@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block Wrapper %}
+<div id="wrapper" class="fade-in">
+
+    <!-- Intro -->
+        <div id="intro">
+            <h1>就是要挑TEA</h1>
+            <p>「誠信」、「用心」、「創新」、「惜福」<br />
+                務實經營、嚴謹管理、穩健成長<br />
+                永續發展，歷久彌新，深耕台灣
+
+            </p>
+            <ul class="actions">
+                <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+            </ul>
+        </div>
+
+	
+		<!-- Header -->
+		  <header id="header">
+            <a href="/bonus" class="logo">挑TEA</a>
+        </header>
+        <div class="col-md-12 col-md-offset-0">
+        <ul class="timeline animate-box fadeInUp animated-fast">
+            <li class="animate-box fadeInUp animated-fast">
+                <div class="timeline-badge" style="background-image:url({% static 'pic01.jpg' %});"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h3 class="timeline-title">First We Meet</h3>
+                        <span class="date">December 25, 2015</span>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#bottom" class="button large">前往點餐</a></li>
+        </ul>
+    </div>
+
+	
+
+
+    <!-- NavInput -->
+    <nav id="nav">
+        <ul class="links">
+            <li class="active"><a href="/bonus">首頁</a></li>
+            <li><a href="/bonus/generic">關於我們</a></li>
+            <li><a href="/bonus/elements">全品項</a></li>
+        </ul>
+        <ul class="icons">
+            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://www.facebook.com/%E5%B0%B1%E6%98%AF%E8%A6%81%E6%8C%91tea-110993528130018/?ref=pages_you_manage" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a href="https://instagram.com/tiao.tea?utm_medium=copy_link" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+        <div id="main">
+
+            <!-- Featured Post -->
+                <article class="post featured">
+                    <header class="major">
+                        <span class="date">BY FCUIECS STUDENT</span>
+                        <h2><a>就是要挑TEA</h2><p>新鮮現泡、在地生產<br />
+                                                    以服務至上，給予最佳的品茶體驗<br />
+                                                    品質保證、歡迎購買</p>
+                    </header>
+
+                    <ul class="actions special">
+                        <li><a href="#bottom" class="button large">前往點餐</a></li>
+                    </ul>
+                </article>
+
+
+    <!-- Posts -->
+    <section class="posts">
+        <article>
+            <header>
+                <h2><a href="elements.html">挑Tea紅茶</a></h2>
+            </header>
+            <a><img src="{% static 'images/紅茶.jpg' %}" alt="" /></a>
+            <p>挑Tea明星商品，茶味柔順不澀，初入口帶熟果香味，後味有芽尖的甜感，具去油解膩效用。</p>
+            <ul class="actions special">
+                <li><a href="#bottom" class="button">前往點餐</a></li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <h2><a href="/bonus/elements">暗黑水晶奶茶</a></h2>
+            </header>
+            <a><img src="{% static 'images/暗黑.jpeg' %}" alt="" /></a>
+            <p>醲醇芳香的「錫蘭奶紅」，加入爽脆Q彈、細密滑順的咖啡凍，而淡雅咖啡香盡在咀嚼之間。</p>
+            <ul class="actions special">
+                <li><a href="#bottom" class="button">前往點餐</a></li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <h2><a href="/bonus/elements">蘆薈蜂蜜檸檬</a></h2>
+            </header>
+            <a><img src="{% static 'images/檸檬蘆薈.jpeg' %}" alt="" /></a>
+            <p>現榨新鮮檸檬原汁，混搭甘甜的龍眼花蜜，再加入柔嫩爽脆的蘆薈，清爽微酸的口感挑逗味蕾，令人回味再三。</p>
+            <ul class="actions special">
+                <li><a href="#bottom" class="button">前往點餐</a></li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <h2><a href="/bonus/elements">鳳梨紅茶</a></h2>
+            </header>
+            <a ><img src="{% static 'images/鳳梨紅茶.jpeg' %}" alt="" /></a>
+            <p>清雅厚實的錫蘭紅茶，搭配香甜可口的南投產金鑽鳳梨（40%）與土鳳梨（60%），甜美豐潤沁人心脾。</p>
+            <ul class="actions special">
+                <li><a href="#bottom" class="button">前往點餐</a></li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <h2><a href="/bonus/elements">紅茶三兄弟</a></h2>
+            </header>
+            <a><img src="{% static 'images/三兄弟.jpg' %}" alt="" /></a>
+            <p>清雅厚實的「錫蘭紅茶」，加入綿密彈牙的珍珠、軟Q細密的布丁、香甜濃郁的香草冰淇淋，多重混搭而毫無違和，多層次的豐富口感令人食指大動。</p>
+            <ul class="actions special">
+                <li><a href="#bottom" class="button">前往點餐</a></li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <h2><a href="/bonus/elements">芝麻奶茶</a></h2>
+            </header>
+            <a><img src="{% static 'images/芝麻.jpg' %}" alt="" /></a>
+            <p>芝麻、紅茶與奶精的絕妙組合，濃郁純正的在地芝麻以香味伴隨清醇茶味、淡雅奶香，迴盪口中，更能喝到芝麻碎粒，富潤厚實。</p>
+            <ul class="actions special">
+                <li><a href="#bottom" class="button">前往點餐</a></li>
+            </ul>
+        </article>
+    </section>    
+    <A Name="bottom"></A>
+    <article class="speciies">
+        <header class="major">
+            <span class="date">不知道喝什麼嗎?</span>
+        </a></header><a href="#">
+
+        </a><ul class="actions special"><a href="#">
+            </a><li><a href="/bonus/elements" class="button large">查看本店品項</a></li>
+        </ul>
+    </article>
+
+</div>
+
+
+<A Name="bottom"></A>
+
+		
+<!-- Footer -->
+<footer id="footer">
+    <section>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class="btn btn-success" type="submit" value="點餐"  />
+        </form>
+    </section>
+    <section class="split contact">
+        <section class="alt">
+            <h3>地址 Address</a></h3>
+            <p><a href="https://www.google.com.tw/maps/place/%E9%80%A2%E7%94%B2%E5%A4%A7%E5%AD%B8/@24.1786547,120.6445524,17z/data=!3m1!4b1!4m5!3m4!1s0x34691623a7988aa7:0x73dd146c41c3035a!8m2!3d24.1786547!4d120.6467411"></a>407<br />
+                台中市西屯區文華路100號</p>
+        </section>
+        <section>
+            <h3>聯絡我們 Our Phone</h3>
+            <p>(000) 000-0000</a></p>
+        </section>
+        <section>
+            <h3>電子信箱 Email</h3>
+            <p>tiaotae@o365.fcu.edu.tw</a></p>
+        </section>
+        <section>
+            <h3>Social</h3>
+            <ul class="icons alt">
+                <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="https://www.facebook.com/%E5%B0%B1%E6%98%AF%E8%A6%81%E6%8C%91tea-110993528130018/?ref=pages_you_manage" class="icon brands fa-facebook-f" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="https://instagram.com/tiao.tea?utm_medium=copy_link" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+            </ul>
+        </section>
+    </section>
+</footer>
+
+
+{% endblock %}
