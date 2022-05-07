@@ -1,0 +1,64 @@
+購物車
+	email(key)(fk)
+	book_id(fk)
+	number int
+	
+
+商品
+	book_id    varchar(20) (PK)
+	book_name  varchar (20)
+	book_img   varchar(50)
+	book_price int
+	book_intro varchar(1000)
+	book_type  varchar(10)
+
+使用者
+	email(pk) 			, not null
+	name varchar(20)		, not null
+	password varchar(20)	.
+	phone varchar20)		.
+	address varchar(20)	.
+	point int	//wallet	
+
+收藏
+	email(key) (fk)
+	book_id    (fk)
+
+交換品項
+	email(key)
+	ch_name   varchar(20)
+	ch_author varchar(20)
+	ch_status varchar(5)
+	ch_judge  varchar(3)
+	
+
+回收品項
+	email(key)
+	re_name   varchar(20)
+	re_author varchar(20)
+	re_price  int
+	re_status varchar(5)
+	re_judge  varchar(3)
+	re_point  int
+
+訂單
+	email
+	order_id	auto-increment
+	order_name
+	order_address
+	order_phone
+	order_payamount
+	order_delivertype		//全部宅配就不需要這個
+
+訂單資料
+	order_id	(fk)
+	book_id	(fk)
+	number 	int
+	
+
+Event
+
+註冊
+登入
+交換書送出表單
+交換
