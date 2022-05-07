@@ -1,3 +1,5 @@
+-- sql name "book" create username "book" password "book"
+
 CREATE TABLE users(
     email VARCHAR(40) NOT NULL,
     username  VARCHAR(20) NOT NULL,
