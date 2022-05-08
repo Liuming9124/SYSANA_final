@@ -27,6 +27,8 @@ register    //註冊頁面
 
 wishlist    //收藏
 
+service    //收藏
+
 static:     //靜態資料
 
 js/css/img
