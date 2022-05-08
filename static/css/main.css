@@ -1525,7 +1525,7 @@ input, select, textarea {
 				margin: 0 auto;
 				width: auto;
 			}
-			
+
 /* List */
 
 	ul {
@@ -1579,7 +1579,7 @@ input, select, textarea {
 /* Actions */
 
 	ul.actions {
-		margin-top: 1.5em;
+		margin-top: 2.5em;
 		clear: both;
 		list-style: none;
 		padding-left: 0;
@@ -2703,4 +2703,3 @@ input, select, textarea {
 				}
 
 	}
-	
