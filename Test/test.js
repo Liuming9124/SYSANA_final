@@ -24,8 +24,8 @@ app.use(express.static(__dirname + '/public'));/* 將預設路徑設在public*/
 
 app.listen(8080);
 
-// connection.query("SELECT * FROM product", function(err, result, fields){ //查詢users的所有資料    
-//   if(err) throw err;
-//     console.log(result);
-//   });
-//   console.log( 'select ended!' );
+connection.query("SELECT * FROM product", function(err, result, fields){ //查詢users的所有資料    
+  if(err) throw err;
+    console.log(result);
+  });
+  console.log( 'select ended!' );
