@@ -1,15 +1,18 @@
+//引用模組
 const mysql = require('mysql');
 const express = require('express');
 const session = require('express-session');
 const path = require('path');
 
-const connection = mysql.createConnection({
+//跟資料庫連結
+const connection = mysql.createConnection({ 
 	host     : 'localhost',
 	user     : 'book',
 	password : 'book',
 	database : 'nodelogin'
 });
 
+//express響應http的請求
 const app = express();
 
 app.use(session({
