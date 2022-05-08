@@ -1,6 +1,10 @@
-const express = require('express');
+const express   = require('express');
 
+<<<<<<< HEAD:nodejs/db.js
 const mysql   = require('mysql');
+=======
+const mysql     = require('mysql');
+>>>>>>> a7b77f1a63086e3f3060baf01799f2990a7dec48:model/db.js
 
 var connection = mysql.createConnection({
   host     : 'localhost',
