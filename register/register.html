@@ -10,7 +10,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="..\static\css\main.css" />
-		<script src="../model/register.js"></script>
 	</head>
 	<body class="right-sidebar is-preload">
 		<div id="page-wrapper">
@@ -46,9 +45,10 @@
 											<li><a href="#">Veroeros feugiat</a></li>
 										</ul>
 									</li>
-									<l<li><a class="icon solid fa-cog" href="../member/member.html"><span>會員頁面</span></a></li>
-									<li><a class="icon solid fa-retweet" href="../login/login.html"><span>登入/註冊</span></a></li>
+									<li><a class="icon solid fa-cog" href="../member/member.html"><span>會員頁面</span></a></li>
+									<li><a class="icon solid fa-retweet" href="../register/register.html"><span>登入/註冊</span></a></li>
 									<li><a class="icon solid fa-sitemap" href="../cart/cart.html"><span>購物車</span></a></li>
+									<li><a class="icon solid fa-sitemap" href="../service/service.html"><span>聯絡客服</span></a></li>
 								</ul>
 							</nav>
 						
@@ -66,22 +66,29 @@
 										<header>
 											<h1 style="height: 60px;"><font size=8>加入會員</font></h1>
 										</header>
-										
-										<div style="height: 60px;">
-											<input class=""type="text" placeholder="姓名" size=20 autocomplete="on">
-										</div>
-										<div style="height: 60px;">
-											<input class="" type="text" placeholder="帳號" size=20 autocomplete="on">
-										</div>
-										<div style="height: 60px;">
-											<input class=""type="password" placeholder="密碼" size=20 autocomplete="off">
-										</div>
-										<div style="height: 60px;">
-											<input class=""type="text" placeholder="信箱" size=20 autocomplete="on">
-										</div>
-										<div style="height: 60px;">
-											<input class=""type="text" placeholder="電話" size=20 autocomplete="on">
-										</div>
+										<form action=" " method="POST">
+
+											<div style="height: 60px;">
+												<input type="text" id="name" placeholder="姓名" size=20 autocomplete="on">
+											</div>
+
+											<div style="height: 60px;">
+												<input type="text" id="username" placeholder="帳號" size=20 autocomplete="on">
+											</div>
+
+											<div style="height: 60px;">
+												<input type="password" id="password" placeholder="密碼" size=20 autocomplete="off">
+											</div>
+
+											<div style="height: 60px;">
+												<input type="text" id="email" placeholder="信箱" size=20 autocomplete="on">
+											</div>
+
+											<div style="height: 60px;">
+												<input type="text" id="phone" placeholder="電話" size=20 autocomplete="on">
+											</div>
+
+										</form>
 										<div>
 											<button>註冊</button>
 										</div>
@@ -117,13 +124,12 @@
 		</div>
 
 		<!-- Scripts -->
-			<!-- Scripts -->
-		<script src="../static/js/jquery.min.js"></script>
-		<script src="../static/js/jquery.dropotron.min.js"></script>
-		<script src="../static/js/browser.min.js"></script>
-		<script src="../static/js/breakpoints.min.js"></script>
-		<script src="../static/js/util.js"></script>
-		<script src="../static/js/main.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
