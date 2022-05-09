@@ -1364,9 +1364,15 @@ input, select, textarea {
 				.row > .col-12-small {
 					width: 100%;
 				}
-
+				.row > .col-13-small {
+					width: 10%;
+				}
 				.row > .off-12-small {
 					margin-left: 100%;
+				}
+				.row > .col-10-small {
+					margin-left: 75%;
+
 				}
 
 				.row.gtr-0 {
