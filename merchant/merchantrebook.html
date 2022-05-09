@@ -35,14 +35,23 @@
 			<!-- Post -->
 			<article class="box post">
 				<header>
-					<h3>查看資料：</h3>
+					<h3>查看回收書資料：</h3>
 				</header>
 				<a href="#" class="image left"><img src="../static/images/pic11.jpg" alt=""></a>
 				<h3><strong>回收用戶：</strong></h3>
 				<p>回收書籍：</p>
 				<p>書籍原價：</p>
 				<p>回收要求價格區間<input type="text" id="down" placeholder="最低">~<input type="text" id="up" placeholder="最高"></p>
-				<p><input type="text" id="howmuch" placeholder="價格為多少"></p>
+				<form action="" method="POST">
+					<div style="height: 60px;">
+						<input  type="text" id="howmuch" placeholder="價格為多少" size=10 autocomplete="on">
+					</div>
+				</form>
+				<form action="" method="POST">
+					<div style="height: 60px;">
+						<input  type="text" id="getpoint" placeholder="獲得點數" size=10 autocomplete="on">
+					</div>
+				</form>
 				<ul class="actions">
 					<li>
 						<a href="#" class="button style1 large">確定</a>
