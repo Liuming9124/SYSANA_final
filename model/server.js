@@ -1,4 +1,6 @@
 const express = require('express');
+const http = require ('http');
+const { json } = require('express/lib/response');
 
 const mysql      = require('mysql');
 
@@ -22,11 +24,22 @@ const app = express();
 app.use(express.static(__dirname + '/public'));/* 將預設路徑設在public*/
 
 
-app.listen(8080);
+// app.listen(8080);
 
-connection.query("SELECT * FROM product", function(err, result, fields){ //查詢users的所有資料    
-  if(err) throw err;
-    console.log(result);
-  });
-  console.log( 'select ended!' );
-  ////
+// connection.query("SELECT * FROM product", function(err, result, fields){ //查詢users的所有資料    
+//   if(err) throw err;
+//     console.log(result);
+//   });
+//   console.log( 'select ended!' );
+  
+
+connection.query("SELECT * FROM product ", function(err, result, fields){   
+  if(err) throw err;      //查詢type 為 learn 的資料
+    //console.log(result);
+    var filterbook = result.filter(function(item,idex,array){
+      return item.book_type=='learn'
+    });
+    console.log(filterbook) //filterbook 為儲存type 為 learn 的書籍 陣列
+    
+});
+console.log( 'select ended!' );
