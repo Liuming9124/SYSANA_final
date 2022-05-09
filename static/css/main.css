@@ -204,6 +204,14 @@ input, select, textarea {
 
 /* Container */
 
+
+	.container_1{
+		display: flex;
+		justify-content: center; 
+		align-items: center;
+		text-align: center;
+	}
+
 	.container {
 		margin: 0 auto;
 		max-width: 100%;
