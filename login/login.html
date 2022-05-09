@@ -9,8 +9,7 @@
 		<title>會員登入</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../static/css/main.css" />
-		<script src="../model/login.js"></script>
+		<link rel="stylesheet" href="..\static\css\main.css" />
 	</head>
 	<body class="right-sidebar is-preload">
 		<div id="page-wrapper">
@@ -22,12 +21,9 @@
 					<!-- Logo -->
 						<h1 id="logo"><a href="../chbook/chbook.html">書贏●登入</a></h1>
 						<p>一個提供多樣化功能的二手書交易平台 讓您能使用後意猶未盡</p>
-						<form action="/search" method="POST">
-							<p>
-								<input type="text" id="search" placeholder="搜尋您想要的商品">
-								<a href="#" class="button style1 col-10-small">搜尋</a>
-							</p>
-							</form>
+						<p>    
+
+						</p>
 						
 							<nav id="nav">
 								<ul>
@@ -70,14 +66,16 @@
 										<header>
 											<h1 style="height: 60px;"><font size=8>會員登入</font></h1>
 										</header>
-											
-										<div style="height: 60px;">
-											<input  type="text" placeholder="帳號" size=20 autocomplete="on">
-										</div>
+										<form action=" " method="POST">
+											<div style="height: 60px;">
+												<input  type="text" id="username" placeholder="帳號" size=20 autocomplete="on">
+											</div>
 
-										<div style="height: 60px;">
-											<input type="password" placeholder="密碼" size=20 autocomplete="off">
-										</div>
+											<div style="height: 60px;">
+												<input type="password" id="password" placeholder="密碼" size=20 autocomplete="off">
+											</div>
+										</form>	
+										
 
 										<div>
 											<button>登入</button>
