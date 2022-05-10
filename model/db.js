@@ -26,13 +26,21 @@ const app = express();
 connection.query("SELECT * FROM product order By Rand()", function(err, result, fields){   //By Rand() 隨機抓取資料
   if(err) throw err;      //查詢type 為 learn 的資料
     //console.log(result);
-    var filterbook = result.filter(function(item,idex,array){
+    var Learnbook = result.filter(function(item,idex,array){
       return item.book_type=='learn'
+    });
+    var Hotbook = result.filter(function(item,idex,array){
+      return item.book_type=='hot'
+    });
+    var Discountbook = result.filter(function(item,idex,array){
+      return item.book_type=='discount'
     });
     console.log('----------以下為隨機出現的所有書籍----------')
     console.log(result) //filterbook 為儲存type 為 learn 的書籍 陣列
     console.log('----------以下為Type為Learn的書籍----------');
-    console.log(filterbook)
+    console.log(Learnbook)
+    // console.log(Hotbookbook)
+    // console.log(Discountbook)
     
 });
 
