@@ -1,12 +1,8 @@
-// const app = require ('express');
+var home = {
 
+    sayhello: function(sayhello){
+        console.log('sayhello');
+    }
+};
 
-
-
-
-$(document).ready(function(){
-    
-    console.log('Good night Taichung,res');
-
-
-})
+module.exports = home

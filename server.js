@@ -1,12 +1,13 @@
 const exp = require('constants');
 var express = require('express');
-// var home    = require('./model/home');
+var home    = require('./static/model/home.js');
 var path    = require('path');
 var app     = express();
 
 //建立 server
 app.get('/',function(req,res){
   res.sendFile(__dirname + '/home/home.html');
+  home.sayhello();
 })
 app.get('/cart/*',function(req,res){
   res.sendFile(__dirname + '/cart/cart.html');
