@@ -1,6 +1,7 @@
 var express = require('express');
+// var home    = require('./model/home');
 var path    = require('path');
-var app = express();
+var app     = express();
 
 //建立 server
 app.get('/',function(req,res){
@@ -42,7 +43,6 @@ app.get('/register/*',function(req,res){
 app.get('/service/*',function(req,res){
   res.sendFile(__dirname + '/service/service.html');
 })
-
 
 app.use(express.static('static')); //讀取靜態檔案
 app.use('*/images'  ,express.static(path.join(__dirname, 'static/images')));
