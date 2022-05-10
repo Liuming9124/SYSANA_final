@@ -1,3 +1,4 @@
+const exp = require('constants');
 var express = require('express');
 // var home    = require('./model/home');
 var path    = require('path');
@@ -49,6 +50,7 @@ app.use('*/images'  ,express.static(path.join(__dirname, 'static/images')));
 app.use('*/js'      ,express.static(path.join(__dirname, 'static/js')));
 app.use('*/css'     ,express.static(path.join(__dirname, 'static/css')));
 app.use('*/webfonts',express.static(path.join(__dirname, 'static/webfonts')));
+app.use('*/model'   ,express.static(path.join(__dirname, 'static/model')));
 
 var server = app.listen(8000,function(){ //8000這個port
   var host = server.address().address;
