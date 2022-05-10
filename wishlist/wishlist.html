@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>書贏●我的收藏</title>
+		<title>書贏●我的願望</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../static/css/main.css" rel="stylesheet">
@@ -15,7 +15,7 @@
 				<div class="container">
 					
 					<!-- Logo -->
-						<h1 id="logo"><a href="../wishlist/wishlist.html">書贏●我的收藏</a></h1>
+						<h1 id="logo"><a href="../wishlist/wishlist.html">書贏●我的願望</a></h1>
 						<p>一個提供多樣化功能的二手書交易平台 讓您能使用後意猶未盡</p>
 						<p>    
 
@@ -25,7 +25,7 @@
 							
 								<nav id="nav">
 									<ul>
-										<li><a class="icon solid fa-home" href="../cart/cart.html"><span>首頁</span></a></li>
+										<li><a class="icon solid fa-home" href="../home/home.html"><span>首頁</span></a></li>
 										<li>
 											<a href="#" class="icon fa-chart-bar"><span>分類</span></a>
 											<ul>
@@ -95,18 +95,20 @@
 									<!-- Post -->
 										<article class="box post">
 											<header>
-												<h3><a href="#">書書書書書書書書書書</a></h3>
+												<h1><a href="#">願望書單</a></h1>
 											</header>
-											<a href="#" class="image left"><img src="../static/images/pic10.jpg" alt=""></a>
-											<p>作者：劉銘</p>
-											<p>價錢：666</p>
-											<ul class="actions">
-												<li>
-													<a href="#" class="button style1 large">加入收藏</a>
-													<a href="#" class="button style2 large">移除購物車</a>
-													<a href="#" class="button style2 large">結帳</a>
-												</li>
-											</ul>
+											<form action=" " method="POST">
+												<div style="height: 60px;width: 300px;">
+													<input  type="text" id="bookname" placeholder="書名" size=20 autocomplete="on">
+												</div>
+	
+												<div style="height: 60px;width: 300px;">
+													<input type="text" id="author" placeholder="作者" size=20 autocomplete="off">
+												</div>
+												<input type="submit" value="許願" onclick="alert('test!!')">
+												<input type="reset" value="清除">
+											</form>
+											
 										</article>
 								</div>
 								
@@ -116,7 +118,7 @@
 				</section>
 			<!-- Footer -->
 				<section id="footer">
-					<div class="container">
+					<div class="container_1">
 						<nav id="nav">
 							<ul class="icons">
 								<li class="icon solid fa-envelope"><a href="Mailto: booking@o365.fcu.edu.tw"> booking@o365.fcu.edu.tw</a>
