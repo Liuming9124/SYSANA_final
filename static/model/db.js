@@ -42,10 +42,10 @@ var db = {
   },
   selectRandom: function (selecRandom) { //抓取product隨機書籍
     connection.query("SELECT * FROM product order By Rand()", function (err, result, fields) {
-      if (err){
+      if (err) {
         throw err;
       }
-      else{
+      else {
         console.log(result);
       }
     });
@@ -63,27 +63,27 @@ var db = {
       }
     });
   },
-  selectHot: function (selectHot){ //抓取type為hot的書籍
-    connection.query("SELECT * FROM product", function (err,result, fields){
-        if(err){
-          throw err;
-        }
-        else{
-          var Hotbook=result.filter(function(item, idex, array){
-              return item.book_type == 'hot';
-              console.log(Hotbook);
-          });
-        }
-    })
-  },
-  selectDiscount: function (selectDiscount){ //抓取type為discount的書籍
-    connection.query("SELECT * FROM product",function (err,result, fields){
-      if(err){
+  selectHot: function (selectHot) { //抓取type為hot的書籍
+    connection.query("SELECT * FROM product", function (err, result, fields) {
+      if (err) {
         throw err;
       }
-      else{
-        var Discountbook=result.filter(function(item,idex,array){
-          return item.book_type =='discount';
+      else {
+        var Hotbook = result.filter(function (item, idex, array) {
+          return item.book_type == 'hot';
+          console.log(Hotbook);
+        });
+      }
+    })
+  },
+  selectDiscount: function (selectDiscount) { //抓取type為discount的書籍
+    connection.query("SELECT * FROM product", function (err, result, fields) {
+      if (err) {
+        throw err;
+      }
+      else {
+        var Discountbook = result.filter(function (item, idex, array) {
+          return item.book_type == 'discount';
           console.log(discount)
         })
       }
