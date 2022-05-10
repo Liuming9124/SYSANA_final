@@ -5,25 +5,29 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../static/css/main.css" rel="stylesheet">
+		<script src="../model/wishlist.js"></script>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<section id="header">
-					<div class="container">
-						
-						<!-- Logo -->
+			<section id="header">
+				<div class="container">
+					
+					<!-- Logo -->
 						<h1 id="logo"><a href="../collect/collect.html">書贏●我的收藏</a></h1>
-							<p>一個提供多樣化功能的二手書交易平台 讓您能使用後意猶未盡</p>
-							<p>    
-
+						<p>一個提供多樣化功能的二手書交易平台 讓您能使用後意猶未盡</p>
+						<form action="/search" method="POST">
+							<p>
+								<input type="text" id="search" placeholder="搜尋您想要的商品">
+								<a href="#" class="button style1 col-10-small">搜尋</a>
 							</p>
-							<input type="text" id="search" placeholder="搜尋您想要的商品">
+							</form>
+
 							
 								<nav id="nav">
 									<ul>
-										<li><a class="icon solid fa-home" href="../home/home.html"><span>首頁</span></a></li>
+										<li><a class="icon solid fa-home" href="../cart/cart.html"><span>首頁</span></a></li>
 										<li>
 											<a href="#" class="icon fa-chart-bar"><span>分類</span></a>
 											<ul>
@@ -42,16 +46,75 @@
 											</ul>
 										</li>
 										<li><a class="icon solid fa-cog" href="../member/member.html"><span>會員頁面</span></a></li>
-										<li><a class="icon solid fa-retweet" href="../register/register.html"><span>登入/註冊</span></a></li>
+										<li><a class="icon solid fa-retweet" href="../login/login.html"><span>登入/註冊</span></a></li>
 										<li><a class="icon solid fa-sitemap" href="../cart/cart.html"><span>購物車</span></a></li>
-										<li><a class="icon solid fa-sitemap" href="../service/service.html"><span>聯絡客服</span></a></li>
+										
 									</ul>
 								</nav>
 							
 					</div>
 				</section>
 	
-					
+					<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<div class="row">
+
+							<!-- Sidebar -->
+								<div id="sidebar" class="col-4 col-12-medium">
+
+										<section>
+											<ul class="divided">
+												<li>
+
+													<!-- Excerpt -->
+													<article class="box excerpt">
+														<header>
+															<span class="date" href="../cart/cart.html">我的購物車</span>
+															<h3><a href="../cart/cart.html">快來把商品帶回家</a></h3>
+														</header>
+													</article>
+
+											</li>
+
+											<li>
+												<!-- Excerpt -->
+													<article class="box excerpt">
+														<header>
+															<span class="date" href="../collect/collect.html">我的收藏</span>
+															<h3><a href="../collect/collect.html">快來把收藏加入購物車</a></h3>
+														</header>
+													</article>
+
+												</li>
+												
+												
+										</section>
+								</div>
+
+							<!-- Content -->
+								<div id="content" class="col-8 col-12-medium imp-medium">
+									<!-- Post -->
+										<article class="box post">
+											<header>
+												<h3><a href="#">書書書書書書書書書書</a></h3>
+											</header>
+											<a href="#" class="image left"><img src="../static/images/pic10.jpg" alt=""></a>
+											<p>作者：劉銘</p>
+											<p>價錢：666</p>
+											<ul class="actions">
+												<li>
+													<a href="#" class="button style1 large">加入購物車</a>
+													<a href="#" class="button style2 large">移除收藏</a>
+												</li>
+											</ul>
+										</article>
+								</div>
+								
+								</article>
+						</div>
+					</div>
+				</section>
 			<!-- Footer -->
 				<section id="footer">
 					<div class="container">
@@ -77,12 +140,12 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="../static/js/jquery.min.js"></script>
+		<script src="../static/js/jquery.dropotron.min.js"></script>
+		<script src="../static/js/browser.min.js"></script>
+		<script src="../static/js/breakpoints.min.js"></script>
+		<script src="../static/js/util.js"></script>
+		<script src="../static/js/main.js"></script>
 
 	</body>
 </html>

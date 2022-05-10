@@ -1,25 +1,27 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>書贏●回收書頁面</title>
+		<title>書贏●回收</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../static/css/main.css" rel="stylesheet">
+		<script src="../model/wishlist.js"></script>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<section id="header">
-					<div class="container">
-						
-						<!-- Logo -->
-							<h1 id="logo"><a href="../rebook/rebook.html">書贏●回收書頁面</a></h1>
-							<p>一個提供多樣化功能的二手書交易平台 讓您能使用後意猶未盡</p>
-							<p>    
+			<section id="header">
+				<div class="container">
+					
+					<!-- Logo -->
+						<h1 id="logo"><a href="../wishlist/wishlist.html">書贏●二手書回收</a></h1>
+						<p>一個提供多樣化功能的二手書交易平台 讓您能使用後意猶未盡</p>
+						<p>    
 
-							</p>
-							<input type="text" id="search" placeholder="搜尋您想要的商品">
+						</p>
+						<input type="text" id="search" placeholder="搜尋您想要的商品">
+
 							
 								<nav id="nav">
 									<ul>
@@ -42,47 +44,58 @@
 											</ul>
 										</li>
 										<li><a class="icon solid fa-cog" href="../member/member.html"><span>會員頁面</span></a></li>
-										<li><a class="icon solid fa-retweet" href="../register/register.html"><span>登入/註冊</span></a></li>
+										<li><a class="icon solid fa-retweet" href="../login/login.html"><span>登入/註冊</span></a></li>
 										<li><a class="icon solid fa-sitemap" href="../cart/cart.html"><span>購物車</span></a></li>
-										<li><a class="icon solid fa-sitemap" href="../service/service.html"><span>聯絡客服</span></a></li>
+										
 									</ul>
 								</nav>
 							
 					</div>
 				</section>
-			<!-- Main -->
+	
+					<!-- Main -->
 			<section id="main">
-				<div class="container_1">
+				<div class="container">
 					<!-- Content -->
 						
 
 							<!-- Post -->
 								<article class="box post">
 									<header>
-										<h1 style="height: 60px;"><font size=8>書籍回收</font></h1>
+										<h1 style="height: 60px; width: 300px;"><font size=8>書籍回收</font></h1>
 									</header>
 									<form action=" " method="POST">
-										<div style="height: 60px;">
-											<input  type="text" id="ch_name" placeholder="書名" size=20 autocomplete="on">
-										</div>
+										<a>書名:</a>
+										<div style="height: 60px; width: 265px;">
 
-										<div style="height: 60px;">
-											<input type="text" id="price" placeholder="原價" size=20 autocomplete="off">
+											<input  type="text" id="re_name" placeholder="請輸入書名" size=20 autocomplete="on">
 										</div>
-										<select>
+										<a>原價:</a>
+										<div style="height: 60px; width: 265px;">
+											
+											<input type="text" id="price" placeholder="請輸入原價" size=20 autocomplete="off">
+										</div>
+										<a>書況:</a>
+										<div style="height: 60px; width: 265px;">
+											
+											<select >
 											<option>請選擇書籍狀況</option>
 											<option>全新</option>
 											<option>7成~9成</option>
 											<option>5成~7成</option>	
 										</select>
+										</div>
+										
 										<input type="submit" value="回收" onclick="alert('test!!')">
 										<input type="reset" value="清除">
 									</form>	
 								</article>
+								
 									
 				</div>
 			</section>
-					
+
+							
 			<!-- Footer -->
 				<section id="footer">
 					<div class="container_1">
@@ -108,12 +121,12 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="../static/js/jquery.min.js"></script>
+		<script src="../static/js/jquery.dropotron.min.js"></script>
+		<script src="../static/js/browser.min.js"></script>
+		<script src="../static/js/breakpoints.min.js"></script>
+		<script src="../static/js/util.js"></script>
+		<script src="../static/js/main.js"></script>
 
 	</body>
 </html>

@@ -25,9 +25,9 @@ rebook      //回收書頁面
 
 register    //註冊頁面
 
-wishlist    //收藏
+wishlist    //許願
 
-service    //收藏
+service    //克服
 
 static:     //靜態資料
 
