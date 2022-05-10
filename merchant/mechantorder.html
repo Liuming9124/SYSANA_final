@@ -40,18 +40,36 @@
 					<h3>訂單細節：</h3>
 				</header>
 				<a href="#" class="image left"><img src="../static/images/pic11.jpg" alt=""></a>
-				<h3><strong>訂購用戶：</strong></h3>
-				<p>訂購書籍編號：</p>
-				<p>書籍名稱：</p>
-				<p>書籍價格：</p>
-				<ul class="actions">
-					<li>
-						<a href="#" class="button style1 large">確定</a>
-						<a href="#" class="button style2 large">取消</a>
-					</li>
-				</ul>
-			</article>
-
+				
+				<form method="" action="POST">
+					<div class="row gtr-45">
+						<div class="display-flex">
+							<div class="col-6 col-24-small">
+								<p>訂購用戶：<input  type="text" id="customer" value="liuming" size=5 autocomplete="on">
+								</div></p>
+								</div>
+							<div class="col-6 col-24-small">
+								<p>訂購書籍編號：<input  type="text" id="list" value="0001" size=5 autocomplete="on">
+								</div></p>
+							<div class="col-6 col-24-small">
+								<p>書籍名稱：<input  type="text" id="name" value="商品名稱" size=5 autocomplete="on">
+								</div></p>
+							<div class="col-6 col-24-small">
+								<p>書籍價格：<input  type="text" id="howmuch" value="666" size=5 autocomplete="on">
+								</div></p>
+							</div>
+						</div>
+						
+						
+						
+					</div>
+		<ul class="actions">
+			<li>
+				<a href="#" class="button style1 large">確定</a>
+				<a href="#" class="button style2 large">取消</a>
+			</li>
+		</ul>
+				</form>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>

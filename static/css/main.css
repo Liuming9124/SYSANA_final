@@ -2717,3 +2717,14 @@ input, select, textarea {
 				}
 
 	}
+
+	.display-flex {
+		display: flex;
+	  }
+	  
+	  .div-size {
+		border: 1px solid rgb(216, 209, 209);
+		width: 600px;
+		height: 120px;
+		margin: 10px;
+	  }
