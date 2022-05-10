@@ -90,6 +90,7 @@ var db = {
     })
   }
 }
+module.exports = db;
 
 const app = express();
 
