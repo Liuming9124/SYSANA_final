@@ -1,10 +1,13 @@
+const exp = require('constants');
 var express = require('express');
+var home    = require('./static/model/home.js');
 var path    = require('path');
-var app = express();
+var app     = express();
 
 //建立 server
 app.get('/',function(req,res){
   res.sendFile(__dirname + '/home/home.html');
+  home.sayhello();
 })
 app.get('/cart/*',function(req,res){
   res.sendFile(__dirname + '/cart/cart.html');
@@ -43,12 +46,12 @@ app.get('/service/*',function(req,res){
   res.sendFile(__dirname + '/service/service.html');
 })
 
-
 app.use(express.static('static')); //讀取靜態檔案
 app.use('*/images'  ,express.static(path.join(__dirname, 'static/images')));
 app.use('*/js'      ,express.static(path.join(__dirname, 'static/js')));
 app.use('*/css'     ,express.static(path.join(__dirname, 'static/css')));
 app.use('*/webfonts',express.static(path.join(__dirname, 'static/webfonts')));
+app.use('*/model'   ,express.static(path.join(__dirname, 'static/model')));
 
 var server = app.listen(8000,function(){ //8000這個port
   var host = server.address().address;
