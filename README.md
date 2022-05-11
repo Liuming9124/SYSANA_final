@@ -10,6 +10,7 @@ rebook      //回收書頁面
 order       //訂單畫面
 cart        //購物車
 collect     //收藏
+checkout  //結帳頁面
 home        //主頁
 member      //會員頁面
 product     //商品呈現頁面
