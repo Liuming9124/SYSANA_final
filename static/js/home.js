@@ -32,14 +32,12 @@ $(document).ready(function(){
     var pricearr  = document.getElementsByClassName("price")
     var authorarr = document.getElementsByClassName("author")
     var imgarr    = document.getElementsByClassName("imgsrc")
-    console.log(namearr)
-    console.log(pricearr)
-    console.log(authorarr)
-    console.log(imgarr)
+    var bidarr    = document.getElementsByClassName("bid")
     for (let i = 0 ; i < 3; i++){
         namearr[i].textContent   = bookinfo[i]["bname"]
         pricearr[i].textContent  = bookinfo[i]["bprice"]
         authorarr[i].textContent = bookinfo[i]["bauthor"]
-        imgarr[i].src    = `"../static/BookImg/${bookinfo[i]["bimg"]}"`
+        imgarr[i].src            = `../static/BookImg/${bookinfo[i]["bimg"]}`
+        bidarr[i].textContent    = "書籍編號 : " + bookinfo[i]["bid"]
     }
 })
