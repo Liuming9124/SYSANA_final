@@ -1,5 +1,4 @@
 var home = {
-
     sayhello: function(sayhello){
         console.log('sayhello');
     }
