@@ -15,6 +15,9 @@ app.get('/cart/*',function(req,res){
 app.get('/chbook/*',function(req,res){
   res.sendFile(__dirname + '/chbook/chbook.html');
 })
+app.get('/classification/*',function(req,res){
+  res.sendFile(__dirname + '/classification/classification.html');
+})
 app.get('/collect/*',function(req,res){
   res.sendFile(__dirname + '/collect/collect.html');
 })
