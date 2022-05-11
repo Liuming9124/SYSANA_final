@@ -3,12 +3,12 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
 <html>
 	<head>
-		<title>書贏●首頁</title>
+		<title>書贏●分類</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../static/css/main.css" rel="stylesheet">
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
-		<script src="../static/js/home.js"></script>
+		<script src="../model/classification.js"></script>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -18,13 +18,11 @@
 					<div class="container">
 						
 						<!-- Logo -->
-							<h1><a href="../home/home.html" id="logo">書贏●首頁</a></h1>
+							<h1><a href="../classification/classification.html" id="logo">書贏●分類</a></h1>
 							<p>一個提供多樣化功能的二手書交易平台 讓您能使用後意猶未盡</p>
 							<form action="/search" method="POST">
 								<p>
-									<div class="container" id="search">
-										<input type="text" id="search" placeholder="搜尋您想要的商品">
-									</div>
+									<input type="text" id="search" placeholder="搜尋您想要的商品">
 									<a href="#" class="button style1 col-10-small">搜尋</a>
 								</p>
 								</form>
@@ -65,10 +63,10 @@
 					<!-- books -->
 						<section id="features">
 							<header class="style1">
-								<h2>商品頁面</h2>
+								<h2>商品分類頁面</h2>
 							</header>
 							<!-- books1 -->
-							<h3>最新上架二手書</h3>
+							<h3>漫畫</h3>
 							<div class="container">
 								<div class="row aln-center">
 									<div class="col-4 col-12-medium">
@@ -114,55 +112,6 @@
 										</section>
 									</div>
 								</div>
-							
-								<!-- books2 -->
-								<p>  </p>
-								<h3>熱門商品</h3>
-								<div class="container">
-									<div class="row aln-center">
-										<div class="col-4 col-12-medium">
-											<section class="books">
-												<a href="#" class="image featured"><img src="..\static\images\pic02.jpg" alt="" /></a>
-												<h3><a href="#">商品名稱1</a></h3>
-												<p>作者：劉銘</p>
-												<p>價錢：666</p>
-												<ul class="actions">
-													<li>
-														<a href="#" class="button style1 large">加入收藏</a>
-														<a href="#" class="button style2 large">加入購物車</a>
-													</li>
-												</ul>
-											</section>
-										</div>
-										<div class="col-4 col-12-medium">
-											<section class="books">
-												<a href="#" class="image featured"><img src="..\static\images\pic03.jpg" alt="" /></a>
-												<h3><a href="#">商品名稱2</a></h3>
-												<p>作者：劉銘</p>
-												<p>價錢：666</p>
-												<ul class="actions">
-													<li>
-														<a href="#" class="button style1 large">加入收藏</a>
-														<a href="#" class="button style2 large">加入購物車</a>
-													</li>
-												</ul>
-											</section>
-										</div>
-										<div class="col-4 col-12-medium">
-											<section class="books">
-												<a href="#" class="image featured"><img src="..\static\images\pic04.jpg" alt="" /></a>
-												<h3><a href="#">商品名稱3</a></h3>
-												<p>作者：劉銘</p>
-												<p>價錢：666</p>
-												<ul class="actions">
-													<li>
-														<a href="#" class="button style1 large">加入收藏</a>
-														<a href="#" class="button style2 large">加入購物車</a>
-													</li>
-												</ul>
-											</section>
-										</div>
-									</div>
 						</section>
 
 				</div>
