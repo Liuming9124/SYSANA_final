@@ -16,17 +16,18 @@
 				<div class="container">
 					
 					<!-- Logo -->
-						<h1 id="logo"><a href="../cart/cart.html">書贏●購物車</a></h1>
+						<h1 id="logo"><a href="../member/member.html">書贏●會員頁面</a></h1>
 						<p>一個提供多樣化功能的二手書交易平台 讓您能使用後意猶未盡</p>
-						
 						<form action="/search" method="POST">
 							<p>
 								<div class="container" id="search">
 									<input type="text" id="search" placeholder="搜尋您想要的商品">
 								</div>
-								<a href="#" class="button style1 col-10-small">搜尋</a>
+								<div class="container" id="searchbottom">
+									<a href="#" class="button style1 col-10-small">搜尋</a>
+								</div>
 							</p>
-						</form>
+							</form>
 
 							
 						<nav id="nav">
@@ -81,7 +82,9 @@
 															</header>
 															<nobr>
 																<p>目前擁有</p>
-																<p><strong>多少</strong></p>
+																<div class="box excerpt" id="bookcoin">
+																	<p><strong>多少</strong></p>
+																</div>
 																<p>book幣</p>
 															</nobr>
 														</article>
@@ -93,7 +96,9 @@
 														<article class="box excerpt">
 															<header>
 																<span class="date" href="#">每日簽到</span>
-																<h3><a href="#" class="button style1">點擊簽到</a></h3>
+																<div class="box excerpt" id="signin">
+																	<h3><a href="#" class="button style1">點擊簽到</a></h3>
+																</div>
 															</header>
 														</article>
 
@@ -159,7 +164,7 @@
 											<div class="input-with-password"><input type="text" placeholder="" maxlength="255" value="*********"></div>
 										</article>
 										<p>  </p>
-										<h3><a href="#" class="button style1">編輯完成</a></h3>
+										<div class="edit"><h3><a href="#" class="button style1">編輯完成</a></h3></div>
 
 								</div>
 
