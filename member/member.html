@@ -18,43 +18,47 @@
 					<!-- Logo -->
 						<h1 id="logo"><a href="../member/member.html">書贏●會員頁面</a></h1>
 						<p>一個提供多樣化功能的二手書交易平台 讓您能使用後意猶未盡</p>
-						<p>    
-
-						</p>
 						<form action="/search" method="POST">
 							<p>
-								<input type="text" id="search" placeholder="搜尋您想要的商品">
-								<a href="#" class="button style1 col-10-small">搜尋</a>
+								<div class="container" id="search">
+									<input type="text" id="search" placeholder="搜尋您想要的商品">
+								</div>
+								<div class="container" id="searchbottom">
+									<a href="#" class="button style1 col-10-small">搜尋</a>
+								</div>
 							</p>
 							</form>
 
 							
-								<nav id="nav">
+						<nav id="nav">
+							<ul>
+								<li><a class="icon solid fa-home" href="../home/home.html"><span>首頁</span></a></li>
+								<li>
+									<a href="#" class="icon fa-chart-bar"><span>分類</span></a>
 									<ul>
-										<li><a class="icon solid fa-home" href="../home/home.html"><span>首頁</span></a></li>
 										<li>
-											<a href="#" class="icon fa-chart-bar"><span>分類</span></a>
+											<a href="#">書籍</a>
 											<ul>
-												<li><a href="#">Lorem ipsum dolor</a></li>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam dolore nisl</a></li>
-												<li>
-													<a href="#">Phasellus consequat</a>
-													<ul>
-														<li><a href="#">Magna phasellus</a></li>
-														<li><a href="#">Etiam dolore nisl</a></li>
-														<li><a href="#">Phasellus consequat</a></li>
-													</ul>
-												</li>
-												<li><a href="#">Veroeros feugiat</a></li>
+												<li><a href="../classification/classification.html">學習</a></li>
+											<li><a href="../classification/classification.html">漫畫</a></li>
+											<li><a href="../classification/classification.html">小說</a></li>
 											</ul>
 										</li>
-										<li><a class="icon solid fa-cog" href="../member/member.html"><span>會員頁面</span></a></li>
-										<li><a class="icon solid fa-retweet" href="../register/register.html"><span>登入/註冊</span></a></li>
-										<li><a class="icon solid fa-sitemap" href="../cart/cart.html"><span>購物車</span></a></li>
-										
+										<li>
+											<a href="#">雜誌</a>
+											<ul>
+												<li><a href="../classification/classification.html">學習</a></li>
+												<li><a href="../classification/classification.html">時尚</a></li>
+											</ul>
+										</li>
 									</ul>
-								</nav>
+								</li>
+								<li><a class="icon solid fa-cog" href="../member/member.html"><span>會員頁面</span></a></li>
+								<li><a class="icon solid fa-retweet" href="../login/login.html"><span>登入/註冊</span></a></li>
+								<li><a class="icon solid fa-sitemap" href="../cart/cart.html"><span>購物車</span></a></li>
+								
+							</ul>
+						</nav>
 							
 					</div>
 				</section>
@@ -78,7 +82,9 @@
 															</header>
 															<nobr>
 																<p>目前擁有</p>
-																<p><strong>多少</strong></p>
+																<div class="box excerpt" id="bookcoin">
+																	<p><strong>多少</strong></p>
+																</div>
 																<p>book幣</p>
 															</nobr>
 														</article>
@@ -90,7 +96,9 @@
 														<article class="box excerpt">
 															<header>
 																<span class="date" href="#">每日簽到</span>
-																<h3><a href="#" class="button style1">點擊簽到</a></h3>
+																<div class="box excerpt" id="signin">
+																	<h3><a href="#" class="button style1">點擊簽到</a></h3>
+																</div>
 															</header>
 														</article>
 
@@ -122,8 +130,8 @@
 													<!-- Excerpt -->
 														<article class="box excerpt">
 															<header>
-																<span class="date" href="..wishlist/wishlist.html">許願功能</span>
-																<h3><a href="#">許下你想購買的書</a></h3>
+																<span class="date" href="../wishlist/wishlist.html">許願功能</span>
+																<h3><a href="../wishlist/wishlist.html">許下你想購買的書</a></h3>
 															</header>
 														</article>
 
@@ -156,7 +164,7 @@
 											<div class="input-with-password"><input type="text" placeholder="" maxlength="255" value="*********"></div>
 										</article>
 										<p>  </p>
-										<h3><a href="#" class="button style1">編輯完成</a></h3>
+										<div class="edit"><h3><a href="#" class="button style1">編輯完成</a></h3></div>
 
 								</div>
 
