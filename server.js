@@ -15,6 +15,9 @@ app.get('/cart/*',function(req,res){
 app.get('/chbook/*',function(req,res){
   res.sendFile(__dirname + '/chbook/chbook.html');
 })
+app.get('/classification/*',function(req,res){
+  res.sendFile(__dirname + '/classification/classification.html');
+})
 app.get('/collect/*',function(req,res){
   res.sendFile(__dirname + '/collect/collect.html');
 })
@@ -47,11 +50,12 @@ app.get('/service/*',function(req,res){
 })
 
 app.use(express.static('static')); //讀取靜態檔案
-app.use('*/images'  ,express.static(path.join(__dirname, 'static/images')));
-app.use('*/js'      ,express.static(path.join(__dirname, 'static/js')));
-app.use('*/css'     ,express.static(path.join(__dirname, 'static/css')));
-app.use('*/webfonts',express.static(path.join(__dirname, 'static/webfonts')));
-app.use('*/model'   ,express.static(path.join(__dirname, 'static/model')));
+app.use('*/images'    ,express.static(path.join(__dirname, 'static/images')));
+app.use('*/js'        ,express.static(path.join(__dirname, 'static/js')));
+app.use('*/css'       ,express.static(path.join(__dirname, 'static/css')));
+app.use('*/webfonts'  ,express.static(path.join(__dirname, 'static/webfonts')));
+app.use('*/model'     ,express.static(path.join(__dirname, 'static/model')));
+app.use('*/js_static' ,express.static(path.join(__dirname, 'static/model/js_static')));
 
 var server = app.listen(8000,function(){ //8000這個port
   var host = server.address().address;
