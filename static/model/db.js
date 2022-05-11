@@ -1,6 +1,7 @@
 const express = require('express');
 const mysql = require('mysql');
 const { json } = require('express/lib/response');
+const res = require('express/lib/response');
 
 
 //start to connect db
@@ -40,54 +41,47 @@ var db = {
   disconn: function (diconn) { //斷開連線
     connection.end()
   },
-  selectRandom: function (selecRandom) { //抓取product隨機書籍
-    connection.query("SELECT * FROM product order By Rand()", function (err, result, fields) {
-      if (err) {
-        throw err;
-      }
-      else {
-        console.log(result);
-      }
-    });
-  },
-  selectLearn: function (selectLearn) { //抓取type為learn的書籍
-    connection.query("SELECT * FROM product", function (err, result, fields) {
-      if (err) {
-        throw err;
-      }
-      else {
-        var Learnbook = result.filter(function (item, idex, array) {
-          return item.book_type == 'learn';
-          console.log(Learnbook);
-        });
-      }
-    });
-  },
-  selectHot: function (selectHot) { //抓取type為hot的書籍
-    connection.query("SELECT * FROM product", function (err, result, fields) {
-      if (err) {
-        throw err;
-      }
-      else {
-        var Hotbook = result.filter(function (item, idex, array) {
-          return item.book_type == 'hot';
-          console.log(Hotbook);
-        });
-      }
-    })
-  },
-  selectDiscount: function (selectDiscount) { //抓取type為discount的書籍
-    connection.query("SELECT * FROM product", function (err, result, fields) {
-      if (err) {
-        throw err;
-      }
-      else {
-        var Discountbook = result.filter(function (item, idex, array) {
-          return item.book_type == 'discount';
-          console.log(discount)
-        })
-      }
-    })
+  select: function (type) {
+    if (type == 'random') {
+      connection.query("SELECT * FROM product order By Rand()", function (err, random, fields) {
+        if (err) {
+          throw err;
+        }
+        else {
+          console.log(radnom);
+        }
+      });
+    }
+    if (type == 'learn') {
+      connection.query("SELECT * FROM product where book_type ='learn'", function (err, learn, fields) {
+        if (err) {
+          throw err;
+        }
+        else {
+          console.log(learn);
+        }
+      });
+    }
+    if (type == 'hot') {
+      connection.query("SELECT * FROM product where book_type ='hot'", function (err, hot, fields) {
+        if (err) {
+          throw err;
+        }
+        else {
+          console.log(hot)
+        }
+      })
+    }
+    if (type == 'discount') {
+      connection.query("SELECT * FROM product where book_type ='discount'", function (err, discount, fields) {
+        if (err) {
+          throw err;
+        }
+        else {
+          console.log(discount);
+        }
+      })
+    }
   }
 }
 module.exports = db;
