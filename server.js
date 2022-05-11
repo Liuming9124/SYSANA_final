@@ -53,6 +53,7 @@ app.get('/service/*',function(req,res){
 
 app.use(express.static('static')); //讀取靜態檔案
 app.use('*/images'    ,express.static(path.join(__dirname, 'static/images')));
+app.use('*/Bookimg'   ,express.static(path.join(__dirname, 'static/BookImg')));
 app.use('*/js'        ,express.static(path.join(__dirname, 'static/js')));
 app.use('*/css'       ,express.static(path.join(__dirname, 'static/css')));
 app.use('*/webfonts'  ,express.static(path.join(__dirname, 'static/webfonts')));

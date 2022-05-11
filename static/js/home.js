@@ -31,7 +31,7 @@ $(document).ready(function(){
     var namearr   = document.getElementsByClassName("name")
     var pricearr  = document.getElementsByClassName("price")
     var authorarr = document.getElementsByClassName("author")
-    var imgarr    = document.getElementsByClassName("image featured")
+    var imgarr    = document.getElementsByClassName("imgsrc")
     console.log(namearr)
     console.log(pricearr)
     console.log(authorarr)
@@ -40,6 +40,6 @@ $(document).ready(function(){
         namearr[i].textContent   = bookinfo[i]["bname"]
         pricearr[i].textContent  = bookinfo[i]["bprice"]
         authorarr[i].textContent = bookinfo[i]["bauthor"]
-        imgarr[i].textContent    = `"../static/images/BookImg/${bookinfo[i]["img"]}"`
+        imgarr[i].src    = `"../static/BookImg/${bookinfo[i]["bimg"]}"`
     }
 })
