@@ -18,10 +18,16 @@
 					<!-- Logo -->
 						<h1 id="logo"><a href="../wishlist/wishlist.html">書贏●二手書交換</a></h1>
 						<p>一個提供多樣化功能的二手書交易平台 讓您能使用後意猶未盡</p>
-						<p>    
-
-						</p>
-						<input type="text" id="search" placeholder="搜尋您想要的商品">
+						<form action="/search" method="POST">
+							<p>
+								<div class="container" id="search">
+									<input type="text" id="search" placeholder="搜尋您想要的商品">
+								</div>
+								<div class="container" id="searchbottom">
+									<a href="#" class="button style1 col-10-small">搜尋</a>
+								</div>
+							</p>
+						</form>
 
 							
 								<nav id="nav">
@@ -57,6 +63,83 @@
 					<!-- Main -->
 			<section id="main">
 				<div class="container">
+					<div class="row">
+
+						<!-- Sidebar -->
+							<div id="sidebar" class="col-4 col-12-medium">
+
+									<section>
+										<ul class="divided">
+											<li>
+
+												<!-- Excerpt -->
+													<article class="box excerpt">
+														<header>
+															<span class="date" >我的錢包</span>
+														</header>
+														<nobr>
+															<p>目前擁有</p>
+															<div class="box excerpt" id="bookcoin">
+																<p><strong>多少</strong></p>
+															</div>
+															<p>book幣</p>
+														</nobr>
+													</article>
+											</li>
+											
+											<li>
+
+												<!-- Excerpt -->
+													<article class="box excerpt">
+														<header>
+															<span class="date" href="#">每日簽到</span>
+															<div class="box excerpt" id="signin">
+																<h3><a href="#" class="button style1">點擊簽到</a></h3>
+															</div>
+														</header>
+													</article>
+
+											</li>
+										
+											<li>
+
+												<!-- Excerpt -->
+													<article class="box excerpt">
+														<header>
+															<span class="date" href="#">回收書功能</span>
+															<h3><a href="../rebook/rebook.html">讓書呈現善的循環</a></h3>
+														</header>
+													</article>
+
+											</li>
+											<li>
+
+												<!-- Excerpt -->
+													<article class="box excerpt">
+														<header>
+															<span class="date" href="../wishlist/wishlist.html">許願功能</span>
+															<h3><a href="../wishlist/wishlist.html">許下你想購買的書</a></h3>
+														</header>
+													</article>
+
+											</li>
+											<li>
+
+												<!-- Excerpt -->
+													<article class="box excerpt">
+														<header>
+															<span class="date" href="../order/order.html">我的訂單</span>
+															<h3><a href="../order/order.html">查看我的訂單狀態</a></h3>
+														</header>
+													</article>
+
+											</li>
+										</ul>
+									</section>
+
+							
+
+							</div>
 					<!-- Content -->
 						
 
@@ -67,15 +150,15 @@
 									</header>
 									<form action=" " method="POST">
 										<a>書名:</a>
-										<div style="height: 60px; width: 265px;">
+										<div style="height: 60px; width: 265px;" class="box post">
 											<input  type="text" id="ch_name" placeholder="書名" size=20 autocomplete="on">
 										</div>
 										<a>地址:</a>
-										<div style="height: 60px; width: 265px;">
+										<div style="height: 60px; width: 265px;" class="box post">
 											<input type="password" id="address" placeholder="收件地址" size=20 autocomplete="off">
 										</div>
 										<a>書況:</a>
-										<div style="height: 60px; width: 265px;">
+										<div style="height: 60px; width: 265px;" class="box post" id="bookcondition">
 											<select>
 												<option>請選擇書籍狀況</option>
 												<option>全新</option>
@@ -84,7 +167,7 @@
 											</select>
 										</div>
 										<a>價格區間:</a>
-										<div style="height: 60px; width: 265px;">
+										<div style="height: 60px; width: 265px;" class="box post" id="bookprice">
 											<select>
 												<option>請選擇書籍價格區間</option>
 												<option>1000up</option>
@@ -94,9 +177,18 @@
 												<option>0~300</option>	
 											</select>
 										</div>
+										<div class="display-flex">
+											<div class="box post" id="exchangebutton">
+												<input type="submit" value="交換" onclick="alert('test!!')">
+											</div>
+											<a>&nbsp</a>
+											<div class="box post" id="resetbutton">
+												<input type="reset" value="清除">
+											</div>
+										</div>
 										
-										<input type="submit" value="交換" onclick="alert('test!!')">
-										<input type="reset" value="清除">
+										
+										
 									</form>	
 								</article>
 									
