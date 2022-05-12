@@ -3,7 +3,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
 <html>
 	<head>
-		<title>書贏●商家頁面-回收書</title>
+		<title>書贏●商家頁面-上架</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../static/css/main.css" />
@@ -58,7 +58,12 @@
 								</div>
 								<p> </p>
 								<p>上傳照片：<div class="col-12">
-									<a href="#" class="form-button-submit button icon solid fa-envelope">上傳照片</a>
+									<form action="/somewhere/to/upload" enctype="multipart/form-data">
+
+										<input id="img" type="file" accept="image/gif, image/jpeg, image/png">
+										
+									</form>
+						
 									</div>
 									<a href="#" class="image left"><img src="../static/images/pic13.jpg" alt=""></a>  <!-- 有上傳才出現 -->
 								</p>
@@ -66,8 +71,18 @@
 							</div>
 				<ul class="actions">
 					<li>
-						<a href="#" class="button style1 large">確定</a>
-						<a href="#" class="button style2 large">取消</a>
+						<form action="" method="POST">
+							<div class="display-flex">
+								<div id="certain" class="box post">
+									<a href="#" class="button style1 large">確定</a>
+								</div>
+								<a>&nbsp</a>
+								<div id="cancel" class="box post">
+									<a href="#" class="button style2 large">取消</a>
+								</div>
+							</div>
+							
+						</form>
 					</li>
 				</ul>
 						</form>

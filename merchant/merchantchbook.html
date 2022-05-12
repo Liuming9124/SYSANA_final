@@ -38,30 +38,51 @@
 			<!-- Post -->
 			<article class="box post">
 				<header>
-					<h2>查看回收書資料：</h2>
+					<h2>查看交換書資料：</h2>
 				</header>
-				<h4>第1組：</h4>
 				<a href="#" class="image left"><img src="../static/images/pic11.jpg" alt=""></a>
-				<h3><strong>交換用戶1：</strong></h3>
-				<p>回收書籍1：</p>
-				<p>收件地址1：</p>
-				<p>書籍價格區間1<input type="text" id="down" placeholder="最低">~<input type="text" id="up" placeholder="最高"></p>
+				<h3><strong><a class="username">交換用戶1：</a></strong></h3>
+				<div class="chbookname">
+					<p>交換書籍1：</p>
+				</div>
+				
+				<div class="address">
+					<p>收件地址1：</p>
+				</div>
+				<div class="box post">
+					<p>書籍價格區間1<input type="text" id="down" placeholder="最低">~<input type="text" id="up" placeholder="最高"></p>
+				</div>
+				
 				<a href="#" class="image left"><img src="../static/images/pic11.jpg" alt=""></a>
-				<h3><strong>交換用戶2：</strong></h3>
-				<p>回收書籍2：</p>
-				<p>收件地址2：</p>
-				<p>書籍價格區間2<input type="text" id="down" placeholder="最低">~<input type="text" id="up" placeholder="最高"></p>
+				<h3><strong><a class="username">交換用戶2：</a></strong></h3>
+				<div class="chbookname" >
+					<p>交換書籍2：</p>
+				</div>
+				
+				<div class="address">
+					<p>收件地址2：</p>
+				</div>
+				<div class="box post">
+					<p>書籍價格區間2<input type="text" id="down" placeholder="最低">~<input type="text" id="up" placeholder="最高"></p>
+				</div>
 				
 				<ul class="actions">
 					<li>
 						<form action="" method="POST">
-							<div style="height: 60px;">
+							<div style="height: 60px;" class="actions">
 								<input  type="text" id="getpoint" placeholder="拒絕交換原因(同意則不填)" size=10 autocomplete="on">
 							</div>
+							<div class="display-flex">
+								<div id="allowexchange" class="box post">
+									<a href="#" class="button style1 large">允許交換</a>
+								</div>
+								<a>&nbsp</a>
+								<div id="refuseexchange" class="box post">
+									<a href="#" class="button style2 large">拒絕交換</a>
+								</div>
+							</div>
+							
 						</form>
-						<a href="#" class="button style1 large">允許交換</a>
-						<a href="#" class="button style2 large">拒絕交換</a>
-						
 					</li>
 				</ul>
 			</article>

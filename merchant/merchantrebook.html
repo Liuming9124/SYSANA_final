@@ -39,24 +39,41 @@
 					<h3>查看回收書資料：</h3>
 				</header>
 				<a href="#" class="image left"><img src="../static/images/pic11.jpg" alt=""></a>
-				<h3><strong>回收用戶：</strong></h3>
-				<p>回收書籍：</p>
-				<p>書籍原價：</p>
-				<p>回收要求價格區間<input type="text" id="down" placeholder="最低">~<input type="text" id="up" placeholder="最高"></p>
+				<h3><strong><a class="reuser">回收用戶：</a></strong></h3>
+				<div class="rebookname">
+					<p>回收書籍：</p>
+				</div>
+				<div class="price">
+					<p>書籍原價：</p>
+				</div>
+				<div class="box post">
+					<p>回收要求價格區間<input type="text" id="down" placeholder="最低">~<input type="text" id="up" placeholder="最高"></p>
+				</div>
+				
 				<form action="" method="POST">
-					<div style="height: 60px;">
+					<div style="height: 60px;" class="box post">
 						<input  type="text" id="howmuch" placeholder="價格為多少" size=10 autocomplete="on">
 					</div>
 				</form>
 				<form action="" method="POST">
-					<div style="height: 60px;">
+					<div style="height: 60px;" class="box post">
 						<input  type="text" id="getpoint" placeholder="獲得點數" size=10 autocomplete="on">
 					</div>
 				</form>
 				<ul class="actions">
 					<li>
-						<a href="#" class="button style1 large">確定</a>
-						<a href="#" class="button style2 large">取消</a>
+						<form action="" method="POST">
+							<div class="display-flex">
+								<div id="certain" class="box post">
+									<a href="#" class="button style1 large">確定</a>
+								</div>
+								<a>&nbsp</a>
+								<div id="cancel" class="box post">
+									<a href="#" class="button style2 large">取消</a>
+								</div>
+							</div>
+							
+						</form>
 					</li>
 				</ul>
 			</article>
