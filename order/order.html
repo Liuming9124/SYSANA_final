@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>書贏●我的願望</title>
+		<title>書贏●我的訂單</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../static/css/main.css" rel="stylesheet">
@@ -16,40 +16,49 @@
 				<div class="container">
 					
 					<!-- Logo -->
-						<h1 id="logo"><a href="../wishlist/wishlist.html">書贏●我的願望</a></h1>
+						<h1 id="logo"><a href="../wishlist/wishlist.html">書贏●我的訂單</a></h1>
 						<p>一個提供多樣化功能的二手書交易平台 讓您能使用後意猶未盡</p>
-						<p>    
-
-						</p>
-						<input type="text" id="search" placeholder="搜尋您想要的商品">
+						<form action="/search" method="POST">
+							<p>
+								<div class="container" id="search">
+									<input type="text" id="search" placeholder="搜尋您想要的商品">
+								</div>
+								<div class="container" id="searchbottom">
+									<a href="#" class="button style1 col-10-small">搜尋</a>
+								</div>
+							</p>
+						</form>
 
 							
-								<nav id="nav">
+						<nav id="nav">
+							<ul>
+								<li><a class="icon solid fa-home" href="../home/home.html"><span>首頁</span></a></li>
+								<li>
+									<a href="#" class="icon fa-chart-bar"><span>分類</span></a>
 									<ul>
-										<li><a class="icon solid fa-home" href="../home/home.html"><span>首頁</span></a></li>
 										<li>
-											<a href="#" class="icon fa-chart-bar"><span>分類</span></a>
+											<a href="#">書籍</a>
 											<ul>
-												<li><a href="#">Lorem ipsum dolor</a></li>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam dolore nisl</a></li>
-												<li>
-													<a href="#">Phasellus consequat</a>
-													<ul>
-														<li><a href="#">Magna phasellus</a></li>
-														<li><a href="#">Etiam dolore nisl</a></li>
-														<li><a href="#">Phasellus consequat</a></li>
-													</ul>
-												</li>
-												<li><a href="#">Veroeros feugiat</a></li>
+												<li><a href="../classification/classification.html">學習</a></li>
+											<li><a href="../classification/classification.html">漫畫</a></li>
+											<li><a href="../classification/classification.html">小說</a></li>
 											</ul>
 										</li>
-										<li><a class="icon solid fa-cog" href="../member/member.html"><span>會員頁面</span></a></li>
-										<li><a class="icon solid fa-retweet" href="../login/login.html"><span>登入/註冊</span></a></li>
-										<li><a class="icon solid fa-sitemap" href="../cart/cart.html"><span>購物車</span></a></li>
-										
+										<li>
+											<a href="#">雜誌</a>
+											<ul>
+												<li><a href="../classification/classification.html">學習</a></li>
+												<li><a href="../classification/classification.html">時尚</a></li>
+											</ul>
+										</li>
 									</ul>
-								</nav>
+								</li>
+								<li><a class="icon solid fa-cog" href="../member/member.html"><span>會員頁面</span></a></li>
+								<li><a class="icon solid fa-retweet" href="../login/login.html"><span>登入/註冊</span></a></li>
+								<li><a class="icon solid fa-sitemap" href="../cart/cart.html"><span>購物車</span></a></li>
+								
+							</ul>
+						</nav>
 							
 					</div>
 				</section>
@@ -99,17 +108,16 @@
 												</li>
 												
 										</section>
-								</div>
-
+								</div>				
 						<!-- Content -->
 							<div id="content" class="col-8 col-12-medium imp-medium">
 								<!-- Post -->
 									<article class="box post">
 	
-										<div>
-											<a size=8 href="#1">未完成</a>
+										<div class="box post">
+											<a size=10 href="#1">未完成</a>
 											<a>&nbsp&nbsp&nbsp</a>
-											<a size=8 href="#2">已完成</a>
+											<a size=10 href="#2">已完成</a>
 										</div>
 									
 		
@@ -117,17 +125,19 @@
 											<h3>訂單資訊</h3>
 										</header>
 										<div>
-											<a href="#" class="image left"><img src="../static/images/pic10.jpg" alt=""></a>
-											<p>作者：劉銘</p>
-											<p>價錢：666</p>
-											<p>出貨狀態:已出or未出</p>
+											<a class="image left"><img src="../static/images/pic10.jpg" alt=""></a>
+											<h3><a class="name">商品名稱1</a></h3>
+											<p class="author">作者：劉銘</p>
+											<p class="price">價錢：666</p>
+											<p class="orderstatus">出貨狀態:已出or未出</p>
 										</div>
 										<br>
 										<div>
-											<a href="#" class="image left"><img src="../static/images/pic10.jpg" alt=""></a>
-											<p>作者：劉銘</p>
-											<p>價錢：666</p>
-											<p>出貨狀態:已出or未出</p>
+											<a class="image left"><img src="../static/images/pic10.jpg" alt=""></a>
+											<h3><a class="name">商品名稱2</a></h3>
+											<p class="author">作者：劉銘</p>
+											<p class="price">價錢：666</p>
+											<p class="orderstatus">出貨狀態:已出or未出</p>
 										</div>
 										
 									</article>
