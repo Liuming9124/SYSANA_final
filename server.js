@@ -2,12 +2,14 @@ const exp = require('constants');
 var express = require('express');
 var home    = require('./static/model/home.js');
 var path    = require('path');
+const db = require('./static/model/db.js');
 var app     = express();
 
 //建立 server
+db.conn();
 app.get('/',function(req,res){
   res.sendFile(__dirname + '/home/home.html');
-  home.sayhello();
+  db.select('learn')
 })
 app.get('/cart/*',function(req,res){
   res.sendFile(__dirname + '/cart/cart.html');
@@ -51,6 +53,7 @@ app.get('/service/*',function(req,res){
 
 app.use(express.static('static')); //讀取靜態檔案
 app.use('*/images'    ,express.static(path.join(__dirname, 'static/images')));
+app.use('*/BookImg'   ,express.static(path.join(__dirname, 'static/BookImg')));
 app.use('*/js'        ,express.static(path.join(__dirname, 'static/js')));
 app.use('*/css'       ,express.static(path.join(__dirname, 'static/css')));
 app.use('*/webfonts'  ,express.static(path.join(__dirname, 'static/webfonts')));

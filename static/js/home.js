@@ -4,19 +4,22 @@ bookinfo = [
         "bname"  :"book1",
         "bprice" :"100",
         "bauthor":"liu",
-        "bimg"   :"1.img"
+        "bimg"   :"1.jpg",
+        "bid"    :"111"
     },
     {
         "bname"  :"book2",
         "bprice" :"200",
         "bauthor":"liu2",
-        "bimg"   :"2.img"
+        "bimg"   :"2.jpg",
+        "bid"    :"222"
     },
     {
         "bname"  :"book3",
         "bprice" :"300",
         "bauthor":"liu3",
-        "bimg"   :"3.img"
+        "bimg"   :"3.jpg",
+        "bid"    :"333"
     }
 ]
 
@@ -25,16 +28,16 @@ bookinfo = [
 
 
 $(document).ready(function(){
-    var name   = document.getElementsByClassName("h3 card-title mb-3")
-    var prive  = document.getElementsByClassName("card-img-top cover")
-    var img    = document.getElementsByClassName("image featured")
-    console.log(namearr)
-    for (let i = 0 ; i < 6; i++){
-        namearr[i].textContent = hot[i]["name"]
-        imgarr[i].src = hot[i]["img"]
-        bodyarr[4*i].textContent = hot[i]["address"]
-        bodyarr[4*i+1].textContent = hot[i]["bestseller"]
-        bodyarr[4*i+2].textContent = hot[i]["comment0"]
-        bodyarr[4*i+3].textContent = hot[i]["comment1"]
+    var namearr   = document.getElementsByClassName("name")
+    var pricearr  = document.getElementsByClassName("price")
+    var authorarr = document.getElementsByClassName("author")
+    var imgarr    = document.getElementsByClassName("imgsrc")
+    var bidarr    = document.getElementsByClassName("bid")
+    for (let i = 0 ; i < 3; i++){
+        namearr[i].textContent   = bookinfo[i]["bname"]
+        pricearr[i].textContent  = bookinfo[i]["bprice"]
+        authorarr[i].textContent = bookinfo[i]["bauthor"]
+        imgarr[i].src            = `../static/BookImg/${bookinfo[i]["bimg"]}`
+        bidarr[i].textContent    = "書籍編號 : " + bookinfo[i]["bid"]
     }
 })
