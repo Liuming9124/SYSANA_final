@@ -20,11 +20,15 @@
 					<p>一個提供多樣化功能的二手書交易平台 讓您能使用後意猶未盡</p>
 					
 					<form action="/search" method="POST">
-					<p>
-						<input type="text" id="search" placeholder="搜尋您想要的商品">
-						<a href="#" class="button style1 col-10-small">搜尋</a>
-					</p>
-					</form>
+						<p>
+							<div class="container" id="search">
+								<input type="text" id="search" placeholder="搜尋您想要的商品">
+							</div>
+							<div class="container" id="searchbottom">
+								<a href="#" class="button style1 col-10-small">搜尋</a>
+							</div>
+						</p>
+						</form>
 
 							
 					<nav id="nav">
@@ -72,17 +76,23 @@
 											<h1 style="height: 60px;"><font size=8>會員登入</font></h1>
 										</header>
 										<form action=" " method="POST">
-											<div style="height: 60px;">
+											<div style="height: 60px;" class="container_1">
 												<input  type="text" id="username" placeholder="帳號" size=20 autocomplete="on">
 											</div>
 
-											<div style="height: 60px;">
+											<div style="height: 60px;" class="container_1">
 												<input type="password" id="password" placeholder="密碼" size=20 autocomplete="off">
 											</div>
-											<div>
-												<input type="submit" value="登入">
-												<a href="../register/register.html"><input type="button"  value="加入會員"></a>
+											<div class="display-flex">
+												<div class="login" id="loginbutton">
+													<input type="submit" value="登入">
+												</div>
+												<a>&nbsp</a>
+												<div class="register" id="joinbutton">
+													<a href="../register/register.html"><input type="button"  value="加入會員"></a>
+												</div>
 											</div>
+											
 										</form>	
 										
 
