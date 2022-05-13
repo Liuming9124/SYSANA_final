@@ -1,15 +1,13 @@
-const exp = require('constants');
 var express = require('express');
-var home    = require('./static/model/home.js');
 var path    = require('path');
-const db = require('./static/model/db.js');
+var db      = require('./static/model/db.js');
 var app     = express();
 
 //建立 server
 db.conn();
 app.get('/',function(req,res){
   res.sendFile(__dirname + '/home/home.html');
-  db.select('learn')
+  db.select('learn');
 })
 app.get('/cart/*',function(req,res){
   res.sendFile(__dirname + '/cart/cart.html');
