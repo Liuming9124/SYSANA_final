@@ -3,50 +3,54 @@ var path    = require('path');
 var db      = require('./models/db.js');
 var app     = express();
 
+
+app.set('view engine', 'ejs');
+
+
 //建立 server
-db.conn();
+// db.conn();
 app.get('/',function(req,res){
-  res.sendFile(__dirname + '/home/home.html');
-  db.select('learn');
+  res.render('home');
+  // db.select('learn');
 })
 app.get('/cart/*',function(req,res){
-  res.sendFile(__dirname + '/cart/cart.html');
+  res.render('cart');
 })
 app.get('/chbook/*',function(req,res){
-  res.sendFile(__dirname + '/chbook/chbook.html');
+  res.render('chbook');
 })
 app.get('/classification/*',function(req,res){
-  res.sendFile(__dirname + '/classification/classification.html');
+  res.render('classification');
 })
 app.get('/collect/*',function(req,res){
-  res.sendFile(__dirname + '/collect/collect.html');
+  res.render('collect');
 })
 app.get('/home/*',function(req,res){
-  res.sendFile(__dirname + '/home/home.html');
+  res.render('home');
 })
 app.get('/login/*',function(req,res){
-  res.sendFile(__dirname + '/login/login.html');
+  res.render('login');
 })
 app.get('/member/*',function(req,res){
-  res.sendFile(__dirname + '/member/member.html');
+  res.render('member');
 })
 app.get('/merchant/*',function(req,res){
-  res.sendFile(__dirname + '/merchant/merchant.html');
+  res.render('merchant');
 })
 app.get('/order/*',function(req,res){
-  res.sendFile(__dirname + '/order/order.html');
+  res.render('order');
 })
 app.get('/product/*',function(req,res){
-  res.sendFile(__dirname + '/product/index.html');
+  res.render('product');
 })
 app.get('/rebook/*',function(req,res){
-  res.sendFile(__dirname + '/rebook/rebook.html');
+  res.render('rebook');
 })
 app.get('/register/*',function(req,res){
-  res.sendFile(__dirname + '/register/register.html');
+  res.render('register');
 })
 app.get('/service/*',function(req,res){
-  res.sendFile(__dirname + '/service/service.html');
+  res.render('service');
 })
 
 app.use(express.static('static')); //讀取靜態檔案
@@ -58,10 +62,8 @@ app.use('*/webfonts'  ,express.static(path.join(__dirname, 'static/webfonts')));
 app.use('*/model'     ,express.static(path.join(__dirname, 'static/model')));
 app.use('*/js_static' ,express.static(path.join(__dirname, 'static/model/js_static')));
 
-var server = app.listen(8000,function(){ //8000這個port
-  var host = server.address().address;
-  var port = server.address().port;
-  console.log("listen on http://%s:%s", host, port)
+app.listen(8000,function(){ //8000這個port
+  console.log("listen on http://localhost:8000")
 })
 
 
