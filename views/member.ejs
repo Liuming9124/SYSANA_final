@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>書贏●會員頁面</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../static/css/main.css" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="../model/member.js"></script>
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<section id="header">
+				<div class="container">
+					
+					<!-- Logo -->
+						<h1 id="logo"><a href="../member/member.html">書贏●會員頁面</a></h1>
+						<p>一個提供多樣化功能的二手書交易平台 讓您能使用後意猶未盡</p>
+						<form action="/search" method="POST">
+							<p>
+								<div class="container" id="search">
+									<input type="text" id="search" placeholder="搜尋您想要的商品">
+								</div>
+								<div class="container" id="searchbottom">
+									<a href="#" class="button style1 col-10-small">搜尋</a>
+								</div>
+							</p>
+							</form>
+
+							
+						<nav id="nav">
+							<ul>
+								<li><a class="icon solid fa-home" href="../home/home.html"><span>首頁</span></a></li>
+								<li>
+									<a href="#" class="icon fa-chart-bar"><span>分類</span></a>
+									<ul>
+										<li>
+											<a href="#">書籍</a>
+											<ul>
+												<li><a href="../classification/classification.html">學習</a></li>
+											<li><a href="../classification/classification.html">漫畫</a></li>
+											<li><a href="../classification/classification.html">小說</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">雜誌</a>
+											<ul>
+												<li><a href="../classification/classification.html">學習</a></li>
+												<li><a href="../classification/classification.html">時尚</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li><a class="icon solid fa-cog" href="../member/member.html"><span>會員頁面</span></a></li>
+								<li><a class="icon solid fa-retweet" href="../login/login.html"><span>登入/註冊</span></a></li>
+								<li><a class="icon solid fa-sitemap" href="../cart/cart.html"><span>購物車</span></a></li>
+								
+							</ul>
+						</nav>
+							
+					</div>
+				</section>
+	
+					<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<div class="row">
+
+							<!-- Sidebar -->
+								<div id="sidebar" class="col-4 col-12-medium">
+
+										<section>
+											<ul class="divided">
+												<li>
+
+													<!-- Excerpt -->
+														<article class="box excerpt">
+															<header>
+																<span class="date" >我的錢包</span>
+															</header>
+															<nobr>
+																<p>目前擁有</p>
+																<div class="box excerpt" id="bookcoin">
+																	<p><strong>多少</strong></p>
+																</div>
+																<p>book幣</p>
+															</nobr>
+														</article>
+												</li>
+												
+												<li>
+
+													<!-- Excerpt -->
+														<article class="box excerpt">
+															<header>
+																<span class="date" href="#">每日簽到</span>
+																<div class="box excerpt" id="signin">
+																	<h3><a href="#" class="button style1">點擊簽到</a></h3>
+																</div>
+															</header>
+														</article>
+
+												</li>
+												<li>
+
+													<!-- Excerpt -->
+														<article class="box excerpt">
+															<header>
+																<span class="date" href="#">交換書功能</span>
+																<h3><a href="../chbook/chbook.html">讓您與書友友進一步交流</a></h3>
+															</header>
+														</article>
+
+												</li>
+												<li>
+
+													<!-- Excerpt -->
+														<article class="box excerpt">
+															<header>
+																<span class="date" href="#">回收書功能</span>
+																<h3><a href="../rebook/rebook.html">讓書呈現善的循環</a></h3>
+															</header>
+														</article>
+
+												</li>
+												<li>
+
+													<!-- Excerpt -->
+														<article class="box excerpt">
+															<header>
+																<span class="date" href="../wishlist/wishlist.html">許願功能</span>
+																<h3><a href="../wishlist/wishlist.html">許下你想購買的書</a></h3>
+															</header>
+														</article>
+
+												</li>
+												<li>
+
+													<!-- Excerpt -->
+														<article class="box excerpt">
+															<header>
+																<span class="date" href="../order/order.html">我的訂單</span>
+																<h3><a href="../order/order.html">查看我的訂單狀態</a></h3>
+															</header>
+														</article>
+
+												</li>
+											</ul>
+										</section>
+
+								
+
+								</div>
+
+							<!-- Content -->
+								<div id="content" class="col-8 col-12-medium imp-medium">
+									<!-- Post -->
+										<article class="box post">
+											<header>
+												<h2>會員資訊</h2>
+											</header>
+											<span class="image featured"><img src="images/pic04.jpg" alt="" /></span>
+											<h3>我的姓名</h3>
+											<div class="input-with-name"><input type="text" placeholder="" maxlength="255" value="劉TA"></div>
+											<p>  </p>
+											<h3>E-mail</h3>
+											<div class="input-with-mail"><input type="text" placeholder="" maxlength="255" value="liuliuming@fcumail.com"></div>
+											<p>  </p>
+											<h3>電話號碼</h3>
+											<div class="input-with-phone"><input type="text" placeholder="" maxlength="255" value="0909090909"></div>
+											<p>  </p>
+											<h3>更改密碼</h3>
+											<div class="input-with-password"><input type="text" placeholder="" maxlength="255" value="*********"></div>
+										</article>
+										<p>  </p>
+										<div class="edit"><h3><a href="#" class="button style1">編輯完成</a></h3></div>
+
+								</div>
+
+						</div>
+					</div>
+				</section>
+			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<nav id="nav">
+							<ul class="icons">
+								<li class="icon solid fa-envelope"><a href="#">info@untitled.tld</a></li>
+								<li class="icon solid fa-phone">(000) 000-0000</li>
+								<li class="icon brands fa-dribbble"><a href="https://www.facebook.com/%E5%B0%B1%E6%98%AF%E8%A6%81%E6%8C%91tea-110993528130018/?ref=pages_you_manage">書贏哀居</a></li>
+								<li class="icon brands fa-facebook-f"><a href="https://instagram.com/tiao.tea?utm_medium=copy_link">書贏臉書</a></li>
+								<li class="icon brands fa-twitter"><a href="#">書贏推特</a></li>
+								<li class="icon brands fa-dribbble"><a href="../home/home.html">書贏首頁</a></li>
+								<li class="icon solid fa-home">1234 Somewhere Road</li>
+							</ul>
+						</nav>
+								
+							</ul>
+						</div>	
+
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="../static/js/jquery.min.js"></script>
+		<script src="../static/js/jquery.dropotron.min.js"></script>
+		<script src="../static/js/browser.min.js"></script>
+		<script src="../static/js/breakpoints.min.js"></script>
+		<script src="../static/js/util.js"></script>
+		<script src="../static/js/main.js"></script>
+
+	</body>
+</html>

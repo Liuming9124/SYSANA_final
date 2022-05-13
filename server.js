@@ -1,6 +1,6 @@
 var express = require('express');
 var path    = require('path');
-var db      = require('./static/model/db.js');
+var db      = require('./models/db.js');
 var app     = express();
 
 //建立 server
