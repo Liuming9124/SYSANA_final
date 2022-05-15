@@ -24,81 +24,38 @@
 						<h2>商品頁面</h2>
 					</header>
 					<!-- books1 -->
+
 					<h3>最新上架二手書</h3>
 					<div class="container">
 						<div class="row aln-center">
-							<div class="col-4 col-12-medium">
-								<section class="books">
-									<a href="#" class="image featured">
-										<img class="imgsrc" src="..\static\images\pic02.jpg" alt="" height="500" />
-									</a>
-									<h3><a href="#" class="name">商品名稱1</a></h3>
-									<p class="author">作者：劉銘</p>
-									<p class="price">價錢：666</p>
-									<p class="bid" id="bid">書籍編號：5155456</p>
-
-									<ul class="actions">
-										<li>
-											<div class="display-flex">
-												<div id="addcollect" class="col-8 col-12-medium imp-medium">
-													<a href="../cart/cart.html" class="button style1 large">加入收藏</a>
-												</div>
-												<div id="addcart" class="col-8 col-12-medium imp-medium">
-													<a href="#" class="button style2 large">加入購物車</a>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</section>
-							</div>
-							<div class="col-4 col-12-medium">
-								<section class="books">
-									<a href="#" class="image featured">
-										<img class="imgsrc" src="..\static\images\pic02.jpg" height="500" alt="" />
-									</a>
-									<h3><a href="#" class="name">商品名稱1</a></h3>
-									<p class="author">作者：劉銘</p>
-									<p class="price">價錢：666</p>
-									<p class="bid" id="bid">書籍編號：5155456</p>
-
-									<ul class="actions">
-										<li>
-											<div class="display-flex">
-												<div id="addcollect" class="col-8 col-12-medium imp-medium">
-													<a href="../cart/cart.html" class="button style1 large">加入收藏</a>
-												</div>
-												<div id="addcart" class="col-8 col-12-medium imp-medium">
-													<a href="#" class="button style2 large">加入購物車</a>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</section>
-							</div>
-							<div class="col-4 col-12-medium">
-								<section class="books">
-									<a href="#" class="image featured">
-										<img class="imgsrc" src="..\static\images\pic02.jpg" height="500" alt="" />
-									</a>
-									<h3><a href="#" class="name">商品名稱1</a></h3>
-									<p class="author">作者：劉銘</p>
-									<p class="price">價錢：666</p>
-									<p class="bid" id="bid">書籍編號：5155456</p>
-
-									<ul class="actions">
-										<li>
-											<div class="display-flex">
-												<div id="addcollect" class="col-8 col-12-medium imp-medium">
-													<a href="../cart/cart.html" class="button style1 large">加入收藏</a>
-												</div>
-												<div id="addcart" class="col-8 col-12-medium imp-medium">
-													<a href="#" class="button style2 large">加入購物車</a>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</section>
-							</div>
+							<table>
+								<% for(var i=0; i < 3; i++) { %>
+									<div class="col-4 col-12-medium">
+										<section class="books">
+											<a href="#" class="image featured">
+												<img class="imgsrc" src="..\static\images\pic02.jpg" alt="" height="500" />
+											</a>
+											<h3><a href="#" class="name">商品名稱1</a></h3>
+											<p class="author">作者：劉銘</p>
+											<p class="price">價錢：666</p>
+											<p class="bid" id="bid">書籍編號：5155456</p>
+		
+											<ul class="actions">
+												<li>
+													<div class="display-flex">
+														<div id="addcollect" class="col-8 col-12-medium imp-medium">
+															<a href="../cart/cart.html" class="button style1 large">加入收藏</a>
+														</div>
+														<div id="addcart" class="col-8 col-12-medium imp-medium">
+															<a href="#" class="button style2 large">加入購物車</a>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</section>
+									</div>
+								<% } %>
+								</table>
 						</div>
 
 						<!-- books2 -->
@@ -106,78 +63,34 @@
 						<h3>熱門商品</h3>
 						<div class="container">
 							<div class="row aln-center">
-								<div class="col-4 col-12-medium">
-									<section class="books">
-										<a href="#" class="image featured">
-											<img class="imgsrc" src="..\static\images\pic02.jpg" height="500" alt="" />
-										</a>
-										<h3><a href="#" class="name">商品名稱1</a></h3>
-										<p class="author">作者：劉銘</p>
-										<p class="price">價錢：666</p>
-										<p class="bid" id="bid">書籍編號：5155456</p>
-
-										<ul class="actions">
-											<li>
-												<div class="display-flex">
-													<div id="addcollect" class="col-8 col-12-medium imp-medium">
-														<a href="../cart/cart.html" class="button style1 large">加入收藏</a>
-													</div>
-													<div id="addcart" class="col-8 col-12-medium imp-medium">
-														<a href="#" class="button style2 large">加入購物車</a>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</section>
-								</div>
-								<div class="col-4 col-12-medium">
-									<section class="books">
-										<a href="#" class="image featured">
-											<img class="imgsrc" src="..\static\images\pic02.jpg" height="500" alt="" />
-										</a>
-										<h3><a href="#" class="name">商品名稱1</a></h3>
-										<p class="author">作者：劉銘</p>
-										<p class="price">價錢：666</p>
-										<p class="bid" id="bid">書籍編號：5155456</p>
-
-										<ul class="actions">
-											<li>
-												<div class="display-flex">
-													<div id="addcollect" class="col-8 col-12-medium imp-medium">
-														<a href="../cart/cart.html" class="button style1 large">加入收藏</a>
-													</div>
-													<div id="addcart" class="col-8 col-12-medium imp-medium">
-														<a href="#" class="button style2 large">加入購物車</a>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</section>
-								</div>
-								<div class="col-4 col-12-medium">
-									<section class="books">
-										<a href="#" class="image featured">
-											<img class="imgsrc" src="..\static\images\pic02.jpg" height="500" alt="" />
-										</a>
-										<h3><a href="#" class="name">商品名稱1</a></h3>
-										<p class="author">作者：劉銘</p>
-										<p class="price">價錢：666</p>
-										<p class="bid" id="bid">書籍編號：5155456</p>
-
-										<ul class="actions">
-											<li>
-												<div class="display-flex">
-													<div id="addcollect" class="col-8 col-12-medium imp-medium">
-														<a href="../cart/cart.html" class="button style1 large">加入收藏</a>
-													</div>
-													<div id="addcart" class="col-8 col-12-medium imp-medium">
-														<a href="#" class="button style2 large">加入購物車</a>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</section>
-								</div>
+								<table>
+									<% for(var i=0; i < 6; i++) { %>
+										<div class="col-4 col-12-medium">
+											<section class="books">
+												<a href="#" class="image featured">
+													<img class="imgsrc" src="..\static\images\pic02.jpg" alt="" height="500" />
+												</a>
+												<h3><a href="#" class="name">商品名稱1</a></h3>
+												<p class="author">作者：劉銘</p>
+												<p class="price">價錢：666</p>
+												<p class="bid" id="bid">書籍編號：5155456</p>
+			
+												<ul class="actions">
+													<li>
+														<div class="display-flex">
+															<div id="addcollect" class="col-8 col-12-medium imp-medium">
+																<a href="../cart/cart.html" class="button style1 large">加入收藏</a>
+															</div>
+															<div id="addcart" class="col-8 col-12-medium imp-medium">
+																<a href="#" class="button style2 large">加入購物車</a>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</section>
+										</div>
+									<% } %>
+									</table>
 							</div>
 				</section>
 
