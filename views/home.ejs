@@ -29,16 +29,17 @@
 					<div class="container">
 						<div class="row aln-center">
 							<table>
-								<% for(var i=0; i < 3; i++) { %>
+								<% for(var i=0; i < <%=howmanybook%>; i++) { %>
 									<div class="col-4 col-12-medium">
 										<section class="books">
 											<a href="#" class="image featured">
 												<img class="imgsrc" src="..\static\images\pic02.jpg" alt="" height="500" />
 											</a>
-											<h3><a href="#" class="name">商品名稱1</a></h3>
-											<p class="author">作者：劉銘</p>
-											<p class="price">價錢：666</p>
-											<p class="bid" id="bid">書籍編號：5155456</p>
+											<h3><a href="../product/product.html" class="name"><%=book.name%></a></h3>
+											<p class="bid" id="bid">書籍編號：<%=book.no%></p>
+											<p class="author">作者：<%=book.writer%></p>
+											<p class="price">價錢：<%=book.money%></p>
+											
 		
 											<ul class="actions">
 												<li>
@@ -64,16 +65,16 @@
 						<div class="container">
 							<div class="row aln-center">
 								<table>
-									<% for(var i=0; i < 6; i++) { %>
+									<% for(var i=0; i < <%=howmanybook%>; i++) { %>
 										<div class="col-4 col-12-medium">
 											<section class="books">
 												<a href="#" class="image featured">
 													<img class="imgsrc" src="..\static\images\pic02.jpg" alt="" height="500" />
 												</a>
-												<h3><a href="#" class="name">商品名稱1</a></h3>
-												<p class="author">作者：劉銘</p>
-												<p class="price">價錢：666</p>
-												<p class="bid" id="bid">書籍編號：5155456</p>
+												<h3><a href="../product/product.html" class="name"><%=book.name%></a></h3>
+												<p class="bid" id="bid">書籍編號：<%=book.no%></p>
+												<p class="author">作者：<%=book.writer%></p>
+												<p class="price">價錢：<%=book.money%></p>
 			
 												<ul class="actions">
 													<li>

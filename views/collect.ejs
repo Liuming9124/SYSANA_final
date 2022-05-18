@@ -68,15 +68,13 @@
 											<table>
 												<% for(var i=0; i < 3; i++) { %>
 													<div class="col-8 col-12-medium imp-medium" id="name">
-														<header>
-															<h3><a href="../product/product.html">我是一本書</a></h3>
-														</header>
+														<header><h3><a href="../product/product.html"><%=book.name%></a></h3></header>
 													</div>
 													<a href="../product/product.html" class="image left"><img src="../static/images/pic10.jpg" alt=""></a>
-															<div class="col-8 col-12-medium imp-medium" id="booknum"><p>書籍編號：5155456</p></div>
-															<div class="col-8 col-12-medium imp-medium" id="writer"><p>作者：劉銘</p></div>
-															<div class="col-8 col-12-medium imp-medium" id="money"><p>價錢：666</p></div>
-															<ul class="actions">
+													<p class="bid" id="bid">書籍編號：<%=book.no%></p>
+													<p class="author">作者：<%=book.writer%></p>
+													<p class="price">價錢：<%=book.money%></p>
+													<ul class="actions">
 																<li>
 																	<div class="display-flex">
 																		<div id="addcart" class="col-8 col-12-medium imp-medium">

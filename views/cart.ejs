@@ -65,14 +65,14 @@
 										<article class="box post">
 											
 											<table>
-												<% for(var i=0; i < 5; i++) { %>
+												<% for(var i=0; i < <%=howmanybook%>; i++) { %>
 													<div class="col-8 col-12-medium imp-medium" id="name">
-														<header><h3><a href="../product/product.html">留名日記</a></h3></header>
+														<header><h3><a href="../product/product.html"><%=book.name%></a></h3></header>
 													</div>
 													<a href="../product/product.html" class="image left"><img src="../static/images/pic10.jpg" alt=""></a>
-													<div class="col-8 col-12-medium imp-medium" id="booknum"><p>書籍編號：5155456</p></div>
-													<div class="col-8 col-12-medium imp-medium" id="writer"><p>作者：劉銘</p></div>
-													<div class="col-8 col-12-medium imp-medium" id="money"><p>價錢：666</p></div>
+													<p class="bid" id="bid">書籍編號：<%=book.no%></p>
+													<p class="author">作者：<%=book.writer%></p>
+													<p class="price">價錢：<%=book.money%></p>
 													<ul class="actions">
 														<li>
 															<div class="display-flex">
@@ -91,7 +91,7 @@
 										</article>
 										<h1>--------------------------------------------------------------------------------------------</h1>
 										<div class="col-12-medium col-24-small" id="money">
-											<h1><p>總共<strong>666</strong>元</p></h1>
+											<h1><p>總共<strong><%=total%></strong>元</p></h1>
 										</div>
 										<div class="col-8 col-24-small" id="checkout">
 											<a href="../checkout/checkout.html" class="button style2 large">結帳</a>
