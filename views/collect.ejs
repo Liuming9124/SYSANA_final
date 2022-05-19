@@ -65,8 +65,9 @@
 								<div id="content" class="col-8 col-12-medium imp-medium">
 									<!-- Post -->
 										<article class="box post">
+											<%if (howmanybook) { %>
+												<% for(var i=0; i < <%=howmanybook%>; i++) { %>
 											<table>
-												<% for(var i=0; i < 3; i++) { %>
 													<div class="col-8 col-12-medium imp-medium" id="name">
 														<header><h3><a href="../product/product.html"><%=book.name%></a></h3></header>
 													</div>
@@ -86,8 +87,20 @@
 																	</div>
 																</li>
 													</ul>
-												<% } %>
 											</table>
+											<% }}%>
+											<%else{%>
+												<section id="features">
+													<div class="container">
+														<header>
+															<h2> <strong>目前收藏沒有商品喔</strong>!</h2>
+														</header>
+													</div>
+													<div class="col-8 col-24-small" >
+														<a  href="../home/home.html" class="button style2 large">去首頁逛逛</a>
+													</div>
+												</section>
+												<%}%>
 										</article>
 								</div>
 								</article>

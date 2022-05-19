@@ -64,6 +64,7 @@
 									<!-- Post -->
 										<article class="box post">
 											
+											<%if (howmanybook) { %>
 											<table>
 												<% for(var i=0; i < <%=howmanybook%>; i++) { %>
 													<div class="col-8 col-12-medium imp-medium" id="name">
@@ -87,7 +88,7 @@
 													</ul>
 												<% } %>
 												</table>
-											
+											<% } %>
 										</article>
 										<h1>--------------------------------------------------------------------------------------------</h1>
 										<div class="col-12-medium col-24-small" id="money">
@@ -96,7 +97,18 @@
 										<div class="col-8 col-24-small" id="checkout">
 											<a href="../checkout/checkout.html" class="button style2 large">結帳</a>
 										</div>
-										
+										<%else{%>
+											<section id="features">
+												<div class="container">
+													<header>
+														<h2> <strong>目前購物車沒有商品喔</strong>!</h2>
+													</header>
+												</div>
+												<div class="col-8 col-24-small" >
+													<a  href="../home/home.html" class="button style2 large">去首頁逛逛</a>
+												</div>
+											</section>
+											<%}%>
 										
 
 								</div>
