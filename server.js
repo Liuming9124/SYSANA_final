@@ -12,20 +12,20 @@ app.set('view engine', 'ejs');
 app.get('/',function(req,res){
   res.render('home',{
     'howmanybook':'1',
-    'book.name':'書本1',
-    'book.no':'00000000',
-    'book.writer':'劉銘',
-    'book.money':'666'
+    'bookname':'書本1',
+    'bookno':'00000000',
+    'bookwriter':'劉銘',
+    'bookmoney':'666'
   });
   // db.select('learn');
 })
 app.get('/cart/*',function(req,res){
   res.render('cart',{
     'howmanybook':'1',
-    'book.name':'書本1',
-    'book.no':'00000000',
-    'book.writer':'劉銘',
-    'book.money':'666',
+    'bookname':'書本1',
+    'bookno':'00000000',
+    'bookwriter':'劉銘',
+    'bookmoney':'666',
     'total':'666'
   });
 })
@@ -38,10 +38,10 @@ app.get('/classification/*',function(req,res){
 app.get('/collect/*',function(req,res){
   res.render('collect',{
     'howmanybook':'1',
-    'book.name':'書本1',
-    'book.no':'00000000',
-    'book.writer':'劉銘',
-    'book.money':'666'
+    'bookname':'書本1',
+    'bookno':'00000000',
+    'bookwriter':'劉銘',
+    'bookmoney':'666'
   });
 })
 app.get('/home/*',function(req,res){
@@ -67,9 +67,9 @@ app.get('/order/*',function(req,res){
 app.get('/product/*', function (req, res) {
   res.render('product',{
     'bookname':'書本1',
-    'book.no':'00000000',
-    'book.writer':'劉銘',
-    'book.money':'666'
+    'bookno':'00000000',
+    'bookwriter':'劉銘',
+    'bookmoney':'666'
   });
 })
 app.get('/rebook/*',function(req,res){

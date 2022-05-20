@@ -11,7 +11,7 @@
 				<div class="container">
 					
 					<!-- Logo -->
-						<h1 id="logo"><a href="../member/member.html">書贏●會員頁面</a></h1>
+						<h1 id="logo"><a href="../product/product.html">書贏●商品頁面</a></h1>
 						<%- include('./partials/nav.ejs') %>
 	
 				<section>
@@ -21,10 +21,19 @@
 							<!-- Highlight -->
 								<article class="box highlight">
 									<a href="#" class="image left"><img src="../static/images/pic06.jpg" alt="" /></a>
-									<header><h3><a href="../product/product.html" class="name" id="name"><%=bookname%></a></h3></header>
-									<p class="bid" id="bid"><p>書籍編號：</p><%=book.no%></p>
-									<p class="author"><p>作者：</p><%=book.writer%></p>
-									<p class="price"><p>價錢：</p><%=book.money%></p>
+									<header><h3><a href="../product/product.html" class="name" id="name">bookname</a></h3></header>
+									<div class="display-flex">
+										<p>書籍編號：</p>	
+										<a class="bid" id="bid">bookno</p>
+									</div>
+									<div class="display-flex">
+										<p>作者：</p>	
+										<a class="writer" id="writer">bookwriter</p>
+									</div>
+									<div class="display-flex">
+										<p>價錢：</p>	
+										<a class="price" id="price">book.money</p>
+									</div>					
 									<ul class="actions">
 										<div class="display-flex">
 												<div id="addcollect" class="col-8 col-12-medium imp-medium"><a href="#" class="button style1 large">加入收藏</a></div>

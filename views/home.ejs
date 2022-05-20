@@ -15,7 +15,7 @@
 				<div class="container">
 			
 					<!-- Logo -->
-					<h1><a href="../home/home.html" id="logo">書贏●首頁</a></h1>
+					<h1><a href="/home" id="logo">書贏●首頁</a></h1>
 					
 			<%- include('./partials/nav.ejs') %>
 				<!-- books -->
@@ -29,18 +29,26 @@
 					<div class="container">
 						<div class="row aln-center">
 							<table>
-								<% for(var i=0; i < <%=howmanybook%>; i++) { %>
+								<% for(var i=0; i < 1; i++) { %>
 									<div class="col-4 col-12-medium">
 										<section class="books">
 											<a href="#" class="image featured">
 												<img class="imgsrc" src="..\static\images\pic02.jpg" alt="" height="500" />
 											</a>
-											<h3><a href="../product/product.html" class="name" id="name"><%=book.name%></a></h3>
-											<p class="bid" id="bid">書籍編號：<%=book.no%></p>
-											<p class="writer" id="writer">作者：<%=book.writer%></p>
-											<p class="price" id="price">價錢：<%=book.money%></p>
+											<h3><a href="/product/" class="name" id="name">bookname</a></h3>
+											<div class="display-flex">
+												<p>書籍編號：</p>	
+												<a class="bid" id="bid">bookno</p>
+											</div>
+											<div class="display-flex">
+												<p>作者：</p>	
+												<a class="writer" id="writer">bookwriter</p>
+											</div>
+											<div class="display-flex">
+												<p>價錢：</p>	
+												<a class="price" id="price">book.money</p>
+											</div>			
 											
-		
 											<ul class="actions">
 												<li>
 													<div class="display-flex">
@@ -65,17 +73,25 @@
 						<div class="container">
 							<div class="row aln-center">
 								<table>
-									<% for(var i=0; i < <%=howmanybook%>; i++) { %>
+									<% for(var i=0; i < 1; i++) { %>
 										<div class="col-4 col-12-medium">
 											<section class="books">
 												<a href="#" class="image featured">
 													<img class="imgsrc" src="..\static\images\pic02.jpg" alt="" height="500" />
 												</a>
-												<h3><a href="../product/product.html" class="name" id="name"><%=book.name%></a></h3>
-											<p class="bid" id="bid">書籍編號：<%=book.no%></p>
-											<p class="writer" id="writer">作者：<%=book.writer%></p>
-											<p class="price" id="price">價錢：<%=book.money%></p>
-			
+												<h3><a href="../product/product.html" class="name" id="name">book.name</a></h3>
+												<div class="display-flex">
+													<p>書籍編號：</p>	
+													<a class="bid" id="bid">bookno</p>
+												</div>
+												<div class="display-flex">
+													<p>作者：</p>	
+													<a class="writer" id="writer">bookwriter</p>
+												</div>
+												<div class="display-flex">
+													<p>價錢：</p>	
+													<a class="price" id="price">book.money</p>
+												</div>			
 												<ul class="actions">
 													<li>
 														<div class="display-flex">
