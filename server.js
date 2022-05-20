@@ -66,7 +66,7 @@ app.get('/order/*',function(req,res){
 })
 app.get('/product/*',function(req,res){
   res.render('product',{
-    'book.name':'書本1',
+    'bookname':'書本1',
     'book.no':'00000000',
     'book.writer':'劉銘',
     'book.money':'666',
