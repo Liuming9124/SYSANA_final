@@ -41,7 +41,13 @@ app.get('/order/*',function(req,res){
   res.render('order');
 })
 app.get('/product/*',function(req,res){
-  res.render('product');
+  res.render('product',{
+    'book.name':'書本1',
+    'book.no':'00000000',
+    'book.writer':'劉銘',
+    'book.money':'666',
+  });
+  
 })
 app.get('/rebook/*',function(req,res){
   res.render('rebook');
