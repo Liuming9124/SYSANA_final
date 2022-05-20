@@ -15,7 +15,7 @@ app.get('/',function(req,res){
     'book.name':'書本1',
     'book.no':'00000000',
     'book.writer':'劉銘',
-    'book.money':'666',
+    'book.money':'666'
   });
   // db.select('learn');
 })
@@ -26,7 +26,7 @@ app.get('/cart/*',function(req,res){
     'book.no':'00000000',
     'book.writer':'劉銘',
     'book.money':'666',
-    'total':'666',
+    'total':'666'
   });
 })
 app.get('/chbook/*',function(req,res){
@@ -41,7 +41,7 @@ app.get('/collect/*',function(req,res){
     'book.name':'書本1',
     'book.no':'00000000',
     'book.writer':'劉銘',
-    'book.money':'666',
+    'book.money':'666'
   });
 })
 app.get('/home/*',function(req,res){
@@ -55,7 +55,7 @@ app.get('/member/*',function(req,res){
     'name':'劉銘',
     'email':'liuliuming@liumail.com',
     'phone':'0986138613',
-    'password':'098613',
+    'password':'098613'
   });
 })
 app.get('/merchant/*',function(req,res){
@@ -64,14 +64,13 @@ app.get('/merchant/*',function(req,res){
 app.get('/order/*',function(req,res){
   res.render('order');
 })
-app.get('/product/*',function(req,res){
+app.get('/product/*', function (req, res) {
   res.render('product',{
     'bookname':'書本1',
     'book.no':'00000000',
     'book.writer':'劉銘',
-    'book.money':'666',
+    'book.money':'666'
   });
-  
 })
 app.get('/rebook/*',function(req,res){
   res.render('rebook');
