@@ -58,8 +58,8 @@ var db = {
           throw err;
         }
         else {
-          // console.log(learn);
-          res.render()
+          console.log(learn);
+          return learn;
         }
       });
     }
