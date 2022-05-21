@@ -29,23 +29,24 @@
 					<div class="container">
 						<div class="row aln-center">
 							<table>
+								<% for (var i=0 ; i < 6 ; i++) { %>
 									<div class="col-4 col-12-medium">
 										<section class="books">
 											<a href="#" class="image featured">
-												<img class="imgsrc" src="..\static\BookImg\<%=book_img%>" alt="" height="500" />
+												<img class="imgsrc" src="..\static\BookImg\<%=random[i].book_img%>" alt="" height="500" />
 											</a>
-											<h3><a href="/product/" class="name" id="name"> <%=book_name %> </a></h3>
+											<h3><a href="/product/" class="name" id="name"> <%=random[i].book_name %> </a></h3>
 											<div class="display-flex">
 												<p>書籍編號：</p>	
-												<a class="bid" id="bid"><%= book_id %></p>
+												<a class="bid" id="bid"><%= random[i].book_id %></p>
 											</div>
 											<div class="display-flex">
 												<p>作者：</p>	
-												<a class="writer" id="writer"><%= book_type %></p>
+												<a class="writer" id="writer"><%= random[i].book_type %></p>
 											</div>
 											<div class="display-flex">
 												<p>價錢：</p>	
-												<a class="price" id="price"><%=book_price%></p>
+												<a class="price" id="price"><%= random[i].book_price%></p>
 											</div>			
 											
 											<ul class="actions">
@@ -62,33 +63,36 @@
 											</ul>
 										</section>
 									</div>
-								</table>
+								<% } %>
+							</table>
 						</div>
 
 						<!-- books2 -->
-						<!-- <p> </p>
+						<p> </p>
 						<h3>熱門商品</h3>
 						<div class="container">
 							<div class="row aln-center">
 								<table>
+									<% for (var i=0 ; i < 6 ; i++) { %>
 										<div class="col-4 col-12-medium">
 											<section class="books">
 												<a href="#" class="image featured">
-													<img class="imgsrc" src="..\static\images\pic02.jpg" alt="" height="500" />
+													<img class="imgsrc" src="..\static\BookImg\<%=hot[i].book_img%>" alt="" height="500" />
 												</a>
-												<h3><a href="../product/product.html" class="name" id="name">book.name</a></h3>
+												<h3><a href="/product/" class="name" id="name"> <%=hot[i].book_name %> </a></h3>
 												<div class="display-flex">
 													<p>書籍編號：</p>	
-													<a class="bid" id="bid">bookno</p>
+													<a class="bid" id="bid"><%= hot[i].book_id %></p>
 												</div>
 												<div class="display-flex">
 													<p>作者：</p>	
-													<a class="writer" id="writer">bookwriter</p>
+													<a class="writer" id="writer"><%= hot[i].book_type %></p>
 												</div>
 												<div class="display-flex">
 													<p>價錢：</p>	
-													<a class="price" id="price">book.money</p>
+													<a class="price" id="price"><%= hot[i].book_price%></p>
 												</div>			
+												
 												<ul class="actions">
 													<li>
 														<div class="display-flex">
@@ -103,8 +107,9 @@
 												</ul>
 											</section>
 										</div>
-									</table>
-							</div> -->
+									<% } %>
+								</table>
+							</div>
 				</section>
 
 

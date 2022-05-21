@@ -21,55 +21,6 @@ var db = {
   },
   disconn: function (diconn) { //斷開連線
     connection.end()
-  },
-  select: async (type, res, next) => {
-    try{
-      if (type == 'random') {
-        await connection.query("SELECT * FROM product order By Rand()", function (err, random, fields) {
-          if (err) {
-            throw err;
-          }
-          else {
-            return (random);
-          }
-        });
-      }
-      else if (type == 'learn') {
-        await connection.query("SELECT * FROM product where book_type ='learn'", function (err, learn, fields) {
-          if (err) {
-            throw err;
-          }
-          else {
-            return (learn);
-          }
-        });
-      }
-      else if (type == 'hot') {
-        await connection.query("SELECT * FROM product where book_type ='hot'", function (err, hot, fields) {
-          if (err) {
-            throw err;
-          }
-          else {
-            return (hot);
-          }
-        })
-      }
-      else if (type == 'discount') {
-        await connection.query("SELECT * FROM product where book_type ='discount'", function (err, discount, fields) {
-          if (err) {
-            throw err;
-          }
-          else {
-            return (discount);
-          }
-        })
-      }
-    } catch(err){
-      console.log(err)
-      return next(err)
-    }
-
-    
   }
 }
 module.exports = db;
