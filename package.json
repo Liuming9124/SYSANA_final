@@ -7,5 +7,22 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "sysana_final",
+  "description": "SYSANA_final \r 系統分析期末專題",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Liuming9124/SYSANA_final.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Liuming9124/SYSANA_final/issues"
+  },
+  "homepage": "https://github.com/Liuming9124/SYSANA_final#readme"
 }
