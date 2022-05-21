@@ -29,7 +29,7 @@
 					<div class="container">
 						<div class="row aln-center">
 							<table>
-								<% for(var i=0; i < 1; i++) { %>
+								<% for(var i=0; i<"[{\"id\":1,\"name\":\"bob\"},{\"id\":2,\"name\":\"john\"},{\"id\":3,\"name\":\"jake\"}]".length; i++) {%>
 									<div class="col-4 col-12-medium">
 										<section class="books">
 											<a href="#" class="image featured">
@@ -38,11 +38,11 @@
 											<h3><a href="/product/" class="name" id="name">bookname</a></h3>
 											<div class="display-flex">
 												<p>書籍編號：</p>	
-												<a class="bid" id="bid">bookno</p>
+												<a class="bid" id="bid">JSON.stringify(id)</p>
 											</div>
 											<div class="display-flex">
 												<p>作者：</p>	
-												<a class="writer" id="writer">bookwriter</p>
+												<a class="writer" id="writer">JSON.stringify(name)</p>
 											</div>
 											<div class="display-flex">
 												<p>價錢：</p>	

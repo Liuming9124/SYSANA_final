@@ -2,14 +2,16 @@
 
 const homeController = {
     homePage: (req, res) => {
-        return res.render('home',{
-            'howmanybook':'1',
-            'bookname':'書本1',
-            'bookno':'00000000',
-            'bookwriter':'劉銘',
-            'bookmoney':'666'
-          })
+        var data = [
+            { id: 1, name: "bob" },
+            { id: 2, name: "john" },
+            { id: 3, name: "jake" },
+        ];
+        
+        JSON.stringify(data)
+        return res.render('home')
     }
+    
 }
 
 module.exports = homeController
