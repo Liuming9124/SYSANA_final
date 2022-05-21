@@ -90,7 +90,6 @@ app.get('/collect/*',function(req,res){
     'bookname':'書本1',
     'bookno':'00000000',
     'bookwriter':'劉銘',
-    'bookmoney':'666',
     'bookmoney':'666'
   });
 })
