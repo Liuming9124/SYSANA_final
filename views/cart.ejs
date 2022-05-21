@@ -11,7 +11,7 @@
 				<div class="container">
 					
 			<!-- Logo -->
-				<h1 id="logo"><a href="../cart/cart.html">書贏●購物車</a></h1>
+				<h1 id="logo"><a href="/cart">書贏●購物車</a></h1>
 					<%- include('./partials/nav.ejs') %>
 					<!-- Main -->
 				<section id="main">
@@ -28,8 +28,8 @@
 													<!-- Excerpt -->
 														<article class="box excerpt">
 															<header>
-																<span class="date" href="../cart/cart.html">我的購物車</span>
-																<h3><a href="../cart/cart.html">快來把商品帶回家</a></h3>
+																<span class="date" href="/cart">我的購物車</span>
+																<h3><a href="/cart">快來把商品帶回家</a></h3>
 															</header>
 														</article>
 
@@ -39,8 +39,8 @@
 													<!-- Excerpt -->
 														<article class="box excerpt">
 															<header>
-																<span class="date" href="../collect/collect.html">我的收藏</span>
-																<h3><a href="../collect/collect.html">快來把收藏加入購物車</a></h3>
+																<span class="date" href="/collect">我的收藏</span>
+																<h3><a href="/collect">快來把收藏加入購物車</a></h3>
 															</header>
 														</article>
 
@@ -50,8 +50,8 @@
 													<!-- Excerpt -->
 														<article class="box excerpt">
 															<header>
-																<span class="date" href="../order/order.html">我的訂單</span>
-																<h3><a href="../order/order.html">查看我的訂單</a></h3>
+																<span class="date" href="../order">我的訂單</span>
+																<h3><a href="/order">查看我的訂單</a></h3>
 															</header>
 														</article>
 
@@ -64,16 +64,16 @@
 									<!-- Post -->
 										<article class="box post">
 											
-											<%if (<%=howmanybook%>) { %>
+											<%if (howmanybook) { %>
 											<table>
-												<% for(var i=0; i < <%=howmanybook%>; i++) { %>
+												<% for(var i=0; i < howmanybook; i++) { %>
 													<div class="col-8 col-12-medium imp-medium" id="name">
-														<header><h3><a href="../product/product.html"><%=book.name%></a></h3></header>
+														<header><h3><a href="/product"><%=book.name%></a></h3></header>
 													</div>
-													<a href="../product/product.html" class="image left"><img src="../static/images/pic10.jpg" alt=""></a>
-													<p class="bid" id="bid">書籍編號：<%=book.no%></p>
-													<p class="author">作者：<%=book.writer%></p>
-													<p class="price">價錢：<%=book.money%></p>
+													<a href="/product" class="image left"><img src="../static/images/pic10.jpg" alt=""></a>
+													<p class="bid" id="bid">書籍編號：book.no</p>
+													<p class="author">作者：book.writer</p>
+													<p class="price">價錢：book.money</p>
 													<ul class="actions">
 														<li>
 															<div class="display-flex">
@@ -95,7 +95,7 @@
 											<h1><p>總共<strong><%=total%></strong>元</p></h1>
 										</div>
 										<div class="col-8 col-24-small" id="checkout">
-											<a href="../checkout/checkout.html" class="button style2 large">結帳</a>
+											<a href="/checkout" class="button style2 large">結帳</a>
 										</div>
 										<%else{%>
 											<section id="features">
@@ -105,7 +105,7 @@
 													</header>
 												</div>
 												<div class="col-8 col-24-small" >
-													<a  href="../home/home.html" class="button style2 large">去首頁逛逛</a>
+													<a  href="/home" class="button style2 large">去首頁逛逛</a>
 												</div>
 											</section>
 											<%}%>

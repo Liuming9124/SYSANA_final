@@ -11,7 +11,7 @@
 				<div class="container">
 					
 					<!-- Logo -->
-						<h1 id="logo"><a href="../collect/collect.html">書贏●我的收藏</a></h1>
+						<h1 id="logo"><a href="/collect">書贏●我的收藏</a></h1>
 						<%- include('./partials/nav.ejs') %>
 	
 					<!-- Main -->
@@ -65,13 +65,13 @@
 								<div id="content" class="col-8 col-12-medium imp-medium">
 									<!-- Post -->
 										<article class="box post">
-											<%if (<%=howmanybook%>) { %>
-												<% for(var i=0; i < <%=howmanybook%>; i++) { %>
+											<%if (howmanybook) { %>
+												<% for(var i=0; i < howmanybook; i++) { %>
 											<table>
 													<div class="col-8 col-12-medium imp-medium" id="name">
-														<header><h3><a href="../product/product.html"><%=book.name%></a></h3></header>
+														<header><h3><a href="/product"><%=book.name%></a></h3></header>
 													</div>
-													<a href="../product/product.html" class="image left"><img src="../static/images/pic10.jpg" alt=""></a>
+													<a href="/product" class="image left"><img src="../static/images/pic10.jpg" alt=""></a>
 													<p class="bid" id="bid">書籍編號：<%=book.no%></p>
 													<p class="author">作者：<%=book.writer%></p>
 													<p class="price">價錢：<%=book.money%></p>
@@ -79,7 +79,7 @@
 																<li>
 																	<div class="display-flex">
 																		<div id="addcart" class="col-8 col-12-medium imp-medium">
-																			<a href="../cart/cart.html" class="button style1 large">加入購物車</a>
+																			<a href="/cart" class="button style1 large">加入購物車</a>
 																		</div>
 																		<div id="outcollect" class="col-8 col-12-medium imp-medium">
 																			<a href="#" class="button style2 large">移除收藏</a>
@@ -97,7 +97,7 @@
 														</header>
 													</div>
 													<div class="col-8 col-24-small" >
-														<a  href="../home/home.html" class="button style2 large">去首頁逛逛</a>
+														<a  href="/home" class="button style2 large">去首頁逛逛</a>
 													</div>
 												</section>
 												<%}%>
