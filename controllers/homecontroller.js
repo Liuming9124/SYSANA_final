@@ -29,6 +29,7 @@ const homeController = {
                 // console.log(random);
                 console.log(random[0]);
                 res.render('home',{
+                    'book_img'  : random[0].book_img,
                     'book_name' : random[0].book_name,
                     'book_id'   : random[0].book_id,
                     'book_type' : random[0].book_type,
