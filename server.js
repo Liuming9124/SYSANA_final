@@ -114,12 +114,7 @@ app.get('/order/*',function(req,res){
   res.render('order');
 })
 app.get('/product/*', function (req, res) {
-  res.render('product',{
-    'bookname':'書本1',
-    'bookno':'00000000',
-    'bookwriter':'劉銘',
-    'bookmoney':'666'
-  });
+  res.render('product');
 })
 app.get('/rebook/*',function(req,res){
   res.render('rebook');
