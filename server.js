@@ -59,24 +59,11 @@ db.conn();
 
 // db.conn();
 app.get('/',function(req,res){
-  res.render('home',{
-    'howmanybook':'1',
-    'bookname':'書本1',
-    'bookno':'00000000',
-    'bookwriter':'劉銘',
-    'bookmoney':'666'
-  });
+  res.render('home');
   // db.select('learn');
 })
 app.get('/cart/*',function(req,res){
-  res.render('cart',{
-    'howmanybook':'1',
-    'bookname':'書本1',
-    'bookno':'00000000',
-    'bookwriter':'劉銘',
-    'bookmoney':'666',
-    'total':'666'
-  });
+  res.render('cart');
 })
 app.get('/chbook/*',function(req,res){
   res.render('chbook');
@@ -85,13 +72,7 @@ app.get('/classification/*',function(req,res){
   res.render('classification');
 })
 app.get('/collect/*',function(req,res){
-  res.render('collect',{
-    'howmanybook':'1',
-    'bookname':'書本1',
-    'bookno':'00000000',
-    'bookwriter':'劉銘',
-    'bookmoney':'666'
-  });
+  res.render('collect');
 })
 app.get('/home/*',function(req,res){
   res.render('home');
@@ -100,12 +81,7 @@ app.get('/login/*',function(req,res){
   res.render('login');
 })
 app.get('/member/*',function(req,res){
-  res.render('member',{
-    'name':'劉銘',
-    'email':'liuliuming@liumail.com',
-    'phone':'0986138613',
-    'password':'098613'
-  });
+  res.render('member');
 })
 app.get('/merchant/*',function(req,res){
   res.render('merchant');
