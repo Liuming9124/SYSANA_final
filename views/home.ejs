@@ -29,24 +29,23 @@
 					<div class="container">
 						<div class="row aln-center">
 							<table>
-								<% for(var i=0; i<"[{\"id\":1,\"name\":\"bob\"},{\"id\":2,\"name\":\"john\"},{\"id\":3,\"name\":\"jake\"}]".length; i++) {%>
 									<div class="col-4 col-12-medium">
 										<section class="books">
 											<a href="#" class="image featured">
 												<img class="imgsrc" src="..\static\images\pic02.jpg" alt="" height="500" />
 											</a>
-											<h3><a href="/product/" class="name" id="name">book.name</a></h3>
+											<h3><a href="/product/" class="name" id="name"> <%=book_name %> </a></h3>
 											<div class="display-flex">
 												<p>書籍編號：</p>	
-												<a class="bid" id="bid"><%= data[i].id %></p>
+												<a class="bid" id="bid"><%= book_id %></p>
 											</div>
 											<div class="display-flex">
 												<p>作者：</p>	
-												<a class="writer" id="writer"><%= data[i].name %></p>
+												<a class="writer" id="writer"><%= book_type %></p>
 											</div>
 											<div class="display-flex">
 												<p>價錢：</p>	
-												<a class="price" id="price">book.money</p>
+												<a class="price" id="price"><%=book_price%></p>
 											</div>			
 											
 											<ul class="actions">
@@ -63,17 +62,15 @@
 											</ul>
 										</section>
 									</div>
-								<% } %>
 								</table>
 						</div>
 
 						<!-- books2 -->
-						<p> </p>
+						<!-- <p> </p>
 						<h3>熱門商品</h3>
 						<div class="container">
 							<div class="row aln-center">
 								<table>
-									<% for(var i=0; i < 1; i++) { %>
 										<div class="col-4 col-12-medium">
 											<section class="books">
 												<a href="#" class="image featured">
@@ -106,9 +103,8 @@
 												</ul>
 											</section>
 										</div>
-									<% } %>
 									</table>
-							</div>
+							</div> -->
 				</section>
 
 
