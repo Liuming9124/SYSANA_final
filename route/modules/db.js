@@ -1,7 +1,5 @@
 const express = require('express');
 const mysql = require('mysql');
-const { json } = require('express/lib/response');
-const res = require('express/lib/response');
 
 
 //start to connect db
