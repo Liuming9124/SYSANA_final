@@ -11,11 +11,14 @@ app.set('view engine', 'ejs');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser('book'));
+app.use(cookieParser('secret'));
 app.use(session({
   secret: 'book',
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: true,
+  cookie : {
+    maxAge : 1000 * 60 * 3, // 設定 session 的有效時間，單位毫秒
+  }    
 }))
 
 //建立 server

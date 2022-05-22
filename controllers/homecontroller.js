@@ -1,4 +1,3 @@
-var db = require('../route/modules/db')
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
@@ -22,7 +21,6 @@ const homeController = {
                     }
                     else {
                         res.render('home', { 'random': random, 'hot': hot });
-                    
                     }
                 })
 
