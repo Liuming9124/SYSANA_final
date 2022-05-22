@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+
 <html>
 	<!--head-->
 	<head>
@@ -29,6 +30,10 @@
 					<div class="container">
 						<div class="row aln-center">
 							<table>
+								<script>
+									var row =<%-JSON.stringify(data)%>
+									console.log(row);
+								</script>
 								<% for(var i=0; i<"[{\"id\":1,\"name\":\"bob\"},{\"id\":2,\"name\":\"john\"},{\"id\":3,\"name\":\"jake\"}]".length; i++) {%>
 									<div class="col-4 col-12-medium">
 										<section class="books">
