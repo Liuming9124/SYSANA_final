@@ -10,6 +10,7 @@ const rebook     = require('./modules/rebook')
 const register   = require('./modules/register')
 const service    = require('./modules/service')
 const wishlist   = require('./modules/wishlist')
+const classes      = require('./modules/classes')
 
 // const { authenticated } = require('../middleware/auth')
 
@@ -26,5 +27,6 @@ module.exports = app => {
   app.use('/register', register)
   app.use('/service', service)
   app.use('/wishlist', wishlist)
+  app.use('/classification', classes )
   app.use('/', (req, res) => { return res.redirect('/home') })
 }

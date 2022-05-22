@@ -25,13 +25,15 @@
 							<h3>漫畫</h3>
 							<div class="container">
 								<div class="row aln-center">
-									<% for (var i=0 ; i < 6 ; i++) { %>
+									<% for (var i=0 ; i < type.length ; i++) { %>
 									<div class="col-4 col-12-medium">
 										<section class="books">
-											<a href="#" class="image featured"><img src="..\static\images\<%=random[i].book_img%>" alt="" /></a>
-											<h3><a class="name" id="name">商品名稱:<%=randion[i].name%> </a></h3>
-											<p class="author" id="author">作者：<%=randion[i].author%></p>
-											<p class="price" id="price">價錢：<%=randion[i].price%> </p>
+											<a href="#" class="image featured">
+												<img class="imgsrc" src="..\static\BookImg\<%=type[i].book_img%>" alt="" height="500" />
+											</a>
+											<h3><a class="name" id="name">商品名稱:<%=type[i].book_name%> </a></h3>
+											<p class="author" id="author">作者：<%=type[i].author%></p>
+											<p class="price" id="price">價錢：<%=type[i].book_price%> </p>
 											<ul class="actions">
 												<li>
 													<div class="display-flex">
