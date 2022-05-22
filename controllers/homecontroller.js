@@ -22,6 +22,7 @@ const homeController = {
                     }
                     else {
                         res.render('home', { 'random': random, 'hot': hot });
+                    
                     }
                 })
 

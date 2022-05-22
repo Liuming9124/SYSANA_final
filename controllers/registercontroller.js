@@ -1,3 +1,5 @@
+const Connection = require("mysql/lib/Connection")
+const { UCS2_PERSIAN_CI } = require("mysql/lib/protocol/constants/charsets")
 
 
 const registerController = {
@@ -5,5 +7,18 @@ const registerController = {
         return res.render('register')
     }
 }
+const Addregister = { //插入資料(固定)
+    AddregisterPage: (req, res) => {
+        var sql = "INSERT INTO users(email,username,userpassword,phone,useraddr,point) VALUES('book2@gmail.com','測試','book2','0912345678','翰林學園',0)";
+        connection.query(sql, function (err, result) {
+            if (err) {
+                throw err;
+            }
+            else {
+                console.log("successful");
+            }
+        })
+    }
 
+}
 module.exports = registerController
