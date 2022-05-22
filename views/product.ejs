@@ -21,18 +21,18 @@
 							<!-- Highlight -->
 								<article class="box highlight">
 									<a href="#" class="image left"><img src="../static/images/pic06.jpg" alt="" /></a>
-									<header><h3><a href="../product/product.html" class="name" id="name">bookname</a></h3></header>
+									<header><h3><a href="../product/product.html" class="name" id="name"><%= bookname %></a></h3></header>
 									<div class="display-flex">
 										<p>書籍編號：</p>	
-										<a class="bid" id="bid">bookno</p>
+										<a class="bid" id="bid"><%= bookno %></p>
 									</div>
 									<div class="display-flex">
 										<p>作者：</p>	
-										<a class="writer" id="writer">bookwriter</p>
+										<a class="writer" id="writer"><%= bookwriter %></p>
 									</div>
 									<div class="display-flex">
 										<p>價錢：</p>	
-										<a class="price" id="price">book.money</p>
+										<a class="price" id="price"><%= bookmoney%></p>
 									</div>					
 									<ul class="actions">
 										<div class="display-flex">
@@ -45,6 +45,7 @@
 								</article>
 								<div id="buy" class="col-8 col-12-medium imp-medium"><input type ="button" javascript:location.href="../cart/cart.html" value="購買"></input>
 								</li></div>
+								<p><%= bookinfo %></p>
 					</ul>
 				</section>	
 

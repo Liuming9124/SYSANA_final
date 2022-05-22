@@ -5,7 +5,6 @@ const cartController = require('../../controllers/cartcontroller')
 
 
 router.get('/', cartController.cartPage)
-router.get('/cart', cartController.cartPage)
 
 
 

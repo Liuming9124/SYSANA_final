@@ -5,7 +5,7 @@ const productController = require('../../controllers/productcontroller')
 
 
 
-router.get('/', productController.productPage)
+router.get('/:id', productController.productPage)
 
 
 

@@ -33,10 +33,10 @@
 								<% for (var i=0 ; i < 6 ; i++) { %>
 									<div class="col-4 col-12-medium">
 										<section class="books">
-											<a href="#" class="image featured">
+											<a href="/product/<%=random[i].book_id%>" class="image featured">
 												<img class="imgsrc" src="..\static\BookImg\<%=random[i].book_img%>" alt="" height="500" />
 											</a>
-											<h3><a href="/product/" class="name" id="name"> <%=random[i].book_name %> </a></h3>
+											<h3><a href="/product/<%=random[i].book_id%> class="name" id="name"> <%=random[i].book_name %> </a></h3>
 											<div class="display-flex">
 												<p>書籍編號：</p>	
 												<a class="bid" id="bid"><%= random[i].book_id %></a>
@@ -77,10 +77,10 @@
 									<% for (var i=0 ; i < 6 ; i++) { %>
 										<div class="col-4 col-12-medium">
 											<section class="books">
-												<a href="#" class="image featured">
+												<a href="/product/<%=hot[i].book_id%>" class="image featured">
 													<img class="imgsrc" src="..\static\BookImg\<%=hot[i].book_img%>" alt="" height="500" />
 												</a>
-												<h3><a href="/product/" class="name" id="name"> <%=hot[i].book_name %> </a></h3>
+												<h3><a href="/product/<%=hot[i].book_id%>" class="name" id="name"> <%=hot[i].book_name %> </a></h3>
 												<div class="display-flex">
 													<p>書籍編號：</p>	
 													<a class="bid" id="bid"><%= hot[i].book_id %></p>
