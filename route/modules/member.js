@@ -6,6 +6,7 @@ const memberController = require('../../controllers/membercontroller')
 
 
 router.get('/', memberController.memberPage)
+router.post('/update', memberController.memberUpdate)
 
 
 

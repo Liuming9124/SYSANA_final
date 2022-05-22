@@ -17,7 +17,7 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
   cookie : {
-    maxAge : 1000 * 60 * 3, // 設定 session 的有效時間，單位毫秒
+    maxAge : 1000 * 60 * 10, // 設定 session 的有效時間，單位毫秒
   }    
 }))
 
