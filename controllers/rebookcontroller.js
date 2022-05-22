@@ -2,7 +2,7 @@
 
 const rebookController = {
     rebookPage: (req, res) => {
-        return res.render('rebook')
+        return res.render('rebook',{'bookcoin':'0'})
     }
 }
 

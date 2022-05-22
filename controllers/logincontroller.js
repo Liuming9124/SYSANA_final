@@ -29,7 +29,8 @@ const loginController = {
                 }
             }
             if(count==result.length){
-                console.log("登入失敗");
+                // return res.render('login', { 'result': '登入失敗' });
+                 console.log("登入失敗");
             }
         })
         // console.log(user.username);

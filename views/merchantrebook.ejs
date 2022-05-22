@@ -2,12 +2,7 @@
 <html>
 	<head>
 		<title>書贏●商家頁面-回收書</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../static/css/main.css" />
-		<script src="http://code.jquery.com/jquery-latest.js"></script>
-		<script src="../model/merchant.js"></script>
-	</head>
+		<%- include('./partials/headermerch.ejs') %>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
 
@@ -21,43 +16,34 @@
 						<h1 id="logo"><a href="/merchant">書贏●商家頁面-回收書</a></h1>
 						
 						<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a class="icon solid fa-cog" href="/merchant/merchantchbook"><span>交換書</span></a></li>
-								<li><a class="icon solid fa-retweet" href="/merchant/merchantrebook"><span>回收書</span></a></li>
-								<li><a class="icon solid fa-sitemap" href="/merchant/mechantorder"><span>訂單確認</span></a></li>
-								<li><a class="icon fa-chart-bar" href="/merchant/merchantupload"><span>上架商品</span></a></li>
-								</ul>
-							</nav>
-
-					</div>
-				</section>
+						<%- include('./partials/navmerch.ejs') %>
 				
 			<!-- Post -->
 			<article class="box post">
 				<header>
 					<h3>查看回收書資料：</h3>
 				</header>
-				<a href="#" class="image left"><img src="../static/images/pic11.jpg" alt=""></a>
-				<h3><strong><a class="reuser">回收用戶：</a></strong></h3>
+				<% for (var i=0 ; i < 6 ; i++) { %>
+				<a href="#" class="image left"><img src="../static/images/<%=random[i].book_img%>" alt=""></a>
+				<h3><strong><a class="reuser" id="reuser">回收用戶：<%=random[i].reuser%></a></strong></h3>
 				<div class="rebookname">
-					<p>回收書籍：</p>
+					<p id="rebookname">回收書籍：<%=random[i].rebookname%></p>
 				</div>
 				<div class="price">
-					<p>書籍原價：</p>
+					<p id="price">書籍原價：<%=random[i].price%></p>
 				</div>
 				<div class="box post">
-					<p>回收要求價格區間<input type="text" id="down" placeholder="最低">~<input type="text" id="up" placeholder="最高"></p>
+					<p>回收要求價格區間<input type="text" id="down" placeholder="最低" name="down">~<input type="text" id="up" placeholder="最高" name="up"></p>
 				</div>
 				
 				<form action="" method="POST">
 					<div style="height: 60px;" class="box post">
-						<input  type="text" id="howmuch" placeholder="價格為多少" size=10 autocomplete="on">
+						<input  type="text" id="howmuch" placeholder="價格為多少" size=10 autocomplete="on" name="howmuch">
 					</div>
 				</form>
 				<form action="" method="POST">
 					<div style="height: 60px;" class="box post">
-						<input  type="text" id="getpoint" placeholder="獲得點數" size=10 autocomplete="on">
+						<input  type="text" id="getpoint" placeholder="獲得點數" size=10 autocomplete="on" name="getpoint">
 					</div>
 				</form>
 				<ul class="actions">
@@ -76,6 +62,7 @@
 						</form>
 					</li>
 				</ul>
+				<% } %>
 			</article>
 
 		<!-- Scripts -->
