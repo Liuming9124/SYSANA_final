@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../static/css/main.css" rel="stylesheet">
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
-		<script src="../model/wishlist.js"></script>
+		<!-- <script src="../static/js/register.js"></script> -->
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -70,33 +70,37 @@
 										<header>
 											<h1 style="height: 60px;"><font size=8>加入會員</font></h1>
 										</header>
-										<form action=" " method="POST">
+										<form action="/register/add" method="POST">
 											<a>姓名:</a>
 											<div style="height: 60px; width: 265px;" class="box post">
-												<input type="text" id="name" placeholder="姓名" size=20 autocomplete="on">
-											</div>
-											<a>帳號:</a>
-											<div style="height: 60px; width: 265px;" class="box post">
-												<input type="text" id="username" placeholder="帳號" size=20 autocomplete="on">
+												<input type="text" id="name" placeholder="姓名" size=20 autocomplete="on" name="name">
 											</div>
 											<a>密碼:</a>
 											<div style="height: 60px; width: 265px;" class="box post">
-												<input type="password" id="password" placeholder="密碼" size=20 autocomplete="off">
+												<input type="password" id="password" placeholder="密碼" size=20 autocomplete="off" name="password">
 											</div>
 											<a>電子信箱:</a>
 											<div style="height: 60px; width: 265px;" class="box post">
-												<input type="email" id="email" placeholder="信箱" size=20 autocomplete="on">
+												<input type="email" id="email" placeholder="信箱" size=20 autocomplete="on" name="email">
 											</div>
 											<a>電話號碼:</a>
 											<div style="height: 60px; width: 265px;" class="box post">
-												<input type="text" id="phone" placeholder="電話" size=20 autocomplete="on">
+												<input type="text" id="phone" placeholder="電話" size=20 autocomplete="on" name="phone">
+											</div>
+											<a>地址:</a>
+											<div style="height: 60px; width: 265px;" class="box post">
+												<input type="text" id="address" placeholder="地址" size=20 autocomplete="on" name="address">
 											</div>
 											
 											<div  class="box post" id="registerbutton">
 												<input type="submit" value="註冊">
 											</div>
 										</form>
-										
+										<h3>
+											<div  class="box post">
+												<a href="/login"><%= result %></a>
+											</div>	
+										</h3>
 									</article>
 										
 							

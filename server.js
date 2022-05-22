@@ -2,10 +2,15 @@ var express = require('express');
 var path    = require('path');
 var db      = require('./route/modules/db');
 var app     = express();
+var cookieParser = require('cookie-parser');
 
 app.set('views', './views')
 app.set('view engine', 'ejs');
 
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 //建立 server
 
