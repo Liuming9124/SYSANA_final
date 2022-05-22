@@ -9,15 +9,20 @@ const connection = mysql.createConnection({
 
 const cartController = {
     cartPage: (req, res) => {
+        if(req.session.userName){
+            connection.query("SELECT * FROM product where book_type ='hot'", function (err, hot, fields) {
+                if (err) {
+                    throw err;
+                }
+                else {
+                    return res.render('cart', { 'cartbook': hot, 'total' : '100' });
+                }
+            })
+        }
+        else{
+            res.redirect('/login');
+        }
         
-        connection.query("SELECT * FROM product where book_type ='hot'", function (err, hot, fields) {
-            if (err) {
-                throw err;
-            }
-            else {
-                res.render('cart', { 'cartbook': hot, 'total' : '100' });
-            }
-        })
     }
 }
 
