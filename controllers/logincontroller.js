@@ -23,7 +23,7 @@ const loginController = {
                     console.log("登入成功");
                     req.session.userName = req.body.username; // 登入成功，設定 session
                     console.log(req.session.userName);
-                    res.redirect('/');
+                    res.redirect('/member');
                     break;
                 }
                 else {

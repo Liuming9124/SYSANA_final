@@ -18,16 +18,33 @@ const memberController = {
         
     },
     memberUpdate: (req, res) => {
-        console.log(req.session);
         var data = req.body;
         console.log(data);
+        if ('book' == data.password){
 
-        if (data.password == result.password){
+            if (data.newpass == '' && data.newpass2 == '' ){
+                //only update name or phone
+            }
+            else{
+                if (data.newpass == data.newpass2){
+
+                }
+                else{
+                    //you need to input the
+                }
+            }
+
+
+
+
+        }
+        
+        if ('book' == data.password){
             if (data.newpass == data.newpass2){
                 //更新到新密碼
             }
             else{
-                
+
             }
         }
         else{
