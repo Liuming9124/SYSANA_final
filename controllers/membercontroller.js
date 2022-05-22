@@ -1,44 +1,77 @@
+const mysql = require('mysql');
 
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'book',
+    password: 'book',
+    database: 'book'
+})
 
 const memberController = {
     memberPage: (req, res) => {
         console.log(req.session);
-        if(req.session.userName){
-            return res.render('member', {
-                'name': '劉銘',
-                'email': 'liuliuming@liumail.com',
-                'phone': '0986138613',
-                'password': '',
-                'bookcoin':'0',
-                'updatestatus':'編輯成功與否資訊'
+        if (req.session.userName) {
+            connection.query("SELECT * FROM users", function (err, result) {
+                for (var i = 0; i < result.length; i++) {
+                    if (req.session.userName == result[i].email) {
+                        console.log(result)
+                        return res.render('member', {
+                            'name': result[i].username,
+                            'phone': result[i].phone,
+                            'bookcoin': '0',
+                            'updatestatus': '編輯成功與否資訊'
+                        })
+                    }
+                }
             })
         }
-        else{
+        else {
             res.redirect('/login');
         }
-        
+
     },
     memberUpdate: (req, res) => {
         var data = req.body;
-        console.log(data);
-        if ('book' == data.password){
-
-            if (data.newpass == '' && data.newpass2 == '' ){
-                //only update name or phone
-            }
-            else{   // update all
-                if (data.newpass == data.newpass2){
-
+        // console.log(data);
+        console.log("----");
+        // console.log(req.session.userName);
+        connection.query("SELECT * FROM users", function (err, result) {
+            for (var i = 0; i < result.length; i++) {
+                console.log(result);
+                if (req.session.userName == result[i].email) {
+                  
+                    if (result[i].userpassword == data.password) {
+                        connection.query('UPDATE users SET username ="'+data.name+'" WHERE email ="'+result[i].email+'"',function(err,result){
+                            if(err){
+                                throw err
+                                
+                            }
+                            else{
+                                console.log("successufl");
+                            }
+                        })
+                        connection.query('UPDATE users SET phone="'+data.phone+'" WHERE email="'+result[i].email+'"',function(err,result2){
+                            if(err){
+                                throw err
+                            }
+                        })
+                        if (data.newpass == data.newpass2 && data.newpass!='' ) {
+                            connection.query('UPDATE users SET userpassword="'+data.newpass+'" WHERE email="'+result[i].email+'"',function(err,result3){
+                                if(err){
+                                    throw err
+                                }
+                                else{
+                                    console.log("successful");
+                                }
+                            })
+                        }
+                        else{
+                            console.log("請確認密碼是否輸入正確");
+                        }
+                    }
                 }
-                else{
-                    //you need to input same new password
-                }
             }
-        }
-        else{
-            console.log('密碼錯誤');
-        }
-
+        })
     }
 }
 
