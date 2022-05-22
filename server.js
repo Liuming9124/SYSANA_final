@@ -3,6 +3,7 @@ var path    = require('path');
 var db      = require('./route/modules/db');
 var app     = express();
 var cookieParser = require('cookie-parser');
+var session      = require('express-session');
 
 app.set('views', './views')
 app.set('view engine', 'ejs');
@@ -10,7 +11,12 @@ app.set('view engine', 'ejs');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
+app.use(cookieParser('book'));
+app.use(session({
+  secret: 'book',
+  resave: false,
+  saveUninitialized: true
+}))
 
 //建立 server
 
