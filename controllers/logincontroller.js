@@ -5,7 +5,8 @@ const loginController = {
         return res.render('login')
     },
     userlogin: (req, res) => {
-        
+        var user = req.body;
+        console.log(user);
     }
 }
 

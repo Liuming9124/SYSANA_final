@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../static/css/main.css" rel="stylesheet">
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
-		<script src="../model/wishlist.js"></script>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -75,13 +74,13 @@
 										<header>
 											<h1 style="height: 60px;"><font size=8>會員登入</font></h1>
 										</header>
-										<form action=" " method="POST">
+										<form action="/login/userlogin" method="POST">
 											<div style="height: 60px;" class="container_1">
-												<input  type="text" id="username" placeholder="帳號" size=20 autocomplete="on">
+												<input  type="text" id="username" placeholder="帳號" size=20 autocomplete="on" name="username">
 											</div>
 
 											<div style="height: 60px;" class="container_1">
-												<input type="password" id="password" placeholder="密碼" size=20 autocomplete="off">
+												<input type="password" id="password" placeholder="密碼" size=20 autocomplete="off" name="password">
 											</div>
 											<div class="display-flex">
 												<div class="login" id="loginbutton">
