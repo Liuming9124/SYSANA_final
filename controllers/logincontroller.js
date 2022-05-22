@@ -1,4 +1,12 @@
+var db = require('../route/modules/db')
+const mysql = require('mysql');
 
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'book',
+    password: 'book',
+    database: 'book'
+})
 
 const loginController = {
     loginPage: (req, res) => {
