@@ -6,7 +6,7 @@ const loginController = require('../../controllers/logincontroller')
 
 
 router.get('/', loginController.loginPage)
-router.get('/login', loginController.loginPage)
+router.post('/', loginController.userlogin)
 
 
 

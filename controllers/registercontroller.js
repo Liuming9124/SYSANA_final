@@ -1,5 +1,12 @@
-const Connection = require("mysql/lib/Connection")
-const { UCS2_PERSIAN_CI } = require("mysql/lib/protocol/constants/charsets")
+var db = require('../route/modules/db')
+const mysql = require('mysql');
+
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'book',
+    password: 'book',
+    database: 'book'
+})
 
 
 const registerController = {
@@ -7,23 +14,19 @@ const registerController = {
         return res.render('register', { 'result': '' })
     },
     registerAdd: (req, res) => {
-
-        console.log(req.body);
-        res.render('register', { 'result': '註冊成功 , 點此跳轉至登入頁面' });
-    }
-}
-const Addregister = { //插入資料(固定)
-    AddregisterPage: (req, res) => {
-        var sql = "INSERT INTO users(email,username,userpassword,phone,useraddr,point) VALUES('book2@gmail.com','測試','book2','0912345678','翰林學園',0)";
+        var data = req.body;
+        console.log(data.email);
+        var sql = "INSERT INTO users(email,username,userpassword,phone,useraddr,point) VALUES('"+ data.email +"','"+ data.name +"','" + data.password + "','" + data.phone + " ',' " + data.address+ "',0)";
+        console.log(sql);
         connection.query(sql, function (err, result) {
             if (err) {
-                throw err;
+                return res.render('register', { 'result': '註冊失敗，此電子信箱已被註冊' });
             }
             else {
-                console.log("successful");
+                return res.render('register', { 'result': '註冊成功 , 點此跳轉至登入頁面' });
             }
         })
+        
     }
-
 }
 module.exports = registerController
