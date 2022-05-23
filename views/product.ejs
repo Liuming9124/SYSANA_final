@@ -11,9 +11,11 @@
 				<div class="container">
 					
 					<!-- Logo -->
-						<h1 id="logo"><a href="../product/product.html">書贏●商品頁面</a></h1>
+						<h1 id="logo"><a href="/product">書贏●二手書回收</a></h1>
 						<%- include('./partials/nav.ejs') %>
 	
+					<!-- Main -->
+			<section id="main">
 				<section>
 					<ul class="divided">
 						<li>
@@ -33,30 +35,25 @@
 									<div class="display-flex">
 										<p>價錢：</p>	
 										<a class="price" id="price"><%= bookmoney%></p>
-									</div>					
+									</div>		
+									<p><%= bookinfo %></p>
 									<ul class="actions">
 										<div class="display-flex">
 												<div id="addcollect" class="col-8 col-12-medium imp-medium"><a href="#" class="button style1 large">加入收藏</a></div>
+												<a>&nbsp</a>
 												<div id="addcart" class="col-8 col-12-medium imp-medium"><a href="#" class="button style2 large">加入購物車</a></div>
-											
 										</div>
-										
 									</ul>
 								</article>
 								<div id="buy" class="col-8 col-12-medium imp-medium"><input type ="button" javascript:location.href="../cart/cart.html" value="購買"></input>
 								</li></div>
-								<p><%= bookinfo %></p>
 					</ul>
 				</section>	
+			</section>
 
 							
-
-						</div>
-					</div>
-				</section>
 			<!-- Footer -->
-			<%- include('./partials/footer.ejs') %>
-
+			<%- include('./partials/footer.ejs') %>	
 		</div>
 
 		<!-- Scripts -->

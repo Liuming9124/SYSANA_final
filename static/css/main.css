@@ -208,7 +208,7 @@ input, select, textarea {
 	.container_1{
 		display: flex;
 		justify-content: center; 
-		align-items: center;
+ 	   align-items: center; 
 		text-align: center;
 	}
 
@@ -2727,5 +2727,5 @@ input, select, textarea {
 		border: 1px solid rgb(216, 209, 209);
 		width: 500px;
 		height: 120px;
-		margin: 10px;
+		margin: 100px;
 	  }
