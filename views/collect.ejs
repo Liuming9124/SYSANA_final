@@ -40,8 +40,8 @@
 													<!-- Excerpt -->
 														<article class="box excerpt">
 															<header>
-																<span class="date" href="../collect/collect.html">我的收藏</span>
-																<h3><a href="../collect/collect.html">快來把收藏加入購物車</a></h3>
+																<span class="date" href="/collect">我的收藏</span>
+																<h3><a href="/collect">快來把收藏加入購物車</a></h3>
 															</header>
 														</article>
 
@@ -51,8 +51,8 @@
 													<!-- Excerpt -->
 														<article class="box excerpt">
 															<header>
-																<span class="date" href="../order/order.html">我的訂單</span>
-																<h3><a href="../order/order.html">查看我的訂單</a></h3>
+																<span class="date" href="/order">我的訂單</span>
+																<h3><a href="/order">查看我的訂單</a></h3>
 															</header>
 														</article>
 
@@ -65,22 +65,23 @@
 								<div id="content" class="col-8 col-12-medium imp-medium">
 									<!-- Post -->
 										<article class="box post">
-											<%if (howmanybook) { %>
-												<% for(var i=0; i < howmanybook; i++) { %>
+											
+												<% for(var i=0; i < 1; i++) { %>
 											<table>
 													<div class="col-8 col-12-medium imp-medium" id="name">
-														<header><h3><a href="/product"><%=book.name%></a></h3></header>
+														<header><h3><a href="/product">4</a></h3></header>
 													</div>
 													<a href="/product" class="image left"><img src="../static/images/pic10.jpg" alt=""></a>
-													<p class="bid" id="bid">書籍編號：<%=book.no%></p>
-													<p class="author">作者：<%=book.writer%></p>
-													<p class="price">價錢：<%=book.money%></p>
+													<p class="bid" id="bid">書籍編號：2</p>
+													<p class="author">作者：2</p>
+													<p class="price">價錢：1</p>
 													<ul class="actions">
 																<li>
 																	<div class="display-flex">
 																		<div id="addcart" class="col-8 col-12-medium imp-medium">
 																			<a href="/cart" class="button style1 large">加入購物車</a>
 																		</div>
+																		<a>&nbsp</a>
 																		<div id="outcollect" class="col-8 col-12-medium imp-medium">
 																			<a href="#" class="button style2 large">移除收藏</a>
 																		</div>
@@ -88,8 +89,8 @@
 																</li>
 													</ul>
 											</table>
-											<% }}%>
-											<%else{%>
+											<% }%>
+											
 												<section id="features">
 													<div class="container">
 														<header>
@@ -100,7 +101,6 @@
 														<a  href="/home" class="button style2 large">去首頁逛逛</a>
 													</div>
 												</section>
-												<%}%>
 										</article>
 								</div>
 								</article>
