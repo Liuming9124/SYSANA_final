@@ -65,16 +65,16 @@
 								<div id="content" class="col-8 col-12-medium imp-medium">
 									<!-- Post -->
 										<article class="box post">
-											<%if (howmanybook) { %>
-												<% for(var i=0; i < howmanybook; i++) { %>
+											
+												<% for(var i=0; i < 3; i++) { %>
 											<table>
 													<div class="col-8 col-12-medium imp-medium" id="name">
-														<header><h3><a href="/product"><%=book.name%></a></h3></header>
+														<header><h3><a href="/product">0</a></h3></header>
 													</div>
 													<a href="/product" class="image left"><img src="../static/images/pic10.jpg" alt=""></a>
-													<p class="bid" id="bid">書籍編號：<%=book.no%></p>
-													<p class="author">作者：<%=book.writer%></p>
-													<p class="price">價錢：<%=book.money%></p>
+													<p class="bid" id="bid">書籍編號：1</p>
+													<p class="author">作者：2</p>
+													<p class="price">價錢：3</p>
 													<ul class="actions">
 																<li>
 																	<div class="display-flex">
@@ -88,8 +88,6 @@
 																</li>
 													</ul>
 											</table>
-											<% }}%>
-											<%else{%>
 												<section id="features">
 													<div class="container">
 														<header>
@@ -100,7 +98,7 @@
 														<a  href="/home" class="button style2 large">去首頁逛逛</a>
 													</div>
 												</section>
-												<%}%>
+												
 										</article>
 								</div>
 								</article>
