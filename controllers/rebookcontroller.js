@@ -1,4 +1,11 @@
+const mysql = require('mysql');
 
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'book',
+    password: 'book',
+    database: 'book'
+})
 
 const rebookController = {
     rebookPage: (req, res) => {
