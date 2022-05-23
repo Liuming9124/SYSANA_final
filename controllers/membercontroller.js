@@ -19,7 +19,7 @@ const memberController = {
                             'name': result[i].username,
                             'phone': result[i].phone,
                             'bookcoin': '0',
-                            'updatestatus': '編輯成功與否資訊'
+                            'updatestatus': ''
                         })
                     }
                 }
@@ -39,12 +39,12 @@ const memberController = {
             for (var i = 0; i < result.length; i++) {
                 console.log(result);
                 if (req.session.userName == result[i].email) {
-                  
+                    var status = 0;
                     if (result[i].userpassword == data.password) {
                         connection.query('UPDATE users SET username ="'+data.name+'" WHERE email ="'+result[i].email+'"',function(err,result){
                             if(err){
-                                throw err
-                                
+                                status = 1;
+                                throw err;
                             }
                             else{
                                 console.log("successufl");
@@ -52,22 +52,69 @@ const memberController = {
                         })
                         connection.query('UPDATE users SET phone="'+data.phone+'" WHERE email="'+result[i].email+'"',function(err,result2){
                             if(err){
+                                status = 1;
                                 throw err
                             }
                         })
-                        if (data.newpass == data.newpass2 && data.newpass!='' ) {
-                            connection.query('UPDATE users SET userpassword="'+data.newpass+'" WHERE email="'+result[i].email+'"',function(err,result3){
-                                if(err){
-                                    throw err
-                                }
-                                else{
-                                    console.log("successful");
+                        if (data.newpass == data.newpass2 ) {
+                            if (data.newpass != ''){
+                                connection.query('UPDATE users SET userpassword="'+data.newpass+'" WHERE email="'+result[i].email+'"',function(err,result3){
+                                    if(err){
+                                        status = 1;
+                                        throw err
+                                    }
+                                    else{
+                                        console.log("successful");
+                                    }
+                                })
+                            }
+                        }
+                        else {
+                            connection.query("SELECT * FROM users", function (err, result) {
+                                for (var i = 0; i < result.length; i++) {
+                                    if (req.session.userName == result[i].email) {
+                                        console.log(result)
+                                        return res.render('member', {
+                                            'name': result[i].username,
+                                            'phone': result[i].phone,
+                                            'bookcoin': '0',
+                                            'updatestatus': '欲更改密碼必須相同'
+                                        })
+                                    }
                                 }
                             })
                         }
-                        else{
-                            console.log("請確認密碼是否輸入正確");
+                        if (status == 0 ){
+                            connection.query("SELECT * FROM users", function (err, result) {
+                                for (var i = 0; i < result.length; i++) {
+                                    if (req.session.userName == result[i].email) {
+                                        console.log(result)
+                                        return res.render('member', {
+                                            'name': result[i].username,
+                                            'phone': result[i].phone,
+                                            'bookcoin': '0',
+                                            'updatestatus': '編輯成功'
+                                        })
+                                    }
+                                }
+                            })
                         }
+                    }
+                    else{
+                        //密碼錯誤
+                        connection.query("SELECT * FROM users", function (err, result) {
+                            for (var i = 0; i < result.length; i++) {
+                                if (req.session.userName == result[i].email) {
+                                    console.log(result)
+                                    return res.render('member', {
+                                        'name': result[i].username,
+                                        'phone': result[i].phone,
+                                        'bookcoin': '0',
+                                        'updatestatus': '密碼錯誤'
+                                    })
+                                }
+                            }
+                        })
                     }
                 }
             }
