@@ -2,12 +2,13 @@
 
 const collectController = {
     collectPage: (req, res) => {
-        return res.render('collect', {
-            'howmanybook': '1',
-            'bookname': '書本1',
-            'bookno': '00000000',
-            'bookwriter': '劉銘',
-            'bookmoney': '666'
+        console.log("this book is book" + req.params.id);
+        return res.render('collect', ,{
+            'bookname':req.params.id,
+            'bookno':'00000000',
+            'bookwriter':'劉銘',
+            'bookmoney':'666',
+            'bookinfo': '這本書很好看喔！！這本書很好看喔'
         })
     }
 }
