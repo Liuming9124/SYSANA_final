@@ -8,7 +8,7 @@ const productController = {
             'bookno':'00000000',
             'bookwriter':'劉銘',
             'bookmoney':'666',
-            'bookinfo': '這本書很好看喔'
+            'bookinfo': '這本書很好看喔！！這本書很好看喔'
         })
     }
 }

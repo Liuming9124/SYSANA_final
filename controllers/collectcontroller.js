@@ -3,7 +3,7 @@
 const collectController = {
     collectPage: (req, res) => {
         console.log("this book is book" + req.params.id);
-        return res.render('collect', ,{
+        return res.render('collect',{
             'bookname':req.params.id,
             'bookno':'00000000',
             'bookwriter':'劉銘',
