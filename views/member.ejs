@@ -128,54 +128,38 @@
 
 								</div>
 
-								<!-- Content -->
-								<div id="content" class="col-8 col-12-medium imp-medium">
-									<!-- Post -->
-									<form action="/member/update" method="POST">
-										<article class="box post">
-											<header>
-												<h2>會員資訊</h2>
-											</header>
-
-											<span class="image featured">
-												<img src="images/pic04.jpg" alt="" />
-											</span>
-
-											<h3>我的姓名</h3>
-											<div class="input-with-name">
-												<input type="text" placeholder=""axlength="255" value="<%=name%>" name="name" required="true">
+													<!-- Post -->
+								<article class="box post">
+									<header>
+										<h1><strong>書籍資訊：</strong></h1>
+									</header>
+									<div class="col-6 col-12-medium">
+										<section>
+											<form method="" action="POST">
+												<div class="row gtr-45">
+													<div class="col-6 col-12-small">
+														<p>書籍名稱：<input  type="text" id="name" placeholder="商品名稱" size=5 autocomplete="on" name="name">
+														</div></p>
+													<div class="col-6 col-12-small">
+														<p>作者：<input  type="text" id="writer" placeholder="作者" size=5 autocomplete="on" name="writer">
+														</div></p>
+												</div>
+												<p>許願後將扣除<strong>book幣一枚</strong></p>
+									<ul class="actions">
+										<li>
+											<div id="enter" class="actions">
+												<a href="#" class="button style1 large">確定</a>
 											</div>
-											<p> </p>
-
-											<h3>電話號碼</h3>
-											<div class="input-with-phone">
-												<input type="text" placeholder="" maxlength="255" value="<%=phone%>" name="phone" required="true">
-											</div>
-											<p> </p>
-
-											<h3>更改密碼</h3>
-											<div class="input-with-password">
-												<input type="password" placeholder="輸入欲更改的密碼"maxlength="255" name="newpass">
-											</div>
-
-											<div class="input-with-password">
-												<input type="password" placeholder="再次輸入更改密碼" maxlength="255" name="newpass2" >
+											<div id="cancel" class="actions">
+												<a href="#" class="button style2 large">取消</a>
 											</div>
 											
-											<p></p>
-											<h3>輸入現在密碼</h3>
-											<div class="input-with-password">
-												<input type="password" placeholder="輸入密碼" maxlength="255" name="password" required="true">
-											</div>
-
-										</article>
-										<p> </p>
-										<div class="edit">
-											<h3><input type="submit" value="編輯完成"></h3>
-										</div>
-										<p><%= updatestatus %></p>
-									</form>
-								</div>
+											
+										</li>
+									</ul>
+											</form>
+										</section>
+								</article>
 
 							</div>
 						</div>
