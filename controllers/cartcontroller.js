@@ -10,11 +10,8 @@ const connection = mysql.createConnection({
 const cartController = {
     cartPage: (req, res) => {
         if (req.session.userName) {
-            // var data = []
-            // x = [1, 2, 3]
-            // data.push(x)
-            // console.log(data)
-            connection.query("SELECT * FROM cart where email ='k0928588211@yahoo.com.tw'", function (err, result, fields) {
+
+            connection.query("SELECT * FROM cart where email ='"+req.session.userName+"'", function (err, result, fields) {
                 if (err) {
                     throw err;
                 }
@@ -24,7 +21,7 @@ const cartController = {
                         totalprice+=result[i].book_price
                     }
                     res.render('cart', {
-                        'cartbook': result, //使用者選擇加入購物車的書籍(資料數)
+                        'cartbook': result, 
                         'result' : result,
                         'total': totalprice
                     });
