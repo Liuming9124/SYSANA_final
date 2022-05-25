@@ -58,7 +58,7 @@
 														</div>
 														<a>&nbsp</a>
 														<div id="addcart" class="col-8 col-12-medium imp-medium">
-															<a href="/cart" class="button style2 large">加入購物車</a>
+															<a href="/cart/<%=random[i].book_id%>" class="button style2 large">加入購物車</a>
 														</div>
 													</div>
 												</li>
@@ -78,8 +78,8 @@
 									<% for (var i=0 ; i < 6 ; i++) { %>
 										<div class="col-4 col-12-medium">
 											<section class="books">
-												<a href="/product/<%=hot[i].book_id%>" class="image featured">
-													<img class="imgsrc" src="..\static\BookImg\<%=hot[i].book_img%>" alt="" height="500" />
+												<a href="/product/<%=hot[i].book_id%>" class="image featured">		<img class="imgsrc" src=".
+											.\static\BookImg\<%=hot[i].book_img%>" alt="" height="500" />
 												</a>
 												<h3><a href="/product/<%=hot[i].book_id%>" class="name" id="name"> <%=hot[i].book_name %> </a></h3>
 												<div class="display-flex">
@@ -103,7 +103,7 @@
 															</div>
 															<a>&nbsp</a>
 															<div id="addcart" class="col-8 col-12-medium imp-medium">
-																<a href="/cart" class="button style2 large">加入購物車</a>
+																<a href="/cart/<%=hot[i].book_id%>" class="button style2 large">加入購物車</a>
 															</div>
 														</div>
 													</li>
