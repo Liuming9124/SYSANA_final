@@ -1,4 +1,4 @@
--- sql name "book" create username "book" password "book"
+
 
 CREATE TABLE users(
     email VARCHAR(40) NOT NULL,
@@ -14,6 +14,7 @@ CREATE TABLE product(
     book_id VARCHAR(20) NOT NULL,
     book_name VARCHAR(20) NOT NULL,
     book_img VARCHAR(50) NOT NULL,
+    book_author VARCHAR(20) NOT NULL,
     book_price INT NOT NULL,
     book_intro VARCHAR(500),
     book_type VARCHAR(10) NOT NULL,
