@@ -4,6 +4,7 @@ var db      = require('./route/modules/db');
 var app     = express();
 var cookieParser = require('cookie-parser');
 var session      = require('express-session');
+const { isObject } = require('util');
 
 app.set('views', './views')
 app.set('view engine', 'ejs');

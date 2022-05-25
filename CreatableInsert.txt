@@ -1,4 +1,6 @@
-INSERT INTO users VALUES('book@gmail.com','管理員','book','09258588211','翰林學園',0);
+
+INSERT INTO cart VALUES('k0928588211@yahoo.com.tw',100,'liuliuming','1',1);
+
 INSERT INTO product VALUES('1','book1','1.jpg','100','hanlin1','learn');
 INSERT INTO product VALUES('2','book2','2.jpg','200','hanlin2','learn');
 INSERT INTO product VALUES('3','book3','3.jpg','300','hanlin3','learn');

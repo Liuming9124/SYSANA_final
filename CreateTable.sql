@@ -22,9 +22,11 @@ CREATE TABLE product(
 
 CREATE TABLE cart(
     email VARCHAR(40) NOT NULL,
+    book_price INT NOT NULL,
+    book_author VARCHAR(20) NOT NULL,
     book_id VARCHAR(20),
     number INT,
-    PRIMARY KEY(email),
+    PRIMARY KEY(book_id),
     FOREIGN KEY(email) REFERENCES users(email)
 );
 
@@ -32,7 +34,7 @@ CREATE TABLE cart(
 CREATE TABLE collect(
     email VARCHAR(40) NOT NULL,
     book_id VARCHAR(20) NOT NULL,
-    PRIMARY KEY(email),
+    PRIMARY KEY(book_id),
     FOREIGN KEY(email) REFERENCES users(email),
     FOREIGN KEY(book_id) REFERENCES product(book_id)
 );
@@ -43,7 +45,8 @@ CREATE TABLE changes(
     ch_author VARCHAR(20) NOT NULL,
     ch_status VARCHAR(5) NOT NULL,
     ch_judge VARCHAR(3) NOT NULL,
-    PRIMARY KEY(email),
+    ch_bookid INT AUTO_INCREMENT,
+    PRIMARY KEY(ch_bookid),
     FOREIGN KEY(email) REFERENCES users(email)
 );
 
@@ -55,7 +58,8 @@ CREATE TABLE reduce(
     re_judge VARCHAR(3) NOT NULL,
     re_point INT NOT NULL,
     re_price INT NOT NULL,
-    PRIMARY KEY(email),
+    re_bookid INT AUTO_INCREMENT,
+    PRIMARY KEY(re_bookid),
     FOREIGN KEY(email) REFERENCES users(email)
 );
 
@@ -74,7 +78,7 @@ CREATE TABLE ordersinformation(
     email VARCHAR(40) NOT NULL,
     order_id INT AUTO_INCREMENT,
     book_id VARCHAR(20) NOT NULL,
-    PRIMARY KEY(email),
+    PRIMARY KEY(order_id),
     FOREIGN KEY(email) REFERENCES users(email),
     FOREIGN KEY(order_id) REFERENCES orders(order_id),
     FOREIGN KEY(book_id) REFERENCES product(book_id)

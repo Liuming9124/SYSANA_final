@@ -68,7 +68,7 @@
 
 										<%if (cartbook) { %>
 											<table>
-												<% for(var i=0; i < cartbook.length; i++) { %>
+												<% for(var i=0; i < cartbook.length ; i++) { %>
 													<div class="col-8 col-12-medium imp-medium" id="name">
 														<header>
 															<h3><a href="/product">
@@ -78,9 +78,9 @@
 													</div>
 													<a href="/product" class="image left"><img
 															src="../static/images/pic10.jpg" alt=""></a>
-													<p class="bid" id="bid">書籍編號：book.no</p>
-													<p class="author">作者：book.writer</p>
-													<p class="price">價錢：book.money</p>
+													<p class="bid" id="bid">書籍編號：<%= result[i].book_id%></p>
+													<p class="author">作者：<%= result[i].book_author%></p>
+													<p class="price">價錢：<%= result[i].book_price%></p>
 													<ul class="actions">
 														<li>
 															<div class="display-flex">
