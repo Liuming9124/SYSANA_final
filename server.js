@@ -4,7 +4,11 @@ var db      = require('./route/modules/db');
 var app     = express();
 var cookieParser = require('cookie-parser');
 var session      = require('express-session');
-const { isObject } = require('util');
+var favicon      = require('serve-favicon');
+
+
+
+app.use(favicon(__dirname + '/static/images/favicon.ico'));
 
 app.set('views', './views')
 app.set('view engine', 'ejs');
