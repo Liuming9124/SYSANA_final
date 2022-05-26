@@ -17,53 +17,60 @@
 						
 						<!-- Nav -->
 						<%- include('./partials/navmerch.ejs') %>
-				
-			<!-- Post -->
-			<article class="box post">
-				<header>
-					<h3>查看回收書資料：</h3>
-				</header>
-				<% for (var i=0 ; i < 6 ; i++) { %>
-				<a href="#" class="image left"><img src="../static/images/<%=random[i].book_img%>" alt=""></a>
-				<h3><strong><a class="reuser" id="reuser">回收用戶：<%=random[i].reuser%></a></strong></h3>
-				<div class="rebookname">
-					<p id="rebookname">回收書籍：<%=random[i].rebookname%></p>
-				</div>
-				<div class="price">
-					<p id="price">書籍原價：<%=random[i].price%></p>
-				</div>
-				<div class="box post">
-					<p>回收要求價格區間<input type="text" id="down" placeholder="最低" name="down">~<input type="text" id="up" placeholder="最高" name="up"></p>
-				</div>
-				
-				<form action="" method="POST">
-					<div style="height: 60px;" class="box post">
-						<input  type="text" id="howmuch" placeholder="價格為多少" size=10 autocomplete="on" name="howmuch">
-					</div>
-				</form>
-				<form action="" method="POST">
-					<div style="height: 60px;" class="box post">
-						<input  type="text" id="getpoint" placeholder="獲得點數" size=10 autocomplete="on" name="getpoint">
-					</div>
-				</form>
-				<ul class="actions">
-					<li>
-						<form action="" method="POST">
-							<div class="display-flex">
-								<div id="certain" class="box post">
-									<a href="#" class="button style1 large">確定</a>
-								</div>
-								<a>&nbsp</a>
-								<div id="cancel" class="box post">
-									<a href="#" class="button style2 large">取消</a>
-								</div>
+						<section id="main">
+							<div class="container_1">
+								<!-- Content -->
+								<article class="box post">
+									<header>
+										<h3>查看回收書資料：</h3>
+									</header>
+									<% for (var i=0 ; i < 6 ; i++) { %>
+									<a href="#" class="image left"><img src="../static/images/<%=random[i].book_img%>" alt=""></a>
+									<h3><strong><a class="reuser" id="reuser">回收用戶：<%=random[i].reuser%></a></strong></h3>
+									<div class="rebookname">
+										<p id="rebookname">回收書籍：<%=random[i].rebookname%></p>
+									</div>
+									<div class="price">
+										<p id="price">書籍原價：<%=random[i].price%></p>
+									</div>
+									<div class="box post">
+										<p>回收要求價格區間<input type="text" id="down" placeholder="最低" name="down">~<input type="text" id="up" placeholder="最高" name="up"></p>
+									</div>
+									
+									<form action="" method="POST">
+										<div style="height: 60px;" class="box post">
+											<input  type="text" id="howmuch" placeholder="價格為多少" size=10 autocomplete="on" name="howmuch">
+										</div>
+									</form>
+									<form action="" method="POST">
+										<div style="height: 60px;" class="box post">
+											<input  type="text" id="getpoint" placeholder="獲得點數" size=10 autocomplete="on" name="getpoint">
+										</div>
+									</form>
+									<ul class="actions">
+										<li>
+											<form action="" method="POST">
+												<div class="display-flex">
+													<div id="certain" class="box post">
+														<a href="#" class="button style1 large">確定</a>
+													</div>
+													<a>&nbsp</a>
+													<div id="cancel" class="box post">
+														<a href="#" class="button style2 large">取消</a>
+													</div>
+												</div>
+												
+											</form>
+										</li>
+									</ul>
+									<% } %>
+								</article>
+		
+										
 							</div>
-							
-						</form>
-					</li>
-				</ul>
-				<% } %>
-			</article>
+						</section>
+			<!-- Post -->
+			
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
