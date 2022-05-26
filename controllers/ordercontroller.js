@@ -14,7 +14,7 @@ const orderController = {
                 for (var i = 0; i < result.length; i++) {
                     if (req.session.userName == result[i].email) {
                         console.log(result)
-                        return res.render('order',{'random':result});
+                        return res.render('order',{'result':result});
                     }
                 }
             })
