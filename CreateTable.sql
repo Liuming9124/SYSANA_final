@@ -38,7 +38,7 @@ CREATE TABLE collect(
     book_price INT NOT NULL,
     book_author VARCHAR(20) NOT NULL,
     PRIMARY KEY(book_id),
-    FOREIGN KEY(email) REFERENCES users(email),
+    FOREIGN KEY(email) REFERENCES users(email)
 );
 
 CREATE TABLE changes(
@@ -80,7 +80,6 @@ CREATE TABLE ordersinformation(
     email VARCHAR(40) NOT NULL,
     order_id INT AUTO_INCREMENT,
     book_id VARCHAR(20) NOT NULL,
-    PRIMARY KEY(order_id),
     FOREIGN KEY(email) REFERENCES users(email),
     FOREIGN KEY(order_id) REFERENCES orders(order_id),
     FOREIGN KEY(book_id) REFERENCES product(book_id)
