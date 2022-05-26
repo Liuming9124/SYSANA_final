@@ -2729,3 +2729,15 @@ input, select, textarea {
 		height: 120px;
 		margin: 100px;
 	  }
+	  
+	  .popup {
+		cursor: pointer;
+	}
+	
+	.popup .popuptext {
+		visibility: hidden;
+	}
+	
+	.popup .show {
+		visibility: visible;
+	}
