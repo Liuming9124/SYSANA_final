@@ -35,9 +35,10 @@ CREATE TABLE cart(
 CREATE TABLE collect(
     email VARCHAR(40) NOT NULL,
     book_id VARCHAR(20) NOT NULL,
+    book_price INT NOT NULL,
+    book_author VARCHAR(20) NOT NULL,
     PRIMARY KEY(book_id),
     FOREIGN KEY(email) REFERENCES users(email),
-    FOREIGN KEY(book_id) REFERENCES product(book_id)
 );
 
 CREATE TABLE changes(

@@ -1,125 +1,144 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>書贏●我的收藏</title>
-		<%- include('./partials/header.ejs') %>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
 
-			<!-- Header -->
-			<section id="header">
-				<div class="container">
-					
-					<!-- Logo -->
-						<h1 id="logo"><a href="/collect">書贏●我的收藏</a></h1>
-						<%- include('./partials/nav.ejs') %>
-	
+<head>
+	<title>書贏●我的收藏</title>
+	<%- include('./partials/header.ejs') %>
+
+<body class="homepage is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<section id="header">
+			<div class="container">
+
+				<!-- Logo -->
+				<h1 id="logo"><a href="/collect">書贏●我的收藏</a></h1>
+				<%- include('./partials/nav.ejs') %>
+
 					<!-- Main -->
-				<section id="main">
-					<div class="container">
-						<div class="row">
+					<section id="main">
+						<div class="container">
+							<div class="row">
 
-							<!-- Sidebar -->
+								<!-- Sidebar -->
 								<div id="sidebar" class="col-4 col-12-medium">
 
-										<section>
-											<ul class="divided">
-												<li>
+									<section>
+										<ul class="divided">
+											<li>
 
-													<!-- Excerpt -->
-														<article class="box excerpt">
-															<header>
-																<h3><a href="/cart" class="date">我的購物車</a></h3>
-																<h3><a href="/cart">快來把商品帶回家</a></h3>
-															</header>
-														</article>
+												<!-- Excerpt -->
+												<article class="box excerpt">
+													<header>
+														<h3><a href="/cart" class="date">我的購物車</a></h3>
+														<h3><a href="/cart">快來把商品帶回家</a></h3>
+													</header>
+												</article>
 
-												</li>
+											</li>
 
-												<li>
-													<!-- Excerpt -->
-														<article class="box excerpt">
-															<header>
-																<h3><a href="/collect" class="date">我的收藏</a></h3>
-																<h3><a href="/collect">快來把收藏加入購物車</a></h3>
-															</header>
-														</article>
+											<li>
+												<!-- Excerpt -->
+												<article class="box excerpt">
+													<header>
+														<h3><a href="/collect" class="date">我的收藏</a></h3>
+														<h3><a href="/collect">快來把收藏加入購物車</a></h3>
+													</header>
+												</article>
 
-												</li>
+											</li>
 
-												<li>
-													<!-- Excerpt -->
-														<article class="box excerpt">
-															<header>
-																<h3><a href="/order" class="date">我的訂單</a></h3>
-																<h3><a href="/order">查看我的訂單</a></h3>
-															</header>
-														</article>
+											<li>
+												<!-- Excerpt -->
+												<article class="box excerpt">
+													<header>
+														<h3><a href="/order" class="date">我的訂單</a></h3>
+														<h3><a href="/order">查看我的訂單</a></h3>
+													</header>
+												</article>
 
-												</li>
-												
-										</section>
+											</li>
+
+									</section>
 								</div>
 
-							<!-- Content -->
+								<!-- Content -->
 								<div id="content" class="col-8 col-12-medium imp-medium">
 									<!-- Post -->
-										<article class="box post">
-											
-												<% for(var i=0; i < 1; i++) { %>
+									<article class="box post">
+										<p>
+											<%=collectstatus%>
+										</p>
+
+										<%if (collectbook) { %>
 											<table>
+												<% for(var i=0; i < collectbook.length; i++) { %>
 													<div class="col-8 col-12-medium imp-medium" id="name">
-														<header><h3><a href="/product">4</a></h3></header>
+														<header>
+															<h3><a href="/product">
+																<%=collectbook[i].book_name%></a></h3>
+														</header>
 													</div>
-													<a href="/product" class="image left"><img src="../static/images/pic10.jpg" alt=""></a>
-													<p class="bid" id="bid">書籍編號：2</p>
-													<p class="author">作者：2</p>
-													<p class="price">價錢：1</p>
+													<a href="/product" class="image left"><img
+															src="../static/images/pic10.jpg" alt=""></a>
+													<p class="bid" id="bid">書籍編號：<%= result[i].book_id%>
+													</p>
+													<p class="author">作者：<%= result[i].book_author%>
+													</p>
+													<p class="price">價錢：<%= result[i].book_price%>
+													</p>
 													<ul class="actions">
-																<li>
-																	<div class="display-flex">
-																		<div id="addcart" class="col-8 col-12-medium imp-medium">
-																			<a href="/cart" class="button style1 large">加入購物車</a>
-																		</div>
-																		<a>&nbsp</a>
-																		<div id="outcollect" class="col-8 col-12-medium imp-medium">
-																			<a href="#" class="button style2 large">移除收藏</a>
-																		</div>
-																	</div>
-																</li>
+														<li>
+															<div class="display-flex">
+																<div id="addcart"
+																	class="col-8 col-12-medium imp-medium">
+																	<a href="/cart"
+																		class="button style1 large">加入購物車</a>
+																</div>
+																<a>&nbsp</a>
+																<div id="outcollect"
+																	class="col-8 col-12-medium imp-medium">
+																	<a href="#" class="button style2 large">移除收藏</a>
+																</div>
+															</div>
+														</li>
 													</ul>
+													<% } %>
 											</table>
 											<% }%>
-											
+											<%if (!collectbook) {%>
 												<section id="features">
 													<div class="container">
 														<header>
 															<h2> <strong>目前收藏沒有商品喔</strong>!</h2>
 														</header>
 													</div>
-													<div class="col-8 col-24-small" >
-														<a  href="/home" class="button style2 large">去首頁逛逛</a>
+													<div class="col-8 col-24-small">
+														<a href="/home" class="button style2 large">去首頁逛逛</a>
 													</div>
 												</section>
-										</article>
+												<%}%>
+									</article>
 								</div>
 								</article>
+							</div>
 						</div>
-					</div>
-				</section>
-			<!-- Footer -->
-			<%- include('./partials/footer.ejs') %>
+					</section>
+					<!-- Footer -->
+					<%- include('./partials/footer.ejs') %>
 
-		</div>
+			</div>
 
 
-		<!-- Scripts -->
-		<script src="../static/js/jquery.min.js"></script>
-		<script src="../static/js/jquery.dropotron.min.js"></script>
-		<script src="../static/js/browser.min.js"></script>
-		<script src="../static/js/breakpoints.min.js"></script>
-		<script src="../static/js/util.js"></script>
-		<script src="../static/js/main.js"></script>
+			<!-- Scripts -->
+			<script src="../static/js/jquery.min.js"></script>
+			<script src="../static/js/jquery.dropotron.min.js"></script>
+			<script src="../static/js/browser.min.js"></script>
+			<script src="../static/js/breakpoints.min.js"></script>
+			<script src="../static/js/util.js"></script>
+			<script src="../static/js/main.js"></script>
 
-	</body>
+</body>
+
 </html>
