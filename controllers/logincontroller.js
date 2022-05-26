@@ -36,7 +36,6 @@ const loginController = {
             }
         })
         // console.log(user.username);
-
     }
 }
 

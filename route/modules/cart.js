@@ -4,7 +4,8 @@ const router = express.Router()
 const cartController = require('../../controllers/cartcontroller')
 
 
-router.get('/:id', cartController.cartPage)
+router.get('/', cartController.cartPage)
+router.get('/add/:id', cartController.addCart)
 
 
 
