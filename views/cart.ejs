@@ -70,13 +70,13 @@
 											<%=cartstatus%>
 										</p>
 
-										<%if (cartbook>=1) { %>
+										<%if (result.length>=1) { %>
 											<table>
-												<% for(var i=0; i < cartbook.length ; i++) { %>
+												<% for(var i=0; i < result.length ; i++) { %>
 													<div class="col-8 col-12-medium imp-medium" id="name">
 														<header>
 															<h3><a href="/product">
-																	<%=cartbook[i].book_name%>
+																	<%=result[i].book_name%>
 																</a></h3>
 														</header>
 													</div>
@@ -121,12 +121,10 @@
 												<a href="/checkout" class="button style2 large">結帳</a>
 											</div>
 											</table>
-											
-
+										<% } %>	
 									</article>
 									
-									<% } %>
-									<%if (cartbook<1) {%>
+									<%if (result.length<1) {%>
 										<section id="features">
 											<div class="container">
 												<header>
@@ -137,7 +135,7 @@
 												<a href="/home" class="button style2 large">去首頁逛逛</a>
 											</div>
 										</section>
-										<%}%>
+									<%}%>
 
 
 								</div>
