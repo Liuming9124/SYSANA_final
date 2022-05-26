@@ -1,5 +1,6 @@
 const cart       = require('./modules/cart')
 const collect    = require('./modules/collect')
+const checkout   = require('./modules/checkout.js')
 const home       = require('./modules/home')
 const login      = require('./modules/login')
 const member     = require('./modules/member')
@@ -11,13 +12,14 @@ const rebook     = require('./modules/rebook')
 const register   = require('./modules/register')
 const service    = require('./modules/service')
 const wishlist   = require('./modules/wishlist')
-const classes      = require('./modules/classes')
+const classes    = require('./modules/classes')
 
 // const { authenticated } = require('../middleware/auth')
 
 module.exports = app => {
   app.use('/cart', cart)
   app.use('/collect', collect)
+  app.use('/checkout', checkout)
   app.use('/home', home)
   app.use('/login', login)
   app.use('/member', member)
