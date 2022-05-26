@@ -29,12 +29,12 @@ const merchantController = {
         return res.render('merchantchbook',{'result':result});
     },
     orderPage: (req, res) => {
-        // var result = [
-        //     {
-        //         'buyer':'liu1',
-        //         '':''
-        //     }
-        // ]
+        var result = [
+            {
+                'buyer':'liu1',
+                '':''
+            }
+        ]
         return res.render('merchantorder');
     },
     uploadPage: (req, res) => {
