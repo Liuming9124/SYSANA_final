@@ -123,6 +123,12 @@
 											<option>5成~7成</option>	
 										</select>
 										</div>
+										<a>預估獲得點數:</a>
+											<div class="popup" id="show"  onclick="show()">
+												<input type="reset" value="顯示預估獲得點數">
+												<br>您可以獲得<span class="popuptext" id="popup_text"><strong>多少</strong></span>點
+											</div>
+										<a>&nbsp</a>
 										<div class="display-flex">
 											<div class="box post" id="recyclebutton">
 												<input type="submit" value="回收" onclick="alert('test!!')">
@@ -143,7 +149,13 @@
 			<!-- Footer -->
 			<%- include('./partials/footer.ejs') %>	
 		</div>
-
+		<script>
+			function show() {
+				var popup = document.getElementById("popup_text");
+				popup.classList.toggle("show");
+			}
+		</script>
+		
 		<!-- Scripts -->
 		<script src="../static/js/jquery.min.js"></script>
 		<script src="../static/js/jquery.dropotron.min.js"></script>
