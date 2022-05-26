@@ -57,7 +57,7 @@ const collectController = {
                                         'collectbook': result,
                                         'result': result,
                                         'total': totalprice,
-                                        'collectstatus': '此書已存在在購物車'
+                                        'collectstatus': '此書已存在在收藏'
                                     });
                                 }
                             })
