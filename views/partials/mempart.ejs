@@ -4,33 +4,40 @@
     <section>
         <ul class="divided">
             <li>
-
+                <!-- Excerpt -->
+                    <article class="box excerpt">
+                            <header>
+                                <span class="date" href="#">每日簽到</span>
+                                <div class="box excerpt" id="signin">
+                                    <h3><a href="#" class="button style1">點擊簽到</a></h3>
+                                </div>
+                            </header>
+                    </article>
+                </li>
+            <li>
                 <!-- Excerpt -->
                 <article class="box excerpt">
                     <header>
                         <span class="date">我的錢包</span>
                     </header>
-                    <nobr>
-                        <p>目前擁有</p>
+                    
+                    <div class="display-flex">
+                        <p>目前擁有</p><a>&nbsp</a>
                         <div class="box excerpt" id="bookcoin">
-                            <p><strong>
-                                    <%=bookcoin%>
-                                </strong></p>
+                            <p><strong><%=bookcoin%></strong><a>&nbsp</a>book幣</p>
                         </div>
-                        <p>book幣</p>
-                    </nobr>
+                    </div>
                 </article>
             </li>
+               
                 <li>
-                <!-- Excerpt -->
-                    <article class="box excerpt">
-                        <header>
-                            <span class="date" href="#">每日簽到</span>
-                            <div class="box excerpt" id="signin">
-                                <h3><a href="#" class="button style1">點擊簽到</a></h3>
-                            </div>
-                        </header>
-                    </article>
+                    <!-- Excerpt -->
+                        <article class="box excerpt">
+                            <header>
+                                <h3><a href="/order" class="date">我的訂單</a></h3>
+                                <h3><a href="/order">查看我的訂單狀態</a></h3>
+                            </header>
+                        </article>
                 </li>
                 <li>
                     <!-- Excerpt -->

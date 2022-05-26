@@ -68,7 +68,7 @@
 
 										<p><%=cartstatus%></p>
 
-										<%if (cartbook) { %>
+										<%if (cartbook>=1) { %>
 											<table>
 												<% for(var i=0; i < cartbook.length ; i++) { %>
 													<div class="col-8 col-12-medium imp-medium" id="name">
@@ -100,25 +100,26 @@
 															</div>
 														</li>
 													</ul>
-													<% } %>
+												<% } %>
+												<h1>--------------------------------------------------------------------------------------------</h1>
+									
+											<div class="col-12-medium col-24-small" id="money">
+												<h1>
+													<p>總共 <%= result.length %> 件商品 總共<strong>
+															<%=total%>
+														</strong>元</p>
+												</h1>
+											</div>
+											<div class="col-8 col-24-small" id="checkout">
+												<a href="/checkout" class="button style2 large">結帳</a>
+											</div>
 											</table>
-										<% } %>
+											
 
 									</article>
-									<h1>--------------------------------------------------------------------------------------------</h1>
 									
-									<div class="col-12-medium col-24-small" id="money">
-										<h1>
-											<p>總共 <%= result.length %> 件商品 總共<strong>
-													<%=total%>
-												</strong>元</p>
-										</h1>
-									</div>
-									<div class="col-8 col-24-small" id="checkout">
-										<a href="/checkout" class="button style2 large">結帳</a>
-									</div>
-									
-									<%if (!cartbook) {%>
+									<% } %>
+									<%if (cartbook<1) {%>
 										<section id="features">
 											<div class="container">
 												<header>
