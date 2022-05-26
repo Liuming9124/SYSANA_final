@@ -25,15 +25,15 @@
 				<header>
 					<h2>查看交換書資料：</h2>
 				</header>
-				<% for (var i=0 ; i < 6 ; i++) { %>
-				<a href="#" class="image left"><img src="../static/images/<%=random[i].book_img%>" alt=""></a>
-				<h3><strong><a class="username" id="username">交換用戶：<%=randion[i].username%></a></strong></h3>
+				<% for (var i=0 ; i < 1 ; i++) { %>
+				<a href="#" class="image left"><img src="../static/images/<%=result[i].book_img%>" alt=""></a>
+				<h3><strong><a class="username" id="username">交換用戶：<%=result[i].username%></a></strong></h3>
 				<div class="chbookname">
-					<p id="chbookname">交換書籍：<%=randion[i].chbookname%></p>
+					<p id="chbookname">交換書籍：<%=result[i].chbookname%></p>
 				</div>
 				
 				<div class="address">
-					<p id="address">收件地址:<%=randion[i].address%></p>
+					<p id="address">收件地址:<%=result[i].address%></p>
 				</div>
 				<div class="price">
 					<p id="price">書籍價格區間:<input type="text" id="down" placeholder="最低" name="down">~<input type="text" id="up" placeholder="最高" name="up"></p>
