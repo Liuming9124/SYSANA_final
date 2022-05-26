@@ -95,23 +95,6 @@ const cartController = {
                     // console.log(sql);
                     connection.query(sql, function (err, result) {
                         if (err) {
-                            // connection.query("SELECT * FROM cart where email ='" + req.session.userName + "'", function (err, result, fields) {
-                            //     if (err) {
-                            //         throw err;
-                            //     }
-                            //     else {
-                            //         totalprice=0;
-                            //         for (var i = 0; i < result.length; i++) {
-                            //             totalprice += result[i].book_price
-                            //         }
-                            //         res.render('cart', { //渲染頁面，(配合ejs的格式)
-                            //             'cartbook': result,
-                            //             'result': result,
-                            //             'total': totalprice,
-                            //             'cartstatus': '此書已存在在購物車'
-                            //         });
-                            //     }
-                            // })
                             console.log('error');
                         }
                         else {
