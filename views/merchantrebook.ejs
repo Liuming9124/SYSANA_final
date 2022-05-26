@@ -23,14 +23,14 @@
 				<header>
 					<h3>查看回收書資料：</h3>
 				</header>
-				<% for (var i=0 ; i < 6 ; i++) { %>
-				<a href="#" class="image left"><img src="../static/images/<%=random[i].book_img%>" alt=""></a>
-				<h3><strong><a class="reuser" id="reuser">回收用戶：<%=random[i].reuser%></a></strong></h3>
+				<% for (var i=0 ; i < result.length ; i++) { %>
+				<a href="#" class="image left"><img src="../static/images/<%=result[i].book_img%>" alt=""></a>
+				<h3><strong><a class="reuser" id="reuser">回收用戶：<%=result[i].reuser%></a></strong></h3>
 				<div class="rebookname">
-					<p id="rebookname">回收書籍：<%=random[i].rebookname%></p>
+					<p id="rebookname">回收書籍：<%=result[i].rebookname%></p>
 				</div>
 				<div class="price">
-					<p id="price">書籍原價：<%=random[i].price%></p>
+					<p id="price">書籍原價：<%=result[i].price%></p>
 				</div>
 				<div class="box post">
 					<p>回收要求價格區間<input type="text" id="down" placeholder="最低" name="down">~<input type="text" id="up" placeholder="最高" name="up"></p>
@@ -58,12 +58,9 @@
 									<a href="#" class="button style2 large">取消</a>
 								</div>
 							</div>
-							
-						</form>
-					</li>
-				</ul>
-				<% } %>
-			</article>
+						</section>
+			<!-- Post -->
+			
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
