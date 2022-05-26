@@ -2,7 +2,6 @@
 
 const collectController = {
     collectPage: (req, res) => {
-        console.log("this book is book" + req.params.id);
         return res.render('collect',{
             'bookname':req.params.id,
             'bookno':'00000000',
@@ -10,6 +9,9 @@ const collectController = {
             'bookmoney':'666',
             'bookinfo': '這本書很好看喔！！這本書很好看喔'
         })
+    },
+    addCollect: (req, res) => {
+        console.log(req.params.id);
     }
 }
 
