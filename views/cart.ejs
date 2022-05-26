@@ -78,8 +78,9 @@
 																</a></h3>
 														</header>
 													</div>
-													<a href="/product" class="image left"><img
-															src="../static/images/pic10.jpg" alt=""></a>
+													<a href="/product/<%= result[i].book_id%>" class="image left">
+														<img src="/static/BookImg/<%=result[i].book_id%>.jpg" height="200px" width="200px" alt="">
+													</a>
 													<p class="bid" id="bid">書籍編號：<%= result[i].book_id%></p>
 													<p class="author">作者：<%= result[i].book_author%></p>
 													<p class="price">價錢：<%= result[i].book_price%></p>
