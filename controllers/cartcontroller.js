@@ -20,7 +20,7 @@ const cartController = {
                     for (var i = 0; i < result.length; i++) {
                         totalprice += result[i].book_price
                     }
-                    console.log(result);
+                    // console.log(result);
                     res.render('cart', { //渲染頁面，(配合ejs的格式)
                         'result': result,
                         'total': totalprice,
@@ -71,6 +71,7 @@ const cartController = {
                         else {
                             console.log('add to cart success');
                             res.redirect('/cart');
+                            
                         }
                     })
                 }
