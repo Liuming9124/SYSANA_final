@@ -1,7 +1,3 @@
-<Cart>
-INSERT INTO cart VALUES('k0928588211@yahoo.com.tw',100,'liuliuming','1',1);
-INSERT INTO cart VALUES('k0928588211@yahoo.com.tw',200,'liuliuming','2',1);
-INSERT INTO cart VALUES('k0928588211@yahoo.com.tw',300,'liuliuming','3',1);
 <Product>
 INSERT INTO product VALUES('1','book1','1.jpg','LiuMin1','100','hanlin0','learn');
 INSERT INTO product VALUES('2','book2','2.jpg','LiuMin2','200','hanlin0','learn');

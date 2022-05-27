@@ -5,6 +5,7 @@ const checkoutController = require('../../controllers/checkoutcontroller.js')
 
 
 router.get('/', checkoutController.checkoutPage)
+router.post('/add', checkoutController.addcheckout)
 
 
 

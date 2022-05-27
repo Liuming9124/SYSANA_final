@@ -11,7 +11,7 @@ const cartController = {
     cartPage: (req, res) => {
         if (req.session.userName) {
 
-            connection.query("SELECT * FROM cart where email ='" + req.session.userName + "'", function (err, result, fields) {
+            connection.query(`SELECT * FROM cart where email ='${req.session.userName}'`, function (err, result, fields) {
                 if (err) {
                     throw err;
                 }

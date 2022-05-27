@@ -26,30 +26,36 @@
 										<header>
 											<h1 style="height: 60px;"><font size=8>結帳</font></h1>
 										</header>
-										<form action=" " method="POST">
+										<form action="/checkout/add" method="POST">
 											<p>收件人:</p>
 											<div style="height: 60px; width: 265px;">
-												<input type="text" id="name" placeholder="姓名" size=20 autocomplete="on" name="name">
+												<input type="text" id="name" placeholder="收件人姓名" size=20 autocomplete="on" name="name">
 											</div>
 											<p>收件地址:</p>
 											<div style="height: 60px; width: 265px;">
-												<input type="text" id="username" placeholder="帳號" size=20 autocomplete="on" name="username">
+												<input type="text" id="address" placeholder="地址" size=20 autocomplete="on" name="address">			
 											</div>
 											<p>電話號碼:</p>
 											<div style="height: 60px; width: 265px;">
-												<input type="text" id="phone" placeholder="密碼" size=20 autocomplete="off" name="phone">
+												<input type="text" id="phone" placeholder="電話號碼" size=20 autocomplete="off" name="phone">
 											</div>
 											<p>電子信箱:</p>
 											<div style="height: 60px; width: 265px;">
 												<input type="text" id="email" placeholder="信箱" size=20 autocomplete="on" name="email">
 											</div>
-											<p>回饋點數:</p>
-											<div class="display-flex">
-												<p class="point"><%=point%> book幣</p>
+											<p>付款方式:</p>
+											<div style="height: 60px; width: 265px;" id="bookcondition" name="payment" aria-placeholder="請選擇付款方式">
+												<select >
+													<option>貨到付款</option>
+													<option>ATM轉帳</option>
+												</select>
 											</div>
-											<p>總價錢:</p>
+											<p></p>
 											<div class="display-flex">
-												<p class="dollar"><%=dollar%> 元</p>
+												<p class="dollar">總價錢: <%=dollar%> 元</p>
+											</div>
+											<div class="display-flex">
+												<p class="point">回饋點數: <%=point%> book幣</p>
 											</div>
 												<div>
 													<input type ="button" onclick="history.back()" value="回到上一頁"></input>

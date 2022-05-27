@@ -71,7 +71,7 @@ CREATE TABLE orders(
     order_name VARCHAR(20) NOT NULL,
     order_address VARCHAR(50) NOT NULL,
     order_phone VARCHAR(15) NOT NULL,
-    order_payamount INT NOT NULL,
+    order_payment VARCHAR(15) NOT NULL,
     PRIMARY KEY(order_id),
     FOREIGN KEY(email) REFERENCES users(email)
 );
@@ -80,7 +80,8 @@ CREATE TABLE ordersinformation(
     email VARCHAR(40) NOT NULL,
     order_id INT AUTO_INCREMENT,
     book_id VARCHAR(20) NOT NULL,
+    order_status tinyINt(1),
     FOREIGN KEY(email) REFERENCES users(email),
-    FOREIGN KEY(order_id) REFERENCES orders(order_id),
+    FOREIGN KEY(order_id) REFERENCES orders(order_id) ON DELETE CASCADE,
     FOREIGN KEY(book_id) REFERENCES product(book_id)
 );
