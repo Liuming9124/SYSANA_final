@@ -8,7 +8,7 @@ const connection = mysql.createConnection({
 })
 var totalprice = 0;
 const checkoutController = {
-    checkoutPage: (req, res) => {
+    checkoutPage: (req, res) => {       //必須處理!!!
         if (req.session.userName) {
 
             // connection.query("SELECT * FROM checkout where email ='" + req.session.userName + "'", function (err, result, fields) {

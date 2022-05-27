@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
 const chbookController = {
     
     chbookPage: (req, res) => {
-        return res.render('chbook', { 'result': '' })
+        return res.render('chbook', { 'result': '' , 'bookcoin': '0'})
     },
     chbookAdd: (req, res) => {
         var data = req.body;

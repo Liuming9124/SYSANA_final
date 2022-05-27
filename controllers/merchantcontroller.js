@@ -31,11 +31,23 @@ const merchantController = {
     orderPage: (req, res) => {
         var result = [
             {
-                'buyer':'liu1',
-                '':''
+                'order_no':'1',
+                'order_name':'liu',
+                'book_id':'1',
+                'book_name':'book1',
+                'book_price':'100',
+                'address':'1408'
+            },
+            {
+                'order_no':'1',
+                'order_name':'liu',
+                'book_id':'1',
+                'book_name':'book1',
+                'book_price':'100',
+                'address':'1408'
             }
         ]
-        return res.render('merchantorder');
+        return res.render('merchantorder',{'result':result});
     },
     uploadPage: (req, res) => {
         return res.render('merchantupload')
