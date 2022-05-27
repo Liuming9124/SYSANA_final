@@ -1,3 +1,4 @@
+const { json } = require("body-parser")
 
 
 
@@ -33,17 +34,35 @@ const merchantController = {
             {
                 'order_no':'1',
                 'order_name':'liu',
-                'book_id':'1',
-                'book_name':'book1',
-                'book_price':'100',
+                'book': [
+                    {
+                        'book_id':'1',
+                        'book_name':'book1',
+                        'book_price':'100',
+                    },
+                    {
+                        'book_id':'2',
+                        'book_name':'book2',
+                        'book_price':'200',
+                    }
+                ],
                 'address':'1408'
             },
             {
                 'order_no':'1',
                 'order_name':'liu',
-                'book_id':'1',
-                'book_name':'book1',
-                'book_price':'100',
+                'book': [
+                    {
+                        'book_id':'1',
+                        'book_name':'book1',
+                        'book_price':'100',
+                    },
+                    {
+                        'book_id':'2',
+                        'book_name':'book2',
+                        'book_price':'200',
+                    },
+                ],
                 'address':'1408'
             }
         ]
