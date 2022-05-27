@@ -39,10 +39,11 @@ const checkoutController = {
 
     },
     addcheckout: (req, res) => {
+        //尚未處理bookcoin折抵
         if (req.session.userName) {
-            console.log(req.body);
-            var sql = `INSERT INTO orders(email,order_name,order_address,order_phone,order_payment) VALUES('${req.session.userName}','liuming','hanlin1','0912345678','貨到付款')`;
-            console.log(sql);
+            // console.log('REQbody=',req.body);
+            var sql = `INSERT INTO orders(email,order_name,order_address,order_phone,order_payment) VALUES('${req.session.userName}','${req.body.name}','${req.body.address}','${req.body.address}','貨到付款')`;
+            // console.log(sql);
             connection.query(sql, function (err, result) {
                 if (err) {
                     console.log(err);
@@ -51,6 +52,7 @@ const checkoutController = {
                     console.log('insert success');
                 }
             })
+            //建立訂單並儲存order ID
             var orderId;
             connection.query(`SELECT order_id FROM orders where email ='${req.session.userName}' ORDER BY order_id DESC LIMIT 1`, function (err, result, fields) {
                 if (err) {
@@ -60,11 +62,13 @@ const checkoutController = {
                     orderId = result[0].order_id;
                 }
             })
+            //利用order id 將購物車內商品依序插入
             connection.query(`SELECT * FROM cart where email ='${req.session.userName}'`, function (err, result, fields) {
                 if (err) {
                     throw err;
                 }
                 else {
+                    //插入商品至訂單
                     for(let i = 0 ; i < result.length ; i++ ){
                         var sql = `INSERT INTO ordersinformation(email,order_id,book_id,order_status) VALUES('${req.session.userName}','${orderId}','${result[i].book_id}','0')`;
                         // console.log(sql);
@@ -77,6 +81,7 @@ const checkoutController = {
                             }
                         })
                     }
+                    //將購物車內商品清空
                     for(let i = 0 ; i < result.length ; i++ ){
                         var sql = `DELETE FROM cart Where email='${req.session.userName}'`;
                         // console.log(sql);
