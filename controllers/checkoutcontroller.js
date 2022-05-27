@@ -39,10 +39,11 @@ const checkoutController = {
 
     },
     addcheckout: (req, res) => {
-        //尚未處理bookcoin折抵
+        //尚未處理bookcoin折抵 -> 折抵coin後    預計在merchant處理訂單時一併增減bookcoin
         if (req.session.userName) {
             // console.log('REQbody=',req.body);
-            var sql = `INSERT INTO orders(email,order_name,order_address,order_phone,order_payment) VALUES('${req.session.userName}','${req.body.name}','${req.body.address}','${req.body.address}','貨到付款')`;
+            //建立訂單
+            var sql = `INSERT INTO orders(email,order_name,order_address,order_phone,order_payment,order_delpoint,order_status) VALUES('${req.session.userName}','${req.body.name}','${req.body.address}','${req.body.address}','貨到付款','${req.body.point}','0')`;
             // console.log(sql);
             connection.query(sql, function (err, result) {
                 if (err) {
@@ -52,7 +53,7 @@ const checkoutController = {
                     console.log('insert success');
                 }
             })
-            //建立訂單並儲存order ID
+            //儲存order ID
             var orderId;
             connection.query(`SELECT order_id FROM orders where email ='${req.session.userName}' ORDER BY order_id DESC LIMIT 1`, function (err, result, fields) {
                 if (err) {
@@ -70,7 +71,7 @@ const checkoutController = {
                 else {
                     //插入商品至訂單
                     for(let i = 0 ; i < result.length ; i++ ){
-                        var sql = `INSERT INTO ordersinformation(email,order_id,book_id,order_status) VALUES('${req.session.userName}','${orderId}','${result[i].book_id}','0')`;
+                        var sql = `INSERT INTO ordersinformation(email,order_id,book_id) VALUES('${req.session.userName}','${orderId}','${result[i].book_id}')`;
                         // console.log(sql);
                         connection.query(sql, function (err, result1) {
                             if (err) {
