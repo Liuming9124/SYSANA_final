@@ -35,51 +35,88 @@ const merchantController = {
         return res.render('merchantchbook', { 'result': result });
     },
     orderPage: (req, res) => {
-        
-        var result = [
-            {
-                'order_no': '3',
-                'order_name': 'liu',
-                'order_email': 'liu@gmail.com',
-                'book': [
-                    {
-                        'book_id': '1',
-                        'book_name': 'book1',
-                        'book_price': '100',
-                    },
-                    {
-                        'book_id': '2',
-                        'book_name': 'book2',
-                        'book_price': '200',
-                    }
-                ],
-                'address': '1408'
-            },
-            {
-                'order_no': '4',
-                'order_name': 'liu',
-                'order_email': 'liu@gmail.com',
-                'book': [
-                    {
-                        'book_id': '1',
-                        'book_name': 'book1',
-                        'book_price': '100',
-                    },
-                    {
-                        'book_id': '2',
-                        'book_name': 'book2',
-                        'book_price': '200',
-                    },
-                ],
-                'address': '1408'
+        var resultfinal = {};
+        var x;
+
+        connection.query(`SELECT * FROM orders where order_status='0'`, function (err1, result, fields) {
+            if (err1) {
+                console.log(err);
             }
-        ]
-        return res.render('merchantorder', { 'result': result });
+            else {
+
+                console.log(result)
+                res.render('merchantorder', { //渲染頁面，(配合ejs的格式)
+                    'result': result,
+                });
+                // var result = [
+                //     {
+                //         'order_no': '3',
+                //         'order_name': 'liu',
+                //         'order_email': 'liu@gmail.com',
+                //         'book': [
+                //             {
+                //                 'book_id': '1',
+                //                 'book_name': 'book1',
+                //                 'book_price': '100',
+                //             },
+                //             {
+                //                 'book_id': '2',
+                //                 'book_name': 'book2',
+                //                 'book_price': '200',
+                //             }
+                //         ],
+                //         'address': '1408'
+                //     },
+                //     {
+                //         'order_no': '4',
+                //         'order_name': 'liu',
+                //         'order_email': 'liu@gmail.com',
+                //         'book': [
+                //             {
+                //                 'book_id': '1',
+                //                 'book_name': 'book1',
+                //                 'book_price': '100',
+                //             },
+                //             {
+                //                 'book_id': '2',
+                //                 'book_name': 'book2',
+                //                 'book_price': '200',
+                //             },
+                //         ],
+                //         'address': '1408'
+                //     }
+                // ]
+                // return res.render('merchantorder', { 'result': result });
+            }
+        })
     },
+
+    // var result = [
+    //     {
+    //         'order_no': result1.order_id,
+    //         'order_name': result2.order_name,
+    //         'order_email': result1.email,
+    //         'book': [
+    //             {
+    //                 'book_id': result1.book_id,
+    //                 'book_name': 'book1',
+    //                 'book_price': '100',
+    //             },
+    //             {
+    //                 'book_id': '2',
+    //                 'book_name': 'book2',
+    //                 'book_price': '200',
+    //             }
+    //         ],
+    //         'address': result2.order_address
+    //     }
+
+    // ]
+    // return res.render('merchantorder', { 'result': result});
     uploadPage: (req, res) => {
         return res.render('merchantupload')
     },
-    confirmOrder: (req, res) => {
+    confirmOrder: (req, res) => { //1=確認
         console.log('confirm ', req.params.id);
         //delete user point -> return bonus point -> update order status
         connection.query(`SELECT * FROM orders where order_id ='${req.params.id}'`, function (err, result, fields) {    //查詢此orderID -> result 為此訂單
@@ -132,7 +169,7 @@ const merchantController = {
     },
     cancelOrder: (req, res) => {
         // console.log('cancel ', req.params.id);
-        //利用order id 查詢該筆訂單 並列為取消狀態
+        //利用order id 查詢該筆訂單 並列為取消狀態  2=取消
         connection.query(`SELECT * FROM orders where order_id ='${req.params.id}'`, function (err, result, fields) {
             if (err) {
                 res.redirect('/merchant/order');
