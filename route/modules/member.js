@@ -6,6 +6,10 @@ const memberController = require('../../controllers/membercontroller')
 
 
 router.get('/', memberController.memberPage)
+router.get('/logout',function (req, res){
+    req.session.destroy();
+    res.redirect('/home');
+})
 router.post('/update', memberController.memberUpdate)
 
 
