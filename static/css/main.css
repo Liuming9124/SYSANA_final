@@ -2765,3 +2765,15 @@ input, select, textarea {
 		visibility: visible;
 	}
 	
+	input{border:0;
+		background-color:#003C9D;
+		color:#fff;
+		border-radius:10px;
+		cursor:pointer;}
+	  
+	  input:hover{
+		color:#003C9D;
+		background-color:#fff;
+		border:2px #003C9D solid;
+	  }
+	  
