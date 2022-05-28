@@ -39,11 +39,11 @@
 											<h3><a href="/product/<%=random[i].book_id%> class="name" id="name"> <%=random[i].book_name %> </a></h3>
 											<div class="display-flex">
 												<p>書籍編號：</p>	
-												<a class="bid" id="bid"><%= random[i].book_id %></a>
+												<a class="bid" id="bid" value="bookid"><%= random[i].book_id %></a>
 											</div>
 											<div class="display-flex">
 												<p>作者：</p>	
-												<a class="writer" id="writer"><%= random[i].book_type %></a>
+												<a class="writer" id="writer"><%= random[i].book_author %></a>
 											</div>
 											<div class="display-flex">
 												<p>價錢：</p>	
@@ -54,11 +54,11 @@
 												<li>
 													<div class="display-flex">
 														<div id="addcollect" class="col-8 col-12-medium imp-medium">
-															<a href="/collect" class="button style1 large">加入收藏</a>
+															<a href="/collect/add/<%= random[i].book_id %> " class="button style1 large">加入收藏</a>
 														</div>
 														<a>&nbsp</a>
 														<div id="addcart" class="col-8 col-12-medium imp-medium">
-															<a href="/cart" class="button style2 large">加入購物車</a>
+															<a href="/cart/add/<%=random[i].book_id%>" class="button style2 large">加入購物車</a>
 														</div>
 													</div>
 												</li>
@@ -78,8 +78,8 @@
 									<% for (var i=0 ; i < 6 ; i++) { %>
 										<div class="col-4 col-12-medium">
 											<section class="books">
-												<a href="/product/<%=hot[i].book_id%>" class="image featured">
-													<img class="imgsrc" src="..\static\BookImg\<%=hot[i].book_img%>" alt="" height="500" />
+												<a href="/product/<%=hot[i].book_id%>" class="image featured">		<img class="imgsrc" src=".
+											.\static\BookImg\<%=hot[i].book_img%>" alt="" height="500" />
 												</a>
 												<h3><a href="/product/<%=hot[i].book_id%>" class="name" id="name"> <%=hot[i].book_name %> </a></h3>
 												<div class="display-flex">
@@ -88,7 +88,7 @@
 												</div>
 												<div class="display-flex">
 													<p>作者：</p>	
-													<a class="writer" id="writer"><%= hot[i].book_type %></p>
+													<a class="writer" id="writer"><%= hot[i].book_author%></p>
 												</div>
 												<div class="display-flex">
 													<p>價錢：</p>	
@@ -99,11 +99,11 @@
 													<li>
 														<div class="display-flex">
 															<div id="addcollect" class="col-8 col-12-medium imp-medium">
-																<a href="/collect" class="button style1 large">加入收藏</a>
+																<a href="/collect/add/<%= hot[i].book_id %> " class="button style1 large">加入收藏</a>
 															</div>
 															<a>&nbsp</a>
 															<div id="addcart" class="col-8 col-12-medium imp-medium">
-																<a href="/cart" class="button style2 large">加入購物車</a>
+																<a href="/cart/add/<%=hot[i].book_id%>" class="button style2 large">加入購物車</a>
 															</div>
 														</div>
 													</li>

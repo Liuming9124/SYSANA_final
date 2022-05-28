@@ -26,33 +26,61 @@
 					<h3>訂單細節：</h3>
 				</header>
 				
-				<div id="pic" class="col-8 col-12-medium imp-medium">
-					<a href="../product/product.html" class="image left"><img src="../static/images/pic11.jpg" alt=""></a>
-				</div>
 				
-				<form method="" action="POST">
-					<div class="row gtr-45">
+				
+				<% for (let i = 0 ; i < result.length ; i++ ) { %>
+					<div id="pic" class="col-8 col-12-medium imp-medium">
+						<a href="/product/<%= result[i].order_no %> " class="image left"><img src="/static/BookImg/<%= result[i].order_no %> " alt=""></a>
+					</div>
+					<div>
+						<p>訂單編號： <%= result[i].order_no %></p><br>
+						<p>訂購用戶： <%= result[i].order_name %></p><br>
+						<% for (let j = 0 ; j < (result[i].book).length ; j++ ) { %> 
+							<p>訂購書籍編號： <%= result[i].book[j].book_id %> 書籍名稱： <%= result[i].book[j].book_price %> 書籍價格： <%= result[i].book[j].book_price %>元 </p>
+							<!-- <p></p>
+							<p></p><br> -->
+						<% } %> 
+						<p>地址： <%= result[i].address %></p><br>
+						<ul class="actions">
+							<div class="col-8 actions">
+								<a href="/merchant/confirm/<%= result[i].order_no %> " class="button style1 large">確認</a>
+								<a href="/merchant/cancel/<%= result[i].order_no %> " class="button style2 large">拒絕</a>
+							</div>
+						</ul>
+					</div>
+
+				<% } %> 
+
+
+				<!-- <form method="" action="POST"> -->
+					<!-- <div class="row gtr-45">
 						<div class="display-flex">
 							<div class="col-6 col-24-small">
-								<p>訂購用戶：<input  type="text" id="customer" value="<%=book.buyer%>" size=5 autocomplete="on">
+								<p>訂單編號：<input  type="text" id="customer" value="<%= result.order_no %>" size=5 autocomplete="on">					
 								</div></p>
 								</div>
 							<div class="col-6 col-24-small">
-								<p>訂購書籍編號：<input  type="text" id="list" value="<%=book.no%>" size=5 autocomplete="on">
+								<p>訂購用戶：<input  type="text" id="customer" value="<%= result.order_name %>" size=5 autocomplete="on">
+								</div></p>
+								</div>
+							<div class="col-6 col-24-small">
+								<p>訂購書籍編號：<input  type="text" id="list" value="<%= result.book_id %>" size=5 autocomplete="on">
 								</div></p>
 							<div class="col-6 col-24-small">
-								<p>書籍名稱：<input  type="text" id="name" value="<%=book.name%>" size=5 autocomplete="on">
+								<p>書籍名稱：<input  type="text" id="name" value="<%= result.book_name %>" size=5 autocomplete="on">
 								</div></p>
 							<div class="col-6 col-24-small">
-								<p>書籍價格：<input  type="text" id="money" value="<%=book.money%>" size=5 autocomplete="on">
+								<p>書籍價格：<input  type="text" id="money" value="<%= result.book_price %>元" size=5 autocomplete="on">
 								</div></p>
 							</div>
-						</div>
+							<div class="col-6 col-24-small">
+								<p>地址：<input  type="text" id="address" value="<%= result.address %>" size=5 autocomplete="on">
+								</div></p>
+							</div>
+						</div> -->
 						
-						
-						
-					</div>
-		<ul class="actions">
+					<!-- </div> -->
+		<!-- <ul class="actions">
 			<div id="enter" class="col-8 actions">
 				<a href="#" class="button style1 large">確定</a>
 			</div>
@@ -60,8 +88,8 @@
 				<a href="#" class="button style2 large">取消</a>
 			</div>
 			</li>
-		</ul>
-				</form>
+		</ul> -->
+				<!-- </form> -->
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>

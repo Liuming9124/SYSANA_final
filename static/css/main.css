@@ -1617,7 +1617,7 @@ input, select, textarea {
 	}
 
 		ul.divided li {
-			border-top: solid 2px #e5e5e5;
+			border-top: solid 1.5px #e5e5e5;
 			padding-left: 0;
 			margin: 2.5em 0 0 0;
 			padding: 2.5em 0 0 0;
@@ -2729,3 +2729,39 @@ input, select, textarea {
 		height: 120px;
 		margin: 100px;
 	  }
+	  
+	  .popup {
+		cursor: pointer;
+	}
+	
+	.popup .popuptext {
+		visibility: hidden;
+	}
+	
+	.popup .show {
+		visibility: visible;
+	}
+	.display-flex-1 {
+		display: flex;
+		width: 400px;
+	  }
+	  
+	  .div-size {
+		border: 1px solid rgb(216, 209, 209);
+		width: 300px;
+		height: 120px;
+		margin: 100px;
+	  }
+	  
+	  .popup {
+		cursor: pointer;
+	}
+	
+	.popup .popuptext {
+		visibility: hidden;
+	}
+	
+	.popup .show {
+		visibility: visible;
+	}
+	

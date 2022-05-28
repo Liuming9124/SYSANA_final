@@ -26,30 +26,33 @@
 										<header>
 											<h1 style="height: 60px;"><font size=8>結帳</font></h1>
 										</header>
-										<form action=" " method="POST">
+										<form action="/checkout/add" method="POST">
 											<p>收件人:</p>
 											<div style="height: 60px; width: 265px;">
-												<input type="text" id="name" placeholder="姓名" size=20 autocomplete="on" name="name">
+												<input type="text" id="name" placeholder="收件人姓名" size=20 autocomplete="on" name="name">
 											</div>
 											<p>收件地址:</p>
 											<div style="height: 60px; width: 265px;">
-												<input type="text" id="username" placeholder="帳號" size=20 autocomplete="on" name="username">
+												<input type="text" id="address" placeholder="地址" size=20 autocomplete="on" name="address">			
 											</div>
 											<p>電話號碼:</p>
 											<div style="height: 60px; width: 265px;">
-												<input type="text" id="phone" placeholder="密碼" size=20 autocomplete="off" name="phone">
+												<input type="text" id="phone" placeholder="電話號碼" size=20 autocomplete="off" name="phone">
 											</div>
-											<p>電子信箱:</p>
+											<!-- <p>電子信箱:</p>
 											<div style="height: 60px; width: 265px;">
 												<input type="text" id="email" placeholder="信箱" size=20 autocomplete="on" name="email">
+											</div> -->
+											<p>請填寫欲折抵book幣 , 最多折抵 xxx 元book幣:</p>	<!-- xxx 請用ejs替代掉 -->
+											<div style="height: 60px; width: 265px;">
+												<input type="text" id="coin" placeholder="0" size=20 autocomplete="on" name="point">
 											</div>
-											<p>回饋點數:</p>
+											<p></p>
 											<div class="display-flex">
-												<p class="point"><%=point%> book幣</p>
+												<p class="dollar">總價錢: <%=dollar%> 元</p>
 											</div>
-											<p>總價錢:</p>
 											<div class="display-flex">
-												<p class="dollar"><%=dollar%> 元</p>
+												<p class="point">回饋點數: <%=point%> book幣</p>
 											</div>
 												<div>
 													<input type ="button" onclick="history.back()" value="回到上一頁"></input>

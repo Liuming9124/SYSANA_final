@@ -22,7 +22,7 @@ const loginController = {
                     // return res.render('login', { 'result': '帳號或密碼錯誤' });
                     console.log("登入成功");
                     req.session.userName = req.body.username; // 登入成功，設定 session
-                    console.log(req.session.userName);
+                    // console.log(req.session.userName);
                     res.redirect('/member');
                     break;
                 }
@@ -36,7 +36,6 @@ const loginController = {
             }
         })
         // console.log(user.username);
-
     }
 }
 

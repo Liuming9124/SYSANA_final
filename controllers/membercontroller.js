@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
 
 const memberController = {
     memberPage: (req, res) => {
-        console.log(req.session);
+        // console.log(req.session);
         if (req.session.userName) {
             connection.query("SELECT * FROM users", function (err, result) {
                 for (var i = 0; i < result.length; i++) {

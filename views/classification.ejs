@@ -28,8 +28,8 @@
 									<% for (var i=0 ; i < type.length ; i++) { %>
 									<div class="col-4 col-12-medium">
 										<section class="books">
-											<a href="#" class="image featured">
-												<img class="imgsrc" src="..\static\BookImg\<%=type[i].book_img%>" alt="" height="500" />
+											<a href="/product/<%= type[i].book_id%>" class="image featured">
+												<img class="imgsrc" src="/static/BookImg/<%=type[i].book_img%>" alt="" height="500" />
 											</a>
 											<h3><a class="name" id="name">商品名稱:<%=type[i].book_name%> </a></h3>
 											<p class="author" id="author">作者：<%=type[i].author%></p>
@@ -41,7 +41,7 @@
 															<a href="/collect" class="button style1 large">加入收藏</a>
 														</div>
 														<div id="addcart" class="col-8 col-12-medium imp-medium">
-															<a href="/cart" class="button style2 large">加入購物車</a>
+															<a href="/cart/add/<%= type[i].book_id%>" class="button style2 large">加入購物車</a>
 														</div>
 													</div>
 												</li>
