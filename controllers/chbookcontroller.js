@@ -11,7 +11,13 @@ const chbookController = {
     
     chbookPage: (req, res) => {
         if (req.session.userName){
-            return res.render('chbook', { 'result': '' , 'bookcoin': '0'})
+            // console.log(`SELECT point FROM users WHERE users.email = '${req.session.userName}';`);
+            connection.query(`SELECT point FROM users WHERE users.email = '${req.session.userName}';`,function (err, result){
+                if (err)    console.log(err);
+                else{
+                    return res.render('chbook', { 'status': '' , 'bookcoin': result[0].point });
+                }
+            });
         }
         else{
             return res.redirect('/login');
@@ -24,10 +30,20 @@ const chbookController = {
             console.log(sql)
             connection.query(sql, function (err, result) {
                 if (err) {
-                    return res.render('chbook', { 'result': 'fail' , 'bookcoin': '0'})
+                    connection.query(`SELECT point FROM users WHERE users.email = '${req.session.userName}';`,function (err, result){
+                        if (err)    console.log(err);
+                        else{
+                            return res.render('chbook', { 'status': 'faul' , 'bookcoin': result[0].point });
+                        }
+                    });
                 }
                 else {
-                    return res.render('chbook', { 'result': 'success' , 'bookcoin': '0'})
+                    connection.query(`SELECT point FROM users WHERE users.email = '${req.session.userName}';`,function (err, result){
+                        if (err)    console.log(err);
+                        else{
+                            return res.render('chbook', { 'status': 'success' , 'bookcoin': result[0].point });
+                        }
+                    });
                 }
             })
         }
