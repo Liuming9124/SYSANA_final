@@ -6,6 +6,7 @@ const chbookController = require('../../controllers/chbookcontroller')
 
 
 router.get('/', chbookController.chbookPage)
+router.post('/add',chbookController.chbookAdd)
 
 
 

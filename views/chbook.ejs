@@ -100,7 +100,7 @@
 									<header>
 										<h1 style="height: 60px;"><font size=8>二手書交換</font></h1>
 									</header>
-									<form action=" " method="POST">
+									<form action="/chbook/add" method="POST">
 										<a>書名:</a>
 										<div style="height: 60px; width: 265px;" class="box post">
 											<input  type="text" id="ch_name" placeholder="書名" size=20 autocomplete="on" name="ch_name">
@@ -110,28 +110,26 @@
 											<input type="text" id="address" placeholder="收件地址" size=20 autocomplete="off" name="address">
 										</div>
 										<a>書況:</a>
-										<div style="height: 60px; width: 265px;" class="box post" id="bookcondition" name="bookcondition">
-											<select>
-												<option>請選擇書籍狀況</option>
-												<option>全新</option>
-												<option>7成~9成</option>
-												<option>5成~7成</option>	
+										<div style="height: 60px; width: 265px;" class="box post" id="bookcondition" >
+											<select name="bookcondition">
+												<option value="全新">全新</option>
+												<option value="7成~9成">7成~9成</option>
+												<option value="5成~7成">5成~7成</option>	
 											</select>
 										</div>
 										<a>價格區間:</a>
-										<div style="height: 60px; width: 265px;" class="box post" id="bookprice" name="bookprice">
-											<select>
-												<option>請選擇書籍價格區間</option>
-												<option>1000up</option>
-												<option>701~999</option>
-												<option>501~700</option>
-												<option>301~500</option>
-												<option>0~300</option>	
+										<div style="height: 60px; width: 265px;" class="box post" id="bookprice" >
+											<select name="bookprice">
+												<option value="1000up">1000up</option>
+												<option value="701~999">701~999</option>
+												<option value="501~700">501~700</option>
+												<option value="301~500">301~500</option>
+												<option value="0~300">0~300</option>	
 											</select>
 										</div>
 										<div class="display-flex">
 											<div class="box post" id="exchangebutton">
-												<input type="submit" value="交換" onclick="alert('test!!')">
+												<input type="submit" value="交換">
 											</div>
 											<a>&nbsp</a>
 											<div class="box post" id="resetbutton">
