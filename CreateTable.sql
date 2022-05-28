@@ -42,13 +42,16 @@ CREATE TABLE collect(
 );
 
 CREATE TABLE changes(
+    ch_id INT AUTO_INCREMENT,
     email VARCHAR(40) NOT NULL,
-    ch_name VARCHAR(20) NOT NULL,
-    ch_author VARCHAR(20) NOT NULL,
-    ch_status VARCHAR(5) NOT NULL,
-    ch_judge VARCHAR(3) NOT NULL,
-    ch_bookid INT AUTO_INCREMENT,
-    PRIMARY KEY(ch_bookid),
+    ch_name VARCHAR(15) NOT NULL,
+    ch_address VARCHAR(30) NOT NULL,
+    ch_bname VARCHAR(20) NOT NULL,
+    ch_bauthor VARCHAR(20) NOT NULL,
+    ch_bstatus VARCHAR(10) NOT NULL,
+    ch_bprice VARCHAR(10) NOT NULL,
+    ch_judge tinyINt (1),
+    PRIMARY KEY(ch_id),
     FOREIGN KEY(email) REFERENCES users(email)
 );
 

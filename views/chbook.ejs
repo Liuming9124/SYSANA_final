@@ -31,33 +31,35 @@
 										<h1 style="height: 60px;"><font size=8>二手書交換</font></h1>
 									</header>
 									<form action="/chbook/add" method="POST">
-										<a>書名:</a>
+										<a>收件人:</a>
 										<div style="height: 60px; width: 265px;" class="box post">
-											<input  type="text" id="ch_name" placeholder="書名" size=20 autocomplete="on" name="ch_name">
+											<input type="text" id="ch_name" placeholder="收件人姓名" size=20 autocomplete="off" name="ch_name">
 										</div>
 										<a>地址:</a>
 										<div style="height: 60px; width: 265px;" class="box post">
-											<input type="text" id="address" placeholder="收件地址" size=20 autocomplete="off" name="address">
+											<input type="text" id="ch_address" placeholder="收件地址" size=20 autocomplete="off" name="ch_address">
+										</div>
+										<a>書名:</a>
+										<div style="height: 60px; width: 265px;" class="box post">
+											<input  type="text" id="ch_bname" placeholder="書名" size=20 autocomplete="on" name="ch_bname">
+										</div>
+										<a>作者:</a>
+										<div style="height: 60px; width: 265px;" class="box post">
+											<input  type="text" id="ch_bauthor" placeholder="作者" size=20 autocomplete="on" name="ch_bauthor">
 										</div>
 										<a>書況:</a>
-										<div style="height: 60px; width: 265px;" class="box post" id="bookcondition" >
-											<select name="bookcondition">
-<<<<<<< HEAD
-=======
+										<div style="height: 60px; width: 265px;" class="box post" id="ch_status" >
+											<select name="ch_bstatus">
 												<option>請選擇書籍狀況</option>
->>>>>>> 0bc73239574d2e5601f6eca697041da04981c347
 												<option value="全新">全新</option>
 												<option value="7成~9成">7成~9成</option>
 												<option value="5成~7成">5成~7成</option>	
 											</select>
 										</div>
 										<a>價格區間:</a>
-										<div style="height: 60px; width: 265px;" class="box post" id="bookprice" >
-											<select name="bookprice">
-<<<<<<< HEAD
-=======
+										<div style="height: 60px; width: 265px;" class="box post" id="ch_bprice" >
+											<select name="ch_bprice">
 												<option>選擇價格區間</option>
->>>>>>> 0bc73239574d2e5601f6eca697041da04981c347
 												<option value="1000up">1000up</option>
 												<option value="701~999">701~999</option>
 												<option value="501~700">501~700</option>
@@ -74,9 +76,6 @@
 												<input type="reset" value="清除">
 											</div>
 										</div>
-										
-										
-										
 									</form>	
 								</article>
 									
