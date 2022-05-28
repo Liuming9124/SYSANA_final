@@ -116,7 +116,7 @@ const merchantController = {
     uploadPage: (req, res) => {
         return res.render('merchantupload')
     },
-    confirmOrder: (req, res) => { //1=確認
+    confirmOrder: (req, res) => {
         console.log('confirm ', req.params.id);
         //delete user point -> return bonus point -> update order status
         connection.query(`SELECT * FROM orders where order_id ='${req.params.id}'`, function (err, result, fields) {    //查詢此orderID -> result 為此訂單
@@ -169,7 +169,7 @@ const merchantController = {
     },
     cancelOrder: (req, res) => {
         // console.log('cancel ', req.params.id);
-        //利用order id 查詢該筆訂單 並列為取消狀態  2=取消
+        //利用order id 查詢該筆訂單 並列為取消狀態
         connection.query(`SELECT * FROM orders where order_id ='${req.params.id}'`, function (err, result, fields) {
             if (err) {
                 res.redirect('/merchant/order');
