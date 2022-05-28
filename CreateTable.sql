@@ -56,15 +56,15 @@ CREATE TABLE changes(
 );
 
 CREATE TABLE reduce(
+    re_id INT AUTO_INCREMENT,
     email VARCHAR(40) NOT NULL,
     re_name VARCHAR(20) NOT NULL,
     re_author VARCHAR(20) NOT NULL,
-    re_status VARCHAR(5) NOT NULL,
-    re_judge VARCHAR(3) NOT NULL,
-    re_point INT NOT NULL,
     re_price INT NOT NULL,
-    re_bookid INT AUTO_INCREMENT,
-    PRIMARY KEY(re_bookid),
+    re_status VARCHAR(5) NOT NULL,
+    re_point INT NOT NULL,
+    re_judge VARCHAR(3) NOT NULL,
+    PRIMARY KEY(re_id),
     FOREIGN KEY(email) REFERENCES users(email)
 );
 
