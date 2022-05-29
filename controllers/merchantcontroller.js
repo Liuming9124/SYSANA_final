@@ -29,6 +29,40 @@ const merchantController = {
     chbookPage: (req, res) => {
         var result = [
             {
+                'book_img':'1.jpg',
+                'username':'liu',
+                'chbookname':'book1',
+                'address':'1408',
+                'down':'150',
+                'up':'500'
+            },
+            {
+                'book_img':'1.jpg',
+                'username':'liu',
+                'chbookname':'book2',
+                'address':'1408',
+                'down':'150',
+                'up':'500'
+            }
+            ,
+            {
+                'book_img':'1.jpg',
+                'username':'liu',
+                'chbookname':'book3',
+                'address':'1408',
+                'down':'150',
+                'up':'500'
+            }
+            ,
+            {
+                'book_img':'1.jpg',
+                'username':'liu',
+                'chbookname':'book4',
+                'address':'1408',
+                'down':'150',
+                'up':'500'
+            },
+            {
                 'book_img': '1.jpg',
                 'username': 'liu',
                 'chbookname': 'book1',

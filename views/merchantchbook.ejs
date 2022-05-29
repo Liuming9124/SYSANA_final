@@ -19,48 +19,55 @@
 						
 						<!-- Nav -->
 						<%- include('./partials/navmerch.ejs') %>
+						<!-- Main -->
 				
-			<!-- Post -->
-			<article class="box post">
-				<header>
-					<h2>查看交換書資料：</h2>
-				</header>
-				<% for (var i=0 ; i < 1 ; i++) { %>
-				<a href="#" class="image left"><img src="../static/images/<%=result[i].book_img%>" alt=""></a>
-				<h3><strong><a class="username" id="username">交換用戶：<%=result[i].username%></a></strong></h3>
-				<div class="chbookname">
-					<p id="chbookname">交換書籍：<%=result[i].chbookname%></p>
-				</div>
-				
-				<div class="address">
-					<p id="address">收件地址:<%=result[i].address%></p>
-				</div>
-				<div class="price">
-					<p id="price">書籍價格區間:<input type="text" id="down" placeholder="最低" name="down">~<input type="text" id="up" placeholder="最高" name="up"></p>
-				</div>
-				
-				<ul class="actions">
-					<li>
-						<form action="" method="POST">
-							<div style="height: 60px;" class="actions">
-								<input  type="text" id="reply" placeholder="拒絕交換原因(同意則不填)" size=10 autocomplete="on" name="reply">
-							</div>
-							<div class="display-flex">
-								<div id="allowexchange" class="box post">
-									<a href="#" class="button style1 large">允許交換</a>
+				<section id="main">
+				<div class="container">
+					<header>
+							<h2>查看交換書資料：</h2>
+					</header>
+					<div class="row aln-center">
+						<table>
+							<% for (var i=0 ; i < 4 ; i++) { %>
+								<div class="col-6 col-12-medium">
+									<a href="#" class="image left"><img src="../static/images/<%=result[i].book_img%>" alt=""></a>
+									<h3><strong><a class="username" id="username">交換用戶：<%=result[i].username%></a></strong></h3>
+									<div class="chbookname">
+										<p id="chbookname">交換書籍：<%=result[i].chbookname%></p>
+									</div>
+									
+									<div class="address">
+										<p id="address">收件地址:<%=result[i].address%></p>
+									</div>
+									<div class="price">
+										<p id="down">書籍價格區間:<%=result[i].down%><a id="up">~<%=result[i].up%></a></p>
+									</div>
+									
+									<ul class="actions">
+										<li>
+											<form action="" method="POST">
+												<div style="height: 60px;" class="actions">
+													<input  type="text" id="reply" placeholder="拒絕交換原因(同意則不填)" size=30 autocomplete="on" name="reply">
+												</div>
+												<div class="display-flex">
+													<div id="allowexchange" class="box post">
+														<a href="#" class="button style1 large">允許交換</a>
+													</div>
+													<a>&nbsp</a>
+													<div id="refuseexchange" class="box post">
+														<a href="#" class="button style2 large">拒絕交換</a>
+													</div>
+												</div>
+												
+											</form>
+										</li>
+									</ul>
 								</div>
-								<a>&nbsp</a>
-								<div id="refuseexchange" class="box post">
-									<a href="#" class="button style2 large">拒絕交換</a>
-								</div>
-							</div>
-							
-						</form>
-					</li>
-				</ul>
-				<% } %>
-			</article>
-
+							<% } %>
+						</table>
+					</div>
+				</div>
+			</section>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
