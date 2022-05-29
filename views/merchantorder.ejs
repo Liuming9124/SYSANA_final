@@ -19,16 +19,18 @@
 						
 						<%- include('./partials/navmerch.ejs') %>
 
-				
 			<!-- Post -->
-			<section id="main">
-				<div class="container">
-			
+			<article class="box post">
+				<section id="features">
+					<div class="container">
+						<input type="button" value="待確認"  style="width:150px;height:50px;">
+						<input type="button" value="已接受訂單" style="width:150px;height:50px;">
+						<input type="button" value="已拒絕訂單" style="width:150px;height:50px;">
+					</div>
+				</section>
 				<header>
 					<h3>訂單細節：</h3>
 				</header>
-				
-				
 				
 				<% for (let i = 0 ; i < result.length ; i++ ) { %>
 					<div id="pic" class="col-6 col-12-medium imp-medium">
