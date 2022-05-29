@@ -12,7 +12,11 @@ router.get('/order', merchantController.orderPage)
 router.get('/upload', merchantController.uploadPage)
 
 //order
-router.get('/confirm/:id', merchantController.confirmOrder);
-router.get('/cancel/:id' , merchantController.cancelOrder);
+router.get('/order/confirm/:id', merchantController.confirmOrder);
+router.get('/order/cancel/:id' , merchantController.cancelOrder);
+
+//rebook
+router.get('/rebook/confirm/:id', merchantController.confirmRebook);
+router.get('/rebook/cancel/:id',  merchantController.cancelRebook);
 
 module.exports = router

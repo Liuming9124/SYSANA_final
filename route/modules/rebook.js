@@ -5,7 +5,8 @@ const rebookController = require('../../controllers/rebookcontroller')
 
 
 
-router.get('/', rebookController.rebookPage)
+router.get('/', rebookController.rebookPage);
+router.post('/add', rebookController.rebookAdd);
 
 
 

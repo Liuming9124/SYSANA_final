@@ -35,18 +35,14 @@
 						<a href="/product/<%= result[i].order_no %> " class="image left"><img src="/static/BookImg/<%= result[i].order_no %> " alt=""></a>
 					</div>
 					<div>
-						<p>訂單編號： <%= result[i].order_no %></p><br>
-						<p>訂購用戶： <%= result[i].order_name %></p><br>
-						<% for (let j = 0 ; j < (result[i].book).length ; j++ ) { %> 
-							<p>訂購書籍編號： <%= result[i].book[j].book_id %> 書籍名稱： <%= result[i].book[j].book_price %> 書籍價格： <%= result[i].book[j].book_price %>元 </p>
-							<!-- <p></p>
-							<p></p><br> -->
-						<% } %> 
-						<p>地址： <%= result[i].address %></p><br>
+						<p>訂單編號： <%= result[i].order_id %></p><br>
+						<p>用戶帳號： <%= result[i].email %></p><br>
+						<p>收件人  ： <%= result[i].order_name %></p><br>
+						<p>地址： <%= result[i].order_address %></p><br>
 						<ul class="actions">
 							<div class="col-8 actions">
-								<a href="/merchant/confirm/<%= result[i].order_no %> " class="button style1 large">確認</a>
-								<a href="/merchant/cancel/<%= result[i].order_no %> " class="button style2 large">拒絕</a>
+								<a href="/merchant/order/confirm/<%= result[i].order_id %>" class="button style1 large">確認</a>
+								<a href="/merchant/order/cancel/<%= result[i].order_id %>" class="button style2 large">拒絕</a>
 							</div>
 						</ul>
 					</div>

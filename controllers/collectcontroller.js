@@ -72,6 +72,36 @@ const collectController = {
         else {
             res.redirect('/login');
         }
+    },
+    delCollect: (req, res) => {
+        if (req.session.userName) {
+
+            // console.log(req.params.id);
+
+            connection.query("SELECT * FROM product where book_id='" + req.params.id + "'", function (err, result) {
+                if (err) {
+                    return res.render('cart', { 'collectstatus': '已加入購物車' });
+                }
+                else {
+                    // console.log(result)
+                    // console.log(result[0].book_id)
+                    var sql = "DELETE FROM collect Where email='" + req.session.userName + "' and book_id='" + req.params.id + "'";
+                    // console.log(sql);
+                    connection.query(sql, function (err, result) {
+                        if (err) {
+                            console.log('error');
+                        }
+                        else {
+                            console.log('success');
+                            res.redirect('/collect');
+                        }
+                    })
+                }
+            })
+        }
+        else {
+            res.redirect('/login');
+        }
     }
 }
 

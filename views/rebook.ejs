@@ -31,35 +31,42 @@
 									<header>
 										<h1 style="height: 60px; width: 300px;"><font size=8>書籍回收</font></h1>
 									</header>
-									<form action="" method="POST">
+									<form action="/rebook/add" method="POST">
+
 										<a>書名:</a>
 										<div style="height: 60px; width: 265px;" class="box post">
-
 											<input  type="text" id="re_name" placeholder="請輸入書名" size=20 autocomplete="on" name="re_name">
 										</div>
+
+										<a>作者:</a>
+										<div style="height: 60px; width: 265px;" class="box post">
+											<input  type="text" id="re_author" placeholder="請輸入作者" size=20 autocomplete="on" name="re_author">
+										</div>
+
 										<a>原價:</a>
 										<div style="height: 60px; width: 265px;" class="box post" >
-											
-											<input type="text" id="price" placeholder="請輸入原價" size=20 autocomplete="off" name="price">
+											<input type="text" id="re_price" placeholder="請輸入原價" size=20 autocomplete="off" name="re_price">
 										</div>
+
 										<a>書況:</a>
-										<div style="height: 60px; width: 265px;" class="box post" id="bookcondition" name="bookcondition">
-											
-											<select >
-											<option>請選擇書籍狀況</option>
-											<option>全新</option>
-											<option>7成~9成</option>
-											<option>5成~7成</option>	
-										</select>
+										<div style="height: 60px; width: 265px;" class="box post" id="re_status">
+											<select name="re_status" >
+												<option>請選擇書籍狀況</option>
+												<option>全新</option>
+												<option>7成~9成</option>
+												<option>5成~7成</option>	
+											</select>
 										</div>
-											<div class="popup" id="show"  onclick="show()">
-												<br><input type="reset" value="顯示預估獲得點數">
-												<br><br>估計可以獲得<span class="popuptext" id="popup_text"><strong>多少</strong></span>點
-											</div>
+
+										<div class="popup" id="show"  onclick="show()">
+											<br><input type="reset" value="顯示預估獲得點數">
+											<br><br>估計可以獲得<span class="popuptext" id="popup_text"><strong>多少</strong></span>點
+										</div>
+
 										<a>&nbsp</a>
 										<div class="display-flex">
 											<div class="box post" id="recyclebutton">
-												<input type="submit" value="回收" onclick="alert('test!!')">
+												<input type="submit" value="回收">
 											</div>
 											<a>&nbsp</a>
 											<div class="box post" id="resetbutton">

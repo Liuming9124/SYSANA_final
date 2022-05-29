@@ -80,26 +80,31 @@
 																<%=collectbook[i].book_name%></a></h3>
 														</header>
 													</div>
-													<a href="/product" class="image left"><img
-															src="../static/images/pic10.jpg" alt=""></a>
-													<p class="bid" id="bid">書籍編號：<%= result[i].book_id%>
+													<a href="/product/<%= result[i].book_id%>" class="image left">
+														<img src="/static/BookImg/<%=result[i].book_id%>.jpg" height="200px" width="200px" alt="">
+													</a>
+													<p class="bid" id="bid">
+														書籍編號：<%= result[i].book_id%>
 													</p>
-													<p class="author">作者：<%= result[i].book_author%>
+													<p class="author">
+														作者：<%= result[i].book_author%>
 													</p>
-													<p class="price">價錢：<%= result[i].book_price%>
+													<p class="price">
+														價錢：<%= result[i].book_price%>
 													</p>
 													<ul class="actions">
 														<li>
 															<div class="display-flex">
-																<div id="addcart"
-																	class="col-8 col-12-medium imp-medium">
-																	<a href="/cart"
-																		class="button style1 large">加入購物車</a>
+																<div id="addcart" class="col-8 col-12-medium imp-medium">
+																	<a href="/cart/add/<%= result[i].book_id %> " class="button style1 large">
+																		加入購物車
+																	</a>
 																</div>
 																<a>&nbsp</a>
-																<div id="outcollect"
-																	class="col-8 col-12-medium imp-medium">
-																	<a href="#" class="button style2 large">移除收藏</a>
+																<div id="outcollect" class="col-8 col-12-medium imp-medium">
+																	<a href="/collect/del/<%= result[i].book_id%>" class="button style2 large">
+																		移除收藏
+																	</a>
 																</div>
 															</div>
 														</li>
