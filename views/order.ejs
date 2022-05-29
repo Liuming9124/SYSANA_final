@@ -61,7 +61,7 @@
 						<!-- Content -->
 							<div id="content" class="col-8 col-12-medium imp-medium">
 								<!-- Post -->
-									<article class="box post">
+									
 										<header>
 											<h3>訂單資訊</h3>
 										</header>
@@ -71,8 +71,10 @@
 											<a>&nbsp&nbsp&nbsp</a>
 											<a size=10 href="#2">已完成</a>
 										</div>
-									</article>
+										
+									
 									<% for (let i = 0 ; i < result.length ; i++ ) { %>
+										<article class="box post">
 										<div id="pic" class="col-6 col-12-medium imp-medium">
 											<a href="/product/<%= result[i].order_no %> " class="image left"><img src="/static/BookImg/<%= result[i].order_no %> " alt=""></a>
 										</div>
@@ -82,6 +84,7 @@
 											<p>收件人  ： <%= result[i].order_name %></p><br>
 											<p>地址： <%= result[i].order_address %></p><br>
 										</div>
+										</article>
 									<% } %>
 							</div>
 							

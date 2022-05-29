@@ -21,37 +21,49 @@
 						<%- include('./partials/navmerch.ejs') %>
 
 			<!-- Post -->
-			<article class="box post">
-				<section id="features">
-					<div class="container">
-						<input type="button" value="待確認"  style="width:150px;height:50px;">
-						<input type="button" value="已接受訂單" style="width:150px;height:50px;">
-						<input type="button" value="已拒絕訂單" style="width:150px;height:50px;">
+			<section id="main">
+				<div class="container_1" style="height:5px">
+					<div class="display-flex">
+						<section id="features">
+								<input type="button" value="待確認"  style="">
+								<input type="button" value="已接受訂單" style="">
+								<input type="button" value="已拒絕訂單" style="">
+						</section>
 					</div>
-				</section>
-				<header>
-					<h3>訂單細節：</h3>
-				</header>
-				
-				<% for (let i = 0 ; i < result.length ; i++ ) { %>
-					<div id="pic" class="col-6 col-12-medium imp-medium">
-						<a href="/product/<%= result[i].order_no %> " class="image left"><img src="/static/BookImg/<%= result[i].order_no %> " alt=""></a>
-					</div>
-					<div>
-						<p>訂單編號： <%= result[i].order_id %></p><br>
-						<p>用戶帳號： <%= result[i].email %></p><br>
-						<p>收件人  ： <%= result[i].order_name %></p><br>
-						<p>地址： <%= result[i].order_address %></p><br>
-						<ul class="actions">
-							<div class="col-8 actions">
-								<a href="/merchant/order/confirm/<%= result[i].order_id %>" class="button style1 large">確認</a>
-								<a href="/merchant/order/cancel/<%= result[i].order_id %>" class="button style2 large">拒絕</a>
-							</div>
-						</ul>
-					</div>
-				<% } %> 
 				</div>
-				</section>
+				
+				<div class="container">
+						<header>
+							<br>
+							<h3>訂單細節：</h3>
+							<br>
+							<br>
+						</header>
+						<div class="row">
+							<table>
+								<% for (let i = 0 ; i < result.length ; i++ ) { %>
+									<div id="pic" class="col-4 col-12-medium">
+									<!-- <a href="/product/ result[i].order_no %> " class="image left"><img src="/static/BookImg/ result[i].order_no %> " alt=""></a> -->
+									
+									<div>
+										<p>訂單編號： <%= result[i].order_id %></p><br>
+										<p>用戶帳號： <%= result[i].email %></p><br>
+										<p>收件人  ： <%= result[i].order_name %></p><br>
+										<p>地址： <%= result[i].order_address %></p><br>
+										<ul class="actions">
+											<div class="col-6 actions">
+												<a href="/merchant/order/confirm/<%= result[i].order_id %>" class="button style1 large">確認</a>
+												<a href="/merchant/order/cancel/<%= result[i].order_id %>" class="button style2 large">拒絕</a>
+											</div>
+										</ul>
+									</div>
+									</div>
+								<% } %> 
+							</table>
+						</div>		
+				</div>
+			</section>
+				
 				
 
 				<!-- <form method="" action="POST"> -->
