@@ -2743,12 +2743,12 @@ input, select, textarea {
 	}
 	.display-flex-1 {
 		display: flex;
-		width: 400px;
+		width: 1000px;
 	  }
 	  
 	  .div-size {
 		border: 1px solid rgb(216, 209, 209);
-		width: 300px;
+		width: 500px;
 		height: 120px;
 		margin: 100px;
 	  }
