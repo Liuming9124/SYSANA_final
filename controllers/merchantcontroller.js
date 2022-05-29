@@ -29,7 +29,17 @@ const merchantController = {
                 'book_img':'1.jpg',
                 'username':'liu',
                 'chbookname':'book1',
-                'address':'1408'
+                'address':'1408',
+                'down':'150',
+                'up':'500'
+            },
+            {
+                'book_img':'1.jpg',
+                'username':'liu',
+                'chbookname':'book2',
+                'address':'1408',
+                'down':'150',
+                'up':'500'
             }
         ]
         return res.render('merchantchbook',{'result':result});
