@@ -1,4 +1,4 @@
-<Product>
+
 INSERT INTO product VALUES('1','book1','1.jpg','LiuMin1','100','hanlin0','learn');
 INSERT INTO product VALUES('2','book2','2.jpg','LiuMin2','200','hanlin0','learn');
 INSERT INTO product VALUES('3','book3','3.jpg','LiuMin3','300','hanlin0','learn');

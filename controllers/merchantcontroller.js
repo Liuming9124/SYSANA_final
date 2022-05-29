@@ -41,6 +41,24 @@ const merchantController = {
                 'down':'150',
                 'up':'500'
             }
+            ,
+            {
+                'book_img':'1.jpg',
+                'username':'liu',
+                'chbookname':'book3',
+                'address':'1408',
+                'down':'150',
+                'up':'500'
+            }
+            ,
+            {
+                'book_img':'1.jpg',
+                'username':'liu',
+                'chbookname':'book4',
+                'address':'1408',
+                'down':'150',
+                'up':'500'
+            }
         ]
         return res.render('merchantchbook',{'result':result});
     },

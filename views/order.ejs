@@ -61,27 +61,32 @@
 						<!-- Content -->
 							<div id="content" class="col-8 col-12-medium imp-medium">
 								<!-- Post -->
+									<article class="box post">
 										<header>
 											<h3>訂單資訊</h3>
 										</header>
-									<% for (var i=0 ; i < 1 ; i++) { %>	
-									<article class="box post">
-	
+						
 										<div class="box post">
 											<a size=10 href="#1">未完成</a>
 											<a>&nbsp&nbsp&nbsp</a>
 											<a size=10 href="#2">已完成</a>
 										</div>
-										<div>
-											<a href="#" class="image featured"><img src="/static/BookImg/<%= result[i].book_img %>" alt="" /></a>
-											<h3><a class="name" id="name">商品名稱:<%= result[i].book_name %> </a></h3>
-											<p class="author" id="author">作者：<%= result[i].book_author %></p>
-											<p class="price" id="price">價錢：<%= result[i].book_price%> </p>
-											<p class="orderstatus" id="orderstatus">出貨狀態:<%= result[i].book_orderstatus %></p>
-										</div>
-										<br>
-									<% } %>
 									</article>
+									<% for (let i = 0 ; i < result.length ; i++ ) { %>
+										<div id="pic" class="col-6 col-12-medium imp-medium">
+											<a href="/product/<%= result[i].order_no %> " class="image left"><img src="/static/BookImg/<%= result[i].order_no %> " alt=""></a>
+										</div>
+										<div>
+											<p>訂單編號： <%= result[i].order_no %></p><br>
+											<p>訂購用戶： <%= result[i].order_name %></p><br>
+											<% for (let j = 0 ; j < (result[i].book).length ; j++ ) { %> 
+												<p>訂購書籍編號： <%= result[i].book[j].book_id %> 書籍名稱： <%= result[i].book[j].book_price %> 書籍價格： <%= result[i].book[j].book_price %>元 </p>
+												<!-- <p></p>
+												<p></p><br> -->
+											<% } %> 
+											<p>地址： <%= result[i].address %></p><br>
+										</div>
+									<% } %>
 							</div>
 							
 							</article>
