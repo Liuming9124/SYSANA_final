@@ -13,15 +13,18 @@ const merchantController = {
         return res.render('merchant')
     },
     rebookPage: (req, res) => {
-        var result = [
-            {
-                'book_img': '1.jpg',
-                'username': 'liu',
-                'chbookname': 'book1',
-                'address': '1408'
+        
+        connection.query(`SELECT * FROM reduce where re_judge='0'`, function (err, result) {
+            if (err) {
+                console.log(err);
             }
-        ]
-        return res.render('merchantrebook', { 'result': result })
+            else {
+                console.log(result)
+                res.render('merchantrebook', { 'result': result })
+                
+            }
+        })
+
     },
     chbookPage: (req, res) => {
         var result = [
@@ -186,6 +189,46 @@ const merchantController = {
                 });
             }
         })
+    },
+    confirmRebook: (req, res) => { //req.params.id
+        connection.query(`SELECT * FROM reduce where re_id ='${req.params.id}'`, function (err, result, fields) {
+            if (err) {
+                res.redirect('/merchant/rebook');
+            }
+            else {
+                connection.query(`UPDATE reduce SET re_judge = '1' WHERE re_id = '${req.params.id}';`, function (err1, result1, fields) {
+                    if (err) {
+                        console.log(err1);
+                    }
+                    else {
+                        connection.query(`UPDATE users SET point = point + ${result[0].re_point} WHERE users.email = '${result[0].email}';`, function (err2, result2) { // 折抵book幣 並從users Point 扣除
+                            if (err)    console.log(err);
+                            else{
+                                return res.redirect('/merchant/rebook');
+                            }
+                        });
+                    }
+                });
+            }
+        })
+    },
+    cancelRebook: (req, res) => {
+        connection.query(`SELECT * FROM reduce where re_id ='${req.params.id}'`, function (err, result) {
+            if (err) {
+                res.redirect('/merchant/rebook');
+            }
+            else {
+                connection.query(`UPDATE reduce SET re_judge = '2' WHERE re_id = '${req.params.id}';`, function (err, result1) {
+                    if (err) {
+                        console.log(err);
+                    }
+                    else {
+                        return res.redirect('/merchant/rebook');
+                    }
+                });
+            }
+        })
+
     }
 }
 

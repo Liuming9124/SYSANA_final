@@ -39,8 +39,8 @@
 						<p>地址： <%= result[i].order_address %></p><br>
 						<ul class="actions">
 							<div class="col-8 actions">
-								<a href="/merchant/confirm/<%= result[i].order_id %>" class="button style1 large">確認</a>
-								<a href="/merchant/cancel/<%= result[i].order_id %>" class="button style2 large">拒絕</a>
+								<a href="/merchant/order/confirm/<%= result[i].order_id %>" class="button style1 large">確認</a>
+								<a href="/merchant/order/cancel/<%= result[i].order_id %>" class="button style2 large">拒絕</a>
 							</div>
 						</ul>
 					</div>
