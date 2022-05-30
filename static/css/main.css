@@ -1619,8 +1619,8 @@ input, select, textarea {
 		ul.divided li {
 			border-top: solid 1.5px #e5e5e5;
 			padding-left: 0;
-			margin: 2.5em 0 0 0;
-			padding: 2.5em 0 0 0;
+			margin: 1em 0 0 0;
+			padding: 1em 0 0 0;
 		}
 
 			ul.divided li:first-child {
@@ -2772,8 +2772,6 @@ input, select, textarea {
 	.popup .show {
 		visibility: visible;
 	}
-<<<<<<< HEAD
-=======
 	
 	.ccle {
 		margin: 0px auto;
@@ -2796,7 +2794,6 @@ input, select, textarea {
 	}
 	
 	
->>>>>>> 908d703bc057411c18d5beed978477639cca9239
 	.pricing-item {
 		background: #ffffff;
 		box-shadow: 0 2px 48px 0 rgba(15, 13, 13, 0.684);
@@ -2804,8 +2801,5 @@ input, select, textarea {
 		margin-bottom: 30px;
 		margin-top: 20px;
 		padding: 30px 100px 40px 100px;
-<<<<<<< HEAD
 	  }
-=======
-		 }
->>>>>>> 908d703bc057411c18d5beed978477639cca9239
+
