@@ -28,24 +28,25 @@
 										</header>
 										<form action="/login/userlogin" method="POST">
 											<div style="height: 60px;" class="container_1">
-												<input  type="text" id="username" placeholder="帳號" size=20 autocomplete="on" name="username" >
+												<input  type="text" id="username" placeholder="帳號" size=20 autocomplete="on" name="username" style="width:700px;height:60px;font-size:20px;" required="true">
 											</div>
-
+											<br>
 											<div style="height: 60px;" class="container_1">
-												<input type="password" id="password" placeholder="密碼" size=20 autocomplete="off" name="password" >
+												<input type="password" id="password" placeholder="密碼" size=20 autocomplete="off" name="password" style="width:700px;height:60px;font-size:20px;" required="true">
 											</div>
-											<div class="display-flex-1">
+											<br>
+											<div class="display-flex">
 												<div class="login" id="loginbutton">
-													<input type="submit" value="登入" style="width:230px;height:60px;font-size:20px;">
+													<input type="submit" value="登入" style="width:400px;height:80px;font-size:27px;">
 												</div>
 												<a>&nbsp</a>
 												<div id="register" >
-													<a href="/register" class="button style2 large" style="width:165px;height:60px;font-size:13px;">點擊註冊會員</a>
+													<a href="/register" class="button style2 large" style="width:300px;height:80px;font-size:30px;">註冊會員</a>
 												</div>
 											</div>
-											
+											<p><%=loginstatus%></p>
 										</form>	
-										<p><%=loginstatus%></p>
+										
 
 									</article>
 						
