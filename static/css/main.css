@@ -1949,6 +1949,18 @@ input, select, textarea {
 				font-size: 0.8em;
 				letter-spacing: 2px;
 		}
+		#header h3 {
+			font-family: 'Arvo';
+			font-weight: 700;
+			color: #ed786a;
+			text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
+			font-size: 3em;
+			letter-spacing: 13px;
+		}
+
+			#header h3 a {
+				border: 0;
+			}
 		#header p {
 			text-align: left;
 			text-transform: uppercase;
@@ -2305,7 +2317,9 @@ input, select, textarea {
 			#header h1 {
 				font-size: 2.5em;
 			}
-
+			#header h3 {
+				font-size: 2.5em;
+			}
 		/* Nav */
 
 			#nav > ul > li {
@@ -2641,7 +2655,11 @@ input, select, textarea {
 				letter-spacing: 5px;
 				line-height: 1em;
 			}
-
+			#header h3 {
+				font-size: 2em;
+				letter-spacing: 8px;
+				line-height: 1.325em;
+			}
 			#header p {
 				margin: 1.25em 0 0 0;
 				letter-spacing: 2px;
