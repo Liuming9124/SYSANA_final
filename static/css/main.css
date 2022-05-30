@@ -2764,4 +2764,11 @@ input, select, textarea {
 	.popup .show {
 		visibility: visible;
 	}
-	
+	.pricing-item {
+		background: #ffffff;
+		box-shadow: 0 2px 48px 0 rgba(15, 13, 13, 0.684);
+		border-radius: 20px;
+		margin-bottom: 30px;
+		margin-top: 20px;
+		padding: 30px 100px 40px 100px;
+	  }
