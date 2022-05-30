@@ -50,7 +50,6 @@ const memberController = {
                     }
                     else{
                         return res.redirect('/member');     //Had punch with a day;
-                        
                     }
                 }
                 else    console.log(err);

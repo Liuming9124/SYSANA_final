@@ -27,49 +27,30 @@ const merchantController = {
 
     },
     chbookPage: (req, res) => {
-        var result = [
-            {
-                'book_img':'1.jpg',
-                'username':'liu',
-                'chbookname':'book1',
-                'address':'1408',
-                'down':'150',
-                'up':'500'
-            },
-            {
-                'book_img':'1.jpg',
-                'username':'liu',
-                'chbookname':'book2',
-                'address':'1408',
-                'down':'150',
-                'up':'500'
+        connection.query(`SELECT * FROM  changes`, function (err, result){
+            if (err){
+                console.log(err);
             }
-            ,
-            {
-                'book_img':'1.jpg',
-                'username':'liu',
-                'chbookname':'book3',
-                'address':'1408',
-                'down':'150',
-                'up':'500'
+            else{
+                console.log(result);
+                return res.render('merchantchbook', { 'result': result });
             }
-            ,
-            {
-                'book_img':'1.jpg',
-                'username':'liu',
-                'chbookname':'book4',
-                'address':'1408',
-                'down':'150',
-                'up':'500'
-            },
-            {
-                'book_img': '1.jpg',
-                'username': 'liu',
-                'chbookname': 'book1',
-                'address': '1408'
+        })
+    },
+    confirmChbook:(req,res)=>{
+
+
+    },
+    cancelChbook:(req,res)=>{
+        connection.query(`UPDATE changes SET ch_judge = '2' WHERE ch_id = '${req.params.id}';`, function (err, result, fields) {
+            if (err) {
+                return res.redirect('/merchant/chbook');
             }
-        ]
-        return res.render('merchantchbook', { 'result': result });
+            else {
+                console.log(`cancel ${req.params.id} success`);
+                return res.redirect('/merchant/chbook');
+            }
+        });
     },
     orderPage: (req, res) => {
         var resultfinal = {};
@@ -207,22 +188,15 @@ const merchantController = {
     cancelOrder: (req, res) => {
         // console.log('cancel ', req.params.id);
         //利用order id 查詢該筆訂單 並列為取消狀態
-        connection.query(`SELECT * FROM orders where order_id ='${req.params.id}'`, function (err, result, fields) {
+        connection.query(`UPDATE orders SET order_status = '2' WHERE order_id = '${req.params.id}';`, function (err, result, fields) {
             if (err) {
-                res.redirect('/merchant/order');
+                return res.redirect('/merchant/order');
             }
             else {
-                connection.query(`UPDATE orders SET order_status = '2' WHERE order_id = '${req.params.id}';`, function (err, result, fields) {
-                    if (err) {
-                        console.log(err);
-                    }
-                    else {
-                        console.log(`cancel ${req.params.id} success`);
-                        return res.redirect('/merchant/order');
-                    }
-                });
+                console.log(`cancel ${req.params.id} success`);
+                return res.redirect('/merchant/order');
             }
-        })
+        });
     },
     confirmRebook: (req, res) => { //req.params.id
         connection.query(`SELECT * FROM reduce where re_id ='${req.params.id}'`, function (err, result, fields) {

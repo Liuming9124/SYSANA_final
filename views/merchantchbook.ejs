@@ -45,19 +45,19 @@
 					</header>
 					<div class="row ">
 						<table>
-							<% for (var i=0 ; i < 4 ; i++) { %>
+							<% for (var i=0 ; i < result.length ; i++) { %>
 								<div class="col-4 col-12-medium">
 									<a href="#" class="image left"><img src="../static/images/<%=result[i].book_img%>" alt=""></a>
-									<h3><strong><a class="username" id="username">交換用戶：<%=result[i].username%></a></strong></h3>
+									<h3><strong><a class="username" id="username">交換用戶: <%=result[i].ch_name%></a></strong></h3>
 									<div class="chbookname">
-										<p id="chbookname">交換書籍：<%=result[i].chbookname%></p>
+										<p id="chbookname">交換書籍: <%=result[i].ch_bname%></p>
 									</div>
 									
 									<div class="address">
-										<p id="address">收件地址:<%=result[i].address%></p>
+										<p id="address">收件地址: <%=result[i].ch_address%></p>
 									</div>
 									<div class="price">
-										<p id="down">書籍價格區間:<%=result[i].down%><a id="up">~<%=result[i].up%></a></p>
+										<p id="down">書籍價格區間: <%=result[i].ch_bprice%></p>
 									</div>
 									
 									<ul class="actions">
@@ -68,11 +68,11 @@
 												</div>
 												<div class="display-flex">
 													<div id="allowexchange" class="box post">
-														<a href="#" class="button style1 large">允許交換</a>
+														<a href="/merchant/chbook/confirm/<%= result[i].ch_id %> " class="button style1 large">允許交換</a>
 													</div>
 													<a>&nbsp</a>
 													<div id="refuseexchange" class="box post">
-														<a href="#" class="button style2 large">拒絕交換</a>
+														<a href="/merchant/chbook/cancel/<%= result[i].ch_id %> " class="button style2 large">拒絕交換</a>
 													</div>
 												</div>
 												
