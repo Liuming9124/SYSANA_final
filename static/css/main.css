@@ -1934,14 +1934,21 @@ input, select, textarea {
 			font-weight: 700;
 			color: #ed786a;
 			text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
-			font-size: 2em;
+			font-size: 1.8em;
 			letter-spacing: 4px;
 		}
 
 			#header h1 a {
 				border: 0;
 			}
-
+		#header h2 {
+				text-align: right;
+				font-weight: 700;
+				color: #928a89;
+				text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
+				font-size: 0.8em;
+				letter-spacing: 2px;
+		}
 		#header p {
 			text-align: left;
 			text-transform: uppercase;
