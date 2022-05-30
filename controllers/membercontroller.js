@@ -1,3 +1,4 @@
+
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
@@ -31,15 +32,25 @@ const memberController = {
         if (req.session.userName){
             connection.query(`SELECT punch FROM users WHERE email = '${req.session.userName}'`, function (err, result){
                 if (!err){
-                    let ct = new Date(Date.now());
-                    let test = new Date(1);
-                    console.log(test);
-                    if (result[0].punch == ct){
-                        // console.log('same date, ',result[0]);
+                    // console.log('pt= ',result[0].punch);
+                    let ct = Date.now();    //current time
+                    let pt = ( new Date(result[0].punch) ).getTime();   //last punch time
+
+                    if ( (ct - pt) >= 86400000){
+                        let nct = new Date(ct);
+                        let time = `${nct.getFullYear()}-${nct.getMonth()+1}-${nct.getDate()} ${nct.getHours()}:${nct.getMinutes()}:${nct.getSeconds()}`;
+
+                        connection.query(`UPDATE users SET punch = '${time}' , point = (point + 1) WHERE email = '${req.session.userName}';`,function (err1,result1){
+                            if (!err){
+                                console.log('punch success');
+                                return res.redirect('/member');
+                            }
+                            else    return res.redirect('/member');
+                        })
                     }
                     else{
+                        return res.redirect('/member');     //Had punch with a day;
                         
-                        // console.log('different date, ',result[0].punch,ct);
                     }
                 }
                 else    console.log(err);
