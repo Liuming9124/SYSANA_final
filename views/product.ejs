@@ -15,12 +15,10 @@
 						<%- include('./partials/nav.ejs') %>
 	
 					<!-- Main -->
-			<section id="main">
-				<section>
-					<ul class="divided">
-						<li>
-
-							<!-- Highlight -->
+					<section id="main">
+						<div class="container">
+							<div class="row">
+								<!-- Highlight -->
 								<article class="box highlight">
 									<a href="#" class="image left">
 										<img src="/static/BookImg/<%= result.book_img %>" alt="" height="500px" width="500px" />
@@ -49,9 +47,11 @@
 								</article>
 								<div id="addcart" class="col-8 col-12-medium imp-medium"><a href="/cart/buy/<%= result.book_id %> " class="button style2 large">購買</a></div>
 								</li></div>
-					</ul>
-				</section>	
-			</section>
+
+							</div>
+						</div>
+					</section>		
+			
 
 							
 			<!-- Footer -->
