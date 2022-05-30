@@ -19,4 +19,8 @@ router.get('/order/cancel/:id' , merchantController.cancelOrder);
 router.get('/rebook/confirm/:id', merchantController.confirmRebook);
 router.get('/rebook/cancel/:id',  merchantController.cancelRebook);
 
+//chbook
+router.get('/chbook/confirm/:id', merchantController.confirmChbook);
+router.get('/chbook/cancel/:id',  merchantController.cancelChbook);
+
 module.exports = router
