@@ -27,49 +27,22 @@ const merchantController = {
 
     },
     chbookPage: (req, res) => {
-        var result = [
-            {
-                'book_img':'1.jpg',
-                'username':'liu',
-                'chbookname':'book1',
-                'address':'1408',
-                'down':'150',
-                'up':'500'
-            },
-            {
-                'book_img':'1.jpg',
-                'username':'liu',
-                'chbookname':'book2',
-                'address':'1408',
-                'down':'150',
-                'up':'500'
+        connection.query(`SELECT * FROM  changes`, function (err, result){
+            if (err){
+                throw err
             }
-            ,
-            {
-                'book_img':'1.jpg',
-                'username':'liu',
-                'chbookname':'book3',
-                'address':'1408',
-                'down':'150',
-                'up':'500'
+            else{
+                console.log(result);
+                return res.render('merchantchbook', { 'result': result });
             }
-            ,
-            {
-                'book_img':'1.jpg',
-                'username':'liu',
-                'chbookname':'book4',
-                'address':'1408',
-                'down':'150',
-                'up':'500'
-            },
-            {
-                'book_img': '1.jpg',
-                'username': 'liu',
-                'chbookname': 'book1',
-                'address': '1408'
-            }
-        ]
-        return res.render('merchantchbook', { 'result': result });
+        })
+    },
+    confirmChbook:(req,res)=>{
+
+
+    },
+    cancelChbook:(req,res)=>{
+
     },
     orderPage: (req, res) => {
         var resultfinal = {};
