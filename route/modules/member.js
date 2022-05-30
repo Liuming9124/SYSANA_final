@@ -10,6 +10,7 @@ router.get('/logout',function (req, res){
     req.session.destroy();
     res.redirect('/home');
 })
+router.get('/punch', memberController.memberPunch);
 router.post('/update', memberController.memberUpdate)
 
 

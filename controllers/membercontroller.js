@@ -27,6 +27,26 @@ const memberController = {
         }
 
     },
+    memberPunch:(req, res) => {
+        if (req.session.userName){
+            connection.query(`SELECT punch FROM users WHERE email = '${req.session.userName}'`, function (err, result){
+                if (!err){
+                    let ct = new Date(Date.now());
+                    let test = new Date(1);
+                    console.log(test);
+                    if (result[0].punch == ct){
+                        // console.log('same date, ',result[0]);
+                    }
+                    else{
+                        
+                        // console.log('different date, ',result[0].punch,ct);
+                    }
+                }
+                else    console.log(err);
+            })
+        }
+        else    return res.redirect('/login');
+    },
     memberUpdate: (req, res) => {
         var data = req.body;
         // console.log(data);

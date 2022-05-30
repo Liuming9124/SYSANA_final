@@ -6,6 +6,7 @@ CREATE TABLE users(
     userpassword  VARCHAR(20) NOT NULL,
     phone VARCHAR(15) NOT NULL,
     useraddr VARCHAR(50) NOT NULL,
+    punch Datetime,
     point INT,
     PRIMARY KEY(email)
 );
