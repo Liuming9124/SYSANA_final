@@ -1923,18 +1923,19 @@ input, select, textarea {
 	}
 
 		#header > .container {
-			padding: 14em 0 7em 0;
+			padding: 4em 0 2em 0;
 			border-bottom: solid 2px #e5e5e5;
 			box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5;
 		}
 
 		#header h1 {
+			text-align: left;
 			font-family: 'Arvo';
 			font-weight: 700;
 			color: #ed786a;
 			text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
-			font-size: 3em;
-			letter-spacing: 13px;
+			font-size: 2em;
+			letter-spacing: 4px;
 		}
 
 			#header h1 a {
@@ -1942,13 +1943,13 @@ input, select, textarea {
 			}
 
 		#header p {
+			text-align: left;
 			text-transform: uppercase;
 			font-weight: 400;
 			color: #888;
 			margin: 2.5em 0 0 0;
 			font-size: 0.85em;
 			letter-spacing: 3px;
-			text-align: center;
 		}
 
 /* Nav */
@@ -2291,7 +2292,7 @@ input, select, textarea {
 		/* Header */
 
 			#header > .container {
-				padding: 12em 0 5em 0;
+				padding: 4em 0 5em 0;
 			}
 
 			#header h1 {
@@ -2362,7 +2363,7 @@ input, select, textarea {
 		/* Header */
 
 			#header > .container {
-				padding: 10em 0 7em 0;
+				padding: 6em 0 3em 0;
 			}
 
 		/* Nav */
@@ -2625,13 +2626,13 @@ input, select, textarea {
 		/* Header */
 
 			#header > .container {
-				padding: 6em 0 4em 0;
+				padding: 3em 0 4em 0;
 			}
 
 			#header h1 {
 				font-size: 2em;
-				letter-spacing: 8px;
-				line-height: 1.325em;
+				letter-spacing: 5px;
+				line-height: 1em;
 			}
 
 			#header p {
@@ -2765,3 +2766,32 @@ input, select, textarea {
 		visibility: visible;
 	}
 	
+	.ccle {
+		margin: 0px auto;
+		text-align: center;
+	}
+	.ccle div {
+		display: inline-block;
+		vertical-align: top;
+		width: 130px;;
+	}
+	
+	
+	
+	.ccle b {
+	color: #e06666;
+	font-size:16px;
+	}
+	.ccle img{
+	margin-top: 5px;
+	}
+	
+	
+	.pricing-item {
+		background: #ffffff;
+		box-shadow: 0 2px 48px 0 rgba(15, 13, 13, 0.684);
+		border-radius: 20px;
+		margin-bottom: 30px;
+		margin-top: 20px;
+		padding: 30px 100px 40px 100px;
+		 }
