@@ -5,67 +5,79 @@
         <ul class="divided">
             <li>
                 <!-- Excerpt -->
-                    <article class="box excerpt">
-                            <header>
-                                <span class="date" href="#"  style="width:120px;height:40px;text-align: center;">每日簽到</span>
-                                <div class="box excerpt" id="signin">
-                                    <h3><a href="/member/punch" class="button style1">點擊簽到</a></h3>
-                                </div>
-                            </header>
-                    </article>
-                </li>
-            <li>
-                <!-- Excerpt -->
                 <article class="box excerpt">
-                    <header>
-                        <span class="date"  style="width:120px;height:40px;text-align: center;">我的錢包</span>
-                    </header>
-                    
                     <div class="display-flex">
-                        <p>目前擁有</p><a>&nbsp</a>
+                        <img src="../static/images/coin.png" style="width:80px;height:80px;" alt="錢包"><p>&nbsp&nbsp&nbsp</>
+                        
                         <div class="box excerpt" id="bookcoin">
-                            <p><strong><%=bookcoin%></strong><a>&nbsp</a>book幣</p>
+                            <br><p>&nbsp&nbsp&nbsp&nbsp目前擁有 &nbsp&nbsp&nbsp<strong><%=bookcoin%></strong>&nbsp&nbsp&nbspbook幣</p>
                         </div>
                     </div>
                 </article>
             </li>
-               
+            <li>
+                <!-- Excerpt -->
+                    <article class="box excerpt">
+                        <div class="display-flex">
+                            <img src="../static/images/sign.png" href="/member/punch" style="width:80px;height:80px;" alt="錢包">
+                           <p>&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+                            <div>
+                                <br><a href="/member/punch" class="button-1 style2 large" style="width:150px;height:50px;font-size:13px;">點擊簽到</a>
+                            </div>
+                        </div>    
+                    </article>
+                </li>
                 <li>
                     <!-- Excerpt -->
                         <article class="box excerpt">
-                            <header>
-                                <h3><a href="/order" class="date" style="width:120px;height:40px;text-align: center;">我的訂單</a></h3>
-                                <h3><a href="/order">查看我的訂單狀態</a></h3>
-                            </header>
+                            <a href="/order" >
+                                <div class="display-flex">
+                                    <img src="../static/images/list.png" href="/order" style="width:80px;height:80px;" alt="我的訂單">
+                                    <div href="/order">
+                                        <br><p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我的訂單</p>
+                                    </div>
+                                </div>
+                            </a>  
                         </article>
                 </li>
                 <li>
                     <!-- Excerpt -->
                         <article class="box excerpt">
-                            <header>
-                                <h3><a href="/collect" class="date"  style="width:120px;height:40px;font-size:12px;text-align: center;">交換書功能</a></h3>
-                                <h3><a href="/chbook">讓您與書友友進一步交流</a></h3>
-                            </header>
+                            <a href="/collect" >
+                                <div class="display-flex">
+                                    <img src="../static/images/change.png" href="/order" style="width:80px;height:80px;" alt="交換書功能">
+                                    <div href="/order">
+                                        <br><p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp交換書功能</p>
+                                    </div>
+                                </div>
+                            </a>
                         </article>
                 </li>
                 
                 <li>
                     <!-- Excerpt -->
                         <article class="box excerpt">
-                            <header>
-                                <h3><a href="/rebook" class="date"  style="width:120px;height:40px;font-size:12px;text-align: center;">回收書功能</a></h3>
-                                <h3><a href="/rebook">讓書呈現善的循環</a></h3>
-                            </header>
+                            <a href="/rebook" >
+                                <div class="display-flex">
+                                    <img src="../static/images/wish.png" href="/rebook" style="width:80px;height:80px;" alt="回收書功能">
+                                    <div href="/rebook">
+                                        <br><p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp回收書功能</p>
+                                    </div>
+                                </div>
+                            </a>
                         </article>
                 </li>
                 <li>
                     <!-- Excerpt -->
                         <article class="box excerpt">
-                            <header>
-                                <h3><a href="/wishlist" class="date"  style="width:120px;height:40px;text-align: center;">許願功能</a></h3>
-
-                                <h3><a href="/wishlist">許下你想購買的書</a></h3>
-                            </header>
+                            <a href="/wishlist" >
+                                <div class="display-flex">
+                                    <img src="../static/images/recycle.png" href="/wishlist" style="width:80px;height:80px;" alt="許願功能">
+                                    <div href="/wishlist">
+                                        <br><p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp許願功能</p>
+                                    </div>
+                                </div>
+                            </a>
                         </article>
                 </li>
                 

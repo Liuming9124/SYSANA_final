@@ -130,7 +130,12 @@ input, select, textarea {
 		letter-spacing: 2px;
 		margin: 0 0 1.25em 0;
 	}
-
+	h4 {
+		justify-content: left;
+		font-size: 1em;
+		letter-spacing: 2px;
+		margin: 0 0 1.25em 0;
+	}
 	a {
 		-moz-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		-webkit-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
@@ -448,7 +453,7 @@ input, select, textarea {
 		}
 
 			.row > * {
-				padding: 50px 0 0 50px;
+				padding: 25px 0 0 250px;
 			}
 
 			.row.gtr-uniform {
@@ -1794,7 +1799,32 @@ input, select, textarea {
 		letter-spacing: 2px;
 		padding: 0.85em 2.75em 0.85em 2.75em;
 	}
-	
+	.button-1 {
+		-moz-transition: all 0.25s ease-in-out;
+		-webkit-transition: all 0.25s ease-in-out;
+		-ms-transition: all 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
+		-webkit-appearance: none;
+		position: relative;
+		display: inline-block;
+		background: #878787;
+		color: #fff !important;
+		text-transform: uppercase;
+		border-radius: 4px;
+		border: 0;
+		outline: 0;
+		font-size: 1em;
+		box-shadow: 0.125em 0.175em 0 0 rgba(0, 0, 0, 0.125);
+		font-weight: 600;
+		text-align: center;
+		font-size: 0.85em;
+		letter-spacing: 2px;
+		padding: 0.85em 2.75em 0.85em 2.75em;
+	}
+	/*input[type="button"],
+	input[type="submit"],
+	input[type="reset"],
+	button,
 	.button_1 {
 		font-size: 15px;
 		color: #fff;
@@ -1934,7 +1964,7 @@ input, select, textarea {
 	}
 
 		#header > .container {
-			padding: 4em 0 2em 0;
+			padding: 4em 0 1em 0;
 			border-bottom: solid 2px #e5e5e5;
 			box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5;
 		}
@@ -1977,7 +2007,7 @@ input, select, textarea {
 			text-transform: uppercase;
 			font-weight: 400;
 			color: #888;
-			margin: 2.5em 0 0 0;
+			margin: 2em 0 0 0;
 			font-size: 0.85em;
 			letter-spacing: 3px;
 		}
@@ -2127,9 +2157,9 @@ input, select, textarea {
 	#features {
 		position: relative;
 		overflow: hidden;
-		background: #fff;
+		background: rgba(255, 255, 255, 0.829);
 		text-align: center;
-		padding: 6em 0;
+		padding: 3em 0;
 	}
 
 		#features p {
@@ -2213,9 +2243,9 @@ input, select, textarea {
 	#content > section,
 	#content > article {
 		border-top: solid 2px #e5e5e5;
-		box-shadow: inset 0px 8px 0px 0px #fff, inset 0px 10px 0px 0px #e5e5e5;
-		margin: 5em 0 0 0;
-		padding: 5em 0 0 0;
+		box-shadow: inset 0px 8px 0px 0px #fff, inset 0px 8px 0px 0px #e5e5e5;
+		margin: 2em 0 0 0;
+		padding: 2em 0 0 0;
 	}
 
 		#content > section:first-child,
@@ -2606,6 +2636,7 @@ input, select, textarea {
 				text-align: center;
 				margin: 0 0 1em 0;
 			}
+			
 
 				h2 br, h3 br, h4 br, h5 br, h6 br {
 					display: none;
@@ -2811,7 +2842,30 @@ input, select, textarea {
 		vertical-align: top;
 		width: 130px;;
 	}
+	.display-flex-2 {
+		justify-content: center;
+		display: flex;
+		width: 600px;
+	  }
+	  
+	  .div-size {
+		border: 1px solid rgb(216, 209, 209);
+		width: 500px;
+		height: 120px;
+		margin: 100px;
+	  }
+	  
+	  .popup {
+		cursor: pointer;
+	}
 	
+	.popup .popuptext {
+		visibility: hidden;
+	}
+	
+	.popup .show {
+		visibility: visible;
+	}
 	
 	
 	.ccle b {
