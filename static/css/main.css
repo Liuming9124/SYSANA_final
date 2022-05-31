@@ -436,7 +436,7 @@ input, select, textarea {
 		}
 
 			.row.gtr-50 > * {
-				padding: 25px 0 0 25px;
+				padding: 10px 0 0 10px;
 			}
 
 			.row.gtr-50.gtr-uniform {
@@ -453,7 +453,7 @@ input, select, textarea {
 		}
 
 			.row > * {
-				padding: 25px 0 0 250px;
+				padding: 10px 0 0 100px;
 			}
 
 			.row.gtr-uniform {
@@ -2380,7 +2380,7 @@ input, select, textarea {
 			}
 
 				#banner > .container {
-					padding: 0 4em;
+					padding: 0 2em;
 				}
 
 					#banner > .container br {
@@ -2425,7 +2425,7 @@ input, select, textarea {
 		/* Header */
 
 			#header > .container {
-				padding: 6em 0 3em 0;
+				padding: 4em 0 3em 0;
 			}
 
 		/* Nav */
