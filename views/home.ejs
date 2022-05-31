@@ -26,14 +26,52 @@
 					</header>
 					
 					<div class="container">
+						<!-- books1 -->
+						<article class="pricing-item">
+
+							<h3>最新上架二手書</h3><br>
+							<div class="row aln-center">
+								<table>
+									<% for (var i=0 ; i < 4 ; i++) { %>
+										<div class="col-3 col-12-medium">
+											<section class="books">
+												<a href="/product/<%=random[i].book_id%>" class="image featured">
+													<img class="imgsrc" src="/static/BookImg/<%=random[i].book_img%>"  style="width:195px;height:310px;font-size:8px;" />
+												</a>
+												<h3><p href="/product/<%=random[i].book_id%> class="name" id="name"> <%=random[i].book_name %> </p></h3>
+												<div class="display-flex">
+													<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+														價錢：</p>	
+													<p class="price" id="price"><%= random[i].book_price%></p>
+												</div>			
+												
+												<ul class="actions">
+													<li>
+														<div class="display-flex">
+															<div id="addcollect" class="col-8 col-12-medium imp-medium">
+																<a href="/collect/add/<%= random[i].book_id %> " class="button style1 large" style="width:120px;height:40px;font-size:8px;">加入收藏</a>
+															</div>
+															<a>&nbsp</a>
+															<div id="addcart" class="col-8 col-12-medium imp-medium">
+																<a href="/cart/add/<%=random[i].book_id%>" class="button style2 large" style="width:120px;height:40px;font-size:8px;">加入購物車</a>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</section>
+										</div>
+									<% } %>
+								</table>
+							</div>
+	</article>
 						<!-- books2 -->
 						<p> </p>
 						<h3>熱門商品</h3><br>
 						<div class="container">
 							<div class="row aln-center">
 								<table>
-									<% for (var i=0 ; i < 6 ; i++) { %>
-										<div class="col-2 col-12-medium">
+									<% for (var i=0 ; i < 5 ; i++) { %>
+										<div class="col-2 col-10-medium">
 											<section class="books">
 												<a href="/product/<%=hot[i].book_id%>" class="image featured" >		<img class="imgsrc" src=".
 											.\static\BookImg\<%=hot[i].book_img%>" alt="" style="width:145px;height:200px;font-size:6px;">
@@ -64,44 +102,7 @@
 								</table>
 							</div>
 						</article>
-							<!-- books1 -->
-							<article class="pricing-item">
-
-						<h3>最新上架二手書</h3><br>
-						<div class="row aln-center">
-							<table>
-								<% for (var i=0 ; i < 4 ; i++) { %>
-									<div class="col-3 col-12-medium">
-										<section class="books">
-											<a href="/product/<%=random[i].book_id%>" class="image featured">
-												<img class="imgsrc" src="/static/BookImg/<%=random[i].book_img%>"  style="width:195px;height:310px;font-size:8px;" />
-											</a>
-											<h3><p href="/product/<%=random[i].book_id%> class="name" id="name"> <%=random[i].book_name %> </p></h3>
-											<div class="display-flex">
-												<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-													價錢：</p>	
-												<p class="price" id="price"><%= random[i].book_price%></p>
-											</div>			
-											
-											<ul class="actions">
-												<li>
-													<div class="display-flex">
-														<div id="addcollect" class="col-8 col-12-medium imp-medium">
-															<a href="/collect/add/<%= random[i].book_id %> " class="button style1 large" style="width:120px;height:40px;font-size:8px;">加入收藏</a>
-														</div>
-														<a>&nbsp</a>
-														<div id="addcart" class="col-8 col-12-medium imp-medium">
-															<a href="/cart/add/<%=random[i].book_id%>" class="button style2 large" style="width:120px;height:40px;font-size:8px;">加入購物車</a>
-														</div>
-													</div>
-												</li>
-											</ul>
-										</section>
-									</div>
-								<% } %>
-							</table>
-						</div>
-</article>
+							
 						
 				</section>
 

@@ -26,25 +26,25 @@
 										</a>
 										<div>
 											<br>
-											<header><h3><a href="../product/product.html" class="name" id="name"><%= result.book_name %></a></h3></header><br>
+											<header><h3><a href="../product/product.html" class="name" id="name"><%= result.book_name %></a></h3></header><br><br>
 											<div class="display-flex">書籍編號：	
 												<p class="bid" id="bid"><%= result.book_id %></p>
-											</div><br>
+											</div>
 											<div class="display-flex">作者：
 												<p class="writer" id="writer"><%= result.book_author %></p>
-											</div><br>
+											</div>
 											<div class="display-flex">價錢：
 												<p class="price" id="price"><%= result.book_price %></p>
-											</div><br>	
+											</div>	
 											
 											<ul class="actions">
 												<div class="display-flex">
-														<div id="addcollect" class="col-8 col-12-medium imp-medium"><a href="/collect/add/<%= result.book_id %> " class="button style1 large">加入收藏</a></div>
+														<div id="addcollect" class="col-8 col-12-medium imp-medium"><a href="/collect/add/<%= result.book_id %> " class="button style1 large" style="width:150px;height:50px;font-size:13px;">加入收藏</a></div>
 														<a>&nbsp</a>
-														<div id="addcart" class="col-8 col-12-medium imp-medium"><a href="/cart/add/<%= result.book_id %> " class="button style2 large">加入購物車</a></div>
+														<div id="addcart" class="col-8 col-12-medium imp-medium"><a href="/cart/add/<%= result.book_id %> " class="button style2 large" style="width:150px;height:50px;font-size:13px;">加入購物車</a></div>
 												</div>
 											</ul>
-											<div id="addcart" class="col-8 col-12-medium imp-medium"><a href="/cart/buy/<%= result.book_id %> " class="button style2 large" style="width:360px;height:60px;font-size:20px;">購買</a></div>
+											<div id="addcart" class="col-8 col-12-medium imp-medium"><a href="/cart/buy/<%= result.book_id %> " class="button style2 large" style="width:300px;height:50px;font-size:13px;">購買</a></div>
 										</li>
 										</div>
 									</div>
