@@ -58,19 +58,19 @@
 										</div>
 										<a>書況:</a>
 										<div class="container_1">
-											<div style="height: 60px; width: 500px;" class="box post" id="re_status">
-												<select name="re_status" >
-													<option disabled selected hidden>請選擇書籍狀況</option>
-													<option>全新</option>
-													<option>7成~9成</option>
-													<option>5成~7成</option>	
+											<div style="height: 60px; width: 500px;" class="box post" >
+												<select name="re_status" id="re_status">
+													<option disabled selected hidden >請選擇書籍狀況</option>
+													<option value="0.6">全新</option>
+													<option value="0.5">7成~9成</option>
+													<option value="0.4">5成~7成</option>	
 												</select>
 											</div>
 										</div>
 										<div class="container_1">
 										<div class="popup" id="show"  onclick="show()">
-											<br><input style="height:60px; width: 300px;"class="button_1"type="button" value="顯示預估獲得點數">
-											<br><br>估計可以獲得<span class="popuptext" id="bookcoin"><strong><%=bookcoin%></strong></span>點
+											<br><input style="height:60px; width: 300px;"class="button_1"type="button" value="顯示預估獲得點數" onclick="compare()">
+											<br><br>估計可以獲得<span ><strong id="showcoin" class="word_2">0</strong></span>點
 										</div>
 										</div>
 										<a>&nbsp</a>
@@ -78,7 +78,7 @@
 										<div class="display-flex">
 											
 											<div class="box post" id="recyclebutton">
-												<input style="width: 250px;"class="button"type="submit" value="回收">
+												<input style="width: 250px;"class="button"type="submit" value="回收" >
 											</div>
 											
 											<a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
@@ -115,6 +115,7 @@
 		<script src="../static/js/breakpoints.min.js"></script>
 		<script src="../static/js/util.js"></script>
 		<script src="../static/js/main.js"></script>
+		<script src="../static/js/rebook.js"></script>
 
 	</body>
 </html>

@@ -57,25 +57,24 @@
 							<% for (var i=0 ; i < result.length ; i++) { %>
 								<div class="col-4 col-12-medium">
 									<div class="pricing-item_1" style="height: 500px; width: 400px;">
-										<a href="#" class="image left"><img src="../static/images/<%=result[i].book_img%>" alt=""></a>
-										<h3><strong><a class="username" id="username">交換用戶: <%=result[i].ch_name%></a></strong></h3>
+										
+										<h3><a class="word_2" id="username">交換用戶: <%=result[i].ch_name%></a></h3>
 										<div class="chbookname">
-											<p id="chbookname">交換書籍: <%=result[i].ch_bname%></p>
+											<p id="chbookname" class="word_2">交換書籍: <%=result[i].ch_bname%></p>
 										</div>
 										
 										<div class="address">
-											<p id="address">收件地址: <%=result[i].ch_address%></p>
+											<p id="address" class="word_2">收件地址: <%=result[i].ch_address%></p>
 										</div>
 										<div class="price">
-											<p id="down">書籍價格區間: <%=result[i].ch_bprice%></p>
+											<p id="down" class="word_2">書籍價格區間: <%=result[i].ch_bprice%></p>
 										</div>
 										
 										
 												<form action="" method="POST">
 													<div style="height: 60px;" class="actions">
-														<input  type="text" id="reply" placeholder="拒絕交換原因(同意則不填)" size=30 autocomplete="on" name="reply">
+														<input class="text"type="text" id="reply" placeholder="拒絕交換原因(同意則不填)" size=30 autocomplete="on" name="reply">
 													</div>
-													
 													<ul class="actions">
 														<div class="display-flex">
 														<div id="allowexchange" class="col-6 actions">
