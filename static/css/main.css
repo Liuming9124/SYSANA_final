@@ -130,7 +130,12 @@ input, select, textarea {
 		letter-spacing: 2px;
 		margin: 0 0 1.25em 0;
 	}
-
+	h4 {
+		justify-content: left;
+		font-size: 1em;
+		letter-spacing: 2px;
+		margin: 0 0 1.25em 0;
+	}
 	a {
 		-moz-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		-webkit-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
@@ -2634,6 +2639,7 @@ input, select, textarea {
 				text-align: center;
 				margin: 0 0 1em 0;
 			}
+			
 
 				h2 br, h3 br, h4 br, h5 br, h6 br {
 					display: none;
