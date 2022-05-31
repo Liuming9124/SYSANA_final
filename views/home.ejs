@@ -34,17 +34,9 @@
 									<div class="col-4 col-12-medium">
 										<section class="books">
 											<a href="/product/<%=random[i].book_id%>" class="image featured">
-												<img class="imgsrc" src="/static/BookImg/<%=random[i].book_img%>" alt="" height="500" />
+												<img class="imgsrc" src="/static/BookImg/<%=random[i].book_img%>" alt="" height="400" />
 											</a>
 											<h3><p href="/product/<%=random[i].book_id%> class="name" id="name"> <%=random[i].book_name %> </p></h3>
-											<div class="display-flex">
-												<p>書籍編號：</p>	
-												<p class="bid" id="bid" value="bookid"><%= random[i].book_id %></p>
-											</div>
-											<div class="display-flex">
-												<p>作者：</p>	
-												<p class="writer" id="writer"><%= random[i].book_author %></p>
-											</div>
 											<div class="display-flex">
 												<p>價錢：</p>	
 												<p class="price" id="price"><%= random[i].book_price%></p>
@@ -82,14 +74,6 @@
 											.\static\BookImg\<%=hot[i].book_img%>" alt="" height="500" />
 												</a>
 												<h3><a href="/product/<%=hot[i].book_id%>" class="name" id="name"> <%=hot[i].book_name %> </a></h3>
-												<div class="display-flex">
-													<p>書籍編號：</p>	
-													<p class="bid" id="bid"><%= hot[i].book_id %></p>
-												</div>
-												<div class="display-flex">
-													<p>作者：</p>	
-													<p class="writer" id="writer"><%= hot[i].book_author%></p>
-												</div>
 												<div class="display-flex">
 													<p>價錢：</p>	
 													<p class="price" id="price"><%= hot[i].book_price%></p>
