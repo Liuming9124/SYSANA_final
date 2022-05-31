@@ -1797,6 +1797,23 @@ input, select, textarea {
 		letter-spacing: 2px;
 		padding: 0.85em 2.75em 0.85em 2.75em;
 	}
+	/*input[type="button"],
+	input[type="submit"],
+	input[type="reset"],
+	button,
+	.button_1 {
+		font-size: 15px;
+		color: #fff;
+		background-color: #00bdfe;
+		border: 1px solid #00bdfe;
+		padding: 10px 30px;
+		display: inline-block;
+		border-radius: 10px;
+		font-weight: 500;
+		text-transform: capitalize;
+		letter-spacing: 0.5px;
+		transition: all .3s;
+	  }*/
 
 		input[type="button"].icon:before,
 		input[type="submit"].icon:before,
@@ -2772,8 +2789,6 @@ input, select, textarea {
 	.popup .show {
 		visibility: visible;
 	}
-<<<<<<< HEAD
-=======
 	
 	.ccle {
 		margin: 0px auto;
@@ -2796,7 +2811,6 @@ input, select, textarea {
 	}
 	
 	
->>>>>>> 908d703bc057411c18d5beed978477639cca9239
 	.pricing-item {
 		background: #ffffff;
 		box-shadow: 0 2px 48px 0 rgba(15, 13, 13, 0.684);
@@ -2804,8 +2818,37 @@ input, select, textarea {
 		margin-bottom: 30px;
 		margin-top: 20px;
 		padding: 30px 100px 40px 100px;
-<<<<<<< HEAD
-	  }
-=======
 		 }
->>>>>>> 908d703bc057411c18d5beed978477639cca9239
+	.pricing-item_1 {
+			text-align: center;
+			padding: 30px;
+			border: 1px solid #e0e0e0;
+			border-radius: 15px;
+			transition: all .5s;
+		}
+	.border-button_1 {
+			font-size: 15px;
+			color: #00bdfe;
+			background-color: transparent;
+			border: 1px solid #00bdfe;
+			padding: 10px 30px;
+			display: inline-block;
+			border-radius: 10px;
+			font-weight: 500;
+			text-transform: capitalize;
+			letter-spacing: 0.5px;
+			transition: all .3s;
+		  }
+	.main-button_1 {
+			font-size: 15px;
+			color: #fff;
+			background-color: #00bdfe;
+			border: 1px solid #00bdfe;
+			padding: 10px 30px;
+			display: inline-block;
+			border-radius: 10px;
+			font-weight: 500;
+			text-transform: capitalize;
+			letter-spacing: 0.5px;
+			transition: all .3s;
+		  }
