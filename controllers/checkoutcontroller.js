@@ -11,6 +11,25 @@ const checkoutController = {
     checkoutPage: (req, res) => {       //必須處理!!!
         if (req.session.userName) {
 
+            connection.query(`SELECT * FROM cart where email ='${req.session.userName}'`, function (err, result, fields) {
+                if (err) {
+                    throw err;
+                }
+                else {
+                    totalprice = 0;
+                    for (var i = 0; i < result.length; i++) {
+                        totalprice += result[i].book_price
+                    }
+                    // console.log(result);
+                    res.render('cart', { //渲染頁面，(配合ejs的格式)
+                        'result': result,
+                        'total': totalprice,
+                        'cartstatus': '',
+                        'point'  :'0',
+                        'dollar' :'0'
+                    });
+                }
+            })
             // connection.query("SELECT * FROM checkout where email ='" + req.session.userName + "'", function (err, result, fields) {
             //     if (err) {
             //         throw err;
@@ -27,11 +46,11 @@ const checkoutController = {
             //             'checkoutstatus': ''
             //         });
             //     }
-            // })
-            res.render('checkout',{
-                'point'  :'0',
-                'dollar' :'0'
-            });
+            // // })
+            // res.render('checkout',{
+            //     'point'  :'0',
+            //     'dollar' :'0'
+            // });
         }
         else {
             res.redirect('/login'); //導向login頁面
