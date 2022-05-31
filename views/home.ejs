@@ -30,7 +30,7 @@
 					<div class="container">
 						<div class="row aln-center">
 							<table>
-								<% for (var i=0 ; i < 8 ; i++) { %>
+								<% for (var i=0 ; i < 4 ; i++) { %>
 									<div class="col-3 col-12-medium">
 										<section class="books">
 											<a href="/product/<%=random[i].book_id%>" class="image featured">
@@ -38,13 +38,15 @@
 											</a>
 											<h3><p href="/product/<%=random[i].book_id%> class="name" id="name"> <%=random[i].book_name %> </p></h3>
 											<div class="display-flex">
-												<p>價錢：</p>	
+												<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+													價錢：</p>	
 												<p class="price" id="price"><%= random[i].book_price%></p>
 											</div>			
 											
 											<ul class="actions">
 												<li>
 													<div class="display-flex">
+														<a>&nbsp&nbsp&nbsp&nbsp</a>
 														<div id="addcollect" class="col-8 col-12-medium imp-medium">
 															<a href="/collect/add/<%= random[i].book_id %> " class="button style1 large" style="width:100px;height:40px;font-size:8px;">加入收藏</a>
 														</div>
@@ -63,7 +65,7 @@
 
 						<!-- books2 -->
 						<p> </p>
-						<h2>熱門商品</h2>
+						<h3>熱門商品</h3>
 						<div class="container">
 							<div class="row aln-center">
 								<table>
@@ -75,7 +77,8 @@
 												</a>
 												<h3><a href="/product/<%=hot[i].book_id%>" class="name" id="name"> <%=hot[i].book_name %> </a></h3>
 												<div class="display-flex">
-													<p>價錢：</p>	
+													<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+														價錢：</p>	
 													<p class="price" id="price"><%= hot[i].book_price%></p>
 												</div>			
 												
