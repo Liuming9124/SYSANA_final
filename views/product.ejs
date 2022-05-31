@@ -25,20 +25,18 @@
 											<img src="/static/BookImg/<%= result.book_img %>" alt="" height="500px" width="500px" />
 										</a>
 										<div>
-											<header><h3><a href="../product/product.html" class="name" id="name"><%= result.book_name %></a></h3></header>
-											<div class="display-flex">
-												<p>書籍編號：</p>	
-												<a class="bid" id="bid"><%= result.book_id %></p>
-											</div>
-											<div class="display-flex">
-												<p>作者：</p>	
-												<a class="writer" id="writer"><%= result.book_author %></p>
-											</div>
-											<div class="display-flex">
-												<p>價錢：</p>	
-												<a class="price" id="price"><%= result.book_price %></p>
-											</div>		
-											<p><%= result.book_intro %></p>
+											<br>
+											<header><h3><a href="../product/product.html" class="name" id="name"><%= result.book_name %></a></h3></header><br>
+											<div class="display-flex">書籍編號：	
+												<a class="bid" id="bid"><%= result.book_id %></a>
+											</div><br>
+											<div class="display-flex">作者：
+												<a class="writer" id="writer"><%= result.book_author %></a>
+											</div><br>
+											<div class="display-flex">價錢：
+												<a class="price" id="price"><%= result.book_price %></a>
+											</div><br>	
+											
 											<ul class="actions">
 												<div class="display-flex">
 														<div id="addcollect" class="col-8 col-12-medium imp-medium"><a href="/collect/add/<%= result.book_id %> " class="button style1 large">加入收藏</a></div>
@@ -47,9 +45,13 @@
 												</div>
 											</ul>
 											<div id="addcart" class="col-8 col-12-medium imp-medium"><a href="/cart/buy/<%= result.book_id %> " class="button style2 large" style="width:360px;height:60px;font-size:20px;">購買</a></div>
-										</li></div>
+										</li>
 										</div>
 									</div>
+									<div class="">
+										<p><strong>商品描述：</strong><br><%= result.book_intro %></p>
+									</div>
+								</div>
 									
 									
 								</article>
