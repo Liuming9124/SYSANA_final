@@ -27,54 +27,57 @@
 				<header>
 					<h1><strong>書籍資訊：</strong></h1>
 				</header>
-				<div class="col-6 col-12-medium">
-					<section>
-						<form method="" action="POST">
-							<div class="row gtr-45">
+				<div class="row">
+					
+					
+						<div class="col-6 col-12-medium">
+							<form method="" action="POST">
 								<div class="col-6 col-12-small">
-									<p>書籍名稱：<input  type="text" id="name" placeholder="商品名稱" size=5 autocomplete="on" name="name">
-									</div></p>
-								<div class="col-6 col-12-small">
-										<p>書籍編號：<input  type="text" id="list" placeholder="商品編號" size=5 autocomplete="on" name="list">
-										</div></p>
-								<div class="col-6 col-12-small">
-									<p>作者：<input  type="text" id="writer" placeholder="作者" size=5 autocomplete="on" name="writer">
-									</div></p>
-								<div class="col-6 col-12-small">
-									<p>書籍價格：<input  type="text" id="howmuch" placeholder="商品價格" size=5 autocomplete="on" name="howmuch">
-									</div></p>
+									<p>書籍名稱：<input  type="text" id="name" placeholder="商品名稱" size=5 autocomplete="on" name="name" required="true"></p>
 								</div>
-								<p> </p>
-								<p>上傳照片：<div class="col-12">
+								<div class="col-6 col-12-small">
+										<p>書籍編號：<input  type="text" id="list" placeholder="商品編號" size=5 autocomplete="on" name="list" required="true"></p>
+								</div>
+								<div class="col-6 col-12-small">
+									<p>作者：<input  type="text" id="writer" placeholder="作者" size=5 autocomplete="on" name="writer" required="true"></p>
+								</div>
+								<div class="col-6 col-12-small">
+									<p>書籍價格：<input  type="text" id="howmuch" placeholder="商品價格" size=5 autocomplete="on" name="howmuch" required="true"></p>
+								</div>
+							</form>
+						</div>	
+							<div class="col-6 col-12-medium">
+								<p>上傳照片：<div class="col-6 col-12-small">
 									<form action="/somewhere/to/upload" enctype="multipart/form-data">
 
-										<input id="img" type="file" accept="image/gif, image/jpeg, image/png" name="picture">
+										<input id="img" type="file" accept="image/gif, image/jpeg, image/png" name="picture" required="true">
 										
 									</form>
 						
 									</div>
 									<a href="#" class="image left"><img src="../static/images/pic13.jpg" alt=""></a>  <!-- 有上傳才出現 -->
 								</p>
-								
 							</div>
-				<ul class="actions">
-					<li>
-						<form action="" method="POST">
-							<div class="display-flex">
-								<div id="certain" class="box post">
-									<a href="#" class="button style1 large">確定</a>
-								</div>
-								<a>&nbsp</a>
-								<div id="cancel" class="box post">
-									<a href="#" class="button style2 large">取消</a>
-								</div>
+							<div class="box post">
+								<ul class="actions">
+										<li>
+											<form action="" method="POST">
+												<div class="display-flex">
+													<div id="certain" class="box post">
+														<a href="#" class="button style1 large">確定</a>
+													</div>
+													<a>&nbsp</a>
+													<div id="cancel" class="box post">
+														<a href="#" class="button style2 large">取消</a>
+													</div>
+											</div>
+										</form>
+									</li>
+								</ul>
 							</div>
-							
-						</form>
-					</li>
-				</ul>
-						</form>
-					</section>
+												
+					
+				</div>	
 			</article>
 			</div>
 		</section>

@@ -1771,10 +1771,7 @@ input, select, textarea {
 
 /* Button */
 
-	input[type="button"],
-	input[type="submit"],
-	input[type="reset"],
-	button,
+	
 	.button {
 		-moz-transition: all 0.25s ease-in-out;
 		-webkit-transition: all 0.25s ease-in-out;
@@ -1797,10 +1794,7 @@ input, select, textarea {
 		letter-spacing: 2px;
 		padding: 0.85em 2.75em 0.85em 2.75em;
 	}
-	/*input[type="button"],
-	input[type="submit"],
-	input[type="reset"],
-	button,
+	
 	.button_1 {
 		font-size: 15px;
 		color: #fff;
@@ -1813,7 +1807,7 @@ input, select, textarea {
 		text-transform: capitalize;
 		letter-spacing: 0.5px;
 		transition: all .3s;
-	  }*/
+	  }
 
 		input[type="button"].icon:before,
 		input[type="submit"].icon:before,
@@ -2839,8 +2833,8 @@ input, select, textarea {
 		 }
 	.pricing-item_1 {
 			text-align: center;
-			padding: 30px;
-			border: 1px solid #e0e0e0;
+			padding: 5px;
+			border: 5px solid #e0e0e0;
 			border-radius: 15px;
 			transition: all .5s;
 		}
@@ -2870,5 +2864,17 @@ input, select, textarea {
 			letter-spacing: 0.5px;
 			transition: all .3s;
 		  }
+		  .main-button_1:hover {
+			background-color: transparent;
+			color: #00bdfe;
+		  }
 	
+	.word_1 {
+		color: #fe9400;
+		font-weight:bold;
+	}
+	.word_2 {
+		color: #12100e;
+		font-weight:bold;
+	}
 

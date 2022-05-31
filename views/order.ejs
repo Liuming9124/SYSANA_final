@@ -67,31 +67,44 @@
 										</header>
 									</div>	
 									<br>
-										<div class="box post" style="height: 15px ;">
+										<div class="box post" style="height: 10px ;">
 											<div class="container_1">
-											<a size=10 href="#1" class="main-button_1" style="font-size:25px;">未完成</a>
+											<a size=10 href="#1"  style="font-size:25px;">未完成</a>
 											<a>&nbsp&nbsp&nbsp</a>
-											<a size=10 href="#2" class="main-button_1" style="font-size:25px;">已完成</a>
+											<a size=10 href="#2" style="font-size:25px;">已完成</a>
 											</div>
 										</div>
 										
-									
+									<%if (result.length>=1) { %>
 									<% for (let i = 0 ; i < result.length ; i++ ) { %>
 										<article class="box post" >
 										<div class="pricing-item_1">
 										<div id="pic" class="col-6 col-12-medium imp-medium">
 											
-											<a href="/product/<%= result[i].order_no %> " class="image left"><img src="/static/BookImg/<%= result[i].order_no %> " alt=""></a>
+											<!--<a href="/product/<%= result[i].order_no %> " class="image left"><img src="/static/BookImg/<%= result[i].order_no %> " alt=""></a>-->
 										</div>
 										<div>
-											<p class="border-button_1" style="font-size:30px;">訂單編號： <%= result[i].order_id %></p><br>
-											<p>用戶帳號： <%= result[i].email %></p><br>
-											<p>收件人  ： <%= result[i].order_name %></p><br>
-											<p>地址： <%= result[i].order_address %></p><br>
+											<p class="border-button_1" style="font-size:30px;height:50px;">訂單編號： <%= result[i].order_id %></p><br>
+											<p class="word_1" style="height:5px;">用戶帳號： <%= result[i].email %></p><br>
+											<p class="word_1" style="height:5px;">收件人  ： <%= result[i].order_name %></p><br>
+											<p class="word_1" style="height:5px;">地址： <%= result[i].order_address %></p><br>
 										</div>
 										</div>
 										</article>
 									<% } %>
+									<% } %>	
+									<%if (result.length<1) {%>
+										<section id="features">
+											<div class="container">
+												<header>
+													<h2> <strong>目前沒有訂單</strong>!</h2>
+												</header>
+											</div>
+											<div class="col-8 col-24-small">
+												<a href="/home" class="button style2 large">去首頁逛逛</a>
+											</div>
+										</section>
+									<%}%>
 							</div>
 							
 							</article>

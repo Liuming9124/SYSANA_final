@@ -27,7 +27,7 @@
 						
 
 							<!-- Post -->
-								<article class="pricing-item" style="height:800px; width:500px;">
+								<article class="pricing-item" style="height:800px; width:700px;">
 									<div class="container_1">
 										<header>
 											<h1 style="height: 60px; width: 300px;"><font size=8>書籍回收</font></h1>
@@ -37,32 +37,39 @@
 									<form action="/rebook/add" method="POST">
 
 										<a>書名:</a>
-										<div style="height: 60px; width: 300px;" class="box post">
-											<input  type="text" id="re_name" placeholder="請輸入書名" size=20 autocomplete="on" name="re_name">
+										<div class="container_1">
+											<div style="height: 60px; width: 500px;" class="box post">
+												<input  type="text" id="re_name" placeholder="請輸入書名" size=20 autocomplete="on" name="re_name">
+											</div>
 										</div>
-
 										<a>作者:</a>
-										<div style="height: 60px; width: 300px;" class="box post">
-											<input  type="text" id="re_author" placeholder="請輸入作者" size=20 autocomplete="on" name="re_author">
+										<div class="container_1">
+											<div style="height: 60px; width: 500px;" class="box post">
+												<input  type="text" id="re_author" placeholder="請輸入作者" size=20 autocomplete="on" name="re_author">
+											</div>
 										</div>
+										
 
 										<a>原價:</a>
-										<div style="height: 60px; width: 300px;" class="box post" >
-											<input type="text" id="re_price" placeholder="請輸入原價" size=20 autocomplete="off" name="re_price">
+										<div class="container_1">
+											<div style="height: 60px; width: 500px;" class="box post" >
+												<input type="text" id="re_price" placeholder="請輸入原價" size=20 autocomplete="off" name="re_price">
+											</div>
 										</div>
-
 										<a>書況:</a>
-										<div style="height: 60px; width: 300px;" class="box post" id="re_status">
-											<select name="re_status" >
-												<option>請選擇書籍狀況</option>
-												<option>全新</option>
-												<option>7成~9成</option>
-												<option>5成~7成</option>	
-											</select>
+										<div class="container_1">
+											<div style="height: 60px; width: 500px;" class="box post" id="re_status">
+												<select name="re_status" >
+													<option>請選擇書籍狀況</option>
+													<option>全新</option>
+													<option>7成~9成</option>
+													<option>5成~7成</option>	
+												</select>
+											</div>
 										</div>
 										<div class="container_1">
 										<div class="popup" id="show"  onclick="show()">
-											<br><input type="button" value="顯示預估獲得點數">
+											<br><input style="height:60px; width: 300px;"class="button_1"type="button" value="顯示預估獲得點數">
 											<br><br>估計可以獲得<span class="popuptext" id="bookcoin"><strong><%=bookcoin%></strong></span>點
 										</div>
 										</div>
@@ -71,13 +78,14 @@
 										<div class="display-flex">
 											
 											<div class="box post" id="recyclebutton">
-												<input type="submit" value="回收">
+												<input style="width: 250px;"class="button"type="submit" value="回收">
 											</div>
 											
-											<a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+											<a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
 											<div class="box post" id="resetbutton">
-												<input type="reset" value="清除">
+												<input style="width: 200px;" class="button"type="reset" value="清除">
 											</div>
+											
 										</div>
 										</div>
 										
