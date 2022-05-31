@@ -1619,8 +1619,8 @@ input, select, textarea {
 		ul.divided li {
 			border-top: solid 1.5px #e5e5e5;
 			padding-left: 0;
-			margin: 2.5em 0 0 0;
-			padding: 2.5em 0 0 0;
+			margin: 1em 0 0 0;
+			padding: 1em 0 0 0;
 		}
 
 			ul.divided li:first-child {
@@ -1966,6 +1966,18 @@ input, select, textarea {
 				font-size: 0.8em;
 				letter-spacing: 2px;
 		}
+		#header h3 {
+			font-family: 'Arvo';
+			font-weight: 700;
+			color: #ed786a;
+			text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
+			font-size: 3em;
+			letter-spacing: 20px;
+		}
+
+			#header h3 a {
+				border: 0;
+			}
 		#header p {
 			text-align: left;
 			text-transform: uppercase;
@@ -1975,7 +1987,7 @@ input, select, textarea {
 			font-size: 0.85em;
 			letter-spacing: 3px;
 		}
-
+		
 /* Nav */
 
 	#nav {
@@ -2322,7 +2334,9 @@ input, select, textarea {
 			#header h1 {
 				font-size: 2.5em;
 			}
-
+			#header h3 {
+				font-size: 2.5em;
+			}
 		/* Nav */
 
 			#nav > ul > li {
@@ -2658,7 +2672,11 @@ input, select, textarea {
 				letter-spacing: 5px;
 				line-height: 1em;
 			}
-
+			#header h3 {
+				font-size: 2em;
+				letter-spacing: 8px;
+				line-height: 1.325em;
+			}
 			#header p {
 				margin: 1.25em 0 0 0;
 				letter-spacing: 2px;
@@ -2852,3 +2870,5 @@ input, select, textarea {
 			letter-spacing: 0.5px;
 			transition: all .3s;
 		  }
+	
+
