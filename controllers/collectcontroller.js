@@ -17,7 +17,6 @@ const collectController = {
                 }
                 else {
                     res.render('collect', { //渲染頁面，(配合ejs的格式)
-                        'collectbook': result,
                         'result': result,
                         'collectstatus': ''
                     });

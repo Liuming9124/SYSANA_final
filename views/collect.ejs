@@ -78,13 +78,13 @@
 											<%=collectstatus%>
 										</p>
 
-										<%if (collectbook) { %>
+										<%if (result) { %>
 											<table>
-												<% for(var i=0; i < collectbook.length; i++) { %>
+												<% for(var i=0; i < result.length; i++) { %>
 													<div class="col-8 col-12-medium imp-medium" id="name">
 														<header>
 															<h3><a href="/product">
-																<%=collectbook[i].book_name%></a></h3>
+																<%=result[i].book_name%></a></h3>
 														</header>
 													</div>
 													<a href="/product/<%= result[i].book_id%>" class="image left">
@@ -118,21 +118,21 @@
 															</div>
 														</li>
 													</ul>
-													<% } %>
+												<% } %>
 											</table>
-											<% }%>
-											<%if (!collectbook) {%>
-												<section id="features">
-													<div class="container">
-														<header>
-															<h2> <strong>目前收藏沒有商品喔</strong>!</h2>
-														</header>
-													</div>
-													<div class="col-8 col-24-small">
-														<a href="/home" class="button style2 large">去首頁逛逛</a>
-													</div>
-												</section>
-												<%}%>
+										<% }%>
+										<% if (result.length == 0) { %>
+											<section id="features">
+												<div class="container">
+													<header>
+														<h2> <strong>目前收藏沒有商品喔</strong>!</h2>
+													</header>
+												</div>
+												<div class="col-8 col-24-small">
+													<a href="/home" class="button style2 large">去首頁逛逛</a>
+												</div>
+											</section>
+										<%}%>
 									</article>
 								</div>
 								</article>
