@@ -22,14 +22,14 @@
 								<h2>商品分類頁面</h2>
 							</header>
 							<!-- books1 -->
-							<h3>漫畫</h3>
+							<h3>漫畫</h3><br>
 							<div class="container">
 								<div class="row aln-center">
-									<% for (var i=0 ; i < type.length ; i++) { %>
-									<div class="col-4 col-12-medium">
-										<section class="books">
+									<% for (var i=0 ; i < 4 ; i++) { %>
+										<div class="col-3 col-12-medium">
+											<section class="books">
 											<a href="/product/<%= type[i].book_id%>" class="image featured">
-												<img class="imgsrc" src="/static/BookImg/<%=type[i].book_img%>" alt="" height="500" />
+												<img class="imgsrc" src="/static/BookImg/<%=type[i].book_img%>" alt="" style="width:240px;height:310px;">
 											</a>
 											<h3><a class="name" id="name">商品名稱:<%=type[i].book_name%> </a></h3>
 											<p class="author" id="author">作者：<%=type[i].author%></p>
@@ -38,10 +38,12 @@
 												<li>
 													<div class="display-flex">
 														<div id="addcollect" class="col-8 col-12-medium imp-medium">
-															<a href="/collect" class="button style1 large">加入收藏</a>
+															<a href="/collect" class="button style1 large" style="width:120px;height:40px;font-size:8px;">加入收藏</a>
 														</div>
+														<a>&nbsp</a>
+
 														<div id="addcart" class="col-8 col-12-medium imp-medium">
-															<a href="/cart/add/<%= type[i].book_id%>" class="button style2 large">加入購物車</a>
+															<a href="/cart/add/<%= type[i].book_id%>" class="button style2 large" style="width:120px;height:40px;font-size:8px;">加入購物車</a>
 														</div>
 													</div>
 												</li>
