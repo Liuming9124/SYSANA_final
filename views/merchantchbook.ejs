@@ -26,7 +26,7 @@
 				<div class="container">
 					<div class="container_1">
 					<form action="/search" method="POST">
-						>
+						
 						
 						<div class="display-flex">
 							<div class="container" id="search">
@@ -55,38 +55,38 @@
 						<table>
 							<% for (var i=0 ; i < result.length ; i++) { %>
 								<div class="col-4 col-12-medium">
-									<a href="#" class="image left"><img src="../static/images/<%=result[i].book_img%>" alt=""></a>
-									<h3><strong><a class="username" id="username">交換用戶: <%=result[i].ch_name%></a></strong></h3>
-									<div class="chbookname">
-										<p id="chbookname">交換書籍: <%=result[i].ch_bname%></p>
-									</div>
-									
-									<div class="address">
-										<p id="address">收件地址: <%=result[i].ch_address%></p>
-									</div>
-									<div class="price">
-										<p id="down">書籍價格區間: <%=result[i].ch_bprice%></p>
-									</div>
-									
-									<ul class="actions">
-										<li>
-											<form action="" method="POST">
-												<div style="height: 60px;" class="actions">
-													<input  type="text" id="reply" placeholder="拒絕交換原因(同意則不填)" size=30 autocomplete="on" name="reply">
-												</div>
-												<div class="display-flex">
-													<div id="allowexchange" class="box post">
-														<a href="/merchant/chbook/confirm/<%= result[i].ch_id %> " class="button style1 large">允許交換</a>
+									<div class="pricing-item_1">
+										<a href="#" class="image left"><img src="../static/images/<%=result[i].book_img%>" alt=""></a>
+										<h3><strong><a class="username" id="username">交換用戶: <%=result[i].ch_name%></a></strong></h3>
+										<div class="chbookname">
+											<p id="chbookname">交換書籍: <%=result[i].ch_bname%></p>
+										</div>
+										
+										<div class="address">
+											<p id="address">收件地址: <%=result[i].ch_address%></p>
+										</div>
+										<div class="price">
+											<p id="down">書籍價格區間: <%=result[i].ch_bprice%></p>
+										</div>
+										
+										
+												<form action="" method="POST">
+													<div style="height: 60px;" class="actions">
+														<input  type="text" id="reply" placeholder="拒絕交換原因(同意則不填)" size=30 autocomplete="on" name="reply">
 													</div>
-													<a>&nbsp</a>
-													<div id="refuseexchange" class="box post">
-														<a href="/merchant/chbook/cancel/<%= result[i].ch_id %> " class="button style2 large">拒絕交換</a>
+													<div class="display-flex">
+														<div id="allowexchange" class="box post">
+															<a href="/merchant/chbook/confirm/<%= result[i].ch_id %> " class="button style1 large">允許交換</a>
+														</div>
+														<a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+														<div id="refuseexchange" class="box post">
+															<a href="/merchant/chbook/cancel/<%= result[i].ch_id %> " class="button style2 large">拒絕交換</a>
+														</div>
 													</div>
-												</div>
-												
-											</form>
-										</li>
-									</ul>
+													
+												</form>
+										
+									</div>
 								</div>
 							<% } %>
 						</table>

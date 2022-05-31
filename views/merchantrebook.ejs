@@ -20,46 +20,47 @@
 				<!-- Nav -->
 				<%- include('./partials/navmerch.ejs') %>
 					<section id="main">
+						<div class="container">
 						<div class="container_1">
-							<!-- Content -->
-							<!-- Post -->
-							<article class="box post">
 								<header>
 									<h2>查看回收書資料</h2>
 								</header>
+						</div>	
+							<div class="row">
+								<table>
 								<% for (var i=0 ; i < result.length ; i++) { %>
-									<p>回收訂單編號 : <%=result[i].re_id%>
-									</p>
-									<h3><strong><a class="reuser" id="reuser">回收用戶：<%=result[i].email%></a></strong>
-									</h3>
-									<div class="rebookname">
-										<p id="rebookname">回收書籍：<%=result[i].re_name%>
-										</p>
-									</div>
-									<div class="price">
-										<p id="price">書籍原價：<%=result[i].re_price%>
-										</p>
-									</div>
-									<div class="box post">
-										<p>回饋book幣 : <%=result[i].re_point%>
-										</p>
-									</div>
-									
-									<ul class="actions">
-										<li>
-											<div class="display-flex">
-												<div id="certain" class="box post">
-													<a href="/merchant/rebook/confirm/<%= result[i].re_id %>" class="button style1 large">確定</a>
-												</div>
-												<a>&nbsp</a>
-												<div id="cancel" class="box post">
-													<a href="/merchant/rebook/cancel/<%= result[i].re_id %>" class="button style2 large">取消</a>
-												</div>
+									<div class="col-4 col-12-medium">
+										<div class="pricing-item_1">
+											<p class="word_1">回收訂單編號 : <%=result[i].re_id%></p>
+											<h3><strong><a class="reuser" id="reuser">回收用戶：<%=result[i].email%></a></strong></h3>
+											<div class="rebookname">
+												<p id="rebookname">回收書籍：<%=result[i].re_name%></p>
 											</div>
-										</li>
-									</ul>
+											<div class="price">
+												<p id="price">書籍原價：<%=result[i].re_price%></p>
+											</div>
+											<div class="box post">
+												<p>回饋book幣 : <%=result[i].re_point%></p>
+											</div>
+									
+											<ul class="actions">
+												<li>
+													<div class="display-flex">
+														<div id="certain" class="box post">
+															<a href="/merchant/rebook/confirm/<%= result[i].re_id %>" class="button style1 large">確定</a>
+														</div>
+														<a>&nbsp</a>
+														<div id="cancel" class="box post">
+															<a href="/merchant/rebook/cancel/<%= result[i].re_id %>" class="button style2 large">取消</a>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
 									<% } %>
-							</article>
+								</table>
+							</div>
 						</div>
 					</section>
 			</div>
