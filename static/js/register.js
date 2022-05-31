@@ -1,3 +1,19 @@
+function compare() {
+    var password = document.getElementById('password').value;
+    var password1 = document.getElementById('password1').value;
+    //console.log(password);
+    //console.log(password1);
+    
+    if(password!=password1) {
+        alert('密碼不相同')
+        document.getElementById('password1').value='';
+        return;
+    }
+    else {
+        document.getElementById('registerbutton').submit();
+    }
+
+}
 // const { name } = require("ejs");
 
 // $(document).ready(function () {
