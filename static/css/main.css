@@ -2373,7 +2373,7 @@ button,
 		/* Features */
 
 			#features {
-				padding: 2em 0;
+				padding: 4em 0;
 			}
 
 		/* Banner */
@@ -2648,7 +2648,7 @@ button,
 		/* Image */
 
 			.image.featured {
-				margin: 0 0 1em 0;
+				margin: 0 0 1.5em 0;
 			}
 
 			.image.left {
@@ -2731,7 +2731,7 @@ button,
 		/* Features */
 
 			#features {
-				padding: 1em 0;
+				padding: 2em 0;
 			}
 
 				#features ul.actions {
