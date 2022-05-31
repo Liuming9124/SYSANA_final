@@ -39,13 +39,13 @@
 										<a>書名:</a>
 										<div class="container_1">
 											<div style="height: 60px; width: 500px;" class="box post">
-												<input  type="text" id="re_name" placeholder="請輸入書名" size=20 autocomplete="on" name="re_name">
+												<input  type="text" id="re_name" placeholder="請輸入書名" size=20 autocomplete="on" name="re_name" required="true">
 											</div>
 										</div>
 										<a>作者:</a>
 										<div class="container_1">
 											<div style="height: 60px; width: 500px;" class="box post">
-												<input  type="text" id="re_author" placeholder="請輸入作者" size=20 autocomplete="on" name="re_author">
+												<input  type="text" id="re_author" placeholder="請輸入作者" size=20 autocomplete="on" name="re_author" required="true">
 											</div>
 										</div>
 										
@@ -53,14 +53,14 @@
 										<a>原價:</a>
 										<div class="container_1">
 											<div style="height: 60px; width: 500px;" class="box post" >
-												<input type="text" id="re_price" placeholder="請輸入原價" size=20 autocomplete="off" name="re_price">
+												<input type="text" id="re_price" placeholder="請輸入原價" size=20 autocomplete="off" name="re_price" oninput = "value=value.replace(/[^\d]/g,'')" required="true">
 											</div>
 										</div>
 										<a>書況:</a>
 										<div class="container_1">
 											<div style="height: 60px; width: 500px;" class="box post" id="re_status">
 												<select name="re_status" >
-													<option>請選擇書籍狀況</option>
+													<option disabled selected hidden>請選擇書籍狀況</option>
 													<option>全新</option>
 													<option>7成~9成</option>
 													<option>5成~7成</option>	

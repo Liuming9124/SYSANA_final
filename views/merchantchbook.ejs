@@ -40,8 +40,9 @@
 					</form>
 					<section id="feature">
 						<div class="container_1">
-							<input  class="button_1"type="button" value="待入庫" style="width:200px;height:50px;">
-							<input class="button_1"type="button" value="等待交換中" style="width:200px;height:50px;">
+							<input  type="button" value="待入庫" style="width:200px;height:50px;">
+							<a>&nbsp&nbsp&nbsp&nbsp</a>
+							<input type="button" value="等待交換中" style="width:200px;height:50px;">
 						</div>
 					</section>
 					<br>
@@ -55,7 +56,7 @@
 						<table>
 							<% for (var i=0 ; i < result.length ; i++) { %>
 								<div class="col-4 col-12-medium">
-									<div class="pricing-item_1">
+									<div class="pricing-item_1" style="height: 500px; width: 400px;">
 										<a href="#" class="image left"><img src="../static/images/<%=result[i].book_img%>" alt=""></a>
 										<h3><strong><a class="username" id="username">交換用戶: <%=result[i].ch_name%></a></strong></h3>
 										<div class="chbookname">
@@ -74,15 +75,18 @@
 													<div style="height: 60px;" class="actions">
 														<input  type="text" id="reply" placeholder="拒絕交換原因(同意則不填)" size=30 autocomplete="on" name="reply">
 													</div>
-													<div class="display-flex">
-														<div id="allowexchange" class="box post">
+													
+													<ul class="actions">
+														<div class="display-flex">
+														<div id="allowexchange" class="col-6 actions">
 															<a href="/merchant/chbook/confirm/<%= result[i].ch_id %> " class="button style1 large">允許交換</a>
 														</div>
 														<a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
-														<div id="refuseexchange" class="box post">
+														<div id="refuseexchange" class="col-6 actions">
 															<a href="/merchant/chbook/cancel/<%= result[i].ch_id %> " class="button style2 large">拒絕交換</a>
 														</div>
-													</div>
+													</div>	
+													</ul>
 													
 												</form>
 										

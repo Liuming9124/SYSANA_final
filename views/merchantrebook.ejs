@@ -44,18 +44,13 @@
 											</div>
 									
 											<ul class="actions">
-												<li>
-													<div class="display-flex">
-														<div id="certain" class="box post">
-															<a href="/merchant/rebook/confirm/<%= result[i].re_id %>" class="button style1 large">確定</a>
-														</div>
-														<a>&nbsp</a>
-														<div id="cancel" class="box post">
-															<a href="/merchant/rebook/cancel/<%= result[i].re_id %>" class="button style2 large">取消</a>
-														</div>
-													</div>
-												</li>
+												<div class="col-6 actions">
+													<a href="/merchant/rebook/confirm/<%= result[i].re_id %>" class="button style1 large">確定</a>
+													<a>&nbsp&nbsp&nbsp&nbsp</a>
+													<a href="/merchant/rebook/cancel/<%= result[i].re_id %>" class="button style2 large">取消</a>
+												</div>
 											</ul>
+													
 										</div>
 									</div>
 									<% } %>
