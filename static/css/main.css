@@ -1955,7 +1955,7 @@ input, select, textarea {
 			color: #ed786a;
 			text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
 			font-size: 3em;
-			letter-spacing: 13px;
+			letter-spacing: 20px;
 		}
 
 			#header h3 a {
@@ -1970,7 +1970,7 @@ input, select, textarea {
 			font-size: 0.85em;
 			letter-spacing: 3px;
 		}
-
+		
 /* Nav */
 
 	#nav {
