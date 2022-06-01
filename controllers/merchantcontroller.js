@@ -37,7 +37,7 @@ const merchantController = {
             }
         })
     },
-    confirmChbook: (req, res) => {
+    confirmChbook: (req, res) => {  //已審核judge狀態為1 交換成功judge為2
         // console.log(req.params.id);
         connection.query(`UPDATE changes SET ch_judge = '1' WHERE ch_id = '${req.params.id}';`, function (err, result, fields) {        //更新此交換書狀態
             if (err) {
@@ -90,8 +90,8 @@ const merchantController = {
         });
 
     },
-    cancelChbook: (req, res) => {
-        connection.query(`UPDATE changes SET ch_judge = '2' WHERE ch_id = '${req.params.id}';`, function (err, result, fields) {
+    cancelChbook: (req, res) => {       //拒絕judge為3
+        connection.query(`UPDATE changes SET ch_judge = '3' WHERE ch_id = '${req.params.id}';`, function (err, result, fields) {
             if (err) {
                 return res.redirect('/merchant/chbook');
             }
