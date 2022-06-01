@@ -18,83 +18,96 @@
 						<h1 id="logo"><a href="/merchant">書贏●商家頁面<br>-交換書</a></h1>
 						
 						<!-- Nav -->
-						<%- include('./partials/navmerch.ejs') %>
+						<p><a href="/member/logout">登出帳號</a></p>
+						<nav id="nav">
+							<ul>
+								<li><a href="/merchamt"><img src="../static/images/home.png" style="width:20px;height:20px;" alt="首頁">&nbsp&nbsp&nbsp<span>首頁</span></a></li>
+								<li><a href="/merchant/chbook"><img src="../static/images/change.png" style="width:20px;height:20px;" alt="分類">&nbsp&nbsp&nbsp<span>交換書</span></a></li>
+								<li><a href="/merchant/rebook"><img src="../static/images/recycle.png" style="width:20px;height:20px;" alt="分類">&nbsp&nbsp&nbsp<span>回收書</span></a></li>
+								<li><a href="/merchant/order"><img src="../static/images/list.png" style="width:20px;height:20px;" alt="特色功能">&nbsp&nbsp&nbsp<span>訂單確認</span></a></li>
+								<li><a href="/merchant/upload"><img src="../static/images/cloud.png" style="width:20px;height:20px;" alt="會員頁面">&nbsp&nbsp&nbsp<span>上架商品</span></a></li>
+							</ul>
+							</nav>
+							<form action="/search" method="POST">
+								<br>
+								 <p>
+									 <div class="ccle">
+										 <div class="container" id="search" style="width:500px;height:60px;font-size:20px;">
+											 <input type="text" id="search" placeholder="搜尋您想要的商品">
+										 </div>
+										 <div class="container" id="searchbottom" >
+											  <a href="#" class="button style1 col-8-small" style="width:100px;height:47px;font-size:10px;">搜尋</a>
+										 </div>
+									 </div>
+								 
+								 </p>
+							 </form>
+					</div>
+			</section>
 						<!-- Main -->
-				
+						
+
 				<section id="main">
-					
-				<div class="container">
-					<div class="container_1">
-					<form action="/search" method="POST">
+					<div class="container">
 						
+						<div class="container_1" style="height: 10px;">
+							<header>
+								<h2>交換書資料：</h2>
+							</header>
+						</div>
+										<div class="box post" style="height: 10px ;">
+											<div class="container_1">
+												<a size=10 href="#1">待入庫</a>
+												<a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+												<a size=10 href="#2">等待交換中</a>
+											</div>
+										</div>
+										<br><br><br>
 						
-						<div class="display-flex">
-							<div class="container" id="search">
-								<input type="text" id="search" placeholder="" style="width:600px;height:60px;">
-							</div>
-							<div class="container" id="searchbottom">
-								<a href="#" class="button style1 col-10-small" style="width:200px;height:60px;">搜尋</a>
-							</div>
-						</div>
-						</div>
-					</form>
-					<section id="feature">
-						<div class="container_1">
-							<input  type="button" value="待入庫" style="width:200px;height:50px;">
-							<a>&nbsp&nbsp&nbsp&nbsp</a>
-							<input type="button" value="等待交換中" style="width:200px;height:50px;">
-						</div>
-					</section>
-					<br>
-					<div class="container_1">
-						<header>
-							<h2>查看交換書資料：</h2>
-						</header>
-					</div>
-					
-					<div class="row ">
-						<table>
-							<% for (var i=0 ; i < result.length ; i++) { %>
-								<div class="col-4 col-12-medium">
-									<div class="pricing-item_1" style="height: 500px; width: 400px;">
-										
-										<h3><a class="word_2" id="username">交換用戶: <%=result[i].ch_name%></a></h3>
-										<div class="chbookname">
-											<p id="chbookname" class="word_2">交換書籍: <%=result[i].ch_bname%></p>
-										</div>
-										
-										<div class="address">
-											<p id="address" class="word_2">收件地址: <%=result[i].ch_address%></p>
-										</div>
-										<div class="price">
-											<p id="down" class="word_2">書籍價格區間: <%=result[i].ch_bprice%></p>
-										</div>
-										
-										
-												<form action="" method="POST">
-													<div style="height: 60px;" class="actions">
-														<!-- <input class="text"type="text" id="reply" placeholder="拒絕交換原因(同意則不填)" size=30 autocomplete="on" name="reply"> -->
-													</div>
-													<ul class="actions">
-														<div class="display-flex">
-														<div id="allowexchange" class="col-6 actions">
-															<a href="/merchant/chbook/confirm/<%= result[i].ch_id %> " class="button style1 large">允許交換</a>
+						<div class="row ">
+							<table>
+								<% for (var i=0 ; i < result.length ; i++) { %>
+									<div class="col-4 col-12-medium">
+										<div class="pricing-item_1" style="height: 500px; width: 400px;">
+											
+											<h3><a class="word_2" id="username">交換用戶: <%=result[i].ch_name%></a></h3>
+											<div class="chbookname">
+												<p id="chbookname" class="word_2">交換書籍: <%=result[i].ch_bname%></p>
+											</div>
+											
+											<div class="address">
+												<p id="address" class="word_2">收件地址: <%=result[i].ch_address%></p>
+											</div>
+											<div class="price">
+												<p id="down" class="word_2">書籍價格區間: <%=result[i].ch_bprice%></p>
+											</div>
+											
+											
+													<form action="" method="POST">
+														<div style="height: 60px;" class="actions">
+															<!-- <input class="text"type="text" id="reply" placeholder="拒絕交換原因(同意則不填)" size=30 autocomplete="on" name="reply"> -->
 														</div>
-														<a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
-														<div id="refuseexchange" class="col-6 actions">
-															<a href="/merchant/chbook/cancel/<%= result[i].ch_id %> " class="button style2 large">拒絕交換</a>
-														</div>
-													</div>	
-													</ul>
-													
-												</form>
-										
+														<ul class="actions">
+															<div class="display-flex">
+															<div id="allowexchange" class="col-6 actions">
+																<a href="/merchant/chbook/confirm/<%= result[i].ch_id %> " class="button style1 large">允許交換</a>
+															</div>
+															<a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+															<div id="refuseexchange" class="col-6 actions">
+																<a href="/merchant/chbook/cancel/<%= result[i].ch_id %> " class="button style2 large">拒絕交換</a>
+															</div>
+														</div>	
+														</ul>
+														
+													</form>
+											
+										</div>
 									</div>
-								</div>
-							<% } %>
-						</table>
-					</div>
-				</div>
+								<% } %>
+							</table>
+						</div>		
+					</div>	
+			
 			</section>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
