@@ -21,7 +21,7 @@ const checkoutController = {
                         totalprice += result[i].book_price
                     }
                     // console.log(result);
-                    res.render('cart', { //渲染頁面，(配合ejs的格式)
+                    res.render('checkout', { //渲染頁面，(配合ejs的格式)
                         'result': result,
                         'total': totalprice,
                         'cartstatus': '',
