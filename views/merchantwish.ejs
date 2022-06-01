@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+<html>
+	<head>
+		<title>書贏●商家頁面-許願功能</title>
+		<%- include('./partials/headermerch.ejs') %>
+		
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			
+
+			<!-- Header -->
+				<section id="header">
+					<div class="container">
+
+						<!-- Logo -->
+						<h1 id="logo"><a href="/merchant">書贏●商家頁面<br>-許願功能</a></h1>
+						
+						<%- include('./partials/navmerch.ejs') %>
+
+			<!-- Post -->
+			<section id="main">
+				
+				
+				<div class="container">
+					<div class="container_1">
+						<header>
+							<h2>許願清單</h2>
+						</header>
+					</div>
+						<header>
+							<br>
+							<h3>清單內容：</h3>
+							<br>
+							<br>
+						</header>
+						<div class="row">
+							<table>
+								<% for (let i = 0 ; i < result.length ; i++ ) { %>
+									<div id="pic" class="col-4 col-12-medium">
+									<!-- <a href="/product/ result[i].order_no %> " class="image left"><img src="/static/BookImg/ result[i].order_no %> " alt=""></a> -->
+									
+									<div class="pricing-item_1">
+										<p class="word_2">許願編號： <%= result[i].order_id %></p><br>
+										<p class="word_2">用戶帳號： <%= result[i].email %></p><br>
+										<p class="word_2">書名  ： <%= result[i].order_name %></p><br>
+										<p class="word_2">作者： <%= result[i].order_address %></p><br>
+										<ul class="actions">
+											<div class="col-6 actions">
+												<a href="/merchant/order/confirm/<%= result[i].order_id %>" class="button style1 large">確認</a>
+												<a>&nbsp&nbsp&nbsp&nbsp</a>
+												<a href="/merchant/order/cancel/<%= result[i].order_id %>" class="button style2 large">拒絕</a>
+											</div>
+										</ul>
+									</div>
+									</div>
+								<% } %> 
+							</table>
+						</div>		
+				</div>
+			</section>
+				
+				
+
+				<!-- <form method="" action="POST"> -->
+					<!-- <div class="row gtr-45">
+						<div class="display-flex">
+							<div class="col-6 col-24-small">
+								<p>訂單編號：<input  type="text" id="customer" value="<%= result.order_no %>" size=5 autocomplete="on">					
+								</div></p>
+								</div>
+							<div class="col-6 col-24-small">
+								<p>訂購用戶：<input  type="text" id="customer" value="<%= result.order_name %>" size=5 autocomplete="on">
+								</div></p>
+								</div>
+							<div class="col-6 col-24-small">
+								<p>訂購書籍編號：<input  type="text" id="list" value="<%= result.book_id %>" size=5 autocomplete="on">
+								</div></p>
+							<div class="col-6 col-24-small">
+								<p>書籍名稱：<input  type="text" id="name" value="<%= result.book_name %>" size=5 autocomplete="on">
+								</div></p>
+							<div class="col-6 col-24-small">
+								<p>書籍價格：<input  type="text" id="money" value="<%= result.book_price %>元" size=5 autocomplete="on">
+								</div></p>
+							</div>
+							<div class="col-6 col-24-small">
+								<p>地址：<input  type="text" id="address" value="<%= result.address %>" size=5 autocomplete="on">
+								</div></p>
+							</div>
+						</div> -->
+						
+					<!-- </div> -->
+		<!-- <ul class="actions">
+			<div id="enter" class="col-8 actions">
+				<a href="#" class="button style1 large">確定</a>
+			</div>
+			<div id="cancel" class="col-8 actions">
+				<a href="#" class="button style2 large">取消</a>
+			</div>
+			</li>
+		</ul> -->
+				<!-- </form> -->
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
