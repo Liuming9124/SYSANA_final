@@ -38,7 +38,16 @@ const merchantController = {
         })
     },
     confirmChbook: (req, res) => {
-
+        console.log(req.params.id);
+        connection.query(`UPDATE changes SET ch_judge = '1' WHERE ch_id = '${req.params.id}';`, function (err, result, fields) {
+            if (err) {
+                return res.redirect('/merchant/chbook');
+            }
+            else {
+                console.log(`success ${req.params.id} success`);
+                return res.redirect('/merchant/chbook');
+            }
+        });
 
     },
     cancelChbook: (req, res) => {

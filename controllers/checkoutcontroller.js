@@ -115,8 +115,9 @@ const checkoutController = {
                         })
                     }
                 }
+                res.redirect('/order');
             })
-            res.redirect('/order');
+            
         }
         else {
             res.redirect('/login');
