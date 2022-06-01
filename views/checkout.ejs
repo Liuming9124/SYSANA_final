@@ -15,56 +15,104 @@
 						<h1 id="logo"><a href="/home">書贏●結帳頁面</a></h1>
 						<%- include('./partials/nav.ejs') %>			
 					<!-- Main -->
-				<section id="main">
-					<div class="container">
-						<!-- Content -->
 							
+						<section id="main">
+							<div class="container">
+								<div class="row">
+									<!-- Sidebar -->
+									<div id="sidebar" class="col-4 col-12-medium">
+										<article class="box post">
+											<div class="contain">
 
-								<!-- Post -->
-									<article class="box post">
-										<header>
-											<h1 style="height: 60px;"><font size=8>結帳</font></h1>
-										</header>
-										<form action="/checkout/add" method="POST">
-											<p>收件人:</p>
-											<div style="height: 60px; width: 265px;">
-												<input type="text" id="name" placeholder="收件人姓名" size=20 autocomplete="on" name="name" required="true">
-											</div>
-											<p>收件地址:</p>
-											<div style="height: 60px; width: 265px;">
-												<input type="text" id="address" placeholder="地址" size=20 autocomplete="on" name="address" required="true">			
-											</div>
-											<p>電話號碼:</p>
-											<div style="height: 60px; width: 265px;">
-												<input type="text" id="phone" placeholder="電話號碼" size=20 autocomplete="off" name="phone" required="true">
-											</div>
-											<!-- <p>電子信箱:</p>
-											<div style="height: 60px; width: 265px;">
-												<input type="text" id="email" placeholder="信箱" size=20 autocomplete="on" name="email">
-											</div> -->
-											<p>請填寫欲折抵book幣 , 最多折抵 xxx 元book幣:</p>	<!-- xxx 請用ejs替代掉 -->
-											<div style="height: 60px; width: 265px;">
-												<input type="text" id="coin" placeholder="0" size=20 autocomplete="on" name="point">
-											</div>
-											<p></p>
-											<div class="display-flex">
-												<p class="dollar">總價錢: <%=dollar%> 元</p>
-											</div>
-											<div class="display-flex">
-												<p class="point">回饋點數: <%=point%> book幣</p>
-											</div>
-												<div>
-													<input type ="button" onclick="history.back()" value="回到上一頁"></input>
-													<input type="submit" value="購買">
+												<header>
+													<h1 style="height: 60px;"><font size=6>訂單內容</font></h1>
+												</header>
+												<div class="inter" id="inte">
+															<p>
+																<%=cartstatus%>
+															</p>
+															<%if (result.length>=1) { %>
+																<table>
+																	<% for(var i=0; i < result.length ; i++) { %>
+																		<div class="col-8 col-12-medium imp-medium" id="name">
+																			
+																		</div>
+																		<a href="/product/<%= result[i].book_id%>" class="image left" style="width:90px;height:110px;">
+																			<img src="/static/BookImg/<%=result[i].book_id%>.jpg" style="width:80px;height:100px;" alt="">
+																		</a><br>
+																		<h3><a href="/product">
+																					<%=result[i].book_name%>
+																			</a></h3><br>
+																		<p class="price">價錢：<%= result[i].book_price%>
+																		</p>
+																		
+																	<% } %>
+																	</table>	
+															<% } %>	
+												</div>
+												
 											</div>
 											
-										</form>
+											
+										</article>
 										
+									</div>
+										<!-- Content -->
+										<div id="content" class="col-1 col-12-medium imp-medium">
+										</div>
+										<article class="pricing-item" style="height:800px; width:700px;">
+
+										<div id="content" class="col-7 col-12-medium imp-medium">
+											<article class="box post">
+												<div class="container_1">
+													<header>
+														<h1 style="height: 60px;"><font size=8>結帳</font></h1>
+													</header>
+												</div>
+												
+												<form action="/checkout/add" method="POST">
+													<p>收件人:</p>
+													<div style="height: 60px; width: 265px;">
+														<input type="text" id="name" placeholder="收件人姓名" size=20 autocomplete="on" name="name" required="true">
+													</div>
+													<p>收件地址:</p>
+													<div style="height: 60px; width: 265px;">
+														<input type="text" id="address" placeholder="地址" size=20 autocomplete="on" name="address" required="true">			
+													</div>
+													<p>電話號碼:</p>
+													<div style="height: 60px; width: 265px;">
+														<input type="text" id="phone" placeholder="電話號碼" size=20 autocomplete="off" name="phone" required="true">
+													</div>
+													<!-- <p>電子信箱:</p>
+													<div style="height: 60px; width: 265px;">
+														<input type="text" id="email" placeholder="信箱" size=20 autocomplete="on" name="email">
+													</div> -->
+													<p>請填寫欲折抵book幣 , 最多折抵 xxx 元book幣:</p>	<!-- xxx 請用ejs替代掉 -->
+													<div style="height: 60px; width: 265px;">
+														<input type="text" id="coin" placeholder="0" size=20 autocomplete="on" name="point">
+													</div>
+													<p></p>
+													<div class="display-flex">
+														<p class="dollar">總價錢: <%=total%> 元</p>
+													</div>
+													<div class="display-flex">
+														<p class="point">回饋點數: <%=point%> book幣</p>
+													</div>
+														<div>
+															<input type ="button" onclick="history.back()" value="回到上一頁"></input>
+															<input type="submit" value="購買">
+													</div>
+													
+												</form>
+												
+											</article>
+										</div>
 									</article>
-										
-							
-					</div>
-				</section>
+									
+	
+								</div>
+								<!-- Post -->
+								
 			<!-- Footer -->
 			<%- include('./partials/footer.ejs') %>
 

@@ -2949,3 +2949,25 @@ button,
 		line-height: 1.25em;
 		padding: 0.75em 1em 0.75em 1em;
 	}
+	div.in11{
+		text-align: center;
+	}
+	.inter{
+		justify-content: left;
+		width: 100%;
+		height: 620px;
+		margin: 0 auto;
+		background: radial-gradient(circle,rgb(238, 238, 232),rgb(249, 249, 253));
+		padding: 0 20px 20px 20px;
+		border-style: groove;
+		overflow: auto;
+		float: right;
+	}
+	.contain12{
+		width: 95%;
+		height: 30%;
+		display: flex;
+		flex-direction: row;
+		margin-left: auto;
+		margin-right: auto;
+	}
