@@ -1824,6 +1824,28 @@ button,
 	letter-spacing: 2px;
 	padding: 0.85em 2.75em 0.85em 2.75em;
 }
+.button-2 {
+	-moz-transition: all 0.25s ease-in-out;
+	-webkit-transition: all 0.25s ease-in-out;
+	-ms-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+	-webkit-appearance: none;
+	position: relative;
+	display: inline-block;
+	background: #6d6666ab;
+	color: #f1eded; !important;
+	text-transform: uppercase;
+	border-radius: 4px;
+	border: #878787;
+	outline: 0;
+	font-size: 1em;
+	box-shadow: 0.125em 0.175em 0 0 rgba(0, 0, 0, 0.125);
+	font-weight: 600;
+	text-align: center;
+	font-size: 0.85em;
+	letter-spacing: 2px;
+	padding: 0.85em 2.75em 0.85em 2.75em;
+}
 /*input[type="button"],
 input[type="submit"],
 input[type="reset"],
