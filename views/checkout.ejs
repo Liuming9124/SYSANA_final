@@ -19,48 +19,7 @@
 						<section id="main">
 							<div class="container">
 								<div class="row">
-									<!-- Sidebar -->
-									<div id="sidebar" class="col-4 col-12-medium">
-										<article class="box post">
-											<div class="contain">
-
-												<header>
-													<h1 style="height: 60px;"><font size=6>訂單內容</font></h1>
-												</header>
-												<div class="inter" id="inte">
-															<p>
-																<%=cartstatus%>
-															</p>
-															<%if (result.length>=1) { %>
-																<table>
-																	<% for(var i=0; i < result.length ; i++) { %>
-																		<div class="col-8 col-12-medium imp-medium" id="name">
-																			
-																		</div>
-																		<a href="/product/<%= result[i].book_id%>" class="image left" style="width:90px;height:110px;">
-																			<img src="/static/BookImg/<%=result[i].book_id%>.jpg" style="width:80px;height:100px;" alt="">
-																		</a><br>
-																		<h3><a href="/product">
-																					<%=result[i].book_name%>
-																			</a></h3><br>
-																		<p class="price">價錢：<%= result[i].book_price%>
-																		</p>
-																		
-																	<% } %>
-																	</table>	
-															<% } %>	
-												</div>
-												
-											</div>
-											
-											
-										</article>
-										
-									</div>
-										<!-- Content -->
-										<div id="content" class="col-1 col-12-medium imp-medium">
-										</div>
-										<article class="pricing-item" style="height:800px; width:700px;">
+									<article class="pricing-item" style="height:850px; width:700px;">
 
 										<div id="content" class="col-7 col-12-medium imp-medium">
 											<article class="box post">
@@ -69,7 +28,7 @@
 														<h1 style="height: 60px;"><font size=8>結帳</font></h1>
 													</header>
 												</div>
-												
+												<div class="container_1">
 												<form action="/checkout/add" method="POST">
 													<p>收件人:</p>
 													<div style="height: 60px; width: 265px;">
@@ -98,21 +57,65 @@
 													<div class="display-flex">
 														<p class="point">回饋點數: <%=point%> book幣</p>
 													</div>
-														<div>
-															<input type ="button" onclick="history.back()" value="回到上一頁"></input>
-															<input type="submit" value="購買">
+													<div class="display-flex">
+														<input type="submit" value="購買" style="width:300px;height:50px;font-size:13px;">
+														<p>&nbsp</p>
+														<input type ="button" onclick="history.back()" value="回到上一頁" style="width:150px;height:50px;font-size:13px;"></input>
 													</div>
-													
-												</form>
+													</form>
+												</div>
 												
 											</article>
 										</div>
 									</article>
+									<!-- Content -->
+									<div id="content" class="col-1 col-12-medium imp-medium">
+									</div>
+									
+										<!-- Sidebar -->
+										<div id="sidebar" class="col-4 col-12-medium">
+											<article class="box post">
+												<div class="contain">
+													<header>
+														<h1 style="height: 60px;"><font size=6>訂單內容</font></h1>
+													</header>
+													<div class="inter" id="inte">
+																<p>
+																	<%=cartstatus%>
+																</p>
+																<%if (result.length>=1) { %>
+																	<table>
+																		<% for(var i=0; i < result.length ; i++) { %>
+																			<div class="col-8 col-12-medium imp-medium" id="name">
+																				
+																			</div>
+																			<a href="/product/<%= result[i].book_id%>" class="image left" style="width:90px;height:110px;">
+																				<img src="/static/BookImg/<%=result[i].book_id%>.jpg" style="width:80px;height:100px;" alt="">
+																			</a><br>
+																			<h3><a href="/product">
+																						<%=result[i].book_name%>
+																				</a></h3><br>
+																			<p class="price">價錢：<%= result[i].book_price%>
+																			</p>
+																			
+																		<% } %>
+																		</table>	
+																<% } %>	
+													</div>
+													
+												</div>
+												
+												
+											</article>
+											
+										</div>
+									
+										
 									
 	
 								</div>
 								<!-- Post -->
-								
+							</section>
 			<!-- Footer -->
 			<%- include('./partials/footer.ejs') %>
 
