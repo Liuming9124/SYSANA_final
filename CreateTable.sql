@@ -94,5 +94,6 @@ CREATE TABLE wish(
     email VARCHAR(40) NOT NULL,
     wish_id VARCHAR(20) NOT NULL,
     wish_author VARCHAR(20) NOT NULL,
-    point INT
+    point INT,
+    FOREIGN KEY (email) REFERENCES users(email) ON DELETE CASCADE
 );
