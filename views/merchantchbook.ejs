@@ -50,16 +50,20 @@
 				<section id="main">
 					<div class="container">
 						
-						<div class="container_1">
+						<div class="container_1" style="height: 10px;">
 							<header>
 								<h2>交換書資料：</h2>
 							</header>
 						</div>
-						<div class="box post">
-							<a size=10 href="#1">待入庫</a>
-							<a>&nbsp&nbsp&nbsp</a>
-							<a size=10 href="#2">等待交換中</a>
-						</div>
+										<div class="box post" style="height: 10px ;">
+											<div class="container_1">
+												<a size=10 href="#1">待入庫</a>
+												<a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+												<a size=10 href="#2">等待交換中</a>
+											</div>
+										</div>
+										<br><br><br>
+						
 						<div class="row ">
 							<table>
 								<% for (var i=0 ; i < result.length ; i++) { %>
@@ -81,7 +85,7 @@
 											
 													<form action="" method="POST">
 														<div style="height: 60px;" class="actions">
-															<input class="text"type="text" id="reply" placeholder="拒絕交換原因(同意則不填)" size=30 autocomplete="on" name="reply">
+															<!-- <input class="text"type="text" id="reply" placeholder="拒絕交換原因(同意則不填)" size=30 autocomplete="on" name="reply"> -->
 														</div>
 														<ul class="actions">
 															<div class="display-flex">

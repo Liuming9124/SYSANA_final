@@ -25,47 +25,50 @@
 							</div>
 
 											<!-- Post -->
-						<article class="box post">
-							<div class="pricing-item_1">
-							<div class="container_1" style="height: 70px;">
-								<header>
-									<h1 style="height: 60px;"><font size=8>許願功能</font></h1>
-								</header>
-							</div>
-							<header>
-								<h2><strong>書籍資訊：</strong></h2>
-							</header>
-							
-							<div class="col-6 col-12-medium">
-								<section>
-									<form method="" action="POST">
-										<div class="row gtr-45">
-											<div class="col-10 col-12-small">
-												<p>書籍名稱：<input  type="text" id="name" placeholder="商品名稱" size=5 autocomplete="on" name="name" required="true">
-												</div></p>
-											<div class="col-10 col-12-small">
-												<p>作者：<input  type="text" id="writer" placeholder="作者" size=5 autocomplete="on" name="writer" required="true">
-												</div></p>
-										</div>
-										<div class="container_1">
-										<p>許願後將扣除<strong>book幣一枚</strong></p>
-										</div>
-							<ul class="actions">
-								<li>
-									<div class="col-6 action">
-										<div id="enter" class="actions">
-											<a href="#" class="button style1 large" style="width:200px;">確定</a>
-										</div>
-									</div>
-								</li>
-							</ul>
-									</form>
-								</section>
-							</div>
-							</div>
-						</article>
-
-					</div>
+											<article class="box post">
+												<article class="pricing-item" style="height:600px; width:700px;">
+													<div class="container_1">
+														<header>
+															<h1 style="height: 60px;"><font size=8>許願功能</font></h1>
+														</header>
+														
+													</div>
+													<div class="container_1">
+														
+														<header>
+															<h2><strong>書籍資訊：</strong></h2>
+														</header>
+													</div>
+													
+													<form action="/rebook/add" method="POST">
+				
+														<a>書籍名稱：</a>
+														<div class="container_1">
+															<div style="height: 60px; width: 500px;" class="box post">
+																<input  type="text" id="name" placeholder="商品名稱" size=20 autocomplete="on" name="name" required="true">
+															</div>
+														</div>
+														<a>作者:</a>
+														<div class="container_1">
+															<div style="height: 60px; width: 500px;" class="box post">
+																<input  type="text" id="writer" placeholder="作者" size=20 autocomplete="on" name="writer" required="true">
+															</div>
+														</div>
+														<div class="container_1">
+															<p>許願後將扣除<strong>book幣一枚</strong></p>
+															</div>
+														<div class="container_1">
+					
+															<div class="box post" id="wishbutton">
+																<input style="width: 250px;"class="button"type="submit" value="確定" >
+															</div>
+											
+														</div>
+														
+													</form>	
+													
+												</article>
+											</article>
 				</div>
 			</section>
 			<!-- Footer -->
