@@ -32,20 +32,60 @@ const merchantController = {
                 console.log(err);
             }
             else {
-                console.log(result);
+                // console.log(result);
                 return res.render('merchantchbook', { 'result': result });
             }
         })
     },
     confirmChbook: (req, res) => {
-        console.log(req.params.id);
-        connection.query(`UPDATE changes SET ch_judge = '1' WHERE ch_id = '${req.params.id}';`, function (err, result, fields) {
+        // console.log(req.params.id);
+        connection.query(`UPDATE changes SET ch_judge = '1' WHERE ch_id = '${req.params.id}';`, function (err, result, fields) {        //更新此交換書狀態
             if (err) {
                 return res.redirect('/merchant/chbook');
             }
             else {
-                console.log(`success ${req.params.id} success`);
-                return res.redirect('/merchant/chbook');
+                connection.query(`SELECT * FROM changes WHERE ch_id = '${req.params.id}'`, function (err1, nowbook){            //抓出此交換書的資訊
+                    if (!err){
+                        var sql = `SELECT * FROM changes WHERE email != '${nowbook[0].email}' and ch_bprice = '${nowbook[0].ch_bprice}' and ch_judge = '1' LIMIT 1`;
+                        // console.log(sql);
+                        connection.query(sql, function(err2, afterbook){          //抓出能交換的一筆交換書資料;
+                            if (!err2){
+                                // console.log('result',afterbook);
+                                // console.log(afterbook.length);
+                                if (afterbook.length != 0){
+                                    var sqlupdate = `UPDATE changes SET ch_judge = '2', ch_complete = '${afterbook[0].ch_id}' WHERE ch_id = '${nowbook[0].ch_id}';` ;
+                                    var sqlupdate2= `UPDATE changes SET ch_judge = '2', ch_complete = '${nowbook[0].ch_id}' WHERE ch_id = '${afterbook[0].ch_id}';`;
+                                    console.log(sqlupdate);
+                                    connection.query(sqlupdate, function(err3, resultEnd){
+                                        if (!err3){
+                                            // console.log('交換成功');
+                                            connection.query(sqlupdate2, function(err4, resultEnd2){
+                                                if (!err4){
+                                                    console.log('交換成功');
+                                                    return res.redirect('/merchant/chbook');
+                                                }
+                                                else{
+                                                    console.log(err4);
+                                                    return res.redirect('/merchant/chbook');
+                                                }
+                                            })
+                                        }
+                                        else{
+                                            console.log(err3);
+                                            return res.redirect('/merchant/chbook');
+                                        }
+                                    })
+                                }
+                                else{
+                                    return res.redirect('/merchant/chbook');
+                                }
+                            }
+                            else    return res.redirect('/merchant/chbook');
+                        });
+                        // console.log(result1);
+                    }
+                    else    return res.redirect('/merchant/chbook');
+                });
             }
         });
 
