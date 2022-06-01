@@ -90,3 +90,9 @@ CREATE TABLE ordersinformation(
     FOREIGN KEY(order_id) REFERENCES orders(order_id) ON DELETE CASCADE,
     FOREIGN KEY(book_id) REFERENCES product(book_id)
 );
+CREATE TABLE wish(
+    email VARCHAR(40) NOT NULL,
+    wish_id VARCHAR(20) NOT NULL,
+    wish_author VARCHAR(20) NOT NULL,
+    point INT
+);
