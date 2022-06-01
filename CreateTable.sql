@@ -52,6 +52,8 @@ CREATE TABLE changes(
     ch_bstatus VARCHAR(10) NOT NULL,
     ch_bprice VARCHAR(10) NOT NULL,
     ch_judge tinyINt (1),
+    ch_complete INT,
+    ch_reason VARCHAR(30),
     PRIMARY KEY(ch_id),
     FOREIGN KEY(email) REFERENCES users(email)
 );

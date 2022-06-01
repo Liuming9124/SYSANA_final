@@ -10,6 +10,7 @@ router.get('/chbook', merchantController.chbookPage)
 router.get('/rebook', merchantController.rebookPage)
 router.get('/order', merchantController.orderPage)
 router.get('/upload', merchantController.uploadPage)
+router.get('/wish', merchantController.wishPage)
 
 //order
 router.get('/order/confirm/:id', merchantController.confirmOrder);

@@ -1,87 +1,94 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>書贏●許願功能</title>
-		<%- include('./partials/header.ejs') %>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
 
-			<!-- Header -->
-			<section id="header">
-				<div class="container">
-					
-					<!-- Logo -->
-						<h1 id="logo"><a href="/wishlist">書贏●許願功能</a></h1>
-						<%- include('./partials/nav.ejs') %>
-			
-			<!-- Main -->
-			<section id="main">
-				<div class="container">
-					<div class="row">
+<head>
+	<title>書贏●許願功能</title>
+	<%- include('./partials/header.ejs') %>
 
-						<%- include('./partials/mempart.ejs') %>
-										</ul>
-									</section>
+<body class="homepage is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<section id="header">
+			<div class="container">
+
+				<!-- Logo -->
+				<h1 id="logo"><a href="/wishlist">書贏●許願功能</a></h1>
+				<%- include('./partials/nav.ejs') %>
+
+					<!-- Main -->
+					<section id="main">
+						<div class="container">
+							<div class="row">
+
+								<%- include('./partials/mempart.ejs') %>
+									</ul>
+					</section>
+			</div>
+
+			<!-- Post -->
+			<article class="box post">
+				<article class="pricing-item" style="height:600px; width:700px;">
+					<div class="container_1">
+						<header>
+							<h1 style="height: 60px;">
+								<font size=8>許願功能</font>
+							</h1>
+						</header>
+
+					</div>
+					<div class="container_1">
+
+						<header>
+							<h2><strong>書籍資訊：</strong></h2>
+						</header>
+					</div>
+
+					<form action="/rebook/add" method="POST">
+
+						<a>書籍名稱：</a>
+						<div class="container_1">
+							<div style="height: 60px; width: 500px;" class="box post">
+								<input type="text" id="name" placeholder="商品名稱" size=20 autocomplete="on" name="name"
+									required="true">
+							</div>
+						</div>
+						<a>作者:</a>
+						<div class="container_1">
+							<div style="height: 60px; width: 500px;" class="box post">
+								<input type="text" id="writer" placeholder="作者" size=20 autocomplete="on" name="writer"
+									required="true">
+							</div>
+						</div>
+						<div class="container_1">
+							<p>許願後將扣除<strong>book幣一枚</strong></p>
+						</div>
+						<div class="container_1">
+
+							<div class="box post" id="wishbutton">
+								<input style="width: 250px;" class="button" hr type="submit" value="確定">
 							</div>
 
-											<!-- Post -->
-											<article class="box post">
-												<article class="pricing-item" style="height:600px; width:700px;">
-													<div class="container_1">
-														<header>
-															<h1 style="height: 60px;"><font size=8>許願功能</font></h1>
-														</header>
-														
-													</div>
-													<div class="container_1">
-														
-														<header>
-															<h2><strong>書籍資訊：</strong></h2>
-														</header>
-													</div>
-													
-													<form action="/rebook/add" method="POST">
-				
-														<a>書籍名稱：</a>
-														<div class="container_1">
-															<div style="height: 60px; width: 500px;" class="box post">
-																<input  type="text" id="name" placeholder="商品名稱" size=20 autocomplete="on" name="name" required="true">
-															</div>
-														</div>
-														<a>作者:</a>
-														<div class="container_1">
-															<div style="height: 60px; width: 500px;" class="box post">
-																<input  type="text" id="writer" placeholder="作者" size=20 autocomplete="on" name="writer" required="true">
-															</div>
-														</div>
-														<div class="container_1">
-															<p>許願後將扣除<strong>book幣一枚</strong></p>
-															</div>
-														<div class="container_1">
-					
-															<div class="box post" id="wishbutton">
-																<input style="width: 250px;"class="button"type="submit" value="確定" >
-															</div>
-											
-														</div>
-														
-													</form>	
-													
-												</article>
-											</article>
-				</div>
-			</section>
-			<!-- Footer -->
-			<%- include('./partials/footer.ejs') %>
+						</div>
+
+					</form>
+
+				</article>
+			</article>
+	</div>
+	</section>
+	<!-- Footer -->
+	<%- include('./partials/footer.ejs') %>
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
-	</body>
+</body>
+
 </html>

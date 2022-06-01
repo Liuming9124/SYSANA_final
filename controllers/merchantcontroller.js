@@ -13,7 +13,7 @@ const merchantController = {
         return res.render('merchant')
     },
     rebookPage: (req, res) => {
-        
+
         connection.query(`SELECT * FROM reduce where re_judge='0'`, function (err, result) {
             if (err) {
                 console.log(err);
@@ -21,27 +21,27 @@ const merchantController = {
             else {
                 console.log(result)
                 res.render('merchantrebook', { 'result': result })
-                
+
             }
         })
 
     },
     chbookPage: (req, res) => {
-        connection.query(`SELECT * FROM  changes`, function (err, result){
-            if (err){
+        connection.query(`SELECT * FROM  changes`, function (err, result) {
+            if (err) {
                 console.log(err);
             }
-            else{
+            else {
                 console.log(result);
                 return res.render('merchantchbook', { 'result': result });
             }
         })
     },
-    confirmChbook:(req,res)=>{
+    confirmChbook: (req, res) => {
 
 
     },
-    cancelChbook:(req,res)=>{
+    cancelChbook: (req, res) => {
         connection.query(`UPDATE changes SET ch_judge = '2' WHERE ch_id = '${req.params.id}';`, function (err, result, fields) {
             if (err) {
                 return res.redirect('/merchant/chbook');
@@ -210,8 +210,8 @@ const merchantController = {
                     }
                     else {
                         connection.query(`UPDATE users SET point = point + ${result[0].re_point} WHERE users.email = '${result[0].email}';`, function (err2, result2) { // 折抵book幣 並從users Point 扣除
-                            if (err)    console.log(err);
-                            else{
+                            if (err) console.log(err);
+                            else {
                                 return res.redirect('/merchant/rebook');
                             }
                         });
@@ -237,6 +237,15 @@ const merchantController = {
             }
         })
 
+    },
+    wishPage: (req, res) => {
+        console.log('hi');
+        res.render('merchantwish', {
+            'order_id': '1',
+            'email': '123@gmail.com',
+            'order_bname': 'book1',
+            'order_author': 'Liumin'
+        });
     }
 }
 

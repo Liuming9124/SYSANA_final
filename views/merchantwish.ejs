@@ -38,15 +38,15 @@
 						</header>
 						<div class="row">
 							<table>
-								<% for (let i = 0 ; i < result.length ; i++ ) { %>
+								<% for (let i = 0 ; i < result.length; i++ ) { %>
 									<div id="pic" class="col-4 col-12-medium">
 									<!-- <a href="/product/ result[i].order_no %> " class="image left"><img src="/static/BookImg/ result[i].order_no %> " alt=""></a> -->
 									
 									<div class="pricing-item_1">
 										<p class="word_2">許願編號： <%= result[i].order_id %></p><br>
 										<p class="word_2">用戶帳號： <%= result[i].email %></p><br>
-										<p class="word_2">書名  ： <%= result[i].order_name %></p><br>
-										<p class="word_2">作者： <%= result[i].order_address %></p><br>
+										<p class="word_2">書名  ： <%= result[i].order_bname %></p><br>
+										<p class="word_2">作者： <%= result[i].order_author %></p><br>
 										<ul class="actions">
 											<div class="col-6 actions">
 												<a href="/merchant/order/confirm/<%= result[i].order_id %>" class="button style1 large">確認</a>
