@@ -36,7 +36,9 @@
 										<div class="col-3 col-12-medium">
 											<section class="books">
 												<a href="/product/<%=random[i].book_id%>" class="image featured">
-													<img class="imgsrc" src="/static/BookImg/<%=random[i].book_img%>"  style="width:195px;height:310px;font-size:8px;" />
+													<div class="photo1">
+														<img class="imgsrc" src="/static/BookImg/<%=random[i].book_img%>"  style="width:195px;height:310px;font-size:8px;" />
+													</div>
 												</a>
 												<h3><p href="/product/<%=random[i].book_id%> class="name" id="name"> <%=random[i].book_name %> </p></h3>
 												<div class="display-flex">
@@ -73,9 +75,10 @@
 									<% for (var i=0 ; i < 5 ; i++) { %>
 										<div class="col-2 col-10-medium">
 											<section class="books">
-												<a href="/product/<%=hot[i].book_id%>" class="image featured" >		<img class="imgsrc" src=".
-											.\static\BookImg\<%=hot[i].book_img%>" alt="" style="width:145px;height:200px;font-size:6px;">
-												</a>
+												<div class="photo1">
+														<a href="/product/<%=hot[i].book_id%>" class="image featured" ><img class="imgsrc" src="..\static\BookImg\<%=hot[i].book_img%>" alt="" style="width:145px;height:200px;font-size:6px;">
+														</a>
+												</div>
 												<h3><a href="/product/<%=hot[i].book_id%>" class="name" id="name"> <%=hot[i].book_name %> </a></h3>
 												<div class="display-flex">
 													<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
