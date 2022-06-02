@@ -316,6 +316,21 @@ const merchantController = {
         }
         
     },
+    showorder: (req, res) => {
+        if (req.session.userName == 'book@gmail.com'){
+            connection.query(`SELECT * FROM orders where order_status='${req.params.id}'`, function (err, result, fields) {
+                if (!err) {
+                    res.render('merchantorder', { //渲染頁面，(配合ejs的格式)
+                        'result': result,
+                    });
+                }
+                else    console.log(err);
+            })
+        }
+        else{
+            return res.redirect('/login');
+        }
+    },
     confirmRebook: (req, res) => { //req.params.id
         if (req.session.userName == 'book@gmail.com'){
             connection.query(`SELECT * FROM reduce where re_id ='${req.params.id}'`, function (err, result, fields) {
