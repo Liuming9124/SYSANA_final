@@ -20,7 +20,21 @@ const homeController = {
                         throw err;
                     }
                     else {
-                        res.render('home', { 'random': random, 'hot': hot });
+                        if (req.session.userName){
+                            res.render('home', {
+                                'random': random,
+                                'hot': hot,
+                                'login':req.session.userName,
+                            });
+                        }
+                        else{
+                            res.render('home', {
+                                'random': random,
+                                'hot': hot,
+                                'login': '',
+                            });
+                        }
+                        
                     }
                 })
 

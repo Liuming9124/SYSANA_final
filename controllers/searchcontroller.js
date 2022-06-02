@@ -17,7 +17,18 @@ const searchController = {
             }
             else {
                 // console.log(type);
-                res.render('search', {'result':result});
+                if (req.session.userName){
+                    res.render('search', {
+                        'result':result,
+                        'login': req.session.userName,
+                    });
+                }
+                else{
+                    res.render('search', {
+                        'result':result,
+                        'login':'',
+                    });
+                }
             }
         });
     }

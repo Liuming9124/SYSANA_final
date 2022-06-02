@@ -141,7 +141,7 @@ const merchantController = {
                 }
                 else {
 
-                    console.log(result)
+                    // console.log(result)
                     res.render('merchantorder', { //渲染頁面，(配合ejs的格式)
                         'result': result,
                     });

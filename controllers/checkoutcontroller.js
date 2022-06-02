@@ -27,6 +27,7 @@ const checkoutController = {
                             'total': totalprice,
                             'point'  : (totalprice-totalprice%100)/100,
                             'delpoint': result1[0].point,
+                            'login': req.session.userName,
                         });
                     })
                 }

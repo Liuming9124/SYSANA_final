@@ -17,13 +17,19 @@ const productController = {
             else {
                 console.log(result)
                 // console.log(result[0].book_id)
-                return res.render('product',{'result':result[0]});
-                    // 'bookname':req.params.id,
-                    // 'bookno':'00000000',
-                    // 'bookwriter':'劉銘',
-                    // 'bookmoney':'666',
-                    // 'bookinfo': '這本書很好看喔！！這本書很好看喔'
-                // })
+                if (req.session.userName){
+                    return res.render('product',{
+                        'result':result[0],
+                        'login': req.session.userName,
+                    });
+                }
+                else{
+                    return res.render('product',{
+                        'result':result[0],
+                        'login': '',
+                    });
+                }
+                
             }
         })
         

@@ -18,7 +18,8 @@ const collectController = {
                 else {
                     res.render('collect', { //渲染頁面，(配合ejs的格式)
                         'result': result,
-                        'collectstatus': ''
+                        'collectstatus': '',
+                        'login': req.session.userName,
                     });
                 }
             })
