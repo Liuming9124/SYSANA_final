@@ -18,7 +18,8 @@ const memberController = {
                         'name': result[0].username,
                         'phone': result[0].phone,
                         'bookcoin': result[0].point,
-                        'updatestatus': ''
+                        'updatestatus': '',
+                        'login': req.session.userName,
                     })
                 }
             })
@@ -129,6 +130,7 @@ const memberController = {
                 else {
                     return res.render('myrebook', {
                         'result': result,
+                        'login': req.session.userName,
                     })
                 }
             })

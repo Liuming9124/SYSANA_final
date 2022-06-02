@@ -20,7 +20,31 @@ const homeController = {
                         throw err;
                     }
                     else {
-                        res.render('home', { 'random': random, 'hot': hot });
+                        connection.query("SELECT * FROM product where book_type ='learn'", function (err, learn, fields) {
+                            if (err) {
+                                throw err;
+                            }
+                            else {
+                                if (req.session.userName){
+                                    res.render('home', {
+                                        'random': random,
+                                        'hot': hot,
+                                        'learn':learn,
+                                        'login':req.session.userName,
+                                    });
+                                }
+                                else{
+                                    res.render('home', {
+                                        'random': random,
+                                        'hot': hot,
+                                        'learn':learn,
+                                        'login': '',
+                                    });
+                                }
+                                
+                            }
+                        })
+                        
                     }
                 })
 

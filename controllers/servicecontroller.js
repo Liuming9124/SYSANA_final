@@ -2,7 +2,7 @@
 
 const serviceController = {
     servicePage: (req, res) => {
-        return res.render('service')
+        return res.render('service',{'login':''})
     }
 }
 

@@ -17,7 +17,19 @@ const classesController = {
             }
             else {
                 console.log(type);
-                res.render('classification', {'type':type});
+                if (req.session.userName){
+                    res.render('classification', {
+                        'type':type,
+                        'login': req.session.userName,
+                    });
+                }
+                else{
+                    res.render('classification', {
+                        'type':type,
+                        'login': '',
+                    });
+                }
+                
             }
         });
     }

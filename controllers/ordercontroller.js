@@ -12,7 +12,10 @@ const orderController = {
         if (req.session.userName) {
             connection.query(`SELECT * FROM orders where email ='${req.session.userName}'`, function (err, result) {
                 // console.log(result)
-                return res.render('order',{'result':result});
+                return res.render('order',{
+                    'result':result,
+                    'login': req.session.userName,
+                });
             })
         }
         else{
@@ -23,7 +26,10 @@ const orderController = {
         if (req.session.userName) {
             connection.query(`SELECT * FROM orders where email ='${req.session.userName}' and order_status = '${req.params.id}'`, function (err, result) {
                 // console.log(result)
-                return res.render('order',{'result':result});
+                return res.render('order',{
+                    'result':result,
+                    'login': req.session.userName,
+                });
             })
         }
         else{
