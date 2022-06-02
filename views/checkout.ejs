@@ -46,7 +46,7 @@
 													<div style="height: 60px; width: 265px;">
 														<input type="text" id="email" placeholder="信箱" size=20 autocomplete="on" name="email">
 													</div> -->
-													<p>請填寫欲折抵book幣 , 最多折抵 xxx 元book幣:</p>	<!-- xxx 請用ejs替代掉 -->
+													<p>請填寫欲折抵book幣 , 最多折抵 <b><%= delpoint %></b> 元book幣:</p>	<!-- xxx 請用ejs替代掉 -->
 													<div style="height: 60px; width: 265px;">
 														<input type="text" id="coin" placeholder="0" size=20 autocomplete="on" name="point">
 													</div>
@@ -81,9 +81,9 @@
 													</header>
 													<div class="inter" id="inte">
 																<p>
-																	<%=cartstatus%>
+																	
 																</p>
-																<%if (result.length>=1) { %>
+																<%if (result.length!=0) { %>
 																	<table>
 																		<% for(var i=0; i < result.length ; i++) { %>
 																			<div class="col-8 col-12-medium imp-medium" id="name">
@@ -91,15 +91,16 @@
 																			</div>
 																			<a href="/product/<%= result[i].book_id%>" class="image left" style="width:90px;height:90px;">
 																				<img src="/static/BookImg/<%=result[i].book_id%>.jpg" style="width:80px;height:80px;" alt="">
-																			</a><br>
-																			<h3><a href="/product">
-																						<%=result[i].book_name%>
-																				</a></h3><br>
+																			</a>
+																			<br>
+																			<h3>
+																				<a href="/product/<%= result[i].book_id%>">書籍編號:<%=result[i].book_id%></a>
+																			</h3>
 																			<p class="price">價錢：<%= result[i].book_price%>
 																			</p>
 																			
 																		<% } %>
-																		</table>	
+																	</table>	
 																<% } %>	
 													</div>
 													
