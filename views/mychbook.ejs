@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>書贏●我的訂單</title>
+    <%- include('./partials/header.ejs') %>
+
+<body class="homepage is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <section id="header">
+            <div class="container">
+
+                <!-- Logo -->
+                <h1 id="logo"><a href="/home">書贏●我的回收書</a></h1>
+                <%- include('./partials/nav.ejs') %>
+
+                    <!-- Main -->
+                    <section id="main">
+                        <div class="container">
+                            <div class="row">
+
+                                <!-- Sidebar -->
+                                <div id="sidebar" class="col-4 col-12-medium">
+                                    <section>
+                                        <ul class="divided">
+                                            <li>
+                                                <!-- Excerpt -->
+                                                <article class="box excerpt">
+                                                    <a href="/cart">
+                                                        <div class="display-flex">
+                                                            <img src="../static/images/cart.png" href="/cart"
+                                                                style="width:80px;height:80px;" alt="我的購物車">
+                                                            <div href="/cart">
+                                                                <br>
+                                                                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我的購物車</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </article>
+                                            </li>
+                                            <li>
+                                                <!-- Excerpt -->
+                                                <article class="box excerpt">
+                                                    <a href="/collect">
+                                                        <div class="display-flex">
+                                                            <img src="../static/images/collect.png" href="/collect"
+                                                                style="width:80px;height:80px;" alt="我的收藏">
+                                                            <div href="/collect">
+                                                                <br>
+                                                                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我的收藏</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </article>
+                                            </li>
+
+                                            <li>
+                                                <!-- Excerpt -->
+                                                <article class="box excerpt">
+                                                    <a href="/order">
+                                                        <div class="display-flex">
+                                                            <img src="../static/images/list.png" href="/order"
+                                                                style="width:80px;height:80px;" alt="我的訂單">
+                                                            <div href="/order">
+                                                                <br>
+                                                                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我的訂單</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </article>
+                                            </li>
+                                            <li>
+                                                <!-- Excerpt -->
+                                                <article class="box excerpt">
+                                                    <a href="/member/myrebook">
+                                                        <div class="display-flex">
+                                                            <img src="../static/images/rebookcheck.png"
+                                                                href="/member/myrebook" style="width:80px;height:80px;"
+                                                                alt="我的回收書">
+                                                            <div href="/member/myrebook">
+                                                                <br>
+                                                                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我的回收書</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </article>
+                                            </li>
+                                            <li>
+                                                <!-- Excerpt -->
+                                                <article class="box excerpt">
+                                                    <a href="/member/mychbook">
+                                                        <div class="display-flex">
+                                                            <img src="../static/images/mychbook.png"
+                                                                href="/member/mychbook" style="width:80px;height:80px;"
+                                                                alt="我的交換書">
+                                                            <div href="/member/mychbook">
+                                                                <br>
+                                                                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我的交換書</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </article>
+                                            </li>
+
+
+                                    </section>
+                                </div>
+                                <!-- Content -->
+                                <div id="content" class="col-8 col-12-medium imp-medium">
+                                    <!-- Post -->
+                                    <div class="container_1">
+                                        <header>
+                                            <h1>
+                                                <font size=8>交換資訊</font>
+                                            </h1>
+                                        </header>
+                                    </div>
+                                    <br>
+                                    <div class="box post" style="height: 10px ;">
+                                        <div class="container_1">
+                                            <a href="/member/showchbook/0" class="button-2 style2 large"
+                                                style="width:120px;height:45px;font-size:10px;">尚未審核書籍</a>
+                                            <P>&nbsp&nbsp&nbsp&nbsp&nbsp</P>
+                                            <a href="/member/showchbook/1" class="button-2 style2 large"
+                                                style="width:120px;height:45px;font-size:10px;">交換成功書籍</a>
+                                            <P>&nbsp&nbsp&nbsp&nbsp&nbsp</P>
+                                            <a href="/member/showchbook/2" class="button-2 style2 large"
+                                                style="width:120px;height:45px;font-size:10px;">拒絕交換書籍</a>
+                                            <P>&nbsp&nbsp&nbsp&nbsp&nbsp</P>
+                                        </div>
+                                    </div>
+                                    <br><br>
+                                    <%if (result.length>=1) { %>
+                                        <% for (let i=0 ; i < result.length ; i++ ) { %>
+                                            <article class="box post">
+                                                <div class="pricing-item_1">
+                                                    <div id="pic" class="col-6 col-12-medium imp-medium">
+
+                                                        <!--<a href="/product/<%= result[i].order_no %> " class="image left"><img src="/static/BookImg/<%= result[i].order_no %> " alt=""></a>-->
+                                                    </div>
+                                                    <div>
+                                                        <p class="border-button_1" style="font-size:30px;height:50px;">
+                                                            交換書籍編號： <%= result[i].ch_id %>
+                                                        </p><br>
+                                                        <p class="word_2" style="height:5px;">用戶帳號： <%= result[i].email
+                                                                %>
+                                                        </p><br>
+                                                        <p class="word_2" style="height:5px;">書名 ： <%=
+                                                                result[i].ch_bname %>
+                                                        </p><br>
+                                                        <p class="word_2" style="height:5px;">作者 ： <%=
+                                                                result[i].ch_bauthor %>
+                                                        </p><br>
+                                                        <p class="word_2" style="height:5px;">價格 ： <%=
+                                                                result[i].ch_bprice %>
+                                                        </p><br>
+                                                        <p class="word_2" style="height:5px;">拒絕原因 ： <%=
+                                                                result[i].ch_reason %>
+                                                        </p><br>
+
+
+
+
+
+
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <% } %>
+                                                <% } %>
+                                                    <%if (result.length<1) {%>
+                                                        <section id="features">
+                                                            <div class="container">
+                                                                <header>
+                                                                    <h2> <strong>目前沒有書籍</strong>!</h2>
+                                                                </header>
+                                                            </div>
+                                                        </section>
+                                                        <%}%>
+                                </div>
+
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Footer -->
+                    <%- include('./partials/footer.ejs') %>
+
+            </div>
+
+            <!-- Scripts -->
+            <script src="../static/js/jquery.min.js"></script>
+            <script src="../static/js/jquery.dropotron.min.js"></script>
+            <script src="../static/js/browser.min.js"></script>
+            <script src="../static/js/breakpoints.min.js"></script>
+            <script src="../static/js/util.js"></script>
+            <script src="../static/js/main.js"></script>
+
+</body>
+
+</html>

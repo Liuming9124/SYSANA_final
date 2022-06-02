@@ -138,8 +138,55 @@ const memberController = {
         }
     },
     showrebook: (req, res) => {
-        console.log(req.params.id);
-        return res.redirect('/member/myrebook');
+        if (req.session.userName) {
+            connection.query(`SELECT * FROM reduce WHERE email = '${req.session.userName}' and re_judge = '${req.params.id}'`, function (err, result) {
+                if (err) {
+                    console.log(err);
+                }
+                else {
+                    return res.render('myrebook', {
+                        'result': result,
+                    })
+                }
+            })
+        }
+        else {
+            return res.redirect('/login');
+        }
+    },
+    mychbookPage: (req, res) => {
+        if (req.session.userName) { 
+            connection.query(`SELECT * FROM changes WHERE email = '${req.session.userName}'`, function (err, result) {
+                if (err) {
+                    console.log(err);
+                }
+                else {
+                    return res.render('mychbook', {
+                        'result': result,
+                    })
+                }
+            })
+        }
+        else {
+            return res.redirect('/login');
+        }
+    },
+    showchbook: (req, res) => {
+        if (req.session.userName) {
+            connection.query(`SELECT * FROM changes WHERE email = '${req.session.userName}' and ch_judge = '${req.params.id}' `, function (err, result) {
+                if (err) {
+                    console.log(err);
+                }
+                else {
+                    return res.render('mychbook', {
+                        'result': result,
+                    })
+                }
+            })
+        }
+        else {
+            return res.redirect('/login');
+        }
     },
 }
 module.exports = memberController
