@@ -13,6 +13,7 @@ const register   = require('./modules/register')
 const service    = require('./modules/service')
 const wishlist   = require('./modules/wishlist')
 const classes    = require('./modules/classes')
+const search     = require('./modules/search.js')
 
 // const { authenticated } = require('../middleware/auth')
 
@@ -32,5 +33,6 @@ module.exports = app => {
   app.use('/service', service)
   app.use('/wishlist', wishlist)
   app.use('/classification', classes )
+  app.use('/search', search);
   app.use('/', (req, res) => { return res.redirect('/home') })
 }

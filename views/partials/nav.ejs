@@ -2,15 +2,16 @@
         <form action="/search" method="POST">
            <br>
             <p>
-                <div class="ccle">
-                    <div class="container" id="search" style="width:500px;height:60px;font-size:20px;">
-                        <input type="text" id="search" placeholder="搜尋您想要的商品">
+                <form action="/search" method="post">
+                    <div class="ccle">
+                        <div class="container" id="search" style="width:500px;height:60px;font-size:20px;">
+                            <input type="text" id="search" placeholder="搜尋您想要的商品" name="find">
+                        </div>
+                        <div class="container" id="searchbottom" >
+                            <input type="submit" value="搜尋" class="button style1 col-8-small" style="width:100px;height:47px;font-size:10px;">
+                        </div>
                     </div>
-                    <div class="container" id="searchbottom" >
-                         <a href="#" class="button style1 col-8-small" style="width:100px;height:47px;font-size:10px;">搜尋</a>
-                    </div>
-                </div>
-            
+                </form>
             </p>
         </form>
 
