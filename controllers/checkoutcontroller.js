@@ -21,13 +21,14 @@ const checkoutController = {
                         totalprice += result[i].book_price
                     }
                     // console.log(result);
-                    res.render('checkout', { //渲染頁面，(配合ejs的格式)
-                        'result': result,
-                        'total': totalprice,
-                        'cartstatus': '',
-                        'point'  :'0',
-                        'dollar' :'0'
-                    });
+                    connection.query(`SELECT * FROM users WHERE email = '${req.session.userName}'`, function (err1, result1){
+                        res.render('checkout', { //渲染頁面，(配合ejs的格式)
+                            'result': result,
+                            'total': totalprice,
+                            'point'  : (totalprice-totalprice%100)/100,
+                            'delpoint': result1[0].point,
+                        });
+                    })
                 }
             })
             // connection.query("SELECT * FROM checkout where email ='" + req.session.userName + "'", function (err, result, fields) {
