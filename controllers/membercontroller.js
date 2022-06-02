@@ -138,7 +138,7 @@ const memberController = {
         }
     },
     showrebook: (req, res) => {
-        console.log(req.params.id);
+        // console.log(req.params.id);
         return res.redirect('/member/myrebook');
     },
 }
