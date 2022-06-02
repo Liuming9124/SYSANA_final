@@ -149,6 +149,7 @@ const memberController = {
                 else {
                     return res.render('myrebook', {
                         'result': result,
+                        'login':req.session.userName
                     })
                 }
             })
@@ -166,6 +167,7 @@ const memberController = {
                 else {
                     return res.render('mychbook', {
                         'result': result,
+                        'login':req.session.userName
                     })
                 }
             })
@@ -183,6 +185,7 @@ const memberController = {
                 else {
                     return res.render('mychbook', {
                         'result': result,
+                        'login':req.session.userName
                     })
                 }
             })
@@ -192,7 +195,7 @@ const memberController = {
         }
 
         // console.log(req.params.id);
-        return res.redirect('/member/myrebook');
+        // return res.redirect('/member/mychbook');
 
     },
 }

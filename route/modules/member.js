@@ -15,7 +15,7 @@ router.post('/update', memberController.memberUpdate);
 
 
 router.get('/myrebook', memberController.myrebookPage);
-// router.get('/mychbook', memberController.mychbookPage);
+router.get('/mychbook', memberController.mychbookPage);
 
 router.get('/showrebook/:id', memberController.showrebook);
 router.get('/showchbook/:id', memberController.showchbook);
