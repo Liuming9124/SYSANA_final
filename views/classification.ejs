@@ -22,10 +22,10 @@
 								<h2>商品分類頁面</h2>
 							</header>
 							<!-- books1 -->
-							<h3>漫畫</h3><br>
+							<h3><%= type[0].book_type %> </h3><br>
 							<div class="container">
 								<div class="row aln-center">
-									<% for (var i=0 ; i < 4 ; i++) { %>
+									<% for (var i=0 ; i < type.length ; i++) { %>
 										<div class="col-3 col-12-medium">
 											<section class="books">
 											<a href="/product/<%= type[i].book_id%>" class="image featured">

@@ -11,7 +11,7 @@ const classesController = {
 
     classesPage: (req, res) => {
         console.log(req.params.id);
-        connection.query("SELECT * FROM product where book_type ='"+ req.params.id +"'", function (err, type, fields) {
+        connection.query(`SELECT * FROM product where book_type ='${req.params.id}'`, function (err, type, fields) {
             if (err) {
                 throw err;
             }
