@@ -23,8 +23,13 @@ const loginController = {
                     console.log("登入成功");
                     req.session.userName = req.body.username; // 登入成功，設定 session
                     // console.log(req.session.userName);
-                    res.redirect('/member');
-                    break;
+                    if (req.session.userName == 'book@gmail.com'){
+                        return res.redirect('/merchant');
+                    }
+                    else{
+                        return res.redirect('/member');
+                    }
+                    
                 }
                 else {
                     count++

@@ -12,7 +12,7 @@ CREATE TABLE users(
 );
 
 CREATE TABLE product(
-    book_id VARCHAR(20) NOT NULL,
+    book_id INT AUTO_INCREMENT,
     book_name VARCHAR(20) NOT NULL,
     book_img VARCHAR(50) NOT NULL,
     book_author VARCHAR(20) NOT NULL,
@@ -87,7 +87,7 @@ CREATE TABLE orders(
 CREATE TABLE ordersinformation(
     email VARCHAR(40) NOT NULL,
     order_id INT AUTO_INCREMENT,
-    book_id VARCHAR(20) NOT NULL,
+    book_id INT NOT NULL,
     FOREIGN KEY(email) REFERENCES users(email),
     FOREIGN KEY(order_id) REFERENCES orders(order_id) ON DELETE CASCADE,
     FOREIGN KEY(book_id) REFERENCES product(book_id)

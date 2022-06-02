@@ -24,4 +24,8 @@ router.get('/rebook/cancel/:id',  merchantController.cancelRebook);
 router.get('/chbook/confirm/:id', merchantController.confirmChbook);
 router.get('/chbook/cancel/:id',  merchantController.cancelChbook);
 
+//upload
+router.post('/uploadbook', merchantController.uploadItem);
+
+
 module.exports = router

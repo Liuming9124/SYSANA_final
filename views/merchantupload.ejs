@@ -2,95 +2,105 @@
 <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
 <html>
-	<head>
-		<title>書贏●商家頁面-上架</title>
-		<%- include('./partials/headermerch.ejs') %>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
 
-			
+<head>
+	<title>書贏●商家頁面-上架</title>
+	<%- include('./partials/headermerch.ejs') %>
 
-			<!-- Header -->
-				<section id="header">
-					<div class="container">
+<body class="homepage is-preload">
+	<div id="page-wrapper">
 
-						<!-- Logo -->
-						<h1 id="logo"><a href="/merchant">書贏●商家頁面<br>-上架商品</a></h1>
-						
-						<!-- Nav -->
-						<%- include('./partials/navmerch.ejs') %>
-				
-			<!-- Post -->
-			<section id="main">
-				<div class="container">
-			<article class="box post">
-				<div class="container_1">
-				<header>
-					<h2>書籍資訊：</h2>
-				</header>
-				</div>
-			</article>
-				<div class="row">
-					
-					
-						<div class="col-6 col-12-medium">
-							<form method="" action="POST">
-								<div class="col-6 col-12-small">
-									<p>書籍名稱：<input  type="text" id="name" placeholder="商品名稱" size=5 autocomplete="on" name="name" required="true"></p>
-								</div>
-								<div class="col-6 col-12-small">
-										<p>書籍編號：<input  type="text" id="list" placeholder="商品編號" size=5 autocomplete="on" name="list" required="true"></p>
-								</div>
-								<div class="col-6 col-12-small">
-									<p>作者：<input  type="text" id="writer" placeholder="作者" size=5 autocomplete="on" name="writer" required="true"></p>
-								</div>
-								<div class="col-6 col-12-small">
-									<p>書籍價格：<input  type="text" id="howmuch" placeholder="商品價格" size=5 autocomplete="on" name="howmuch" required="true"></p>
-								</div>
-							</form>
-						</div>	
-							<div class="col-6 col-12-medium">
-								<p>上傳照片：<div class="col-6 col-12-small">
-									<form action="/somewhere/to/upload" enctype="multipart/form-data">
 
-										<input id="img" type="file" accept="image/gif, image/jpeg, image/png" name="picture" required="true">
-										
+
+		<!-- Header -->
+		<section id="header">
+			<div class="container">
+
+				<!-- Logo -->
+				<h1 id="logo"><a href="/merchant">書贏●商家頁面<br>-上架商品</a></h1>
+
+				<!-- Nav -->
+				<%- include('./partials/navmerch.ejs') %>
+
+					<!-- Post -->
+					<section id="main">
+						<div class="container">
+							<article class="box post">
+								<div class="container_1">
+									<header>
+										<h2>書籍資訊：</h2>
+									</header>
+								</div>
+							</article>
+							<div class="row">
+
+
+								<div class="col-6 col-12-medium">
+									<form action="/merchant/uploadbook" method="post">
+										<div class="col-6 col-12-small">
+											<p>書籍名稱：<input type="text" id="name" placeholder="商品名稱" size=5 autocomplete="on" name="name" required="true"></p>
+											<p>作者：<input type="text" id="writer" placeholder="作者" size=5 autocomplete="on" name="author" required="true"></p>
+											<p>書籍類型：<input type="text" id="type" placeholder="類型" size=5 autocomplete="on" name="type" required="true"></p>
+											<p>書籍介紹<input type="text" id="intro" placeholder="書籍介紹" size=5 autocomplete="on" name="intro" required="true"></p>
+											<p>書籍價格：<input type="text" id="howmuch" placeholder="商品價格" size=5 autocomplete="on" name="price" required="true"></p>
+											<p>圖片檔名+副檔名：<input type="text" id="picture" placeholder="圖片名稱" size=5 autocomplete="on" name="picture" required="true"></p>
+											<input class="button"type="submit" value="確認" >
+											<input class="button"type="reset" value="清除">
+										</div>
 									</form>
-						
-									</div>
-									<a href="#" class="image left"><img src="../static/images/pic13.jpg" alt=""></a>  <!-- 有上傳才出現 -->
-								</p>
-							</div>
-							<div class="box post">
-								<ul class="actions">
-										<li>
-											<form action="" method="POST">
-												<div class="display-flex">
-													<div id="certain" class="box post">
-														<a href="#" class="button style1 large">確定</a>
-													</div>
-													<a>&nbsp</a>
-													<div id="cancel" class="box post">
-														<a href="#" class="button style2 large">取消</a>
-													</div>
+									<!-- <form action="/merchant/uploadbook" action="post">
+										<div class="col-6 col-12-small">
+											<p>書籍名稱：<input type="text" id="name" placeholder="商品名稱" size=5 autocomplete="on" name="name" required="true"></p>
+										</div>
+										<div class="col-6 col-12-small">
+											<p>書籍編號：<input type="text" id="list" placeholder="商品編號" size=5 autocomplete="on" name="list" required="true"></p>
+										</div>
+										<div class="col-6 col-12-small">
+											<p>作者：<input type="text" id="writer" placeholder="作者" size=5 autocomplete="on" name="writer" required="true"></p>
+										</div>
+										<div class="col-6 col-12-small">
+											<p>書籍價格：<input type="text" id="howmuch" placeholder="商品價格" size=5 autocomplete="on" name="howmuch" required="true"></p>
+										</div>
+										<div class="col-6 col-12-small">
+											<p>圖片檔名+副檔名：<input type="text" id="picture" placeholder="圖片名稱" size=5 autocomplete="on" name="howmuch" required="true"></p>
+										</div>
+										<div class="display-flex">
+											<div class="box post" id="recyclebutton">
+												<input class="button"type="submit" value="確認" >
 											</div>
+											<p>&nbsp&nbsp</p>
+											<div class="box post" id="resetbutton">
+												<input class="button"type="reset" value="清除">
+											</div>
+										</div>
+									</form> -->
+								</div>
+								<div class="col-6 col-12-medium">
+									<p>上傳照片：
+									<div class="col-6 col-12-small">
+										<form action="/somewhere/to/upload" enctype="multipart/form-data">
+											<input id="getimg" type="file" accept="image/gif, image/jpeg, image/png"
+												name="picture" required="true" onchange="previewFile()">
 										</form>
-									</li>
-								</ul>
-							</div>
-												
-					
-				</div>	
-			
-			</div>
-		</section>
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
-	</body>
+										<a href="#" class="image left"><img src="" id="showimg" alt="ImgPreview"
+												height="200px" width="200px"></a> <!-- 有上傳才出現 -->
+
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- Scripts -->
+					<script src="assets/js/jquery.min.js"></script>
+					<script src="assets/js/jquery.dropotron.min.js"></script>
+					<script src="assets/js/browser.min.js"></script>
+					<script src="assets/js/breakpoints.min.js"></script>
+					<script src="assets/js/util.js"></script>
+					<script src="assets/js/main.js"></script>
+					<script src="/static/js/merchantUpload.js"></script>
+
+</body>
+
 </html>

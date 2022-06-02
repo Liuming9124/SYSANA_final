@@ -5,6 +5,7 @@ var app     = express();
 var cookieParser = require('cookie-parser');
 var session      = require('express-session');
 var favicon      = require('serve-favicon');
+// var multer       = require('multer');
 
 
 
@@ -25,6 +26,20 @@ app.use(session({
     maxAge : 1000 * 60 * 10, // 設定 session 的有效時間，單位毫秒
   }    
 }))
+
+
+//上傳圖片 尚未實現
+// const storage = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, 'static/BookImg/')
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, file.filename + '-' + Date.now())
+//   }
+// })
+// const upload = multer({ storage: storage })
+// const fs = require('fs')
+
 
 //建立 server
 
