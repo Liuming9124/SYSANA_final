@@ -26,15 +26,17 @@ const rebookController = {
         if (req.session.userName) {
             var data = req.body;
             var point = data.re_price;
-            if (data.re_status == '7成~9成'){
+            console.log(point);
+            console.log(data.re_status);
+            if (data.re_status == '0.6'){
                 point *= 0.6;
                 point = point-point%1;
             }
-            else if (data.re_status == '全新'){
+            else if (data.re_status == '0.5'){
                 point *= 0.5;
                 point = point-point%1;
             }
-            else if (data.re_status == '5成~7成'){
+            else if (data.re_status == '0.4'){
                 point *= 0.4;
                 point = point-point%1;
             }
