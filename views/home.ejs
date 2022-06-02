@@ -65,10 +65,10 @@
 									<% } %>
 								</table>
 							</div>
-	</article>
+						</article>
 						<!-- books2 -->
 						<p> </p>
-						<h3>熱門商品</h3><br>
+						<h3>學習暢銷書</h3><br>
 						<div class="container">
 							<div class="row aln-center">
 								<table>
@@ -104,7 +104,47 @@
 									<% } %>
 								</table>
 							</div>
-						</article>
+						</div>
+
+						<!-- books3 -->
+						<p> </p>
+						<h3>熱門商品</h3><br>
+						<div class="container">
+							<div class="row aln-center">
+								<table>
+									<% for (var i=0 ; i < (learn.length-learn.length%6) ; i++) { %>
+										<div class="col-2 col-10-medium">
+											<section class="books">
+												<div class="photo1">
+														<a href="/product/<%=learn[i].book_id%>" class="image featured" ><img class="imgsrc" src="..\static\BookImg\<%=learn[i].book_img%>" alt="" style="width:145px;height:200px;font-size:6px;">
+														</a>
+												</div>
+												<h3><a href="/product/<%=learn[i].book_id%>" class="name" id="name"> <%=learn[i].book_name %> </a></h3>
+												<div class="display-flex">
+													<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+														價錢：</p>	
+													<p class="price" id="price"><%= learn[i].book_price%></p>
+												</div>			
+												
+												<ul class="actions">
+													<li>
+														<div class="display-flex">
+															<div id="addcollect" class="col-8 col-12-medium imp-medium">
+																<a href="/collect/add/<%= learn[i].book_id %> " class="button style1 large" style="width:80px;height:26px;font-size:3px;"><img src="../static/images/collect1.png" href="/collect" style="width:20px;height:20px;" alt="我的收藏"></a>
+															</div>
+															<a>&nbsp</a>
+															<div id="addcart" class="col-8 col-12-medium imp-medium">
+																<a href="/cart/add/<%=learn[i].book_id%>" class="button style2 large" style="width:80px;height:26px;font-size:2px;"><img src="../static/images/cart1.png" href="/collect" style="width:20px;height:20px;" alt="我的收藏"></a>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</section>
+										</div>
+									<% } %>
+								</table>
+							</div>
+						</div>
 							
 						
 				</section>

@@ -24,7 +24,8 @@ const cartController = {
                     res.render('cart', { //渲染頁面，(配合ejs的格式)
                         'result': result,
                         'total': totalprice,
-                        'cartstatus': ''
+                        'cartstatus': '',
+                        'login': req.session.userName,
                     });
                 }
             })
@@ -41,7 +42,7 @@ const cartController = {
 
             connection.query("SELECT * FROM product where book_id='" + req.params.id + "'", function (err, result) {
                 if (err) {
-                    return res.render('cart', { 'cartstatus': '已加入購物車' });
+                    return res.render('cart', { 'cartstatus': '已加入購物車','login':req.session.userName });
                 }
                 else {
                     // console.log(result)
@@ -63,7 +64,8 @@ const cartController = {
                                         'cartbook': result,
                                         'result': result,
                                         'total': totalprice,
-                                        'cartstatus': '此書已存在在購物車'
+                                        'cartstatus': '此書已存在在購物車',
+                                        'login':req.session.userName
                                     });
                                 }
                             })
@@ -88,7 +90,7 @@ const cartController = {
 
             connection.query("SELECT * FROM product where book_id='" + req.params.id + "'", function (err, result) {
                 if (err) {
-                    return res.render('cart', { 'cartstatus': '已加入購物車' });
+                    return res.render('cart', { 'cartstatus': '已加入購物車' ,'login': req.session.userName});
                 }
                 else {
                     // console.log(result)
@@ -110,7 +112,8 @@ const cartController = {
                                         'cartbook': result,
                                         'result': result,
                                         'total': totalprice,
-                                        'cartstatus': '此書已存在在購物車'
+                                        'cartstatus': '此書已存在在購物車',
+                                        'login':req.session.userName,
                                     });
                                 }
                             })
@@ -133,7 +136,7 @@ const cartController = {
 
             connection.query("SELECT * FROM product where book_id='" + req.params.id + "'", function (err, result) {
                 if (err) {
-                    return res.render('cart', { 'cartstatus': '已加入購物車' });
+                    return res.render('cart', { 'cartstatus': '已加入購物車' ,'login':req.session.userName});
                 }
                 else {
                     // console.log(result)

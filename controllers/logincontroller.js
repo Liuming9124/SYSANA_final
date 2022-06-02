@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
 
 const loginController = {
     loginPage: (req, res) => {
-        return res.render('login',{'loginstatus':''})
+        return res.render('login',{'loginstatus':'', 'login':'' })
     },
     userlogin: (req, res) => {
         var user = req.body;
@@ -37,7 +37,7 @@ const loginController = {
             }
             if (count == result.length) {
                 console.log("登入失敗");
-                return res.render('login', { 'loginstatus': '帳號或密碼錯誤' });
+                return res.render('login', { 'loginstatus': '帳號或密碼錯誤', 'login':'' });
             }
         })
         // console.log(user.username);

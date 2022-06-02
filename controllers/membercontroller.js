@@ -18,7 +18,8 @@ const memberController = {
                         'name': result[0].username,
                         'phone': result[0].phone,
                         'bookcoin': result[0].point,
-                        'updatestatus': ''
+                        'updatestatus': '',
+                        'login': req.session.userName,
                     })
                 }
             })
@@ -129,6 +130,7 @@ const memberController = {
                 else {
                     return res.render('myrebook', {
                         'result': result,
+                        'login': req.session.userName,
                     })
                 }
             })
@@ -138,6 +140,7 @@ const memberController = {
         }
     },
     showrebook: (req, res) => {
+<<<<<<< HEAD
         if (req.session.userName) {
             connection.query(`SELECT * FROM reduce WHERE email = '${req.session.userName}' and re_judge = '${req.params.id}'`, function (err, result) {
                 if (err) {
@@ -187,6 +190,10 @@ const memberController = {
         else {
             return res.redirect('/login');
         }
+=======
+        // console.log(req.params.id);
+        return res.redirect('/member/myrebook');
+>>>>>>> c300b0d81129b75cbf37d84b92fc8d19141fcb00
     },
 }
 module.exports = memberController

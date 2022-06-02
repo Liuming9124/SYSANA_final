@@ -15,6 +15,7 @@ router.get('/wish', merchantController.wishPage)
 //order
 router.get('/order/confirm/:id', merchantController.confirmOrder);
 router.get('/order/cancel/:id' , merchantController.cancelOrder);
+router.get('/showorder/:id', merchantController.showorder);
 
 //rebook
 router.get('/rebook/confirm/:id', merchantController.confirmRebook);

@@ -6,6 +6,7 @@ const orderController = require('../../controllers/ordercontroller')
 
 
 router.get('/', orderController.orderPage)
+router.get('/showorder/:id', orderController.showorder);
 
 
 

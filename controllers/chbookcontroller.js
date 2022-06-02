@@ -15,7 +15,11 @@ const chbookController = {
             connection.query(`SELECT point FROM users WHERE users.email = '${req.session.userName}';`,function (err, result){
                 if (err)    console.log(err);
                 else{
-                    return res.render('chbook', { 'status': '' , 'bookcoin': result[0].point });
+                    return res.render('chbook', { 
+                        'status': '' , 
+                        'bookcoin': result[0].point ,
+                        'login': req.session.userName,
+                    });
                 }
             });
         }
@@ -41,7 +45,11 @@ const chbookController = {
                     connection.query(`SELECT point FROM users WHERE users.email = '${req.session.userName}';`,function (err, result){
                         if (err)    console.log(err);
                         else{
-                            return res.render('chbook', { 'status': 'success' , 'bookcoin': result[0].point });
+                            return res.render('chbook', { 
+                                'status': 'success' , 
+                                'bookcoin': result[0].point,
+                                'login': req.session.userName,
+                            });
                         }
                     });
                 }
@@ -50,9 +58,6 @@ const chbookController = {
         else{
             return res.redirect ('/login');
         }
-        
-        
-
     }
 }
 module.exports = chbookController

@@ -16,11 +16,15 @@ const wishlistController = {
                         console.log(result)
                         return res.render('wishlist', {
                             'bookcoin': '0',
-                            'updatestatus': ''
+                            'updatestatus': '',
+                            'login': req.session.userName,
                         })
                     }
                 }
             })
+        }
+        else{
+            res.redirect('/login');
         }
     }
 }

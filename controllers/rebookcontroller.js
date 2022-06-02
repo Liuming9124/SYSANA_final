@@ -12,7 +12,10 @@ const rebookController = {
         if (req.session.userName) {
             connection.query(`SELECT * FROM users WHERE email = '${req.session.userName}'`, function (err, result) {
                 if (!err){
-                    return res.render('rebook',{'bookcoin': result[0].point})
+                    return res.render('rebook',{
+                        'bookcoin': result[0].point,
+                        'login': req.session.userName,
+                    })
                 }
                 else    return res.redirect('/login');
             })
@@ -48,7 +51,10 @@ const rebookController = {
                             console.log(err);
                         }
                         else{
-                            return res.render('rebook',{'bookcoin': result[0].point})
+                            return res.render('rebook',{
+                                'bookcoin': result[0].point,
+                                'login': req.session.userName,
+                            })
                         }
                     })
                 }
