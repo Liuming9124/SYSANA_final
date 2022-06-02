@@ -11,8 +11,12 @@ router.get('/logout',function (req, res){
     res.redirect('/home');
 })
 router.get('/punch', memberController.memberPunch);
-router.post('/update', memberController.memberUpdate)
+router.post('/update', memberController.memberUpdate);
 
+
+
+router.get('/myrebook', memberController.myrebookPage);
+router.get('/mychbook', memberController.mychbookPage);
 
 
 module.exports = router

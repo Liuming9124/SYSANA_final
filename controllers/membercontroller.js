@@ -119,6 +119,22 @@ const memberController = {
                 }
             }
         })
+    },
+    myrebookPage: (req, res) =>{
+        connection.query(`SELECT * FROM reduce WHERE email = '${req.session.userName}'`, function (err, result) {
+            if (err){
+                throw err;
+            }
+            else{
+                console.log(result)
+                res.render('member', {
+                    'result' :result
+                })
+            }
+        })
+    },
+    mychbookPage: (req, res) =>{
+
     }
 }
 module.exports = memberController
