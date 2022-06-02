@@ -14,9 +14,10 @@ router.get('/punch', memberController.memberPunch);
 router.post('/update', memberController.memberUpdate);
 
 
-
 router.get('/myrebook', memberController.myrebookPage);
 router.get('/mychbook', memberController.mychbookPage);
+
+router.get('/showrebook/:id', memberController.showrebook);
 
 
 module.exports = router

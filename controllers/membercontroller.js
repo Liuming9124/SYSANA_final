@@ -13,7 +13,7 @@ const memberController = {
         // console.log(req.session);
         if (req.session.userName) {
             connection.query(`SELECT * FROM users WHERE email = '${req.session.userName}'`, function (err, result) {
-                if (!err){
+                if (!err) {
                     return res.render('member', {
                         'name': result[0].username,
                         'phone': result[0].phone,
@@ -28,34 +28,34 @@ const memberController = {
         }
 
     },
-    memberPunch:(req, res) => {
-        if (req.session.userName){
-            connection.query(`SELECT punch FROM users WHERE email = '${req.session.userName}'`, function (err, result){
-                if (!err){
+    memberPunch: (req, res) => {
+        if (req.session.userName) {
+            connection.query(`SELECT punch FROM users WHERE email = '${req.session.userName}'`, function (err, result) {
+                if (!err) {
                     // console.log('pt= ',result[0].punch);
                     let ct = Date.now();    //current time
-                    let pt = ( new Date(result[0].punch) ).getTime();   //last punch time
+                    let pt = (new Date(result[0].punch)).getTime();   //last punch time
 
-                    if ( (ct - pt) >= 86400000){
+                    if ((ct - pt) >= 86400000) {
                         let nct = new Date(ct);
-                        let time = `${nct.getFullYear()}-${nct.getMonth()+1}-${nct.getDate()} ${nct.getHours()}:${nct.getMinutes()}:${nct.getSeconds()}`;
+                        let time = `${nct.getFullYear()}-${nct.getMonth() + 1}-${nct.getDate()} ${nct.getHours()}:${nct.getMinutes()}:${nct.getSeconds()}`;
 
-                        connection.query(`UPDATE users SET punch = '${time}' , point = (point + 1) WHERE email = '${req.session.userName}';`,function (err1,result1){
-                            if (!err){
+                        connection.query(`UPDATE users SET punch = '${time}' , point = (point + 1) WHERE email = '${req.session.userName}';`, function (err1, result1) {
+                            if (!err) {
                                 console.log('punch success');
                                 return res.redirect('/member');
                             }
-                            else    return res.redirect('/member');
+                            else return res.redirect('/member');
                         })
                     }
-                    else{
+                    else {
                         return res.redirect('/member');     //Had punch with a day;
                     }
                 }
-                else    console.log(err);
+                else console.log(err);
             })
         }
-        else    return res.redirect('/login');
+        else return res.redirect('/login');
     },
     memberUpdate: (req, res) => {
         var data = req.body;
@@ -63,33 +63,33 @@ const memberController = {
         console.log("----");
         // console.log(req.session.userName);
         connection.query(`SELECT * FROM users WHERE email = '${req.session.userName}'`, function (err, result) {
-            if (!err){
+            if (!err) {
                 var status = 0;
                 var user = result[0];
                 if (user.userpassword == data.password) {
-                    connection.query(`UPDATE users SET username ='${data.name}' WHERE email ='${user.email}'`,function(err,result){
-                        if(err){
+                    connection.query(`UPDATE users SET username ='${data.name}' WHERE email ='${user.email}'`, function (err, result) {
+                        if (err) {
                             status = 1;
                             throw err;
                         }
-                        else{
+                        else {
                             console.log("successufl");
                         }
                     })
-                    connection.query(`UPDATE users SET phone = '${data.phone}' WHERE email = '${user.email}' `,function(err,result2){
-                        if(err){
+                    connection.query(`UPDATE users SET phone = '${data.phone}' WHERE email = '${user.email}' `, function (err, result2) {
+                        if (err) {
                             status = 1;
                             throw err
                         }
                     })
-                    if (data.newpass == data.newpass2 ) {
-                        if (data.newpass != ''){
-                            connection.query(`UPDATE users SET userpassword='${data.newpass}' WHERE email='${user.email}'`,function(err,result3){
-                                if(err){
+                    if (data.newpass == data.newpass2) {
+                        if (data.newpass != '') {
+                            connection.query(`UPDATE users SET userpassword='${data.newpass}' WHERE email='${user.email}'`, function (err, result3) {
+                                if (err) {
                                     status = 1;
                                     throw err
                                 }
-                                else{
+                                else {
                                     console.log("successful");
                                 }
                             })
@@ -102,13 +102,13 @@ const memberController = {
                             'bookcoin': user.point,
                             'updatestatus': '欲更改密碼必須相同'
                         })
-                        
+
                     }
-                    if (status == 0 ){
+                    if (status == 0) {
                         return res.redirect('/member');
                     }
                 }
-                else{
+                else {
                     //密碼錯誤
                     return res.render('member', {
                         'name': user.username,
@@ -120,21 +120,26 @@ const memberController = {
             }
         })
     },
-    myrebookPage: (req, res) =>{
-        connection.query(`SELECT * FROM reduce WHERE email = '${req.session.userName}'`, function (err, result) {
-            if (err){
-                throw err;
-            }
-            else{
-                console.log(result)
-                res.render('member', {
-                    'result' :result
-                })
-            }
-        })
+    myrebookPage: (req, res) => {
+        if (req.session.userName) {
+            connection.query(`SELECT * FROM reduce WHERE email = '${req.session.userName}'`, function (err, result) {
+                if (err) {
+                    console.log(err);
+                }
+                else {
+                    return res.render('myrebook', {
+                        'result': result,
+                    })
+                }
+            })
+        }
+        else {
+            return res.redirect('/login');
+        }
     },
-    mychbookPage: (req, res) =>{
-
-    }
+    showrebook: (req, res) => {
+        console.log(req.params.id);
+        return res.redirect('/member/myrebook');
+    },
 }
 module.exports = memberController
