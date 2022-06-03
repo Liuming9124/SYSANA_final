@@ -133,15 +133,24 @@
 									</div>
 									<br><br>
 									<%if (result.length>=1) { %>
-										<% for (let i=0 ; i < result.length ; i++ ) { %>
+										
+										
 											<article class="box post">
+												<div class="container_1">
+													<header>
+														<h1>
+															<font size=6>待確認訂單</font>
+														</h1>
+													</header>
+												</div><br>
+												<% for (let i=0 ; i < result.length ; i++ ) { %>
 												<div class="pricing-item_1">
 													<div id="pic" class="col-6 col-12-medium imp-medium">
 
 														<!--<a href="/product/<%= result[i].order_no %> " class="image left"><img src="/static/BookImg/<%= result[i].order_no %> " alt=""></a>-->
 													</div>
 													<div>
-														<a class="border-button_1" style="font-size:30px;height:50px;" href="/order/orderdeatil/<%= result[i].order_id %>">
+														<a class="border-button_1" style="font-size:30px;height:50px;" href="/order/orderdetail/<%= result[i].order_id %>">
 															訂單編號： <%= result[i].order_id %>
 														</a><br><br>
 														<p class="word_2" style="height:5px;">用戶帳號： <%= result[i].email
