@@ -141,9 +141,9 @@
 														<!--<a href="/product/<%= result[i].order_no %> " class="image left"><img src="/static/BookImg/<%= result[i].order_no %> " alt=""></a>-->
 													</div>
 													<div>
-														<p class="border-button_1" style="font-size:30px;height:50px;">
+														<a class="border-button_1" style="font-size:30px;height:50px;" href="/order/orderdeatil/<%= result[i].order_id %>">
 															訂單編號： <%= result[i].order_id %>
-														</p><br>
+														</a><br><br>
 														<p class="word_2" style="height:5px;">用戶帳號： <%= result[i].email
 																%>
 														</p><br>
