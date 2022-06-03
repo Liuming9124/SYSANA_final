@@ -35,6 +35,20 @@ const orderController = {
         else{
             res.redirect('/login');
         }
+    },
+    orderdetailPage: (req, res) => {
+        if (req.session.userName) {
+            // connection.query(`SELECT * FROM orders where email ='${req.session.userName}'`, function (err, result) {
+            //     // console.log(result)
+                return res.render('orderdetail',{
+                    'result':'',
+                    'login': req.session.userName,
+                });
+            // })
+        }
+        else{
+            res.redirect('/login');
+        }
     }
 }
 
