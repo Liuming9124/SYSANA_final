@@ -116,7 +116,7 @@
 										</header>
 									</div>
 									<article class="box post">
-										<div class="pricing-item_1">
+										<div class="pricing-iten_2" style="height=100px">
 												<div>
 													<p class="border-button_1" style="font-size:30px;height:50px;">
 														訂單編號： <%= result[i].order_id %>
@@ -132,8 +132,22 @@
 													</p><br>
 												</div>
 										</div>
+										<div class="contain">
+											<header>
+												<h1><font size=6>訂單內容</font></h1>
+											</header>
+											<div class="inter" id="inte">
+													<table>
+														<a href="/product/<%= result[i].book_id%>" class="image left" style="width:90px;height:90px;">
+																<img src="/static/BookImg/<%=result[i].book_id%>.jpg" style="width:80px;height:80px;" alt="">
+														</a><br>
+														<h3><a href="/product/<%= result[i].book_id%>">書籍編號:<%=result[i].book_id%></a></h3>
+															<p class="price">價錢：<%= result[i].book_price%></p>
+													</table>
+											</div>
+										</div>
 									</article>
-								</div>
+									
 							</div>
 						</div>
 					</section>

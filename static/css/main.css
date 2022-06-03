@@ -2914,6 +2914,12 @@ button,
 			border-radius: 15px;
 			transition: all .5s;
 		}
+		.pricing-iten {
+			background: #ffffff;
+			 }
+		.pricing-iten_1 {
+			text-align: center;
+		}
 	.border-button_1 {
 			font-size: 15px;
 			color: #00bdfe;
