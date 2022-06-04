@@ -94,8 +94,12 @@ CREATE TABLE ordersinformation(
 );
 CREATE TABLE wish(
     email VARCHAR(40) NOT NULL,
-    wish_id VARCHAR(20) NOT NULL,
+    wish_id INT AUTO_INCREMENT,
+    wish_name VARCHAR(20) NOT NULL,
     wish_author VARCHAR(20) NOT NULL,
-    point INT,
-    FOREIGN KEY (email) REFERENCES users(email) ON DELETE CASCADE
+    wish_total int NOT NULL,
+    wish_judge int(1) NOT NULL,
+    PRIMARY KEY(wish_id),
+    FOREIGN KEY(email) REFERENCES users(email)
+   
 );

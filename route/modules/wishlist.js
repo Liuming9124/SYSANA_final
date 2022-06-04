@@ -6,6 +6,7 @@ const wishlistController = require('../../controllers/wishlistcontroller')
 
 
 router.get('/', wishlistController.wishlistPage)
+router.post('/add',wishlistController.wishlistAdd)
 
 
 

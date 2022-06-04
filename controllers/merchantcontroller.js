@@ -54,6 +54,31 @@ const merchantController = {
         }
         
     },
+    wishPage: (req, res) => {
+        if (req.session.userName == 'book@gmail.com'){
+            connection.query(`SELECT * FROM  wish`, function (err, result) {
+                if (err) {
+                    console.log(err);
+                }
+                else {
+                    /*connection.query(`SELECT wish_name,SUM(wish_total) FROM wish GROUP BY wish_name;`,function(err,result1){
+                        if(err){
+                            console.log(err);
+                        }
+                        else{
+                            
+                            return res.render('merchantwish', { 'result1': result1 });
+                        }
+                    })*/
+                    return res.render('merchantwish', { 'result': result });
+                }
+            })
+        }
+        else{
+            return res.redirect('/login');
+        }
+        
+    },
     confirmChbook: (req, res) => {  //已審核judge狀態為1 交換成功judge為2
         if (req.session.userName == 'book@gmail.com'){
             connection.query(`UPDATE changes SET ch_judge = '1' WHERE ch_id = '${req.params.id}';`, function (err, result, fields) {        //更新此交換書狀態
@@ -383,15 +408,57 @@ const merchantController = {
         
 
     },
-    wishPage: (req, res) => {
-        console.log('hi');
-        res.render('merchantwish', {
-            'order_id': '1',
-            'email': '123@gmail.com',
-            'order_bname': 'book1',
-            'order_author': 'Liumin'
-        });
+    confirmwish: (req, res) => { //req.params.id
+        if (req.session.userName == 'book@gmail.com'){
+            connection.query(`SELECT * FROM wish where wish_id ='${req.params.id}'`, function (err, result) {
+                if (err) {
+                    res.redirect('/merchant/wish');
+                }
+                else {
+                    connection.query(`UPDATE wish SET wish_judge = 2 WHERE wish_id = '${req.params.id}';`, function (err1, result1, fields) {
+                        if (err) {
+                            console.log(err1);
+                        }
+                        else {
+                            console.log(`cancel ${req.params.id} success`);
+                            return res.redirect('/merchant/wish');
+                        }
+                    });
+                }
+            })
+        }
+        else{
+            return res.redirect('/login');
+        }
+        
+    },
+    cancelwish: (req, res) => { //req.params.id
+        if (req.session.userName == 'book@gmail.com'){
+            
+            connection.query(`SELECT * FROM wish where wish_id ='${req.params.id}'`, function (err, result) {
+                if (err) {
+                    res.redirect('/merchant/wish');
+                }
+                else {
+                    connection.query(`UPDATE wish SET wish_judge = 3 WHERE wish_id = '${req.params.id}';`, function (err1, result1, fields) {
+                        if (err) {
+                            console.log(err1);
+                        }
+                        else {
+                            console.log(`cancel ${req.params.id} success`);
+                            return res.redirect('/merchant/wish');
+                        }
+                    });
+                }
+            })
+        }
+        else{
+            return res.redirect('/login');
+        }
+        
     }
+    
 }
+
 
 module.exports = merchantController

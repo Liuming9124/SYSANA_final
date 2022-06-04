@@ -43,15 +43,14 @@
 									<!-- <a href="/product/ result[i].order_no %> " class="image left"><img src="/static/BookImg/ result[i].order_no %> " alt=""></a> -->
 									
 									<div class="pricing-item_1">
-										<p class="word_2">許願編號： <%= result[i].order_id %></p><br>
-										<p class="word_2">用戶帳號： <%= result[i].email %></p><br>
-										<p class="word_2">書名  ： <%= result[i].order_bname %></p><br>
-										<p class="word_2">作者： <%= result[i].order_author %></p><br>
+										<p class="word_2">許願數量： <%= result[i].wish_total %></p><br>
+										<p class="word_2">書名  ： <%= result[i].wish_name %></p><br>
+										<p class="word_2">作者： <%= result[i].wish_author %></p><br>
 										<ul class="actions">
 											<div class="col-6 actions">
-												<a href="/merchant/order/confirm/<%= result[i].order_id %>" class="button style1 large">確認</a>
+												<a href="/merchant/wish/confirm/<%= result[i].wish_id %>" class="button style1 large">確認</a>
 												<a>&nbsp&nbsp&nbsp&nbsp</a>
-												<a href="/merchant/order/cancel/<%= result[i].order_id %>" class="button style2 large">拒絕</a>
+												<a href="/merchant/wish/cancel/<%= result[i].wish_id %>" class="button style2 large">拒絕</a>
 											</div>
 										</ul>
 									</div>
