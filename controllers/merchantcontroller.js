@@ -61,16 +61,15 @@ const merchantController = {
                     console.log(err);
                 }
                 else {
-                    /*connection.query(`SELECT wish_name,SUM(wish_total) FROM wish GROUP BY wish_name;`,function(err,result1){
+                    connection.query(`SELECT wish_name,wish_author,SUM(wish_total) AS wish_total FROM wish GROUP BY wish_name;`,function(err,result1){
                         if(err){
                             console.log(err);
                         }
                         else{
                             
-                            return res.render('merchantwish', { 'result1': result1 });
+                            return res.render('merchantwish', { 'result1': result1,'result': result });
                         }
-                    })*/
-                    return res.render('merchantwish', { 'result': result });
+                    })
                 }
             })
         }
