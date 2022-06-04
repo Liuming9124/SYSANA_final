@@ -13,7 +13,7 @@
 			<div class="container">
 
 				<!-- Logo -->
-				<h1 id="logo"><a href="/home">書贏●我的回收書</a></h1>
+				<h1 id="logo"><a href="/home">書贏●我的訂單</a></h1>
 				<%- include('./partials/nav.ejs') %>
 
 					<!-- Main -->
@@ -76,9 +76,8 @@
 												<article class="box excerpt">
 													<a href="/member/myrebook">
 														<div class="display-flex">
-															<img src="../static/images/rebookcheck.png"
-																href="/member/myrebook" style="width:80px;height:80px;"
-																alt="我的回收書">
+															<img src="../static/images/rebookcheck.png" href="/member/myrebook"
+																style="width:80px;height:80px;" alt="我的回收書">
 															<div href="/member/myrebook">
 																<br>
 																<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我的回收書</p>
@@ -92,9 +91,8 @@
 												<article class="box excerpt">
 													<a href="/member/mychbook">
 														<div class="display-flex">
-															<img src="../static/images/mychbook.png"
-																href="/member/mychbook" style="width:80px;height:80px;"
-																alt="我的交換書">
+															<img src="../static/images/mychbook.png" href="/member/mychbook"
+																style="width:80px;height:80px;" alt="我的交換書">
 															<div href="/member/mychbook">
 																<br>
 																<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我的交換書</p>
@@ -113,71 +111,61 @@
 									<div class="container_1">
 										<header>
 											<h1>
-												<font size=8>回收資訊</font>
+												<font size=8>訂單詳細資訊</font>
 											</h1>
 										</header>
 									</div>
-									<br>
-									<div class="box post" style="height: 10px ;">
-										<div class="container_1">
-											<a href="/member/showrebook/0" class="button-2 style2 large"
-												style="width:120px;height:45px;font-size:10px;">待確認</a> 
-											<P>&nbsp&nbsp&nbsp&nbsp&nbsp</P>
-											<a href="/member/showrebook/1" class="button-2 style2 large"
-												style="width:120px;height:45px;font-size:10px;">已確認</a>
-											<P>&nbsp&nbsp&nbsp&nbsp&nbsp</P>
-										</div>
-									</div>
-									<br><br>
-											<article class="box post">
-												<div class="container_1">
-													<header>
-														<h1>
-															<font size=6>待確認訂單</font>
-														</h1>
-													</header>
-												</div><br>
-												<%if (result.length>=1) { %>
-													<% for (let i=0 ; i < result.length ; i++ ) { %>
-												<div class="pricing-item_1">
-													<div id="pic" class="col-6 col-12-medium imp-medium">
+									<article class="box post">
+										<% for (let i=0 ; i < 1 ; i++ ) { %>
+											<div class="pricing-item_2">
+												<div id="pic" class="col-6 col-12-medium imp-medium">
 
-														<!--<a href="/product/<%= result[i].order_no %> " class="image left"><img src="/static/BookImg/<%= result[i].order_no %> " alt=""></a>-->
-													</div>
-													<div>
-														<p class="border-button_1" style="font-size:30px;height:50px;">
-															回收書籍編號： <%= result[i].re_id %>
-														</p><br>
-														<p class="word_2" style="height:5px;">用戶帳號： <%= result[i].email
-																%>
-														</p><br>
-														<p class="word_2" style="height:5px;">書名 ： <%=
-															result[i].re_name %>
-													</p><br>
-														<p class="word_2" style="height:5px;">作者 ： <%=
-																result[i].re_author %>
-														</p><br>
-														<p class="word_2" style="height:5px;">回饋金額： <%=
-																result[i].re_point %>
-														</p><br>
-														
-													</div>
+													<!--<a href="/product/<%= result[i].order_no %> " class="image left"><img src="/static/BookImg/<%= result[i].order_no %> " alt=""></a>-->
 												</div>
-											</article>
-											<% } %>
+												<div>
+													<div class="container_1">
+														<header>
+														<a class="border-button_1" style="font-size:30px;height:50px;" href="/order/orderdetail/<%= result[i].order_id %>">
+															訂單編號： <%= result[i].order_id %>
+														</a>	
+														</header>
+													</div>
+													
+													<br><br>
+													<p class="word_2" style="height:5px;">用戶帳號： <%= result[i].email
+															%>
+													</p><br>
+													<p class="word_2" style="height:5px;">收件人 ： <%=
+															result[i].order_name %>
+													</p><br>
+													<p class="word_2" style="height:5px;">地址： <%=
+															result[i].order_address %>
+													</p><br>
+												</div>
+											</div>
+										</article>
+										<% } %>
+										<div class="contain">
+											<header>
+												<h1><font size=6>訂單內容</font></h1>
+											</header>
+											<div class="inter" id="inte">
+													<table>
+												<% for(var i=0; i < result.length ; i++) { %>
+													<a href="/product/<%= result[i].book_id%>" class="image left" style="width:90px;height:90px;">
+														<img src="/static/BookImg/<%=result[i].book_id%>.jpg" style="width:80px;height:80px;" alt="">
+												</a>
+												<h3><a href="/product/<%= result[i].book_id%>">書籍編號:<%=result[i].book_id%></a></h3>
+													<p class="price">價錢：<%= result[i].book_price%></p>
+													
 												<% } %>
-													<%if (result.length<1) {%>
-														<section id="features">
-															<div class="container">
-																<header>
-																	<h2> <strong>目前沒有書籍</strong>!</h2>
-																</header>
-															</div>
-														</section>
-														<%}%>
-								</div>
-
-								</article>
+												<h1>--------------------------------------------------------------------------------------------</h1>
+												<p class="dollar">總價錢: total 元</p>
+											</table>	
+											</div>
+										</div>
+									</article>
+									
 							</div>
 						</div>
 					</section>
