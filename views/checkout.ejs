@@ -4,6 +4,7 @@
 	<head>
 		<title>書贏●結帳頁面</title>
 		<%- include('./partials/header.ejs') %>
+	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
 
@@ -29,7 +30,7 @@
 													</header>
 												</div>
 												<div class="container_1">
-												<form action="/checkout/add" method="POST">
+												<form action="/checkout/add" method="POST" onsubmit="return compare()">
 													<p>收件人:</p>
 													<div style="height: 50px; width: 265px;">
 														<input type="text" id="name" placeholder="收件人姓名" size=20 autocomplete="on" name="name" required="true">
@@ -40,7 +41,7 @@
 													</div>
 													<p>電話號碼:</p>
 													<div style="height: 50px; width: 265px;">
-														<input type="text" id="phone" placeholder="電話號碼" size=20 autocomplete="off" name="phone" required="true">
+														<input type="text" id="phone" placeholder="電話號碼" size=20 autocomplete="off" name="phone" required="true" oninput = "value=value.replace(/[^\d]/g,'')">
 													</div>
 													<!-- <p>電子信箱:</p>
 													<div style="height: 60px; width: 265px;">

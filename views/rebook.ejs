@@ -3,6 +3,7 @@
 	<head>
 		<title>書贏●回收</title>
 		<%- include('./partials/header.ejs') %>
+	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
 
@@ -35,7 +36,7 @@
 										</header>
 									</div>
 									
-									<form action="/rebook/add" method="POST">
+									<form action="/rebook/add" method="POST" onsubmit="return status()">
 
 										<a>書名:</a>
 										<div class="container_1">
@@ -69,7 +70,7 @@
 											</div>
 										</div>
 										<div class="container_1">
-										<div class="popup" id="show"  onclick="show()">
+										<div class="popup" id="show" >
 											<br><input style="height:60px; width: 300px;"class="button_1"type="button" value="顯示預估獲得點數" onclick="compare()">
 											<br><br>估計可以獲得<span ><strong id="showcoin" class="word_2">0</strong></span>點
 										</div>

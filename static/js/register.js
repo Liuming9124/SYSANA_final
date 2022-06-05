@@ -7,10 +7,10 @@ function compare() {
     if(password!=password1) {
         alert('密碼不相同')
         document.getElementById('password1').value='';
-        return;
+        return false;
     }
     else {
-        document.getElementById('registerbutton').submit();
+        return true;
     }
 
 }
