@@ -31,7 +31,7 @@ function status() {
     const re_status = document.getElementById('re_status').value;
     if(re_status=='請選擇書籍狀況'){
         alert('請選擇書籍狀況')
-        return false
+        return false;
     }
     else{
         return true;
