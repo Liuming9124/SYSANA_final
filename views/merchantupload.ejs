@@ -46,6 +46,7 @@
 											<input class="button"type="reset" value="清除">
 										</div>
 									</form>
+								</div>	
 									<!-- <form action="/merchant/uploadbook" action="post">
 										<div class="col-6 col-12-small">
 											<p>書籍名稱：<input type="text" id="name" placeholder="商品名稱" size=5 autocomplete="on" name="name" required="true"></p>
@@ -72,20 +73,19 @@
 											</div>
 										</div>
 									</form> -->
-								</div>
+								
 								<div class="col-6 col-12-medium">
 									<p>上傳照片：
-									<div class="col-6 col-12-small">
-										<form action="/somewhere/to/upload" enctype="multipart/form-data">
-											<input id="getimg" type="file" accept="image/gif, image/jpeg, image/png"
-												name="picture" required="true" onchange="previewFile()">
-										</form>
+										<div class="col-6 col-12-small">
+											<form action="/somewhere/to/upload" enctype="multipart/form-data">
+												<input id="getimg" type="file" accept="image/gif, image/jpeg, image/png"
+													name="picture" required="true" onchange="previewFile()">
+											</form>
 
 										<a href="#" class="image left"><img src="" id="showimg" alt="ImgPreview"
 												height="200px" width="200px"></a> <!-- 有上傳才出現 -->
 
-										</p>
-									</div>
+									</p>
 								</div>
 							</div>
 						</div>
@@ -98,7 +98,7 @@
 					<script src="assets/js/util.js"></script>
 					<script src="assets/js/main.js"></script>
 					<script src="/static/js/merchantUpload.js"></script>
-
+	</div>
 </body>
 
 </html>

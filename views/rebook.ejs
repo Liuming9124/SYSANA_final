@@ -102,24 +102,24 @@
 			</section>
 
 							
-			<!-- Footer -->
-			<%- include('./partials/footer.ejs') %>	
+				<!-- Footer -->
+				<%- include('./partials/footer.ejs') %>	
+			
+			<script>
+				function show() {
+					var popup = document.getElementById("popup_text");
+					popup.classList.toggle("show");
+				}
+			</script>
+			
+			<!-- Scripts -->
+			<script src="../static/js/jquery.min.js"></script>
+			<script src="../static/js/jquery.dropotron.min.js"></script>
+			<script src="../static/js/browser.min.js"></script>
+			<script src="../static/js/breakpoints.min.js"></script>
+			<script src="../static/js/util.js"></script>
+			<script src="../static/js/main.js"></script>
+			<script src="../static/js/rebook.js"></script>
 		</div>
-		<script>
-			function show() {
-				var popup = document.getElementById("popup_text");
-				popup.classList.toggle("show");
-			}
-		</script>
-		
-		<!-- Scripts -->
-		<script src="../static/js/jquery.min.js"></script>
-		<script src="../static/js/jquery.dropotron.min.js"></script>
-		<script src="../static/js/browser.min.js"></script>
-		<script src="../static/js/breakpoints.min.js"></script>
-		<script src="../static/js/util.js"></script>
-		<script src="../static/js/main.js"></script>
-		<script src="../static/js/rebook.js"></script>
-
 	</body>
 </html>
