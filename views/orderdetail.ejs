@@ -130,37 +130,19 @@
 														</a>	
 														</header>
 													</div>
-													
-													<br><br>
-													<p class="word_2" style="height:5px;">用戶帳號： <%= result[i].email
-															%>
-													</p><br>
-													<p class="word_2" style="height:5px;">收件人 ： <%=
-															result[i].order_name %>
-													</p><br>
-													<p class="word_2" style="height:5px;">地址： <%=
-															result[i].order_address %>
-													</p><br>
 												</div>
 											</div>
 										</article>
 										<% } %>
 										<div class="contain">
-											<header>
-												<h1><font size=6>訂單內容</font></h1>
-											</header>
 											<div class="inter" id="inte">
-													<table>
+													<table><br>
 												<% for(var i=0; i < result.length ; i++) { %>
 													<a href="/product/<%= result[i].book_id%>" class="image left" style="width:90px;height:90px;">
 														<img src="/static/BookImg/<%=result[i].book_id%>.jpg" style="width:80px;height:80px;" alt="">
-												</a>
-												<h3><a href="/product/<%= result[i].book_id%>">書籍編號:<%=result[i].book_id%></a></h3>
-													<p class="price">價錢：<%= result[i].book_price%></p>
-													
+												</a><br>
+												<h3><a href="/product/<%= result[i].book_id%>">書籍編號:<%=result[i].book_id%></a></h3><br>
 												<% } %>
-												<h1>--------------------------------------------------------------------------------------------</h1>
-												<p class="dollar">總價錢: total 元</p>
 											</table>	
 											</div>
 										</div>
