@@ -46,7 +46,7 @@
 											</div>
 											<a>電話號碼:</a>
 											<div style="height: 60px; width: 265px;" class="box post">
-												<input type="text" id="phone" placeholder="電話" size=20 autocomplete="on" name="phone" required="true" >
+												<input type="text" id="phone" placeholder="電話" size=20 autocomplete="on" name="phone" required="true" oninput = "value=value.replace(/[^\d]/g,'')" >
 											</div>
 											<a>地址:</a>
 											<div style="height: 60px; width: 265px;" class="box post">

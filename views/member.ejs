@@ -114,7 +114,7 @@
 											<h3>電話號碼</h3>
 											<div class="input-with-phone">
 												<input type="text" placeholder="" maxlength="255" value="<%=phone%>" name="phone"
-													required="true">
+													required="true" oninput = "value=value.replace(/[^\d]/g,'')">
 											</div>
 											<p> </p>
 
