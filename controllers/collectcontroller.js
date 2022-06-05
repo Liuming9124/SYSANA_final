@@ -13,7 +13,7 @@ const collectController = {
 
             connection.query("SELECT * FROM collect where email ='" + req.session.userName + "'", function (err, result, fields) {
                 if (err) {
-                    throw err;
+                    console.log(err);
                 }
                 else {
                     res.render('collect', { //渲染頁面，(配合ejs的格式)
@@ -35,7 +35,7 @@ const collectController = {
 
             connection.query("SELECT * FROM product where book_id='" + req.params.id + "'", function (err, result) {
                 if (err) {
-                    return res.render('collect', { 'collectstatus': '已加入收藏' });
+                    return res.redirect('/home');
                 }
                 else {
                     // console.log(result)
@@ -46,7 +46,7 @@ const collectController = {
                         if (err) {
                             connection.query("SELECT * FROM collect where email ='" + req.session.userName + "'", function (err, result, fields) {
                                 if (err) {
-                                    throw err;
+                                    console.log(err);
                                 }
                                 else {
                                     totalprice=0;
