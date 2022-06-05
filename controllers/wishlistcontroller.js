@@ -35,14 +35,13 @@ const wishlistController = {
                 if(result[0].point>1){//寫入資料庫
                     var sql = `INSERT INTO wish  VALUES ('${req.session.userName}','','${data.name}','${data.writer}','1','0');`;
                     connection.query(sql, function (err, result1){
-                        if
-                         (err){
+                        if(err){
                             console.log(err);
                         }
-                        else{//更新扣點
-                            var point_sql = `UPDATE users SET point ='${result[0].point-1}' WHERE email = '${req.session.userName}';`;
-                            connection.query(point_sql,function(err,res){
-                                if(err){
+                        else {//更新扣點
+                            var point_sql = `UPDATE users SET point ='${result[0].point - 1}' WHERE email = '${req.session.userName}';`;
+                            connection.query(point_sql, function (err, res) {
+                                if (err) {
                                     console.log(err);
                                 }
                             }
@@ -52,7 +51,7 @@ const wishlistController = {
                                 'updatestatus': 'success',
                                 'login': req.session.userName,
                             })
-                    }
+                        }
                 })
                 }else{
                     return res.render('wishlist', {

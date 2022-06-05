@@ -117,7 +117,17 @@ const checkoutController = {
                         })
                     }
                 }
-                res.redirect('/order');
+                console.log(req.body);
+                var point_sql = `UPDATE users SET point = point + ${req.body.addpoint} - ${req.body.point} WHERE email = '${req.session.userName}';`;
+                connection.query(point_sql, function (err, result) {
+                    if (err) {
+                        console.log(err);
+                    }
+                    else{
+                        return res.redirect('/order');
+                    }
+                })
+                
             })
             
         }
