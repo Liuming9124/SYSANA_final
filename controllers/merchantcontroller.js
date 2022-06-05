@@ -409,22 +409,30 @@ const merchantController = {
     },
     confirmwish: (req, res) => { //req.params.id
         if (req.session.userName == 'book@gmail.com'){
-            connection.query(`SELECT * FROM wish where wish_id ='${req.params.id}'`, function (err, result) {
-                if (err) {
-                    res.redirect('/merchant/wish');
+            connection.query(`SELECT wish_name,wish_author,SUM(wish_total) AS wish_total FROM wish WHERE wish_id = '${req.params.id}' GROUP BY wish_name;`,function(err,result){
+                if(err){
+                    console.log(err);
                 }
-                else {
-                    connection.query(`UPDATE wish SET wish_judge = 2 WHERE wish_id = '${req.params.id}';`, function (err1, result1, fields) {
-                        if (err) {
-                            console.log(err1);
+                else{
+                    connection.query(`SELECT * FROM wish where wish_name ='${result[0].wish_name}'`, function (err, result1){
+                        if(err){
+                            console.log(err);
                         }
-                        else {
-                            console.log(`cancel ${req.params.id} success`);
-                            return res.redirect('/merchant/wish');
-                        }
-                    });
+                        else{                                                                        ///這邊
+                            connection.query(`UPDATE wish SET wish_judge = 2 WHERE wish_name = '${result1[0].wish_name}';`, function (err1, resultEnd2, fields) {
+                                if (err) {
+                                    console.log(err);
+                                }
+                                else {
+                                        console.log(`cancel ${req.params.id} success`);
+                                        return res.redirect('/merchant/wish');
+                                        }
+                                    });
+                                }
+                            })
                 }
             })
+            
         }
         else{
             return res.redirect('/login');
