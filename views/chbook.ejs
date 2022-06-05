@@ -20,11 +20,14 @@
 				<div class="container">
 					<div class="row">
 
-						<%- include('./partials/mempart.ejs') %>
-										</ul>
-									</section>
-							</div>
-					<!-- Content -->
+						<div id="sidebar" class="col-4 col-12-medium">
+							<section>
+								<ul class="divided">
+							<%- include('./partials/mempart.ejs') %>
+							</ul>
+							</section>
+						</div>
+						<!-- Content -->
 					
 							<!-- Post -->
 							<article class="box post">
@@ -90,6 +93,7 @@
 									<p><%= status %></p> 
 								</article>
 							</article>		
+					</div>
 				</div>
 			</section>
 
