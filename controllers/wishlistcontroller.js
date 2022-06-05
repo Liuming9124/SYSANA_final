@@ -10,12 +10,12 @@ const connection = mysql.createConnection({
 const wishlistController = {
     wishlistPage: (req, res) => {
         if (req.session.userName) {
-            connection.query("SELECT * FROM users", function (err, result) {
+            connection.query(`SELECT * FROM users WHERE email = '${req.session.userName}';`, function (err, result) {
                 for (var i = 0; i < result.length; i++) {
                     if (req.session.userName == result[i].email) {
                         console.log(result)
                         return res.render('wishlist', {
-                            'bookcoin': '0',
+                            'bookcoin': result[0].point,
                             'updatestatus': '',
                             'login': req.session.userName,
                         })
