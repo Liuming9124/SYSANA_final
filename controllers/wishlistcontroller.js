@@ -46,11 +46,7 @@ const wishlistController = {
                                 }
                             }
                             )
-                            return res.render('wishlist', {
-                                'bookcoin': result[0].point,
-                                'updatestatus': 'success',
-                                'login': req.session.userName,
-                            })
+                            return res.redirect('/wishlist')
                         }
                 })
                 }else{

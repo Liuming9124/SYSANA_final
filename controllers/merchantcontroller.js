@@ -61,7 +61,7 @@ const merchantController = {
                     console.log(err);
                 }
                 else {
-                    connection.query(`SELECT wish_name,wish_author,SUM(wish_total) AS wish_total FROM wish GROUP BY wish_name;`,function(err,result1){
+                    connection.query(`SELECT wish_name,wish_author,SUM(wish_total) AS wish_total FROM wish GROUP BY wish_name ORDER BY wish_total DESC;`,function(err,result1){
                         if(err){
                             console.log(err);
                         }
