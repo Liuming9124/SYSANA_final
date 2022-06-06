@@ -57,7 +57,8 @@ const collectController = {
                                         'collectbook': result,
                                         'result': result,
                                         'total': totalprice,
-                                        'collectstatus': '此書已存在在收藏'
+                                        'collectstatus': '此書已存在在收藏',
+                                        'login' : req.session.userName
                                     });
                                 }
                             })
@@ -80,7 +81,7 @@ const collectController = {
 
             connection.query("SELECT * FROM product where book_id='" + req.params.id + "'", function (err, result) {
                 if (err) {
-                    return res.render('cart', { 'collectstatus': '已加入購物車' });
+                    return res.render('cart', { 'collectstatus': '已加入購物車' , 'login' : req.session.userName});
                 }
                 else {
                     // console.log(result)
