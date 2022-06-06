@@ -34,12 +34,11 @@ const merchantController = {
         else{
             return res.redirect('/login');
         }
-        
 
     },
     chbookPage: (req, res) => {
         if (req.session.userName == 'book@gmail.com'){
-            connection.query(`SELECT * FROM  changes`, function (err, result) {
+            connection.query(`SELECT * FROM  changes WHERE ch_judge = '0'`, function (err, result) {
                 if (err) {
                     console.log(err);
                 }
@@ -52,7 +51,6 @@ const merchantController = {
         else{
             return res.redirect('/login');
         }
-        
     },
     wishPage: (req, res) => {
         if (req.session.userName == 'book@gmail.com'){
@@ -153,6 +151,22 @@ const merchantController = {
             return res.redirect('/login');
         }
         
+    },
+    showChbook: (req,res) => {
+        if (req.session.userName == 'book@gmail.com'){
+            connection.query(`SELECT * FROM  changes WHERE ch_judge = '1'`, function (err, result) {
+                if (err) {
+                    console.log(err);
+                }
+                else {
+                    // console.log(result);
+                    return res.render('merchantchbook', { 'result': result });
+                }
+            })
+        }
+        else{
+            return res.redirect('/login');
+        }
     },
     orderPage: (req, res) => {
         if (req.session.userName == 'book@gmail.com'){
@@ -406,6 +420,23 @@ const merchantController = {
         }
         
 
+    },
+    showRebook: (req, res) => {
+        if (req.session.userName == 'book@gmail.com'){
+            connection.query(`SELECT * FROM reduce where re_judge='${req.params.id}'`, function (err, result) {
+                if (err) {
+                    console.log(err);
+                }
+                else {
+                    console.log(result)
+                    res.render('merchantrebook', { 'result': result })
+
+                }
+            })
+        }
+        else{
+            return res.redirect('/login');
+        }
     },
     confirmwish: (req, res) => { //req.params.id
         if (req.session.userName == 'book@gmail.com'){

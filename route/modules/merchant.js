@@ -20,10 +20,12 @@ router.get('/showorder/:id', merchantController.showorder);
 //rebook
 router.get('/rebook/confirm/:id', merchantController.confirmRebook);
 router.get('/rebook/cancel/:id',  merchantController.cancelRebook);
+router.get('/showrebook/:id',     merchantController.showRebook);
 
 //chbook
 router.get('/chbook/confirm/:id', merchantController.confirmChbook);
 router.get('/chbook/cancel/:id',  merchantController.cancelChbook);
+router.get('/showchbook/:id',     merchantController.showChbook);
 
 //upload
 router.post('/uploadbook', merchantController.uploadItem);
